@@ -4,41 +4,58 @@
   <head>
     <style>
       body {font-family: Arial, Helvetica, sans-serif;}
-      * {box-sizing: border-box;}
-      
-      input[type=text], select, textarea {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        margin-top: 6px;
-        margin-bottom: 16px;
-        resize: vertical;
-      }
-      
-      input[type=submit] {
-        background-color: #04AA6D;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-      
-      input[type=submit]:hover {
-        background-color: #45a049;
-      }
-      
-      .container {
-        border-radius: 5px;
-        background-color: #f2f2f2;
-        padding: 20px;
-      }
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: blue;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  
+  padding: 50px;
+}
+.bg-img {
+  /* The image used */
+  background-image: url("contact.jpg");
+
+  min-height: 380px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  opacity: 0.5;
+}
+
       </style>
     <meta charset="UTF-8">
     <title> CONTACT US|LOVE COMPUTER</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -96,54 +113,27 @@
     </div>
   </nav>
   <h3>Contact Us</h3>
-
-<div class="container">
-  <form action="index.html">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-    <label for="lname">E-Mail</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your email">
-
-    <label for="country">Country</label>
-    <select id="country" name="country">
-      <option value="australia">India</option>
-      <option value="canada">Srilanka</option>
-      <option value="usa">Pakistan</option>
-    </select>
-
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-    <input type="submit" value="Submit">
-  </form>
-</div>
-  <script src="script.js"></script>
-  <?php
-// Get data from form
-$name = $_POST['name'];
-$email= $_POST['email'];
-$message= $_POST['message'];
-
-$to = "tarunkumar1405@lovecomputer.co.in";
-$subject = "Message from website";
-
-// The following text will be sent
-// Name = user entered name
-// Email = user entered email
-// Message = user entered message
-$txt ="Name = ". $name . "\r\n Email = "
-	. $email . "\r\n Message =" . $message;
-
-$headers = "From: noreply@demosite.com" . "\r\n" .
-			"CC: somebodyelse@example.com";
-if($email != NULL) {
-	mail($to, $subject, $txt, $headers);
-}
-
-// Redirect to
-header("Location:intex.html");
-?>
-
+  
+  <div class="container">
+        <div class="row">
+            <div class="col-lg-6 m-auto">
+                <div class="card mt-5">
+                    <div class="card-title">
+                        <h2 class="text-center py-2"> Contact Us </h2>
+                        
+                    </div>
+                    <div class="card-body">
+                        <form action="index.html" method="post">
+                            <input type="text" name="UName" placeholder="User Name" class="form-control mb-2">
+                            <input type="email" name="Email" placeholder="Email" class="form-control mb-2">
+                            <input type="text" name="Subject" placeholder="Subject" class="form-control mb-2">
+                            <textarea name="msg" class="form-control mb-2" placeholder="Write The Message"></textarea>
+                            <button class="btn btn-success" name="btn-send"> Send </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
