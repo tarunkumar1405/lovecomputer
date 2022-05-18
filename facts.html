@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Important Facts</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      #myInput {
+        background-image: url(icons8-search-24.png);
+        background-position: 10px 12px;
+        background-repeat: no-repeat;
+        width: 100%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+      }
+
+      #myUL {
+        list-style-type: "✓";
+        padding: 5px;
+        margin: 0;
+        color: blue;
+        font-weight: bold;
+      }
+
+      #myUL li a {
+        border: 1px solid #ddd;
+        margin-top: -1px; /* Prevent double borders */
+        background-color: #f6f6f6;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 17px;
+        color: blue;
+        display: block;
+      }
+
+      #myUL li a:hover:not(.header) {
+        background-color: #eee;
+      }
+    </style>
+
+    <link rel="stylesheet" href="style1.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <nav>
+      <div class="navbar">
+        <i class="bx bx-menu"></i>
+        <div class="logo"><a href="index.html">Love Computer</a></div>
+        <div class="nav-links">
+          <div class="sidebar-logo">
+            <span class="logo-name">Love Computer</span>
+            <i class="bx bx-x"></i>
+          </div>
+          <ul class="links">
+            <li><a href="index.html">HOME</a></li>
+            <li>
+              <a href="#">COMPUTER</a>
+              <i class="bx bxs-chevron-down htmlcss-arrow arrow"></i>
+              <ul class="htmlCss-sub-menu sub-menu">
+                <li><a href="fullform.html">FULL FORMS</a></li>
+                <li><a href="facts.html">COMPUTER FACTS</a></li>
+                <li><a href="computer.html">COMPUTER BASICS</a></li>
+
+                <li class="more">
+                  <span
+                    ><a href="#">More</a>
+                    <i class="bx bxs-chevron-right arrow more-arrow"></i>
+                  </span>
+                  <ul class="more-sub-menu sub-menu">
+                    <li><a href="#">NETWORKING</a></li>
+                    <li><a href="#">PROGRAMMING LANGUAGES</a></li>
+                    <li><a href="#">WEB DEVELOPMENT</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">JAVASCRIPT</a>
+              <i class="bx bxs-chevron-down js-arrow arrow"></i>
+              <ul class="js-sub-menu sub-menu">
+                <li><a href="#">Dynamic Clock</a></li>
+                <li><a href="#">Form Validation</a></li>
+                <li><a href="#">Card Slider</a></li>
+                <li><a href="#">Complete Website</a></li>
+              </ul>
+            </li>
+            <li><a href="aboutus.html">ABOUT US</a></li>
+            <li><a href="contactus.html">CONTACT US</a></li>
+          </ul>
+        </div>
+        <div class="search-box">
+          <i class="bx bx-search"></i>
+          <div class="input-box">
+            <input type="text" placeholder="Search..." />
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div style="padding: 100px 5px 5px">
+      <h2 style="text-align: center">
+        Some Important Facts related to Computers
+      </h2>
+      <input
+        type="text"
+        id="myInput"
+        onkeyup="myFunction()"
+        placeholder="Search Facts..."
+        title="Type in a name"
+      />
+
+      <ul id="myUL">
+        <li><a>December 2 is observed as Computer Literacy Day.</a></li>
+        <li><a>India has announced New Computer Policy in 1984.</a></li>
+        <li>
+          <a
+            >First Computer(made in India) is 'Siddharth',which was manufactured
+            by ECI(Electronics Corporation of India).</a
+          >
+        </li>
+        <li>
+          <a
+            >First Computer in India was installed in the Main Post Office of
+            Bangalore on August 16, 1986.</a
+          >
+        </li>
+        <li>
+          <a
+            >First Pollution free Computerized Petrol Pump of India is in
+            Mumbai.</a
+          >
+        </li>
+        <li>
+          <a
+            >First Computer University(in Private Sector) in India is Rajeev
+            Gandhi Computer University.</a
+          >
+        </li>
+        <li>
+          <a
+            >Bangalore(Now Bangaluru) is also known as the Silicon Valley of
+            India.</a
+          >
+        </li>
+        <li>
+          <a
+            >First Indian News Paper to be available on Internet is"The
+            Hindu".</a
+          >
+        </li>
+        <li>
+          <a
+            >First Indian Magazine to be available on Internet is "India
+            Today".</a
+          >
+        </li>
+        <li>
+          <a
+            >First Indian Political Party which has created its website on
+            Internet is BJP in 1995.</a
+          >
+        </li>
+        <li>
+          <a
+            >Mainly there are three types of Computer - Analog, Digital and
+            Hybrid.</a
+          >
+        </li>
+        <li>
+          <a
+            >First Super Computer of the world is -CRAY K-1-S, developed by Cray
+            K Company of USA.</a
+          >
+        </li>
+        <li>
+          <a
+            >"Deep Blue" is a Super Computer which had defeated World Chess
+            Champion Garry Kasparov. This Super Computer is able to do the work
+            equivalent to the work of 32 Computers and can think 20 crore steps
+            of chess in 1 second.</a
+          >
+        </li>
+        <li>
+          <a>First Electronic Digital Computer of the world is 'ENIAC'.</a>
+        </li>
+        <li><a>Most Popular Operating System in the world is WINDOWS.</a></li>
+        <li>
+          <a
+            >USENET(User's Network) is a link to connect all the
+            Universities.</a
+          >
+        </li>
+        <li>
+          <a>First book on Personal Computer was written by Ted Nelson.</a>
+        </li>
+        <li>
+          <a>First Magazine on Computer is 'Computer and Automation'. </a>
+        </li>
+
+        <li><a>First home Computer is Comodor VIC/20 in 1980. </a></li>
+        <li>
+          <a
+            >First Practical Digital Computer is UNIVAC(Universal Automatic
+            Computer) in 1951
+          </a>
+        </li>
+        <li><a>FORTRAN is the first Programming Language. </a></li>
+        <li>
+          <a>PROLOG is the language of the Fifth generation of computer. </a>
+        </li>
+        <li><a>J.S.Kilbi developed the IC chips. </a></li>
+        <li><a>A computer error is known as Bug. </a></li>
+        <li>
+          <a
+            >C-DAC (Centre of development and Advanced Computing) as established
+            in Pune in 1988.
+          </a>
+        </li>
+        <li>
+          <a
+            >Super Computer PARAM (means "supreme" in the Sanskrit
+            language)-10000, having the capacity of 1 billion calculations per
+            second, was made by the scientists of C-DAC of Pune of March 28,
+            1998. The main credit for the development of the PARAM-10000 goes to
+            Dr. Vijay P. Bhaskar, Executive Director of C-DAC, Pune.
+          </a>
+        </li>
+        <li>
+          <a>Laser Printers are the Fastest Printers. </a>
+        </li>
+        <li>
+          <a
+            >IBM(International Business Machine) is an American Computer
+            Company.
+          </a>
+        </li>
+        <li>
+          <a>
+            Computer Virus is a man made digital parasite, which
+            corrupts(infects) the file and known as 'File corrupter'.
+          </a>
+        </li>
+        <li>
+          <a
+            >Y-2K was a technical problem, associated with the calender (Date,
+            Month and year) known as 'Millennium Bug'.
+          </a>
+        </li>
+        <li>
+          <a>The Development of Computer Stated in India since 1955. </a>
+        </li>
+        <li>
+          <a
+            >On Sept. 17, 1991 Linus Benedict Torvalds completed the first
+            version of Linux. He made the wisest decision in Operating System
+            History by releasing Linux Under General Public License, Thereby
+            making it open and free to all.
+          </a>
+        </li>
+        <li>
+          <a
+            >Linus Torvalds is one of the Pioneers who advocated the idea of
+            free software and thereby changed the software market.
+          </a>
+        </li>
+        <li>
+          <a
+            >A Computer May be used to control purely mechanical action. It has
+            two main Parts: Hardware and Software.
+          </a>
+        </li>
+        <li>
+          <a>The original Windows 1 was released in November 1985 and was
+            Microsoft’s first true attempt at a graphical user interface in
+            16-bit. Development was spearheaded by Microsoft founder Bill Gates
+            and ran on top of MS-DOS, which relied on command-line input.
+          </a>
+        </li>
+      </ul>
+    </div>
+    <script src="script.js"></script>
+    <script src="script1.js"></script>
+    <script src="top.js"></script>
+    <script src="script3.js"></script>
+  </body>
+</html>
