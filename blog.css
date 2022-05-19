@@ -34,10 +34,11 @@
   
   /* Fake image */
   .fakeimg {
-    background-color: #aaa;
+    background-color: whitesmoke;
     width: 100%;
-    padding: 20px;
+    padding: 10px;
   }
+  
   
   /* Add a card effect for articles */
   .card {
