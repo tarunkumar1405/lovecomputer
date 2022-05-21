@@ -14,8 +14,8 @@
     padding: 30px;
     font-size: 20px;
     text-align: center;
-    background: white;
-    color: blue;
+    
+    
   }
   
   /* Create two unequal columns that floats next to each other */
@@ -34,7 +34,7 @@
   
   /* Fake image */
   .fakeimg {
-    background-color: whitesmoke;
+    
     width: 100%;
     padding: 10px;
   }
@@ -45,6 +45,7 @@
      background-color: white;
      padding: 20px;
      margin-top: 20px;
+     text-align: left;
   }
   
   /* Clear floats after the columns */
