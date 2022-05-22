@@ -272,6 +272,10 @@ nav .navbar .links li:hover .js-sub-menu {
   nav .navbar .links li {
     display: block;
   }
+  footer{
+    padding: 23px;
+    text-align: center;
+  text-decoration: overline 1px;}
 
   nav .navbar .links li .sub-menu {
     position: relative;

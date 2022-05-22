@@ -62,3 +62,7 @@ border-radius: 4px;
 #myBtn:hover {
 background-color: #555;
 }
+footer{
+  padding: 23px;
+  text-align: center;
+text-decoration: overline 1px;}
