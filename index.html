@@ -2,7 +2,7 @@
 <!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
 <html lang="en" dir="ltr">
   <head>
-    <link rel="icon" type="image/x-icon" href="favicon2.ico">
+    <link rel="icon" type="image/x-icon" href="favicon2.ico" />
     <style>
       * {
         box-sizing: border-box;
@@ -90,39 +90,42 @@
       .author {
         color: cornflowerblue;
       }
-      
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-}
 
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+      .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+      }
 
-footer{
-    padding: 23px;
-    text-align: center;
-  text-decoration: overline 1px;}
+      /* Clearfix (clear floats) */
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      footer {
+        padding: 23px;
+        text-align: center;
+        text-decoration: overline 1px;
+      }
     </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Computer awareness and knowledge">
-  <meta name="keywords" content="HTML, CSS, JavaScript, computer knowledge, special symbols">
-  
+    <meta name="description" content="Computer awareness and knowledge" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, computer knowledge, special symbols"
+    />
+
     <title>HOME / LOVE COMPUTER</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="ani.css" />
-    
+
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
     />
-    
   </head>
   <body>
     <nav>
@@ -131,6 +134,7 @@ footer{
         <div class="logo"><a href="index.html">Love Computer</a></div>
         <div class="nav-links">
           <div class="sidebar-logo">
+            <p id="demo"></p>
             <span class="logo-name">Love Computer</span>
             <i class="bx bx-x"></i>
           </div>
@@ -178,7 +182,7 @@ footer{
         </div>
       </div>
     </nav>
-    
+    <p id="demo"></p>
     <div class="slideshow-container">
       <div class="mySlides">
         <q
@@ -188,7 +192,8 @@ footer{
       </div>
       <div class="mySlides">
         <q
-          >Computers are good at following instructions, but not at reading your mind.</q
+          >Computers are good at following instructions, but not at reading your
+          mind.</q
         >
         <p class="author">- Donald Knuth</p>
       </div>
@@ -209,9 +214,7 @@ footer{
         <p class="author">- Greg Perry</p>
       </div>
       <div class="mySlides">
-        <q
-          >Computers have lots of memory but no imagination..</q
-        >
+        <q>Computers have lots of memory but no imagination..</q>
         <p class="author">- Anonymous</p>
       </div>
 
@@ -226,22 +229,38 @@ footer{
       <span class="dot" onclick="currentSlide(4)"></span>
       <span class="dot" onclick="currentSlide(5)"></span>
     </div>
-  
-  <div class="row">
-    <div class="column">
-      <a href="fullform.html"> <img src="keyboard.jpg" alt="Snow" style="width:100%"></a>
+    <div
+      style="
+        width: 100%;
+        height: auto;
+        font-weight: bold;
+                background-color: blanchedalmond;
+        color: blue;
+        text-align: center;
+      "
+    >
+      <p id="time"></p>
     </div>
-    <div class="column">
-      <a href="facts.html"><img src="compute.jpg" alt="Forest" style="width:100%"></a>
+    <div class="row">
+      <div class="column">
+        <a href="fullform.html">
+          <img src="keyboard.jpg" alt="Snow" style="width: 100%"
+        /></a>
+      </div>
+      <div class="column">
+        <a href="facts.html"
+          ><img src="compute.jpg" alt="Forest" style="width: 100%"
+        /></a>
+      </div>
+      <div class="column">
+        <a href="blog.html"
+          ><img src="blog.jpg" alt="Mountains" style="width: 100%"
+        /></a>
+      </div>
     </div>
-    <div class="column">
-      <a href="blog.html"><img src="blog.jpg" alt="Mountains" style="width:100%"></a>
-    </div>
-  </div>
-  <footer>
-    Copyright &copy; lovecomputer.co.in | All rights reserved
-</footer>
+    <footer>Copyright &copy; lovecomputer.co.in | All rights reserved</footer>
     <script src="script.js"></script>
+    <script src="time.js"></script>
     <script>
       var slideIndex = 1;
       showSlides(slideIndex);
