@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="style1.css" />
     <link rel="stylesheet" href="style.css" />
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">   
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css"></style>
+<script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   </head>
   <body>
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
@@ -64,35 +69,21 @@
         </div>
       </div>
     </nav>
-
-    
-      <h4
-        style="
+         
+      <div class="container" style="margin: 60px auto">
+        <div class="row header" style="text-align:center;color:green">
           
-          font-size: 20px;
-          color: brown;
-          text-align: center;
-          
-        "
-      >
-        Computer Related Full Forms
-      </h4>
-      <a href="facts.html" class="previous">&laquo; Previous</a>
-    <div>
-      <input
-        type="text"
-        id="myInput"
-        onkeyup="myFunction1()"
-        placeholder="Search full forms"
-        title="Type in a name"
-      />
-
-      <table id="myTable">
-        <tr class="header">
-          <th style="width: 60%">Abbreviation</th>
-          <th style="width: 40%">Full Form</th>
-        </tr>
-
+        <h3><u>Computer Related Full Forms</u></h3>
+        </div>
+        <table id="myTable" class="table table-striped table-bordered table-responsive table-hover" >  
+          <thead>  
+            <tr>  
+              <th>Abbreviation</th>  
+              <th>Full Form</th>  
+              
+            </tr>  
+          </thead>  
+          <tbody>  
         <tr>
           <td>RAM</td>
           <td>Random Access Memory</td>
@@ -1879,7 +1870,6 @@
         </tr>
       </table>
     </div>
-    <button onclick="window.print()">Print this page</button>
     <div>
     <footer style="padding: 23px;
     text-align: center;
@@ -1888,7 +1878,12 @@
   </footer>
 </div>
     <script src="script.js"></script>
-    <script src="script1.js"></script>
+
     <script src="top.js"></script>
+    <script>
+      $(document).ready(function(){
+          $('#myTable').dataTable();
+      });
+      </script>
   </body>
 </html>
