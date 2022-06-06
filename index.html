@@ -91,23 +91,45 @@
         color: cornflowerblue;
       }
 
-      .column {
-        float: left;
-        width: 33.33%;
-        padding: 5px;
-      }
-
-      /* Clearfix (clear floats) */
-      .row::after {
-        content: "";
-        clear: both;
-        display: table;
-      }
-
       footer {
         padding: 23px;
         text-align: center;
         text-decoration: overline 1px;
+      }
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      /* Style the buttons */
+      .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #ddd;
+      }
+
+      .btn.active {
+        background-color: #666;
+        color: white;
+      }
+      h1 {
+        text-align: center;
+        font-size: 20px;
+        color: blue;
       }
     </style>
     <meta charset="UTF-8" />
@@ -121,6 +143,7 @@
     <title>HOME / LOVE COMPUTER</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="ani.css" />
+    <link rel="stylesheet" href="col.css" />
 
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
@@ -235,30 +258,140 @@
         width: 100%;
         height: auto;
         font-weight: bold;
-                background-color: blanchedalmond;
+        background-color: blanchedalmond;
         color: blue;
         text-align: center;
       "
     >
       <p id="time"></p>
     </div>
+    <h1>WEB DEVELOPMENT LANGUAGES</h1>
+    <div id="btnContainer">
+      <button class="btn" onclick="listView()">
+        <i class="fa fa-bars"></i> List
+      </button>
+      <button class="btn active" onclick="gridView()">
+        <i class="fa fa-th-large"></i> Grid
+      </button>
+    </div>
+    <br />
+
     <div class="row">
-      <div class="column">
-        <a href="fullform.html">
-          <img src="keyboard.jpg" alt="Snow" style="width: 100%"
-        /></a>
+      <div class="column" style="background-color: blanchedalmond">
+        <h2>HTML</h2>
+        <p>HTML is the standard markup language for creating Web pages.</p>
+        <ul>
+          <li>HTML stands for Hyper Text Markup Language.</li>
+          <li>HTML is the standard markup language for creating Web pages</li>
+          <li>HTML describes the structure of a Web page.</li>
+          <li>HTML consists of a series of elements.</li>
+          <li>HTML elements tell the browser how to display the content.</li>
+          <li>
+            HTML elements label pieces of content such as "this is a heading",
+            "this is a paragraph", "this is a link", etc.
+          </li>
+        </ul>
       </div>
-      <div class="column">
-        <a href="facts.html"
-          ><img src="compute.jpg" alt="Forest" style="width: 100%"
-        /></a>
-      </div>
-      <div class="column">
-        <a href="blog.html"
-          ><img src="blog.jpg" alt="Mountains" style="width: 100%"
-        /></a>
+      <div class="column" style="background-color: lightcyan">
+        <h2>CSS</h2>
+        <p>CSS is the language we use to style a Web page.</p>
+        <ul>
+          <li>CSS stands for Cascading Style Sheets.</li>
+          <li>
+            CSS describes how HTML elements are to be displayed on screen,
+            paper, or in other media.
+          </li>
+          <li>
+            CSS saves a lot of work. It can control the layout of multiple web
+            pages all at once.
+          </li>
+          <li>External stylesheets are stored in CSS files.</li>
+          <li>CSS Syntax: Selector {Property:value;}</li>
+        </ul>
       </div>
     </div>
+
+    <div class="row">
+      <div class="column" style="background-color: lightblue">
+        <h2>JAVASCRIPT</h2>
+        <p>JavaScript is the world's most popular programming language.</p>
+        <ul>
+          <li>JavaScript is the programming language of the Web.</li>
+          <li>JavaScript is easy to learn.</li>
+          <li>JavaScript runs on the client side of the web.</li>
+          <li>
+            avaScript (often shortened to JS) is a lightweight, interpreted,
+            object-oriented language with first-class functions.
+          </li>
+          <li>
+            You can place the "script" tags, containing your JavaScript,
+            anywhere within your web page.
+          </li>
+        </ul>
+      </div>
+      <div class="column" style="background-color: lightcoral">
+        <h2>PHP</h2>
+        <p>
+          PHP is a server scripting language, and a powerful tool for making
+          dynamic and interactive Web pages.
+        </p>
+        <ul>
+          <li>PHP is an acronym for "PHP: Hypertext Preprocessor"</li>
+          <li>PHP is a widely-used, open source scripting language</li>
+          <li>
+            PHP files can contain text, HTML, CSS, JavaScript, and PHP code
+          </li>
+          <li>
+            PHP code is executed on the server, and the result is returned to
+            the browser as plain HTML
+          </li>
+          <li>PHP files have extension ".php"</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column" style="background-color: lightgreen">
+        <h2>PYTHON</h2>
+        <p>
+          Python is a popular programming language. Python can be used on a
+          server to create web applications.
+        </p>
+        <ul>
+          <li>
+            Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.
+          </li>
+          <li>
+            It is used for:
+
+web development (server-side),
+software development,
+mathematics,
+system scripting.
+          </li>
+          <li>
+            Python can be used on a server to create web applications.
+          </li>
+        </ul>
+      </div>
+      <div class="column" style="background-color: lightsalmon">
+        <h2>SQL</h2>
+        <p>
+          SQL is a standard language for storing, manipulating and retrieving
+          data in databases.
+        </p>
+        <ul>
+          <li>SQL stands for Structured Query Language.</li>
+          <li>SQL lets you access and manipulate databases.</li>
+          <li>
+            SQL became a standard of the American National Standards Institute
+            (ANSI) in 1986, and of the International Organization for
+            Standardization (ISO) in 1987.
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
     <footer>Copyright &copy; lovecomputer.co.in | All rights reserved</footer>
     <script src="script.js"></script>
     <script src="time.js"></script>
@@ -292,6 +425,38 @@
         }
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
+      }
+    </script>
+    <script>
+      // Get the elements with class="column"
+      var elements = document.getElementsByClassName("column");
+
+      // Declare a loop variable
+      var i;
+
+      // List View
+      function listView() {
+        for (i = 0; i < elements.length; i++) {
+          elements[i].style.width = "100%";
+        }
+      }
+
+      // Grid View
+      function gridView() {
+        for (i = 0; i < elements.length; i++) {
+          elements[i].style.width = "50%";
+        }
+      }
+
+      /* Optional: Add active class to the current button (highlight it) */
+      var container = document.getElementById("btnContainer");
+      var btns = container.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
       }
     </script>
   </body>
