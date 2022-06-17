@@ -59,8 +59,30 @@ border-radius: 4px;
 #myBtn:hover {
 background-color: #555;
 }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+  
+}
+
+th, td {
+  text-align:left;
+  padding: 8px;
+  
+  
+  
+  
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+</style>
         
-        </style>
+        
     <meta charset="UTF-8">
     <title> SQL / LOVE COMPUTER</title>
     <link rel="stylesheet" href="style.css">
@@ -170,7 +192,426 @@ background-color: #555;
       <a href="#section37" class="btn">37. SQL Operators</a><br>
       
   </div>
-  
+  <div class="line">
+  </div>
+  <div class="section one" id="section1">
+      <h2> SQL Introduction</h2>
+      <p>  SQL is a standard language for storing, manipulating and retrieving data in databases.</p>
+      <ul style="text-align: left;">
+        <li>SQL can execute queries against a database</li>
+        <li>SQL can retrieve data from a database</li>
+        <li>SQL can insert records in a database</li>
+        <li>SQL can update records in a database</li>
+        <li>SQL can delete records from a database</li>
+        <li>SQL can create new databases</li>
+        <li>SQL can create new tables in a database</li>
+        <li>SQL can create stored procedures in a database</li>
+        <li>SQL can create views in a database</li>
+        <li>SQL can set permissions on tables, procedures, and views</li>
+      </ul>
+  </div>
+  <div class="section one" id="section2">
+    <h2> SQL Syntax</h2>
+    <p>Basic syntax of SQL: Select * from tablename</p>
+    <p>* SQL keywords are NOT case sensitive: "select" is the same as "SELECT"</p>
+    <h3> Some Important SQL commands</h3>
+    <div style="overflow-x:auto;">
+    <table>
+      <tr>
+        <th>Commands</th>
+        <th>Syntax</th>
+        <th>Example</th>
+        
+      </tr>
+      <tr>
+        <td>SELECT(The SELECT statement is used to select data from a database.)</td>
+        
+        <td> SELECT column1, column 2,.... FROM table_name; </td>
+        <td>SELECT CustomerName, City FROM Customers;</td>
+        
+      </tr>
+      <tr>
+        <td>SELECT DISTINCT(The SELECT DISTINCT statement is used to return only distinct (different) values.)</td>
+        
+        <td> SELECT DISTINCT column1, column 2,.... FROM table_name; </td>
+        <td>SELECT DISTINCT Country FROM Customers;</td>
+      </tr>
+      <tr>
+        <td>WHERE(The WHERE clause is used to filter records.)</td>
+        <td> SELECT column1, column 2,.... FROM table_name WHERE condition; </td>
+        <td>SELECT * FROM Customers
+          WHERE Country='India';</td>
+      </tr>
+      
+        
+      <tr>
+        <td>AND(The AND operator displays a record if all the conditions separated by AND are TRUE.)</td>
+        <td> SELECT column1, column 2,.... FROM table_name WHERE condition1 AND condition2 AND condition3.... ; </td>
+        <td>SELECT * FROM Customers
+          WHERE Country='Germany' AND City='Berlin';</td>
+      </tr>
+      <tr>
+        <td> OR(The OR operator displays a record if any of the conditions separated by OR is TRUE.)</td>
+      </td>
+        <td> SELECT column1, column 2,.... FROM table_name WHERE condition1 OR condition2 OR condition3.... ; </td>
+        <td>SELECT * FROM Customers
+          WHERE Country='Germany' OR Country='Spain';</td>
+      </tr>
+      <tr>
+        <td> NOT(The NOT operator displays a record if the conditions is NOT TRUE.)</td>
+      </td>
+        <td> SELECT column1, column 2,.... FROM table_name WHERE NOT condition; </td>
+        <td>SELECT * FROM Customers
+          WHERE NOT Country='Germany';</td>
+      </tr>
+      <tr>
+        <td> ORDER BY(The ORDER BY keyword is used to sort the result-set in ascending or descending order.)</td>
+      </td>
+        <td> SELECT column1, column2, ...
+          FROM table_name
+          ORDER BY column1, column2, ... ASC|DESC; </td>
+        <td>SELECT * FROM Customers
+          ORDER BY Country ASC, CustomerName DESC;</td>
+      </tr>
+      <tr>
+      <td> INSERT INTO(The INSERT INTO statement is used to insert new records in a table.)</td>
+      </td>
+        <td> INSERT INTO table_name (column1, column2, column3, ...)
+          VALUES (value1, value2, value3, ...); </td>
+        <td>INSERT INTO Customers (CustomerName, City, Country)
+          VALUES ('Cardinal', 'Stavanger', 'Norway');</td>
+      </tr>
+      <tr>
+      <td> NULL Values(A field with a NULL value is a field with no value.)</td>
+      </td>
+        <td> SELECT column_names
+          FROM table_name
+          WHERE column_name IS NULL;</td>
+        <td>SELECT CustomerName, ContactName, Address
+          FROM Customers
+          WHERE Address IS NULL;</td>
+      </tr>
+      <tr>
+      <td>UPDATE(The UPDATE statement is used to modify the existing records in a table.)</td>
+      </td>
+        <td> UPDATE table_name
+          SET column1 = value1, column2 = value2, ...
+          WHERE condition;</td>
+        <td>UPDATE Customers
+          SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
+          WHERE CustomerID = 1;</td>
+      </tr>
+      <tr>
+      <td>DELETE(The DELETE statement is used to delete existing records in a table.)</td>
+      </td>
+        <td> DELETE FROM table_name WHERE condition;</td>
+        <td>DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';</td>
+      </tr>
+<tr>
+      <td>SELECT TOP(The SELECT TOP clause is used to specify the number of records to return.)</td>
+    </td>
+      <td> SELECT TOP number|percent column_name(s)
+        FROM table_name
+        WHERE condition;</td>
+      <td>SELECT TOP 50 PERCENT * FROM Customers;</td>
+    </tr>
+    <tr>
+    <td>MIN()(The MIN() function returns the smallest value of the selected column.)</td>
+    </td>
+      <td> SELECT MIN(column_name)
+        FROM table_name
+        WHERE condition;</td>
+      <td>SELECT MIN(Price) AS LargestPrice
+        FROM Products;</td>
+    </tr>
+    <tr>
+    <td>MAX()(The MAX() function returns the largest value of the selected column.)</td>
+    </td>
+      <td> SELECT MAX(column_name)
+        FROM table_name
+        WHERE condition;</td>
+      <td>SELECT MAX(Price) AS LargestPrice
+        FROM Products;</td>
+    </tr>
+    
+    <tr>
+    <td>COUNT()(The COUNT() function returns the number of rows that matches a specified criterion.)</td>
+    </td>
+      <td> SELECT COUNT(column_name)
+        FROM table_name
+        WHERE condition;</td>
+      <td>SELECT COUNT(ProductID)
+        FROM Products;</td>
+    </tr>
+    <tr>
+    <td>AVG()(The AVG() function returns the average value of a numeric column. )</td>
+    </td>
+      <td> SELECT AVG(column_name)
+        FROM table_name
+        WHERE condition;</td>
+      <td>SELECT AVG(Price)
+        FROM Products;</td>
+    </tr>
+    <tr>
+    <td>SUM()(The SUM() function returns the total sum of a numeric column. )</td>
+    </td>
+      <td> SELECT SUM(column_name)
+        FROM table_name
+        WHERE condition;</td>
+      <td>SELECT SUM(Quantity)
+        FROM OrderDetails;</td>
+    </tr>
+    <tr>
+    <td>LIKE Operator(The LIKE operator is used in a WHERE clause to search for a specified pattern in a column.)</td>
+    </td>
+      <td> SELECT column1, column2, ...
+        FROM table_name
+        WHERE columnN LIKE pattern;</td>
+      <td>SELECT * FROM Customers
+        WHERE CustomerName LIKE 'a%';</td>
+    </tr>
+    <tr>
+    <td>IN(The IN operator allows you to specify multiple values in a WHERE clause.)</td>
+    
+      <td> SELECT column_name(s)
+        FROM table_name
+        WHERE column_name IN (value1, value2, ...);</td>
+      <td>SELECT * FROM Customers
+        WHERE Country IN ('Germany', 'France', 'UK');</td>
+    </tr>
+    <tr>
+      <td>BETWEEN(The BETWEEN operator selects values within a given range. The values can be numbers, text, or dates.)</td>
+      
+        <td> SELECT column_name(s)
+          FROM table_name
+          WHERE column_name BETWEEN value1 AND value2;</td>
+        <td>SELECT * FROM Products
+          WHERE Price BETWEEN 10 AND 20;</td>
+      </tr>
+      <tr>
+        <td>Aliases (An alias is created with the AS keyword.)SQL aliases are used to give a table, or a column in a table, a temporary name.</td>
+        
+          <td> SELECT column_name AS alias_name
+            FROM table_name;</td>
+          <td>SELECT CustomerID AS ID, CustomerName AS Customer
+            FROM Customers;</td>
+        </tr>
+        <tr>
+          <td>JOIN(A JOIN clause is used to combine rows from two or more tables, based on a related column between them.)</td>
+          
+            <td> <ul>
+              <li>(INNER) JOIN: Returns records that have matching values in both tables</li>
+              <li>LEFT (OUTER) JOIN: Returns all records from the left table, and the matched records from the right table</li>
+              <li>RIGHT (OUTER) JOIN: Returns all records from the right table, and the matched records from the left table</li>
+              <li>FULL (OUTER) JOIN: Returns all records when there is a match in either left or right table</li>
+              </ul></td>
+            <td><img src="join.png" alt="join"></td>
+          </tr>
+          <tr>
+            <td>INNER JOIN(The INNER JOIN keyword selects records that have matching values in both tables.)</td>
+            
+              <td> SELECT column_name(s)
+                FROM table1
+                INNER JOIN table2
+                ON table1.column_name = table2.column_name;</td>
+              <td>SELECT Orders.OrderID, Customers.CustomerName
+                FROM Orders
+                INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;</td>
+            </tr>
+            <tr>
+              <td>LEFT JOIN(The LEFT JOIN keyword returns all records from the left table (table1), and the matching records from the right table (table2). The result is 0 records from the right side, if there is no match.)</td>
+              
+                <td> SELECT column_name(s)
+                  FROM table1
+                  LEFT JOIN table2
+                  ON table1.column_name = table2.column_name;</td>
+                <td>SELECT Customers.CustomerName, Orders.OrderID
+                  FROM Customers
+                  LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+                  ORDER BY Customers.CustomerName;</td>
+              </tr>
+              <tr>
+                <td>RIGHT JOIN(The RIGHT JOIN keyword returns all records from the right table (table2), and the matching records from the left table (table1). The result is 0 records from the left side, if there is no match.)</td>
+                
+                  <td> SELECT column_name(s)
+                    FROM table1
+                    RIGHT JOIN table2
+                    ON table1.column_name = table2.column_name;</td>
+                  <td>SELECT Orders.OrderID, Employees.LastName, Employees.FirstName
+                    FROM Orders
+                    RIGHT JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID
+                    ORDER BY Orders.OrderID;
+                    </td>
+                </tr>
+                <tr>
+                  <td>FULL OUTER JOIN(The FULL OUTER JOIN keyword returns all records when there is a match in left (table1) or right (table2) table records.)</td>
+                  
+                    <td> SELECT column_name(s)
+                      FROM table1
+                      FULL OUTER JOIN table2
+                      ON table1.column_name = table2.column_name
+                      WHERE condition;</td>
+                    <td>SELECT Customers.CustomerName, Orders.OrderID
+                      FROM Customers
+                      FULL OUTER JOIN Orders ON Customers.CustomerID=Orders.CustomerID
+                      ORDER BY Customers.CustomerName;
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>Self Join(A self join is a regular join, but the table is joined with itself.)</td>
+                    
+                      <td> SELECT column_name(s)
+                        FROM table1 T1, table1 T2
+                        WHERE condition;</td>
+                      <td>SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City
+                        FROM Customers A, Customers B
+                        WHERE A.CustomerID <> B.CustomerID
+                        AND A.City = B.City
+                        ORDER BY A.City;
+                        </td>
+                    </tr>
+                    <tr>
+                      <td>UNION Operator(The UNION operator is used to combine the result-set of two or more SELECT statements.)</td>
+                      
+                        <td> SELECT column_name(s) FROM table1
+                          UNION
+                          SELECT column_name(s) FROM table2;</td>
+                        <td>SELECT City FROM Customers
+                          UNION
+                          SELECT City FROM Suppliers
+                          ORDER BY City;
+                          </td>
+                      </tr>
+                      <tr>
+                        <td>GROUP BY(The GROUP BY statement groups rows that have the same values into summary rows, like "find the number of customers in each country".)</td>
+                        
+                          <td> SELECT column_name(s)
+                            FROM table_name
+                            WHERE condition
+                            GROUP BY column_name(s)
+                            ORDER BY column_name(s);</td>
+                          <td>SELECT COUNT(CustomerID), Country
+                            FROM Customers
+                            GROUP BY Country;
+                            </td>
+                        </tr>
+                        <tr>
+                          <td>HAVING Clause(The HAVING clause was added to SQL because the WHERE keyword cannot be used with aggregate functions.)</td>
+                          
+                            <td> SELECT column_name(s)
+                              FROM table_name
+                              WHERE condition
+                              GROUP BY column_name(s)
+                              HAVING condition
+                              ORDER BY column_name(s);</td>
+                            <td>SELECT COUNT(CustomerID), Country
+                              FROM Customers
+                              GROUP BY Country
+                              HAVING COUNT(CustomerID) > 5;
+                              </td>
+                          </tr>
+                          <tr>
+                            <td>EXISTS Operator(The EXISTS operator is used to test for the existence of any record in a subquery.)</td>
+                            
+                              <td> SELECT column_name(s)
+                                FROM table_name
+                                WHERE EXISTS
+                                (SELECT column_name FROM table_name WHERE condition);</td>
+                              <td>SELECT SupplierName
+                                FROM Suppliers
+                                WHERE EXISTS (SELECT ProductName FROM Products WHERE Products.SupplierID = Suppliers.supplierID AND Price < 20);
+                                </td>
+                            </tr>
+                            <tr>
+                              <td>ANY Operators(ANY means that the condition will be true if the operation is true for any of the values in the range.)</td>
+                              
+                                <td> SELECT column_name(s)
+                                  FROM table_name
+                                  WHERE column_name operator ANY
+                                    (SELECT column_name
+                                    FROM table_name
+                                    WHERE condition);</td>
+                                <td>SELECT ProductName
+                                  FROM Products
+                                  WHERE ProductID = ANY
+                                    (SELECT ProductID
+                                    FROM OrderDetails
+                                    WHERE Quantity = 10);
+                                  </td>
+                              </tr>
+                              <tr>
+                                <td>ALL Operators(ALL means that the condition will be true only if the operation is true for all values in the range. )</td>
+                                
+                                  <td> SELECT column_name(s)
+                                    FROM table_name
+                                    WHERE column_name operator ALL
+                                      (SELECT column_name
+                                      FROM table_name
+                                      WHERE condition);</td>
+                                  <td>SELECT ProductName
+                                    FROM Products
+                                    WHERE ProductID = ALL
+                                      (SELECT ProductID
+                                      FROM OrderDetails
+                                      WHERE Quantity = 10);
+                                    </td>
+                                </tr>
+                                <tr>
+                                  <td>SELECT INTO(The SELECT INTO statement copies data from one table into a new table.)</td>
+                                  
+                                    <td> SELECT *
+                                      INTO newtable [IN externaldb]
+                                      FROM oldtable
+                                      WHERE condition;</td>
+                                    <td>SELECT * INTO CustomersBackup2017
+                                      FROM Customers;
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                    <td>INSERT INTO SELECT(The INSERT INTO SELECT statement copies data from one table and inserts it into another table.)</td>
+                                    
+                                      <td> INSERT INTO table2
+                                        SELECT * FROM table1
+                                        WHERE condition;</td>
+                                      <td>INSERT INTO Customers (CustomerName, City, Country)
+                                        SELECT SupplierName, City, Country FROM Suppliers;
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                      <td>CASE Statement(The CASE statement goes through conditions and returns a value when the first condition is met (like an if-then-else statement). So, once a condition is true, it will stop reading and return the result. If no conditions are true, it returns the value in the ELSE clause.)</td>
+                                      
+                                        <td> CASE
+                                          WHEN condition1 THEN result1
+                                          WHEN condition2 THEN result2
+                                          WHEN conditionN THEN resultN
+                                          ELSE result
+                                      END;</td>
+                                        <td>SELECT OrderID, Quantity,
+                                          CASE
+                                              WHEN Quantity > 30 THEN 'The quantity is greater than 30'
+                                              WHEN Quantity = 30 THEN 'The quantity is 30'
+                                              ELSE 'The quantity is under 30'
+                                          END AS QuantityText
+                                          FROM OrderDetails;
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                        <td>Stored Procedures(A stored procedure is a prepared SQL code that you can save, so the code can be reused over and over again.)</td>
+                                        
+                                          <td> CREATE PROCEDURE procedure_name
+                                            AS
+                                            sql_statement
+                                            GO;</td>
+                                          <td>CREATE PROCEDURE SelectAllCustomers
+                                            AS
+                                            SELECT * FROM Customers
+                                            GO;<br>EXEC procedure_name;
+                                            </td>
+                                        </tr>
+                                        
+    </table>
+  </div>
+</div>
 
   <script src="script.js"></script>
   <script src="top.js"></script>
