@@ -60,22 +60,24 @@ border-radius: 4px;
 background-color: #555;
 }
 
-table {
+table, th, td {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
-  border: 1px solid #ddd;
+  border: 1px solid black;
   
 }
 
 th, td {
   text-align:left;
   padding: 8px;
+ 
   
   
   
   
 }
+
 
 tr:nth-child(even) {
   background-color: #f2f2f2;
@@ -214,7 +216,7 @@ tr:nth-child(even) {
     <h2> SQL Syntax</h2>
     <p>Basic syntax of SQL: Select * from tablename</p>
     <p>* SQL keywords are NOT case sensitive: "select" is the same as "SELECT"</p>
-    <h3> Some Important SQL commands</h3>
+    <h4> Some Important SQL commands</h4>
     <div style="overflow-x:auto;">
     <table>
       <tr>
@@ -224,20 +226,20 @@ tr:nth-child(even) {
         
       </tr>
       <tr>
-        <td>SELECT(The SELECT statement is used to select data from a database.)</td>
+        <td>SELECT<br>(The SELECT statement is used to select data from a database.)</td>
         
         <td> SELECT column1, column 2,.... FROM table_name; </td>
         <td>SELECT CustomerName, City FROM Customers;</td>
         
       </tr>
       <tr>
-        <td>SELECT DISTINCT(The SELECT DISTINCT statement is used to return only distinct (different) values.)</td>
+        <td>SELECT DISTINCT<br>(The SELECT DISTINCT statement is used to return only distinct (different) values.)</td>
         
         <td> SELECT DISTINCT column1, column 2,.... FROM table_name; </td>
         <td>SELECT DISTINCT Country FROM Customers;</td>
       </tr>
       <tr>
-        <td>WHERE(The WHERE clause is used to filter records.)</td>
+        <td>WHERE<br>(The WHERE clause is used to filter records.)</td>
         <td> SELECT column1, column 2,.... FROM table_name WHERE condition; </td>
         <td>SELECT * FROM Customers
           WHERE Country='India';</td>
@@ -245,27 +247,27 @@ tr:nth-child(even) {
       
         
       <tr>
-        <td>AND(The AND operator displays a record if all the conditions separated by AND are TRUE.)</td>
+        <td>AND<br>(The AND operator displays a record if all the conditions separated by AND are TRUE.)</td>
         <td> SELECT column1, column 2,.... FROM table_name WHERE condition1 AND condition2 AND condition3.... ; </td>
         <td>SELECT * FROM Customers
           WHERE Country='Germany' AND City='Berlin';</td>
       </tr>
       <tr>
-        <td> OR(The OR operator displays a record if any of the conditions separated by OR is TRUE.)</td>
+        <td> OR<br>(The OR operator displays a record if any of the conditions separated by OR is TRUE.)</td>
       </td>
         <td> SELECT column1, column 2,.... FROM table_name WHERE condition1 OR condition2 OR condition3.... ; </td>
         <td>SELECT * FROM Customers
           WHERE Country='Germany' OR Country='Spain';</td>
       </tr>
       <tr>
-        <td> NOT(The NOT operator displays a record if the conditions is NOT TRUE.)</td>
+        <td> NOT<br>(The NOT operator displays a record if the conditions is NOT TRUE.)</td>
       </td>
         <td> SELECT column1, column 2,.... FROM table_name WHERE NOT condition; </td>
         <td>SELECT * FROM Customers
           WHERE NOT Country='Germany';</td>
       </tr>
       <tr>
-        <td> ORDER BY(The ORDER BY keyword is used to sort the result-set in ascending or descending order.)</td>
+        <td> ORDER BY<br>(The ORDER BY keyword is used to sort the result-set in ascending or descending order.)</td>
       </td>
         <td> SELECT column1, column2, ...
           FROM table_name
@@ -274,7 +276,7 @@ tr:nth-child(even) {
           ORDER BY Country ASC, CustomerName DESC;</td>
       </tr>
       <tr>
-      <td> INSERT INTO(The INSERT INTO statement is used to insert new records in a table.)</td>
+      <td> INSERT INTO<br>(The INSERT INTO statement is used to insert new records in a table.)</td>
       </td>
         <td> INSERT INTO table_name (column1, column2, column3, ...)
           VALUES (value1, value2, value3, ...); </td>
@@ -282,7 +284,7 @@ tr:nth-child(even) {
           VALUES ('Cardinal', 'Stavanger', 'Norway');</td>
       </tr>
       <tr>
-      <td> NULL Values(A field with a NULL value is a field with no value.)</td>
+      <td> NULL Values<br>(A field with a NULL value is a field with no value.)</td>
       </td>
         <td> SELECT column_names
           FROM table_name
@@ -292,7 +294,7 @@ tr:nth-child(even) {
           WHERE Address IS NULL;</td>
       </tr>
       <tr>
-      <td>UPDATE(The UPDATE statement is used to modify the existing records in a table.)</td>
+      <td>UPDATE<br>(The UPDATE statement is used to modify the existing records in a table.)</td>
       </td>
         <td> UPDATE table_name
           SET column1 = value1, column2 = value2, ...
@@ -302,13 +304,13 @@ tr:nth-child(even) {
           WHERE CustomerID = 1;</td>
       </tr>
       <tr>
-      <td>DELETE(The DELETE statement is used to delete existing records in a table.)</td>
+      <td>DELETE<br>(The DELETE statement is used to delete existing records in a table.)</td>
       </td>
         <td> DELETE FROM table_name WHERE condition;</td>
         <td>DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';</td>
       </tr>
 <tr>
-      <td>SELECT TOP(The SELECT TOP clause is used to specify the number of records to return.)</td>
+      <td>SELECT TOP<br>(The SELECT TOP clause is used to specify the number of records to return.)</td>
     </td>
       <td> SELECT TOP number|percent column_name(s)
         FROM table_name
@@ -316,7 +318,7 @@ tr:nth-child(even) {
       <td>SELECT TOP 50 PERCENT * FROM Customers;</td>
     </tr>
     <tr>
-    <td>MIN()(The MIN() function returns the smallest value of the selected column.)</td>
+    <td>MIN()<br>(The MIN() function returns the smallest value of the selected column.)</td>
     </td>
       <td> SELECT MIN(column_name)
         FROM table_name
@@ -325,7 +327,7 @@ tr:nth-child(even) {
         FROM Products;</td>
     </tr>
     <tr>
-    <td>MAX()(The MAX() function returns the largest value of the selected column.)</td>
+    <td>MAX()<br>(The MAX() function returns the largest value of the selected column.)</td>
     </td>
       <td> SELECT MAX(column_name)
         FROM table_name
@@ -335,7 +337,7 @@ tr:nth-child(even) {
     </tr>
     
     <tr>
-    <td>COUNT()(The COUNT() function returns the number of rows that matches a specified criterion.)</td>
+    <td>COUNT()<br>(The COUNT() function returns the number of rows that matches a specified criterion.)</td>
     </td>
       <td> SELECT COUNT(column_name)
         FROM table_name
@@ -344,7 +346,7 @@ tr:nth-child(even) {
         FROM Products;</td>
     </tr>
     <tr>
-    <td>AVG()(The AVG() function returns the average value of a numeric column. )</td>
+    <td>AVG()<br>(The AVG() function returns the average value of a numeric column. )</td>
     </td>
       <td> SELECT AVG(column_name)
         FROM table_name
@@ -353,7 +355,7 @@ tr:nth-child(even) {
         FROM Products;</td>
     </tr>
     <tr>
-    <td>SUM()(The SUM() function returns the total sum of a numeric column. )</td>
+    <td>SUM()<br>(The SUM() function returns the total sum of a numeric column. )</td>
     </td>
       <td> SELECT SUM(column_name)
         FROM table_name
@@ -362,7 +364,7 @@ tr:nth-child(even) {
         FROM OrderDetails;</td>
     </tr>
     <tr>
-    <td>LIKE Operator(The LIKE operator is used in a WHERE clause to search for a specified pattern in a column.)</td>
+    <td>LIKE Operator<br>(The LIKE operator is used in a WHERE clause to search for a specified pattern in a column.)</td>
     </td>
       <td> SELECT column1, column2, ...
         FROM table_name
@@ -371,7 +373,7 @@ tr:nth-child(even) {
         WHERE CustomerName LIKE 'a%';</td>
     </tr>
     <tr>
-    <td>IN(The IN operator allows you to specify multiple values in a WHERE clause.)</td>
+    <td>IN<br>(The IN operator allows you to specify multiple values in a WHERE clause.)</td>
     
       <td> SELECT column_name(s)
         FROM table_name
@@ -380,7 +382,7 @@ tr:nth-child(even) {
         WHERE Country IN ('Germany', 'France', 'UK');</td>
     </tr>
     <tr>
-      <td>BETWEEN(The BETWEEN operator selects values within a given range. The values can be numbers, text, or dates.)</td>
+      <td>BETWEEN<br>(The BETWEEN operator selects values within a given range. The values can be numbers, text, or dates.)</td>
       
         <td> SELECT column_name(s)
           FROM table_name
@@ -389,7 +391,7 @@ tr:nth-child(even) {
           WHERE Price BETWEEN 10 AND 20;</td>
       </tr>
       <tr>
-        <td>Aliases (An alias is created with the AS keyword.)SQL aliases are used to give a table, or a column in a table, a temporary name.</td>
+        <td>Aliases <br>(An alias is created with the AS keyword.)SQL aliases are used to give a table, or a column in a table, a temporary name.</td>
         
           <td> SELECT column_name AS alias_name
             FROM table_name;</td>
@@ -397,7 +399,7 @@ tr:nth-child(even) {
             FROM Customers;</td>
         </tr>
         <tr>
-          <td>JOIN(A JOIN clause is used to combine rows from two or more tables, based on a related column between them.)</td>
+          <td>JOIN<br>(A JOIN clause is used to combine rows from two or more tables, based on a related column between them.)</td>
           
             <td> <ul>
               <li>(INNER) JOIN: Returns records that have matching values in both tables</li>
@@ -408,7 +410,7 @@ tr:nth-child(even) {
             <td><img src="join.png" alt="join"></td>
           </tr>
           <tr>
-            <td>INNER JOIN(The INNER JOIN keyword selects records that have matching values in both tables.)</td>
+            <td>INNER JOIN<br>(The INNER JOIN keyword selects records that have matching values in both tables.)</td>
             
               <td> SELECT column_name(s)
                 FROM table1
@@ -419,7 +421,7 @@ tr:nth-child(even) {
                 INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;</td>
             </tr>
             <tr>
-              <td>LEFT JOIN(The LEFT JOIN keyword returns all records from the left table (table1), and the matching records from the right table (table2). The result is 0 records from the right side, if there is no match.)</td>
+              <td>LEFT JOIN<br>(The LEFT JOIN keyword returns all records from the left table (table1), and the matching records from the right table (table2). The result is 0 records from the right side, if there is no match.)</td>
               
                 <td> SELECT column_name(s)
                   FROM table1
@@ -431,7 +433,7 @@ tr:nth-child(even) {
                   ORDER BY Customers.CustomerName;</td>
               </tr>
               <tr>
-                <td>RIGHT JOIN(The RIGHT JOIN keyword returns all records from the right table (table2), and the matching records from the left table (table1). The result is 0 records from the left side, if there is no match.)</td>
+                <td>RIGHT JOIN<br>(The RIGHT JOIN keyword returns all records from the right table (table2), and the matching records from the left table (table1). The result is 0 records from the left side, if there is no match.)</td>
                 
                   <td> SELECT column_name(s)
                     FROM table1
@@ -444,7 +446,7 @@ tr:nth-child(even) {
                     </td>
                 </tr>
                 <tr>
-                  <td>FULL OUTER JOIN(The FULL OUTER JOIN keyword returns all records when there is a match in left (table1) or right (table2) table records.)</td>
+                  <td>FULL OUTER JOIN<br>(The FULL OUTER JOIN keyword returns all records when there is a match in left (table1) or right (table2) table records.)</td>
                   
                     <td> SELECT column_name(s)
                       FROM table1
@@ -458,7 +460,7 @@ tr:nth-child(even) {
                       </td>
                   </tr>
                   <tr>
-                    <td>Self Join(A self join is a regular join, but the table is joined with itself.)</td>
+                    <td>Self Join<br>(A self join is a regular join, but the table is joined with itself.)</td>
                     
                       <td> SELECT column_name(s)
                         FROM table1 T1, table1 T2
@@ -471,7 +473,7 @@ tr:nth-child(even) {
                         </td>
                     </tr>
                     <tr>
-                      <td>UNION Operator(The UNION operator is used to combine the result-set of two or more SELECT statements.)</td>
+                      <td>UNION Operator<br>(The UNION operator is used to combine the result-set of two or more SELECT statements.)</td>
                       
                         <td> SELECT column_name(s) FROM table1
                           UNION
@@ -483,7 +485,7 @@ tr:nth-child(even) {
                           </td>
                       </tr>
                       <tr>
-                        <td>GROUP BY(The GROUP BY statement groups rows that have the same values into summary rows, like "find the number of customers in each country".)</td>
+                        <td>GROUP BY<br>(The GROUP BY statement groups rows that have the same values into summary rows, like "find the number of customers in each country".)</td>
                         
                           <td> SELECT column_name(s)
                             FROM table_name
@@ -496,7 +498,7 @@ tr:nth-child(even) {
                             </td>
                         </tr>
                         <tr>
-                          <td>HAVING Clause(The HAVING clause was added to SQL because the WHERE keyword cannot be used with aggregate functions.)</td>
+                          <td>HAVING Clause<br>(The HAVING clause was added to SQL because the WHERE keyword cannot be used with aggregate functions.)</td>
                           
                             <td> SELECT column_name(s)
                               FROM table_name
@@ -511,7 +513,7 @@ tr:nth-child(even) {
                               </td>
                           </tr>
                           <tr>
-                            <td>EXISTS Operator(The EXISTS operator is used to test for the existence of any record in a subquery.)</td>
+                            <td>EXISTS Operator<br>(The EXISTS operator is used to test for the existence of any record in a subquery.)</td>
                             
                               <td> SELECT column_name(s)
                                 FROM table_name
@@ -523,7 +525,7 @@ tr:nth-child(even) {
                                 </td>
                             </tr>
                             <tr>
-                              <td>ANY Operators(ANY means that the condition will be true if the operation is true for any of the values in the range.)</td>
+                              <td>ANY Operators<br>(ANY means that the condition will be true if the operation is true for any of the values in the range.)</td>
                               
                                 <td> SELECT column_name(s)
                                   FROM table_name
@@ -540,7 +542,7 @@ tr:nth-child(even) {
                                   </td>
                               </tr>
                               <tr>
-                                <td>ALL Operators(ALL means that the condition will be true only if the operation is true for all values in the range. )</td>
+                                <td>ALL Operators<br>(ALL means that the condition will be true only if the operation is true for all values in the range. )</td>
                                 
                                   <td> SELECT column_name(s)
                                     FROM table_name
@@ -557,7 +559,7 @@ tr:nth-child(even) {
                                     </td>
                                 </tr>
                                 <tr>
-                                  <td>SELECT INTO(The SELECT INTO statement copies data from one table into a new table.)</td>
+                                  <td>SELECT INTO<br>(The SELECT INTO statement copies data from one table into a new table.)</td>
                                   
                                     <td> SELECT *
                                       INTO newtable [IN externaldb]
@@ -568,7 +570,7 @@ tr:nth-child(even) {
                                       </td>
                                   </tr>
                                   <tr>
-                                    <td>INSERT INTO SELECT(The INSERT INTO SELECT statement copies data from one table and inserts it into another table.)</td>
+                                    <td>INSERT INTO SELECT<br>(The INSERT INTO SELECT statement copies data from one table and inserts it into another table.)</td>
                                     
                                       <td> INSERT INTO table2
                                         SELECT * FROM table1
@@ -578,7 +580,7 @@ tr:nth-child(even) {
                                         </td>
                                     </tr>
                                     <tr>
-                                      <td>CASE Statement(The CASE statement goes through conditions and returns a value when the first condition is met (like an if-then-else statement). So, once a condition is true, it will stop reading and return the result. If no conditions are true, it returns the value in the ELSE clause.)</td>
+                                      <td>CASE Statement<br>(The CASE statement goes through conditions and returns a value when the first condition is met (like an if-then-else statement). So, once a condition is true, it will stop reading and return the result. If no conditions are true, it returns the value in the ELSE clause.)</td>
                                       
                                         <td> CASE
                                           WHEN condition1 THEN result1
@@ -596,7 +598,7 @@ tr:nth-child(even) {
                                           </td>
                                       </tr>
                                       <tr>
-                                        <td>Stored Procedures(A stored procedure is a prepared SQL code that you can save, so the code can be reused over and over again.)</td>
+                                        <td>Stored Procedures<br>(A stored procedure is a prepared SQL code that you can save, so the code can be reused over and over again.)</td>
                                         
                                           <td> CREATE PROCEDURE procedure_name
                                             AS
@@ -610,8 +612,110 @@ tr:nth-child(even) {
                                         </tr>
                                         
     </table>
-  </div>
+    </div>
 </div>
+
+<h2>1. CREATE DATABASE</h2>
+<p>The CREATE DATABASE statement is used to create a new SQL database.<br>CREATE DATABASE databasename;</p>
+<h2>2. DROP DATABASE</h2>
+<p>The DROP DATABASE statement is used to drop an existing SQL database.<br>DROP DATABASE databasename;</p>
+<h2>3. BACKUP DATABASE</h2>
+<p>The BACKUP DATABASE statement is used in SQL Server to create a full back up of an existing SQL database.<br>BACKUP DATABASE databasename
+  TO DISK = 'filepath';</p>
+<h2>4. CREATE TABLE</h2>
+<p>The CREATE TABLE statement is used to create a new table in a database.<br>CREATE TABLE table_name (
+  column1 datatype,
+  column2 datatype,
+  column3 datatype,
+ ....
+);</p>
+<h2>5. DROP TABLE</h2>
+<p>The DROP TABLE statement is used to drop an existing table in a database.<br>DROP TABLE table_name;</p>
+<h2>6.TRUNCATE TABLE</h2>
+<p>The TRUNCATE TABLE statement is used to delete the data inside a table, but not the table itself.<br>TRUNCATE TABLE table_name;</p>
+<h2>7. ALTER TABLE </h2>
+<p>The ALTER TABLE statement is used to add, delete, or modify columns in an existing table.<br>ALTER TABLE table_name
+  ADD column_name datatype;</p>
+<h2>8. SQL Constraints</h2>
+<p>SQL constraints are used to specify rules for data in a table.<br>Constraints can be specified when the table is created with the CREATE TABLE statement, or after the table is created with the ALTER TABLE statement.<br>CREATE TABLE table_name (
+  column1 datatype constraint,
+  column2 datatype constraint,
+  column3 datatype constraint,
+  ....
+);</p>
+<h4>The following constraints are commonly used in SQL:</h4>
+<ul style="text-align: left;">
+  <li>NOT NULL - Ensures that a column cannot have a NULL value</li>
+  <li>UNIQUE - Ensures that all values in a column are different</li>
+  <li>PRIMARY KEY - A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table</li>
+  <li>FOREIGN KEY - Prevents actions that would destroy links between tables</li>
+  <li>CHECK - Ensures that the values in a column satisfies a specific condition</li>
+  <li>DEFAULT - Sets a default value for a column if no value is specified</li>
+  <li>CREATE INDEX - Used to create and retrieve data from the database very quickly</li>
+  </ul>
+<h2>9. NOT NULL</h2>
+<p>By default, a column can hold NULL values, The NOT NULL constraint enforces a column to NOT accept NULL values.<br>CREATE TABLE Persons (
+  ID int NOT NULL,
+  LastName varchar(255) NOT NULL,
+  FirstName varchar(255) NOT NULL,
+  Age int
+);</p>
+<h2>10. UNIQUE Constraint</h2>
+<p>The UNIQUE constraint ensures that all values in a column are different.<br>CREATE TABLE Persons (
+  ID int NOT NULL UNIQUE,
+  LastName varchar(255) NOT NULL,
+  FirstName varchar(255),
+  Age int
+);</p>
+<h2>11. PRIMARY KEY</h2>
+<p>The PRIMARY KEY constraint uniquely identifies each record in a table.<br>CREATE TABLE Persons (
+  ID int NOT NULL,
+  LastName varchar(255) NOT NULL,
+  FirstName varchar(255),
+  Age int,
+  PRIMARY KEY (ID)
+);</p>
+<h2>12. FOREIGN KEY</h2>
+<p>The FOREIGN KEY constraint is used to prevent actions that would destroy links between tables.<br>CREATE TABLE Orders (
+  OrderID int NOT NULL PRIMARY KEY,
+  OrderNumber int NOT NULL,
+  PersonID int FOREIGN KEY REFERENCES Persons(PersonID)
+
+);</p>
+<h2>13. CHECK Constraint</h2>
+<p>The CHECK constraint is used to limit the value range that can be placed in a column.<br>CREATE TABLE Persons (
+  ID int NOT NULL,
+  LastName varchar(255) NOT NULL,
+  FirstName varchar(255),
+  Age int CHECK (Age>=18)
+
+);</p>
+<h2>14. DEFAULT Constraint</h2>
+<p>The DEFAULT constraint is used to set a default value for a column.<br>	Syntax: CREATE TABLE Persons (
+  ID int NOT NULL,
+  LastName varchar(255) NOT NULL,
+  FirstName varchar(255),
+  Age int,
+  City varchar(255) DEFAULT 'Sandnes');</p>
+<h2>15. CREATE INDEX Statement</h2>
+<p>The CREATE INDEX statement is used to create indexes in tables.<br>	Syntax: CREATE INDEX index_name
+  ON table_name (column1, column2, ...);
+</p>
+<h2>16. AUTO INCREMENT Field</h2>
+<p>Auto-increment allows a unique number to be generated automatically when a new record is inserted into a table.<br>	Syntax: CREATE TABLE Persons (
+  Personid int NOT NULL AUTO_INCREMENT,
+  LastName varchar(255) NOT NULL,
+  FirstName varchar(255),
+  Age int,
+  PRIMARY KEY (Personid)
+);
+</p>
+<h2>17. Views</h2>
+<p>In SQL, a view is a virtual table based on the result-set of an SQL statement.<br>	Syntax: CREATE VIEW view_name AS
+  SELECT column1, column2, ...
+  FROM table_name
+  WHERE condition;
+</p>
 
   <script src="script.js"></script>
   <script src="top.js"></script>
