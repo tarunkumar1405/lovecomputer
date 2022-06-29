@@ -1,433 +1,198 @@
 <!DOCTYPE html>
-<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+
 <html lang="en" dir="ltr">
   <head>
+    <link rel="icon" type="image/x-icon" href="favicon2.ico" />
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <meta name="description" content="Computer awareness and knowledge" />
     <meta
       name="keywords"
       content="HTML, CSS, JavaScript, computer knowledge, special symbols"
     />
-    <title>Blog|LOVE COMPUTER</title>
+
+    <title>BLOG / LOVE COMPUTER</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="blog.css" />
-    <!-- Boxicons CDN Link -->
+
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <style>
-      table {
-        border-collapse: collapse;
-        border-spacing: 0;
-        width: 100%;
-        
+      * {
+        box-sizing: border-box;
       }
 
-      th,
-      td {
-        padding: 10px;
+      body {
+        font-family: Arial, Helvetica, sans-serif;
       }
 
-      tr:nth-child(even) {
-        background-color: #f2f2f2;
+      /* Float four columns side by side */
+      .column {
+        float: left;
+        width: 75%;
+        padding: 0 15px 15px;
       }
-      h1 {
+
+      /* Remove extra left and right margins, due to padding */
+
+      /* Clear floats after the columns */
+      .column:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .column {
+        margin: 0 -5px;
+      }
+
+      /* Responsive columns */
+      @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+          display: block;
+          margin-bottom: 20px;
+        }
+      }
+
+      /* Style the counter cards */
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 25px;
         text-align: center;
-        text-decoration: underline;
-        color:blue
+        background-color: #f1f1f1;
       }
-      p{text-align: left;}
-     
-      #myBtn {
-display: none;
-position: fixed;
-bottom: 20px;
-right: 30px;
-z-index: 99;
-font-size: 12px;
-border: none;
-outline: none;
-background-color: blue;
-color: white;
-cursor: pointer;
-padding: 15px;
-border-radius: 4px;
-}
-
-#myBtn:hover {
-background-color: #555;
-}
+      p {
+        text-align: justify;
+      }
     </style>
   </head>
   <body>
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     <nav>
       <div class="navbar">
-        <i class='bx bx-menu'></i>
+        <i class="bx bx-menu"></i>
         <div class="logo"><a href="index.html">Love Computer</a></div>
         <div class="nav-links">
           <div class="sidebar-logo">
             <span class="logo-name">Love Computer</span>
-            <i class='bx bx-x' ></i>
+            <i class="bx bx-x"></i>
           </div>
           <ul class="links">
             <li><a href="index.html">HOME</a></li>
+            <li><a href="blog.html">BLOG</a></li>
+
             <li>
-              <a href="#">COMPUTER</a>
-              <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
-              <ul class="htmlCss-sub-menu sub-menu">
-                <li><a href="fullform.html">FULL FORMS</a></li>
-                <li><a href="facts.html">COMPUTER FACTS</a></li>
-                <li><a href="blog.html">BLOG</a></li>
-                <li><a href="msexcel.html">MS-Excel Shortcuts</a></li>
-                <li><a href="msword.html">MS-Word Shortcuts</a></li>
-                <li class="more">
-                  <span><a href="#">More</a>
-                  <i class='bx bxs-chevron-right arrow more-arrow'></i>
-                </span>
-                  <ul class="more-sub-menu sub-menu">
-                    <li><a href="pincode.html">Pincode</a></li>
-                    
-                  </ul>
-                </li>
-              </ul>
-            </li>
-                  <li>
               <a href="#">WEB DEVELOPMENT</a>
-              <i class='bx bxs-chevron-down js-arrow arrow '></i>
+              <i class="bx bxs-chevron-down js-arrow arrow"></i>
               <ul class="js-sub-menu sub-menu">
                 <li><a href="ht.html">HTML</a></li>
                 <li><a href="cs.html">CSS</a></li>
                 <li><a href="JavaScript.html">JAVASCRIPT</a></li>
                 <li><a href="py.html">Python</a></li>
                 <li><a href="sql.html">SQL</a></li>
-                
               </ul>
             </li>
             <li><a href="aboutus.html">ABOUT US</a></li>
-          <li><a href="contactus.html">CONTACT US</a></li>
+            <li><a href="contactus.html">CONTACT US</a></li>
           </ul>
         </div>
         <div class="search-box">
-          <i class='bx bx-search'></i>
+          <i class="bx bx-search"></i>
           <div class="input-box">
-            <input type="text" placeholder="Search...">
+            <input type="text" placeholder="Search..." />
           </div>
         </div>
       </div>
     </nav>
-    <div style="width: 100%; height: auto; padding: 50px; text-align: center">
-      <div class="header">
-        <img
-          src="Love comptuer.png"
-          alt="lovecomputer"
-          width="100%"
-          height="auto"
-        />
-      </div>
-
-      <div class="row">
-        <div class="leftcolumn">
-          <div class="card" id="special">
-            <h1>SPECIAL SYMBOLS</h1>
-            <h5>Special Symbols on Keyboard, May 19, 2022</h5>
-            <div class="fakeimg" style="height: 200px">
-              <img src="special-character.jpg" alt="special symbols" />
-            </div>
-            <p>
-              There are 34 types of special symbols on the keyboard as below
-              with their Unicode. Unicode: an international encoding standard
-              for use with different languages and scripts, by which each
-              letter, digit, or symbol is assigned a unique numeric value that
-              applies across different platforms and programs.
-            </p>
-            <table>
-              <tr>
-                <th>Special Symbols</th>
-                <th>Name</th>
-              </tr>
-              <tr>
-                <td>!</td>
-                <td>Exclamation Mark</td>
-              </tr>
-              <tr>
-                <td>""</td>
-                <td>Double Quote</td>
-              </tr>
-              <tr>
-                <td>#</td>
-                <td>A number Sign(Hash)</td>
-              </tr>
-              <tr>
-                <td>#</td>
-                <td>A number Sign(Hash)</td>
-              </tr>
-              <tr>
-                <td>$</td>
-                <td>Dollar Sign</td>
-              </tr>
-              <tr>
-                <td>%</td>
-                <td>Percent</td>
-              </tr>
-              <tr>
-                <td>&</td>
-                <td>Ampersand</td>
-              </tr>
-              <tr>
-                <td>'</td>
-                <td>Single Quote</td>
-              </tr>
-              <tr>
-                <td>()</td>
-                <td>Parenthesis</td>
-              </tr>
-              <tr>
-                <td>*</td>
-                <td>Asterisk</td>
-              </tr>
-              <tr>
-                <td>+</td>
-                <td>Plus</td>
-              </tr>
-              <tr>
-                <td>,</td>
-                <td>Comma</td>
-              </tr>
-              <tr>
-                <td>-</td>
-                <td>Minus</td>
-              </tr>
-              <tr>
-                <td>.</td>
-                <td>Full Stop</td>
-              </tr>
-              <tr>
-                <td>/</td>
-                <td>Forward Slash</td>
-              </tr>
-              <tr>
-                <td>\</td>
-                <td>backward Slash</td>
-              </tr>
-              <tr>
-                <td>:</td>
-                <td>Colon</td>
-              </tr>
-              <tr>
-                <td>;</td>
-                <td>Semi Colon</td>
-              </tr>
-              <tr>
-                <td><</td>
-                <td>Less Than</td>
-              </tr>
-              <tr>
-                <td>></td>
-                <td>Greater Than</td>
-              </tr>
-
-              <tr>
-                <td>=</td>
-                <td>Equal Sign</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>A number Sign(Hash)</td>
-              </tr>
-              <tr>
-                <td>?</td>
-                <td>Question Mark</td>
-              </tr>
-              <tr>
-                <td>@</td>
-                <td>At Sign(at the rate)</td>
-              </tr>
-              <tr>
-                <td>[]</td>
-                <td>Bracket</td>
-              </tr>
-              <tr>
-                <td>^</td>
-                <td>Caret</td>
-              </tr>
-              <tr>
-                <td>_</td>
-                <td>Underscore</td>
-              </tr>
-              <tr>
-                <td>`</td>
-                <td>Grave Accent(backtick)</td>
-              </tr>
-              <tr>
-                <td>{}</td>
-                <td>Curly Brace</td>
-              </tr>
-              <tr>
-                <td>|</td>
-                <td>Vertical Bar(Pipe)</td>
-              </tr>
-              <tr>
-                <td>~</td>
-                <td>Tilde</td>
-              </tr>
-            </table>
-          </div>
-          <div class="card" id="usb">
-            <h1>USB CABLES</h1>
-            <h5>TYPES OF USB (UNIVERSAL SERIAL BUS) CABLES, May 20, 2022</h5>
-
-            <p>
-              1. USB-A: It is most commonly used with computers or power
-              outlets. When charging, you will connect the USB-A side into the
-              USB plug or into a laptop or computer.
-            </p>
-            <img src="usb1.png" alt="special symbols" width="40%"/>
-            <p>
-              2. USB-B: It is ports are mostly used to connect printers or
-              external hard drives with computers. They are not as common as the
-              other types of USB cables.
-            </p>
-            <img src="USB2.png" alt="special symbols"width="40%" />
-            <p>
-              3. USB-Mini: It was used for connecting mobile devices including
-              MP3 players and cameras, and is a much smaller connection, thus
-              allowing smaller devices to connect.
-            </p>
-            <img src="usb3.png" alt="special symbols"width="40%" />
-            <p>
-              4. Micro-USB: It is used to be the most common USB port and is
-              still found on many older models. This type of connection allows
-              data to be read without needing a computer. For example, you can
-              connect Flash Drives, or Memory Sticks, directly to your mobile
-              device.
-            </p>
-            <img src="usb4.png" alt="special symbols"width="40%" />
-            <p>
-              5. USB-C: It is the most recent USB development and all new
-              Samsung devices come with USB-C ports. USB-C cables allow
-              high-speed data transfers and a higher power flow, allowing your
-              phone to charge more quickly. USB-C cables are also reversible and
-              can be plugged in either way round.
-            </p>
-            <img src="usb5.png" alt="special symbols"width="40%" />
-            <p>
-              6. USB 3: It was designed to be able to be backwards compatible
-              with earlier versions of USB cables and ports. The USB 3 has
-              different shaped connector pins so it can withstand more frequent
-              use. The USB 3-A and USB 3-B cables are identical to the USB-A and
-              USB-B cables at the top of this article, except they are colored
-              blue inside to distinguish them. The USB 3 micro cable has extra
-              pins to enable the transference of more data.
-            </p>
-          </div>
-          <div class="card"id="internet">
-            <h1>What is Internet?</h1>
-            <h5>
-              Internet: Interconnected/International Network, May 21, 2022
-            </h5>
-            <p>
-              Network: When two or more computers are connected with wired and
-              wireless and share their resources(in the form of Images, Videos,
-              etc) it is called a Network.
-            </p>
-            <h3>* The real meaning of Network/Internet is "Sharing".</h3>
-            <h2>->Few important Point</h2>
-            <ol>
-              <li>
-                The Network is created by the Fiber Optic Cable across the
-                world.
-              </li>
-              <li>
-                Through these cables transfer data from one end to another at
-                almost the speed of light. (The speed of light approx 3 lakh
-                Kilometer/second).
-              </li>
-              <li>
-                Internet is a worldwide global system of interconnected computer
-                networks.
-              </li>
-              <li>Internet uses the standard Internet Protocol (TCP/IP).</li>
-              <li>
-                Every computer on the internet is identified by a unique IP
-                address.
-              </li>
-              <li>
-                IP Address is a unique set of numbers (such as 192.168.1.1) that
-                identifies a computer location.
-              </li>
-              <li>
-                A special computer DNS (Domain Name Server) is used to give a
-                name to the IP Address so that the user can locate a computer by
-                a name.
-              </li>
-              <li>
-                For example, a DNS server will resolve a name
-                www.lovecomputer.co.in to a particular IP address to uniquely
-                identify the computer on which this website is hosted.
-              </li>
-              <li>Internet is accessible to every user all over the world.</li>
-            </ol>
-            <h2>Diagram of Internet: how the Internet works
-            </h2>
-            <img src="inter.png" alt="special symbols"width="50%" />
-            <h2>There are three types of Networks:</h2>
-            <p>1. Internet: The network formed by the cooperative interconnection of millions of computers, linked together is called the Internet. </p>
-            <p>2.  Intranet: It is an internal private network built within an organization using the Internet and World Wide Web standards and products that allow employees of an organization to gain access to corporate information.  </p>
-            <p>3. Extranet: It is the type of network that allows users from outside to access the Intranet of an organization.</p>
-            <h2>There are three types of data communications mode in a network:-</h2>
-            <p>1. Simplex Mode: In simplex mode data only go to one way. Example: Radio, Television (इस तरीके में जानकारी सिर्फ एक ही तरफ़ जाती है) </p>
-            <img src="net.png" alt="special symbols" width="50%"/>
-            <p>2. Half Duplex Mode:  In Half Duplex mode sender can send the data and also can receive the data but one at a time. It is two-way directional communication but one at a time. Example: Walkie- talkie, physical example: Post office (इस तरीके में जानकारी एक समय में एक ही तरफ से दूसरी तरफ जाती है)</p>
-            <img src="net2.png" alt="special symbols" width="50%" />
-            <p>3. Full Duplex Mode: In Full Duplex mode, Sender can send the data and also can receive the data simultaneously. It is two-way directional communication simultaneously. Example: Mobile, landline Phone. physical example: face to face (इस तरीके में जानकारी एक ही समय में एक तरफ से दूसरे और दूसरी तरफ से पहली तरफ जा सकती है) </p>
-            <h2>Protocol (नियम):</h2>
-            <p>There are many rules in the Internet network system like any other system through which it runs smoothly and makes this system good and fair. </p>
-            <h2>This network works on OSI(open system interconnect) Model.</h2>
-            <img src="iso.png" alt="special symbols" width="50%"/>
-            <h1>-Thank You-</h1>
-          </div>
-        </div>
-        <div class="rightcolumn">
-          <div class="card">
-            <h2>About Me</h2>
-            <div class="fakeimg1" style="height: 200px">
-              <img
-                src="Computer.svg.png"
-                alt="special symbols"
-                width="200"
-                height="200"
-              />
-            </div>
-            <p>
-              This Blog has a motive to spread the Computer related information.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Popular Post</h3>
-            <p><a href="facts.html">COMPUTER FACTS</a></p>
-            <p><a href="fullform.html">FULL FORMS</a></p>
-            <p><a href="#special">Special Symbols</a></p>
-            <p><a href="#usb">Types of USB</a></p>
-            <p><a href="#internet">What is Internet</a></p>
-
-            
-          </div>
+    <div style="padding-top: 12%; text-align: center">
+      <h2>Love Computer Blog</h2>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <h3>Computer Full Forms</h3>
+          <p>
+            Full form of Computer: A computer is an electronic machine that
+            accepts data from the user, processes the data by performing
+            calculations and operations on it and generates the desired outcome
+            or result. The computer is derived from the Latin word ‘computerae’
+            which means ‘to compute’. The full form of the Computer is Common
+            Operating Machine Purposely Used for Technological and Educational
+            Research.
+          </p>
+          <a href="fullform.html">Read More</a>
         </div>
       </div>
-      
-      <div class="footer">
-        <footer>
-          Copyright &copy; lovecomputer.co.in | All rights reserved
-      </footer>
-                <h4>Contact: tarunkumar1405@lovecomputer.co.in</h4>
+
+      <div class="column">
+        <div class="card">
+          <h3>Computer Facts</h3>
+          <p>Some Important Facts related to Computers</p>
+          <a href="facts.html">Read More</a>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <h3>Microsoft Word Shortcuts</h3>
+          <p>The more commonly used shortcut keys in Microsoft Word.</p>
+          <a href="msword.html">Read More</a>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <h3>Microsoft Excel Shortcuts</h3>
+          <p>The more commonly used shortcut keys in Microsoft Excel.</p>
+          <a href="msexcel.html">Read More</a>
+        </div>
       </div>
     </div>
+    <div class="column">
+      <div class="card">
+        <h3>Delhi's Pincode</h3>
+        <p>You can search pincode of whole Delhi</p>
+        <a href="pincode.html">Read More</a>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <h3>SPECIAL SYMBOLS</h3>
+        <p>
+          There are 34 types of special symbols on the keyboard as below with
+          their Unicode. Unicode: an international encoding standard for use
+          with different languages and scripts, by which each letter, digit, or
+          symbol is assigned a unique numeric value that applies across
+          different platforms and programs.
+        </p>
+        <a href="spsy.html">Read More</a>
+      </div>
+    </div>
+    <div class="column">
+        <div class="card">
+          <h3>TYPES OF USB (UNIVERSAL SERIAL BUS)</h3>
+          <p>
+            There are so many types of USB
+          </p>
+          <a href="usb.html">Read More</a>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <h3>INTERNET NETWORK</h3>
+          <p>
+            Network: When two or more computers are connected with wired and wireless and share their resources(in the form of Images, Videos, etc) it is called a Network.
+          </p>
+          <a href="net.html">Read More</a>
+        </div>
+      </div>
+
     <script src="script.js"></script>
-    <script src="top.js"></script>
   </body>
 </html>
