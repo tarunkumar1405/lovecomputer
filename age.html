@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="icon" type="image/x-icon" href="favicon2.ico" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Computer awareness and knowledge" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, computer knowledge, special symbols"
+    />
+
+    <title>BLOG / LOVE COMPUTER</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    
+      <script>
+
+        function ageCalculator() {
+            //collect input from HTML form and convert into date format
+            var userinput = document.getElementById("DOB").value;
+            var dob = new Date(userinput);
+            
+            //check user provide input or not
+            if(userinput==null || userinput==''){
+              document.getElementById("message").innerHTML = "**Choose a date please!";  
+              return false; 
+            } 
+            
+            //execute if the user entered a date 
+            else {
+            //extract the year, month, and date from user date input
+            var dobYear = dob.getYear();
+            var dobMonth = dob.getMonth();
+            var dobDate = dob.getDate();
+            
+            //get the current date from the system
+            var now = new Date();
+            //extract the year, month, and date from current date
+            var currentYear = now.getYear();
+            var currentMonth = now.getMonth();
+            var currentDate = now.getDate();
+          
+            //declare a variable to collect the age in year, month, and days
+            var age = {};
+            var ageString = "";
+          
+            //get years
+            yearAge = currentYear - dobYear;
+          
+            //get months
+            if (currentMonth >= dobMonth)
+              //get months when current month is greater
+              var monthAge = currentMonth - dobMonth;
+            else {
+              yearAge--;
+              var monthAge = 12 + currentMonth - dobMonth;
+            }
+        
+            //get days
+            if (currentDate >= dobDate)
+              //get days when the current date is greater
+              var dateAge = currentDate - dobDate;
+            else {
+              monthAge--;
+              var dateAge = 31 + currentDate - dobDate;
+        
+              if (monthAge < 0) {
+                monthAge = 11;
+                yearAge--;
+              }
+            }
+            //group the age in a single variable
+            age = {
+            years: yearAge,
+            months: monthAge,
+            days: dateAge
+            };
+              
+              
+            if ( (age.years > 0) && (age.months > 0) && (age.days > 0) )
+               ageString = age.years + " years, " + age.months + " months, and " + age.days + " days old.";
+            else if ( (age.years == 0) && (age.months == 0) && (age.days > 0) )
+               ageString = "Only " + age.days + " days old!";
+            //when current month and date is same as birth date and month
+            else if ( (age.years > 0) && (age.months == 0) && (age.days == 0) )
+               ageString = age.years +  " years old. Happy Birthday!!";
+            else if ( (age.years > 0) && (age.months > 0) && (age.days == 0) )
+               ageString = age.years + " years and " + age.months + " months old.";
+            else if ( (age.years == 0) && (age.months > 0) && (age.days > 0) )
+               ageString = age.months + " months and " + age.days + " days old.";
+            else if ( (age.years > 0) && (age.months == 0) && (age.days > 0) )
+               ageString = age.years + " years, and" + age.days + " days old.";
+            else if ( (age.years == 0) && (age.months > 0) && (age.days == 0) )
+               ageString = age.months + " months old.";
+            //when current date is same as dob(date of birth)
+            else ageString = "Welcome to Earth! <br> It's first day on Earth!"; 
+        
+            //display the calculated age
+            return document.getElementById("result").innerHTML = ageString; 
+                     
+          }
+        }
+        </script>
+      
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <i class="bx bx-menu"></i>
+        <div class="logo"><a href="index.html">Love Computer</a></div>
+        <div class="nav-links">
+          <div class="sidebar-logo">
+            <span class="logo-name">Love Computer</span>
+            <i class="bx bx-x"></i>
+          </div>
+          <ul class="links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="blog.html">BLOG</a></li>
+
+            <li>
+              <a href="#">WEB DEVELOPMENT</a>
+              <i class="bx bxs-chevron-down js-arrow arrow"></i>
+              <ul class="js-sub-menu sub-menu">
+                <li><a href="ht.html">HTML</a></li>
+                <li><a href="cs.html">CSS</a></li>
+                <li><a href="JavaScript.html">JAVASCRIPT</a></li>
+                <li><a href="py.html">Python</a></li>
+                <li><a href="sql.html">SQL</a></li>
+              </ul>
+            </li>
+            <li><a href="aboutus.html">ABOUT US</a></li>
+            <li><a href="contactus.html">CONTACT US</a></li>
+          </ul>
+        </div>
+        <div class="search-box">
+          <i class="bx bx-search"></i>
+          <div class="input-box">
+            <input type="text" placeholder="Search..." />
+          </div>
+        </div>
+      </div>
+    </nav>
+    <center>
+      <h2 style="padding: 80px 5px 10px 15px; color:blue;"> Calculate Age from Date of Birth <br> <br> </h2> 
+      
+      <b> Enter Date of Birth: <input type=date id = DOB>  </b>
+      <span id = "message" style="color:red"> </span> <br><br>  
+      <button type="submit" onclick = "ageCalculator()"> Calculate age </button> <br><br>
+      <h3 style="color:32A80F" id="result" align="center"></h3> 
+      </center>
+    
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+

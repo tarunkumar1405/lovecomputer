@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="icon" type="image/x-icon" href="favicon2.ico" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Computer awareness and knowledge" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, computer knowledge, special symbols"
+    />
+
+    <title>BLOG / LOVE COMPUTER</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style>
+      button {
+        background-color: blue;
+        border: none;
+        color: white;
+        padding: 15px 15px;
+        
+        
+        font-size: 15px;
+        cursor: pointer;
+        border-radius: 5px;
+              }
+      p{
+        color: black;
+      }
+      div{
+          align-items: center;
+          width: 100%;
+      }
+        
+      </style>
+      
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <i class="bx bx-menu"></i>
+        <div class="logo"><a href="index.html">Love Computer</a></div>
+        <div class="nav-links">
+          <div class="sidebar-logo">
+            <span class="logo-name">Love Computer</span>
+            <i class="bx bx-x"></i>
+          </div>
+          <ul class="links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="blog.html">BLOG</a></li>
+
+            <li>
+              <a href="#">WEB DEVELOPMENT</a>
+              <i class="bx bxs-chevron-down js-arrow arrow"></i>
+              <ul class="js-sub-menu sub-menu">
+                <li><a href="ht.html">HTML</a></li>
+                <li><a href="cs.html">CSS</a></li>
+                <li><a href="JavaScript.html">JAVASCRIPT</a></li>
+                <li><a href="py.html">Python</a></li>
+                <li><a href="sql.html">SQL</a></li>
+              </ul>
+            </li>
+            <li><a href="aboutus.html">ABOUT US</a></li>
+            <li><a href="contactus.html">CONTACT US</a></li>
+          </ul>
+        </div>
+        <div class="search-box">
+          <i class="bx bx-search"></i>
+          <div class="input-box">
+            <input type="text" placeholder="Search..." />
+          </div>
+        </div>
+      </div>
+    </nav>
+    <center>
+    <div style="padding: 80px 5px 10px 15px;width: 100%;align-items: center; color: navy;">
+    Enter the number: 
+    <input id="number" placeholder="Enter any number" />
+  <button onclick="addNumbers()" >Enter</button>
+</div>
+</center>
+  
+  <div id="result" style="text-align: center; color: green; font-family: 'Courier New', Courier, monospace;">
+    <script>
+      function addNumbers() {
+        var number;
+        var result = "";
+
+        number = Number(document.getElementById("number").value);
+
+        for(var i = 1; i<= 10; i++){
+          result = result + "<p>" +number +  "x"  +  i +  "="  + number * i+ "</p>" ;
+        }
+
+        document.getElementById("result").innerHTML = result;
+      }
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
