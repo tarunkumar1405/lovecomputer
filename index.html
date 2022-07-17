@@ -264,6 +264,14 @@
     >
       <p id="time"></p>
     </div>
+    <div style="text-align: center;">
+    <p><b>Click the Geo Location button to get your current coordinates.</b></p>
+
+<button onclick="getLocation()" style="color: white; background-color:blue;">Geo location</button>
+
+<p id="geo" style="color:green"></p>
+</div>
+
     <div class="social-media">
       <a target="_self" href="ht.html" class="twitter">HTML</a>
       <a target="_self" href="cs.html" class="facebook">CSS</a>
@@ -483,6 +491,21 @@
         loader.style.display = "none";
       })
     </script>
-      
+      <script>
+        const x = document.getElementById("geo");
+        
+        function getLocation() {
+          try {
+            navigator.geolocation.getCurrentPosition(showPosition);
+          } catch {
+            x.innerHTML = err;
+          }
+        }
+        
+        function showPosition(position) {
+          x.innerHTML = "Latitude: " + position.coords.latitude + 
+          "<br>Longitude: " + position.coords.longitude;
+        }
+        </script>
   </body>
 </html>
