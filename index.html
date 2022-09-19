@@ -1,293 +1,136 @@
 <!DOCTYPE html>
-<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+
 <html lang="en" dir="ltr">
-  <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="icon" type="image/x-icon" href="favicon2.ico" />
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        font-family: Verdana, sans-serif;
-        margin: 0;
-      }
 
-      /* Slideshow container */
-      .slideshow-container {
-        position: relative;
-        background: #f1f1f1f1;
-      }
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="icon" type="image/x-icon" href="favicon2.ico" />
+  <style>
+    * {
+  box-sizing: border-box;
+}
 
-      /* Slides */
-      .mySlides {
-        display: none;
-        padding: 100px;
-        text-align: center;
-        height: 300px;
-      }
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
 
-      /* Next & previous buttons */
-      .prev,
-      .next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        margin-top: -30px;
-        padding: 16px;
-        color: #888;
-        font-weight: bold;
-        font-size: 20px;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-      }
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
 
-      /* Position the "next button" to the right */
-      .next {
-        position: absolute;
-        right: 0;
-        border-radius: 3px 0 0 3px;
-      }
+.btn:hover {
+  background-color: #ddd;
+}
 
-      /* On hover, add a black background color with a little bit see-through */
-      .prev:hover,
-      .next:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-        color: white;
-      }
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Computer awareness and knowledge" />
+  <meta name="keywords" content="HTML, CSS, JavaScript, computer knowledge, special symbols" />
 
-      /* The dot/bullet/indicator container */
-      .dot-container {
-        text-align: center;
-        font-size: 25px;
-        padding: 20px;
-        background: rgb(104, 104, 236);
-      }
+  <title>HOME / LOVE COMPUTER</title>
 
-      /* The dots/bullets/indicators */
-      .dot {
-        cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: rgb(227, 146, 146);
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-      }
+  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+ <link rel="stylesheet" href="slide.css">
+</head>
 
-      /* Add a background color to the active dot/circle */
-      .active,
-      .dot:hover {
-        background-color: blue;
-      }
+<body>
 
-      /* Add an italic font style to all quotes */
-      q {
-        font-style: italic;
-      }
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">LOVE COMPUTER</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About Us</a>
+          </li>
 
-      /* Add a blue color to the author */
-      .author {
-        color: cornflowerblue;
-      }
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Web Development
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="ht.html">HTML</a></li>
+              <li><a class="dropdown-item" href="cs.html">CSS</a></li>
+              <li><a class="dropdown-item" href="JavaScript.html">JavaScript</a></li>
+              <li><a class="dropdown-item" href="py.html">Python</a></li>
+              <li><a class="dropdown-item" href="sql.html">SQL</a></li>
+              <li><a class="dropdown-item" href="PostgreSQL.html">PostgreSQL</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="slideshow-container">
 
-      footer {
-        padding: 23px;
-        text-align: center;
-        text-decoration: overline 1px;
-      }
-      /* Create two equal columns that floats next to each other */
-      .column {
-        float: left;
-        width: 50%;
-        padding: 10px;
-      }
-
-      /* Clear floats after the columns */
-      .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-      /* Style the buttons */
-      .btn {
-        border: none;
-        outline: none;
-        padding: 12px 16px;
-        background-color: #f1f1f1;
-        cursor: pointer;
-      }
-
-      .btn:hover {
-        background-color: #ddd;
-      }
-
-      .btn.active {
-        background-color: #666;
-        color: white;
-      }
-      h1 {
-        text-align: center;
-        font-size: 20px;
-        color: blue;
-      }
-    #preloader{
-      background:black url(circle-loader-gif-2.gif) no-repeat center center;
-      background-size: 15%;
-      height:100vh;
-      width:100vw;
-      position:fixed;
-      z-index: 100;
-    }
-      
-    </style>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Computer awareness and knowledge" />
-    <meta
-      name="keywords"
-      content="HTML, CSS, JavaScript, computer knowledge, special symbols"
-    />
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="html.png" style="width:100%">
+      <div class="text">HYPERTEXT MARKUP LANGUAGE</div>
+    </div>
     
-    <title>HOME / LOVE COMPUTER</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="ani.css" />
-    <link rel="stylesheet" href="col.css" />
-    <link rel="stylesheet" href="sty.css" />
-
-    <link
-      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="front.png" style="width:100%">
+      <div class="text">CASCADING STYLE SHEET</div>
+    </div>
     
-  </head>
-  <body>
-    <div id="preloader"></div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">LOVE COMPUTER</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="blog.html">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="aboutus.html">About Us</a>
-        </li>
-        
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Web Development
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="ht.html">HTML</a></li>
-            <li><a class="dropdown-item" href="cs.html">CSS</a></li>
-            <li><a class="dropdown-item" href="JavaScript.html">JavaScript</a></li>
-            <li><a class="dropdown-item" href="py.html">Python</a></li>
-            <li><a class="dropdown-item" href="sql.html">SQL</a></li>
-            <li><a class="dropdown-item" href="PostgreSQL.html">PostgreSQL</a></li>
-          </ul>
-        </li>
-      </ul>
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="html.png" style="width:100%">
+      <div class="text">JavaScript</div>
     </div>
-  </div>
-</nav>
     
-    <p id="demo"></p>
-    <div class="slideshow-container">
-      <div class="mySlides">
-        <q
-          >The computer was born to solve problems that did not exist before.
-        </q>
-        <p class="author">— Bill Gates</p>
-      </div>
-      <div class="mySlides">
-        <q
-          >Computers are good at following instructions, but not at reading your
-          mind.</q
-        >
-        <p class="author">- Donald Knuth</p>
-      </div>
-
-      <div class="mySlides">
-        <q
-          >It’s hardware that makes a machine fast. It’s software that makes a
-          fast machine slow.
-        </q>
-        <p class="author">— Craig Bruce</p>
-      </div>
-
-      <div class="mySlides">
-        <q
-          >Computers are finite machines; when given the same input, they always
-          produce the same output.</q
-        >
-        <p class="author">- Greg Perry</p>
-      </div>
-      <div class="mySlides">
-        <q>Computers have lots of memory but no imagination..</q>
-        <p class="author">- Anonymous</p>
-      </div>
-
-      <a class="prev" onclick="plusSlides(-1)">❮</a>
-      <a class="next" onclick="plusSlides(1)">❯</a>
     </div>
-
-    <div class="dot-container">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-      <span class="dot" onclick="currentSlide(4)"></span>
-      <span class="dot" onclick="currentSlide(5)"></span>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
     </div>
-    <div
-      style="
-        width: 100%;
-        height: auto;
-        font-weight: bold;
-        background-color: blanchedalmond;
-        color: blue;
-        text-align: center;
-      "
-    >
-      <p id="time"></p>
-    </div>
+    <hr/>
     <div style="text-align: center;">
-    <p><b>Click the Geo Location button to get your current coordinates.</b></p>
-
-<button onclick="getLocation()" style="color: white; background-color:blue;">Geo location</button>
-
-<p id="geo" style="color:green"></p>
-</div>
-
-    <div class="social-media">
-      <a target="_self" href="ht.html" class="twitter">HTML</a>
-      <a target="_self" href="cs.html" class="facebook">CSS</a>
-      <a target="_self" href="JavaScript.html" class="youtube">JavaScript</a>
-      <a target="_self" href="py.html" class="linkedin">Python</a>
-      <a target="_self" href="sql.html" class="instagram">SQL</a>
+      <p><b>Click the Geo Location button to get your current coordinates.</b></p>
+  
+  <button onclick="getLocation()" style="color: white; background-color:blue;">Geo location</button>
+  
+  <p id="geo" style="color:blue"></p>
     </div>
-    <div ng-app="">
-      <p style="text-align: center">
-        Name :
-        <input type="text" ng-model="name" placeholder="Enter Your Name" />
-      </p>
-      <h1>Hello {{name}}</h1>
-    </div>
-    
     <div id="btnContainer">
       <button class="btn" onclick="listView()">
         <i class="fa fa-bars"></i> List
@@ -299,7 +142,7 @@
     <br />
 
     <div class="row">
-      <div class="column" style="background-color: blanchedalmond">
+      <div class="column1" style="background-color: yellow">
         <h2>HTML</h2>
         <p>HTML is the standard markup language for creating Web pages.</p>
         <ul>
@@ -314,7 +157,7 @@
           </li>
         </ul>
       </div>
-      <div class="column" style="background-color: lightcyan">
+      <div class="column1" style="background-color: lightgreen">
         <h2>CSS</h2>
         <p>CSS is the language we use to style a Web page.</p>
         <ul>
@@ -334,7 +177,7 @@
     </div>
 
     <div class="row">
-      <div class="column" style="background-color: lightblue">
+      <div class="column1" style="background-color: lightgoldenrodyellow">
         <h2>JAVASCRIPT</h2>
         <p>JavaScript is the world's most popular programming language.</p>
         <ul>
@@ -351,7 +194,7 @@
           </li>
         </ul>
       </div>
-      <div class="column" style="background-color: lightcoral">
+      <div class="column1" style="background-color: lightseagreen">
         <h2>PHP</h2>
         <p>
           PHP is a server scripting language, and a powerful tool for making
@@ -372,7 +215,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="column" style="background-color: lightgreen">
+      <div class="column1" style="background-color: lightgreen">
         <h2>PYTHON</h2>
         <p>
           Python is a popular programming language. Python can be used on a
@@ -390,7 +233,7 @@
           <li>Python can be used on a server to create web applications.</li>
         </ul>
       </div>
-      <div class="column" style="background-color: lightsalmon">
+      <div class="column1" style="background-color: lightyellow">
         <h2>SQL</h2>
         <p>
           SQL is a standard language for storing, manipulating and retrieving
@@ -407,122 +250,79 @@
         </ul>
       </div>
     </div>
+<hr/>
+  <div class="card text-center ">
+    <div class="card-header bg-dark text-white">
+      About Us
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Spread Knowledge with Practical</h5>
+      <p class="card-text text-center"><BR> THIS WEBSITE HAS A MOTIVE TO SPREAD THE INFORMATION ABOUT Web Development.<br>
+      Developed by Tarun Kumar</p>
+    </div>
+    <hr/>
 
-   <div class="card text-center">
-        <div class="card-header">
-          About Us
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Spread knowledge with practical</h5>
-          <p class="card-text text-center"><BR> THIS WEBSITE HAS A MOTIVE TO SPREAD THE INFORMATION ABOUT COMPUTER.<br>
-          Developed by Tarun Kumar</p>
-          <a href="aboutus.html" class="btn btn-primary">About US</a>
-          <a href="blog.html" class="btn btn-primary">Blog</a>
-          
-        </div>
-        <div class="card-footer text-muted">
-          Thank you for visiting 
-        </div>
-      </div>
-    <script src="script.js"></script>
-    <script src="time.js"></script>
-    <script>
-      var slideIndex = 1;
-      showSlides(slideIndex);
+    <a class="btn btn-primary active btn-outline-primary" href="blog.html" role="button">Click here for Blog</a> 
 
-      function plusSlides(n) {
-        showSlides((slideIndex += n));
+      
+       
+    
+    <div class="card-footer text-muted">
+      Thank you for visiting 
+    </div>
+  </div>
+  <script>
+    // Get the elements with class="column"
+    var elements = document.getElementsByClassName("column1");
+    
+    // Declare a loop variable
+    var i;
+    
+    // List View
+    function listView() {
+      for (i = 0; i < elements.length; i++) {
+        elements[i].style.width = "100%";
       }
-
-      function currentSlide(n) {
-        showSlides((slideIndex = n));
+    }
+    
+    // Grid View
+    function gridView() {
+      for (i = 0; i < elements.length; i++) {
+        elements[i].style.width = "50%";
       }
-
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-          slideIndex = 1;
-        }
-        if (n < 1) {
-          slideIndex = slides.length;
-        }
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-      }
+    }
+    
+    /* Optional: Add active class to the current button (highlight it) */
+    var container = document.getElementById("btnContainer");
+    var btns = container.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
     </script>
     <script>
-      // Get the elements with class="column"
-      var elements = document.getElementsByClassName("column");
-
-      // Declare a loop variable
-      var i;
-
-      // List View
-      function listView() {
-        for (i = 0; i < elements.length; i++) {
-          elements[i].style.width = "100%";
+      const x = document.getElementById("geo");
+      
+      function getLocation() {
+        try {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } catch {
+          x.innerHTML = err;
         }
       }
-
-      // Grid View
-      function gridView() {
-        for (i = 0; i < elements.length; i++) {
-          elements[i].style.width = "50%";
-        }
+      
+      function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude + 
+        "<br>Longitude: " + position.coords.longitude;
       }
+      </script>
+  <script src="slide.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
 
-      /* Optional: Add active class to the current button (highlight it) */
-      var container = document.getElementById("btnContainer");
-      var btns = container.getElementsByClassName("btn");
-      for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function () {
-          var current = document.getElementsByClassName("active");
-          current[0].className = current[0].className.replace(" active", "");
-          this.className += " active";
-        });
-      }
-    </script>
-    <a href="https://dissertation-writingservice.com/"
-      >Dissertation-WritingService.com</a
-    >
-    <script
-      type="text/javascript"
-      src="https://www.freevisitorcounters.com/auth.php?id=d7c79dec184c0599a3d3691fce0d61eee9de9545"
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://www.freevisitorcounters.com/en/home/counter/948441/t/0"
-    ></script>
-    <script>
-      var loader = document.getElementById("preloader");
-      window.addEventListener("load", function(){
-        loader.style.display = "none";
-      })
-    </script>
-      <script>
-        const x = document.getElementById("geo");
-        
-        function getLocation() {
-          try {
-            navigator.geolocation.getCurrentPosition(showPosition);
-          } catch {
-            x.innerHTML = err;
-          }
-        }
-        
-        function showPosition(position) {
-          x.innerHTML = "Latitude: " + position.coords.latitude + 
-          "<br>Longitude: " + position.coords.longitude;
-        }
-        </script>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  </body>
 </html>
