@@ -24,10 +24,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
         .card {
      background-color: white;
      padding: 70px 15px;
+     width: 90%;
      
      text-align:justify;
 
@@ -48,44 +50,71 @@
     background-color:lightyellow;
 }
 
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid blue;
+}
 
+th{
+  text-align: center;
+  padding: 16px;
+  background-color: green;
+  color: white;
+  border: 1px solid blue;
+  
+}
+td {
+  
+  text-align: justify;
+  padding: 16px;
+  border: 1px solid blue;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+important{
+  text-align: center;
+}
       </style>
       
   </head>
   <body>
-    <nav>
-      <div class="navbar">
-        <i class="bx bx-menu"></i>
-        <div class="logo"><a href="index.html">Love Computer</a></div>
-        <div class="nav-links">
-          <div class="sidebar-logo">
-            <span class="logo"><a href="index.html">LoveComputer</a></span>
-            <i class="bx bx-x"></i>
-          </div>
-          <ul class="links">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="blog.html">BLOG</a></li>
-            
-            <li>
-              <a href="">WEB DEVELOPMENT</a>
-              <i class="bx bxs-chevron-down htmlcss-arrow arrow"></i>
-              <ul class="htmlCss-sub-menu sub-menu">
-                <li><a href="ht.html">HTML</a></li>
-                <li><a href="cs.html">CSS</a></li>
-                <li><a href="JavaScript.html">JAVASCRIPT</a></li>
-                <li><a href="py.html">Python</a></li>
-                <li><a href="sql.html">SQL</a></li>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">LOVE COMPUTER</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus.html">About Us</a>
+            </li>
+  
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Web Development
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="ht.html">HTML</a></li>
+                <li><a class="dropdown-item" href="cs.html">CSS</a></li>
+                <li><a class="dropdown-item" href="JavaScript.html">JavaScript</a></li>
+                <li><a class="dropdown-item" href="py.html">Python</a></li>
+                <li><a class="dropdown-item" href="sql.html">SQL</a></li>
+                <li><a class="dropdown-item" href="PostgreSQL.html">PostgreSQL</a></li>
               </ul>
             </li>
-            <li><a href="aboutus.html">ABOUT US</a></li>
-            <li><a href="contactus.html">CONTACT US</a></li>
           </ul>
-        </div>
-        <div class="search-box">
-          <i class="bx bx-search"></i>
-          <div class="input-box">
-            <input type="text" placeholder="Search..." />
-          </div>
         </div>
       </div>
     </nav>
@@ -93,7 +122,7 @@
     <div class="card" id="usb">
         <h2>What is Language? भाषा क्या है?</h2>
         <p>दुनिया की सबसे पुरानी भाषा "संस्कृत"  और इस भाषा की व्याकरण को जिस विद्वान ने दुनिया को बतलाया, समझाया, कि भाषा कैसे बोली जाएँगी, पढ़ी जाएँगी, और लिखी जाएँगी, उनका नाम था "महर्षि पाणिनि"(Panini)। उन्होंने अष्टाध्यायी = आठ अध्यायों वाली (8 chaptars) में उस सबकी पूरी व्याख्या की है। </p>
-<img src="Panini-Stamp.jpg">
+<img src="Panini-Stamp.jpg" width="50%">
 <p>उसके बाद दुनिया के तमाम इलाकों में रहने वाले लोगों ने अपनी-अपनी बोलियों की व्याकरण को पहचाना। </p>
 <h3><b>Father of linguistics(भाषा विज्ञान)</b></h3>
 <p>The history of linguistics begins not with Plato or Aristotle, but with the Indian grammarian Panini. --  Rens Bod, University of Amsterdam</p>
@@ -105,11 +134,12 @@
     <li>लिखित</li>
 </ul>
 <p>भाषा <b>conveyor belt (वाहन पट्टी)</b> की तरह होती है, जैसे वाहन पट्टी सामान को एक जगह से दूसरी जगह लेकर जाती है, उसी तरह भाषा भी हम सबके विचारों, संस्कृति, परंपरा, रीतिरिवाज़, आदि की सही सूचना को एक पीढ़ी से दूसरी पीढ़ी तक लेकर जाती है।</p>
-<img src="belt.png">
+<img src="belt.png" width="50%">
 <p><b>किसी ने सही कहा है:</b>"जो समाज अपनी भाषा से कट जाता है अपनी ज़मीन से कट जाता है"</p>
 <h4>कितनी जरुरी है अपनी भाषा ? </h4>
 <p>अगर आप दुनिया के तमाम विकसित देशों को देखोंगे तो एक चीज़ आपको अभिन्न नज़र आएँगी और वो है कि वो शिक्षा से लेकर अपना सारा काम अपनी ही भाषा में करते है। 
     <b>जैसे :- अमेरिका, जापान, चाइना,  यूरोप के तमाम देश,  रूस आदि ।</b></p>
+    <hr/>
     <important><b>अब बात करते है भाषा आखिर होती क्या है?</b></important>
     <h3>भाषा के तीन साथी:-</h3>
     <ol>
@@ -119,6 +149,7 @@
         </li>
     </ol>
     <p><b>इन तीनो में असल में भाषा क्या है ?</b></p>
+    <hr/>
     <h2>Script/लिपि</h2>
     <p>क्या "लिपि" भाषा होती है ?</p>
     <p>अगर मैं एक वाक्य दो अलग लिपियों में लिखता हूँ तो क्या भाषा बदलती है? </p>
@@ -126,6 +157,7 @@
     <p><b>"Roman script: Hindi Behtreen bhasha hai"</b></p>
     <p>आप इन दोनों को एक जैसा ही पढ़ेंगे।</p>
     <p><b>नोट: </b>आप अपनी भाषा किसी भी लिपि में लिख सकते हो, लिपि बदलने से भाषा नहीं बदलती ।</p>
+    <hr/>
     <h2>Words/शब्द</h2>
     <p>क्या "शब्द "भाषा होते है ?</p>
     <p><b>एक उदाहरण से समझते है :</b></p>
@@ -174,14 +206,135 @@
 </li>
 </ol>
 <p><b>नोट: दोस्तों, आप भी पता लगाइए कौन सा शब्द किस भाषा से लिया गया है।</b></p>
+<hr/>
 <p>दोस्तों, अब बात करते है कुछ शब्द जो दो अलग-अलग भाषाओं के शब्दों से बने फिर एक हो गए, भाषा किसी देश की तरह होती है और शब्द लोगों की तरह। दुनिया की तमाम भाषाएं इलाकों की होती है ना किसी धर्म की। जिस भाषा में  जितने शब्द वो उतनी बड़ी और ख़ूबसूरत होती है और जितने लोग उतना खुशहाल देश। क्योंकि शब्द ही भाषा है और लोग ही देश है।</p>
-<img src="12.jpg" width="75%">
-<img src="13.jpg" width="75%">
+<table>
+  <tr>
+      <th width="70%" >शब्द</th>
+      <th width="30%" >क्रमश: भाषाएँ </th>
+  </tr>
+  <tr>
+      <td>अणुबम, उपबोली, गुरुभाई, परमाणु बम </td>
+      <td>संस्कृत-हिंदी </td>
+  </tr>
+  <tr>
+      <td>आवागमन, खेती-व्यवस्था, घर-द्वार, समझौता-प्रेमी </td>
+      <td>हिंदी-संस्कृत</td>
+  </tr>
+  <tr>
+      <td>खानापूरी, पेशाबघर </td>
+      <td>फारसी-हिंदी </td>
+  </tr>
+  <tr>
+      <td>धन-दौलत, समझौता-परस्त, काम-धंधा, गुलाब-जामुन, खेल-तमाशा, चोर-बाजार, दाना-पानी, बाल-बच्चे, तन-बदन, सीधा-सादा, नौकर-चाकर </td>
+      <td>हिंदी-फारसी</td>
+  </tr>
+  <tr>
+      <td>अखबारवाला, किताबघर, मालगाड़ी </td>
+      <td>अरबी-हिंदी </td>
+  </tr>
+  <tr>
+      <td>भेंट-मुलाकात, हँसी-मजाक, इमामबाड़ा, रीति-रिवाज, हुक्का-पानी, कफनचोर, पंच-फैसला, चोर-महल </td>
+      <td>हिंदी-अरबी</td>
+  </tr>
+  <tr>
+      <td>छायादार, विज्ञापनबाजी </td>
+      <td>संस्कृत-फारसी </td>
+  </tr>
+  <tr>
+      <td>गुलाब-वाटिका, मजदूर-संघ </td>
+      <td>फारसी-संस्कृत </td>
+  </tr>
+  <tr>
+      <td>टिकटघर, टिकटबाबू, पाकेटमार, पार्सल-घर, पावरोटी, पुलिसवाला, मोटरगाड़ी, रेलगाड़ी, होटलवाला, डबलरोटी, पोपलीला, साइकिलसवार </td>
+      <td>अंग्रेजी-हिंदी</td>
+  </tr>
+  <tr>
+      <td>ठलुआ-क्लब, लोहा-फैक्टरी </td>
+      <td>हिंदी-अंग्रेजी </td>
+  </tr>
+  <tr>
+      <td>अधिकारी-क्लब, महिला-क्लब </td>
+      <td>संस्कृत-अंग्रेजी </td>
+  </tr>
+  <tr>
+      <td>क्रास-मुद्रा, कौंसिल-भवन, प्रेस-सम्मेलन,</td>
+      <td>अंग्रेजी-संस्कृत</td>
+  </tr>
+  <tr>
+      <td>प्रेस-वार्ता, फिल्मोत्सव, रेल-पथ, रोमांसवाद, सभा-सोसायटी, सूटधारी, तोपगाड़ी</td>
+      <td>तुर्की-हिंदी </td>
+  </tr>
+  <tr>
+      <td>तोप-सैनिक </td>
+      <td>तुर्की-संस्कृत </td>
+  </tr>
+  <tr>
+      <td>तोपखाना</td>
+      <td>तुर्की-फारसी </td>
+  </tr>
+  <tr>
+      <td>अक्लमंद, खबरदार, दगाबाज, जेब-खर्च, सफर-खर्च, हवादार </td>
+      <td>अरबी-फारसी</td>
+  </tr>
+  <tr>
+      <td>धन-दौलत, विवाह-खर्च </td>
+      <td>संस्कृत-अरबी</td>
+  </tr>
+  <tr>
+      <td>खुशकिस्मत, नमकहराम, नमकहलाल, बे-मौत</td>
+      <td>फारसी-अरबी</td>
+  </tr>
+  <tr>
+      <td>कानून-भंग, जिला-प्रशासन </td>
+      <td>अरबी-संस्कृत</td>
+  </tr>
+  <tr>
+      <td>इंगलिस्तान, कंपनीबाग, कुलीगीरी</td>
+      <td>अंग्रेजी-फारसी</td>
+  </tr>
+  <tr>
+      <td>कोचवान, जेलखाना, डिजाइनदार, नंबरवार, पतलूननुमा, पार्टीबाज, प्लेटदार, फैशनपरस्त, रोलदार, लेक्चरबाज, सीलबंद मजदूर-यूनियन, शक्कर-मिल</td>
+      <td>फारसी-अंग्रेजी </td>
+  </tr>
+  <tr>
+      <td>पॉकेट-खर्च </td>
+      <td>अंग्रेजी-अरबी </td>
+  </tr>
+  <tr>
+      <td>गोलची, मिडिलची</td>
+      <td>अंग्रेजी-तुर्की</td>
+  </tr>
+  
+</table>
 <p><b>नोट: जब तक भाषा की व्याकरण सही है तब तक भाषा सही है। </b></p>
 <h2 style="text-align:center;">-:धन्यवाद:-</h2>
+<hr/>
     </div>
     </div>
-
-    <script src="script.js"></script>
+    <hr/>
+    <div class="card text-center ">
+      <div class="card-header bg-dark text-white">
+        About Us
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Spread Knowledge with Practical</h5>
+        <p class="card-text text-center"><BR> THIS WEBSITE HAS A MOTIVE TO SPREAD THE INFORMATION ABOUT Web Development.<br>
+        Developed by Tarun Kumar</p>
+      </div>
+      <hr/>
+  
+      <a class="btn btn-primary active btn-outline-primary" href="blog.html" role="button">Click here for Blog</a> 
+  
+        
+         
+      
+      <div class="card-footer text-muted">
+        Thank you for visiting 
+        
+      </div>
+    </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>
