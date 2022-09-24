@@ -1,146 +1,323 @@
 <!DOCTYPE html>
 
 <html lang="en" dir="ltr">
-  <head>
-    <link rel="icon" type="image/x-icon" href="favicon2.ico" />
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Computer awareness and knowledge" />
-    <meta
-      name="keywords"
-      content="HTML, CSS, JavaScript, computer knowledge, special symbols"
-    />
+<head>
+  <link rel="icon" type="image/x-icon" href="favicon2.ico" />
 
-    <title>BLOG / LOVE COMPUTER</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Computer awareness and knowledge" />
+  <meta name="keywords" content="HTML, CSS, JavaScript, computer knowledge, special symbols" />
 
-    <link
-      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <style>
-        .card {
-     background-color: white;
-     padding: 10%;
-     
-     text-align:justify;
+  <title>BLOG / LOVE COMPUTER</title>
 
-  }
-  h1{
-    color: blue;
-    text-decoration: underline;
-    text-align: center;
-  }
-      </style>
-  </head>
-  <body>
-    <nav>
-      <div class="navbar">
-        <i class="bx bx-menu"></i>
-        <div class="logo"><a href="index.html">Love Computer</a></div>
-        <div class="nav-links">
-          <div class="sidebar-logo">
-            <span class="logo"><a href="index.html">LoveComputer</a></span>
-            <i class="bx bx-x"></i>
-          </div>
-          <ul class="links">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="blog.html">BLOG</a></li>
-            
-            <li>
-              <a href="">WEB DEVELOPMENT</a>
-              <i class="bx bxs-chevron-down htmlcss-arrow arrow"></i>
-              <ul class="htmlCss-sub-menu sub-menu">
-                <li><a href="ht.html">HTML</a></li>
-                <li><a href="cs.html">CSS</a></li>
-                <li><a href="JavaScript.html">JAVASCRIPT</a></li>
-                <li><a href="py.html">Python</a></li>
-                <li><a href="sql.html">SQL</a></li>
-              </ul>
-            </li>
-            <li><a href="aboutus.html">ABOUT US</a></li>
-            <li><a href="contactus.html">CONTACT US</a></li>
-          </ul>
-        </div>
-        <div class="search-box">
-          <i class="bx bx-search"></i>
-          <div class="input-box">
-            <input type="text" placeholder="Search..." />
-          </div>
-        </div>
+  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <style>
+    .card {
+      background-color: white;
+      padding-left: 5%;
+      padding-top: 5%;
+      padding-right: 5%;
+
+      text-align: left;
+
+    }
+
+    h1 {
+      color: blue;
+      text-decoration: underline;
+      text-align: center;
+    }
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">LOVE COMPUTER</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About Us</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Web Development
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="ht.html">HTML</a></li>
+              <li><a class="dropdown-item" href="cs.html">CSS</a></li>
+              <li><a class="dropdown-item" href="JavaScript.html">JavaScript</a></li>
+              <li><a class="dropdown-item" href="py.html">Python</a></li>
+              <li><a class="dropdown-item" href="sql.html">SQL</a></li>
+              <li><a class="dropdown-item" href="PostgreSQL.html">PostgreSQL</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
-    </nav>
-    <div class="card"id="internet">
-        <h1>What is Internet?</h1>
-        
-        <p>
-          Network: When two or more computers are connected with wired and
-          wireless and share their resources(in the form of Images, Videos,
-          etc) it is called a Network.
-        </p>
-        <h3>* The real meaning of Network/Internet is "Sharing".</h3>
-        <h2>->Few important Point</h2>
-        <ol>
-          <li>
-            The Network is created by the Fiber Optic Cable across the
-            world.
-          </li>
-          <li>
-            Through these cables transfer data from one end to another at
-            almost the speed of light. (The speed of light approx 3 lakh
-            Kilometer/second).
-          </li>
-          <li>
-            Internet is a worldwide global system of interconnected computer
-            networks.
-          </li>
-          <li>Internet uses the standard Internet Protocol (TCP/IP).</li>
-          <li>
-            Every computer on the internet is identified by a unique IP
-            address.
-          </li>
-          <li>
-            IP Address is a unique set of numbers (such as 192.168.1.1) that
-            identifies a computer location.
-          </li>
-          <li>
-            A special computer DNS (Domain Name Server) is used to give a
-            name to the IP Address so that the user can locate a computer by
-            a name.
-          </li>
-          <li>
-            For example, a DNS server will resolve a name
-            www.lovecomputer.co.in to a particular IP address to uniquely
-            identify the computer on which this website is hosted.
-          </li>
-          <li>Internet is accessible to every user all over the world.</li>
-        </ol>
-        <h2>Diagram of Internet: how the Internet works
-        </h2>
-        <img src="inter.png" alt="special symbols"width="Auto" />
-        <h2>There are three types of Networks:</h2>
-        <p>1. Internet: The network formed by the cooperative interconnection of millions of computers, linked together is called the Internet. </p>
-        <p>2.  Intranet: It is an internal private network built within an organization using the Internet and World Wide Web standards and products that allow employees of an organization to gain access to corporate information.  </p>
-        <p>3. Extranet: It is the type of network that allows users from outside to access the Intranet of an organization.</p>
-        <h2>There are three types of data communications mode in a network:-</h2>
-        <p>1. Simplex Mode: In simplex mode data only go to one way. Example: Radio, Television (इस तरीके में जानकारी सिर्फ एक ही तरफ़ जाती है) </p>
-        <img src="net.png" alt="special symbols" width="Auto"/>
-        <p>2. Half Duplex Mode:  In Half Duplex mode sender can send the data and also can receive the data but one at a time. It is two-way directional communication but one at a time. Example: Walkie- talkie, physical example: Post office (इस तरीके में जानकारी एक समय में एक ही तरफ से दूसरी तरफ जाती है)</p>
+    </div>
+  </nav>
+  <div class="card" id="internet">
+    <h1>What is Internet?</h1>
 
-        <img src="net2.png" alt="special symbols" width="auto" />
-        <p>3. Full Duplex Mode: In Full Duplex mode, Sender can send the data and also can receive the data simultaneously. It is two-way directional communication simultaneously. Example: Mobile, landline Phone. physical example: face to face (इस तरीके में जानकारी एक ही समय में एक तरफ से दूसरे और दूसरी तरफ से पहली तरफ जा सकती है) </p>
-        <img src="full-duplex.jpg" alt="special symbols" width="60%" />
-        <h2>Protocol (नियम):</h2>
-        <p>There are many rules in the Internet network system like any other system through which it runs smoothly and makes this system good and fair. </p>
-        <h2>This network works on OSI(open system interconnect) Model.</h2>
-        <img src="iso.png" alt="special symbols" width="100%"/>
-    
-    <script src="script.js"></script>
-  </body>
+    <p>
+      Network: When two or more computers are connected with wired and
+      wireless and share their resources(in the form of Images, Videos,
+      etc) it is called a Network.
+    </p>
+    <h3><b> The real meaning of Network/Internet is "Sharing".</b></h3>
+    <important>
+      <h2>Few important Point</h2>
+    </important>
+    <ol>
+      <li>
+        The Network is created by the Fiber Optic Cable across the
+        world.
+      </li>
+      <li>
+        Through these cables transfer data from one end to another at
+        almost the speed of light. (The speed of light approx 3 lakh
+        Kilometer/second).
+      </li>
+      <li>
+        Internet is a worldwide global system of interconnected computer
+        networks.
+      </li>
+      <li>Internet uses the standard Internet Protocol (TCP/IP).</li>
+      <li>
+        Every computer on the internet is identified by a unique IP
+        address.
+      </li>
+      <li>
+        IP Address is a unique set of numbers (such as 192.168.1.1) that
+        identifies a computer location.
+      </li>
+      <li>
+        A special computer DNS (Domain Name Server) is used to give a
+        name to the IP Address so that the user can locate a computer by
+        a name.
+      </li>
+      <li>
+        For example, a DNS server will resolve a name
+        www.lovecomputer.co.in to a particular IP address to uniquely
+        identify the computer on which this website is hosted.
+      </li>
+      <li>Internet is accessible to every user all over the world.</li>
+    </ol>
+    <h2>Diagram of Internet: how the Internet works
+    </h2>
+    <img src="inter.png" alt="special symbols" width="50%" />
+    <h2>There are three types of Networks:</h2>
+    <p>1. Internet: The network formed by the cooperative interconnection of millions of computers, linked together is
+      called the Internet. </p>
+    <p>2. Intranet: It is an internal private network built within an organization using the Internet and World Wide Web
+      standards and products that allow employees of an organization to gain access to corporate information. </p>
+    <p>3. Extranet: It is the type of network that allows users from outside to access the Intranet of an organization.
+    </p>
+    <h2>There are three types of data communications mode in a network:-</h2>
+    <p>1. Simplex Mode: In simplex mode data only go to one way. Example: Radio, Television (इस तरीके में जानकारी सिर्फ
+      एक ही तरफ़ जाती है) </p>
+    <img src="net.png" alt="simplex" width="50%" />
+    <p>2. Half Duplex Mode: In Half Duplex mode sender can send the data and also can receive the data but one at a
+      time. It is two-way directional communication but one at a time. Example: Walkie- talkie, physical example: Post
+      office (इस तरीके में जानकारी एक समय में एक ही तरफ से दूसरी तरफ जाती है)</p>
+
+    <img src="net2.png" alt="half Duplex" width="50%" />
+    <p>3. Full Duplex Mode: In Full Duplex mode, Sender can send the data and also can receive the data simultaneously.
+      It is two-way directional communication simultaneously. Example: Mobile, landline Phone. physical example: face to
+      face (इस तरीके में जानकारी एक ही समय में एक तरफ से दूसरे और दूसरी तरफ से पहली तरफ जा सकती है) </p>
+    <img src="full-duplex.jpg" alt="Full Duplex" width="50%%" />
+    <h2>Protocol (नियम):</h2>
+    <p>There are many rules in the Internet network system like any other system through which it runs smoothly and
+      makes this system good and fair. </p>
+    <h2>This network works on OSI(open system interconnect) Model.</h2>
+    <table>
+      <tr>
+        <th>Layer</th>
+        <th>what it role</th>
+        <th>where it is work</th>
+
+      </tr>
+      <tr>
+        <td>7 - Application</td>
+        <td>Where humans process data and information</td>
+        <td>Software Level</td>
+
+
+      </tr>
+      <tr>
+        <td>6 - Presentation</td>
+        <td>Ensrues data is in a usable format</td>
+        <td>Software Level</td>
+
+      </tr>
+      <tr>
+        <td>5 - Session</td>
+        <td>Capable of maintaining connections</td>
+        <td>Software Level</td>
+
+      </tr>
+      <tr>
+        <td>4 - Transport</td>
+        <td>Data is forwarded to a service cable of handling requests</td>
+        <td>connects the software with the hardware</td>
+
+      </tr>
+      <tr>
+        <td>3 - Network layer</td>
+        <td>Accountable for which path packets should travel on a Network.</td>
+        <td>Hardware</td>
+
+      </tr>
+      <tr>
+        <td>2 - Data Link</td>
+        <td>Accountable for which physical devices packets should go to</td>
+        <td>Hardware</td>
+
+      </tr>
+      <tr>
+        <td>1 - Physical</td>
+        <td>The Physical infratructure to transport data</td>
+        <td>Hardware</td>
+
+      </tr>
+    </table>
+    <P>Note: SDN ("Software Defined Networking") is technology which allows more layers of the hardware to be
+      implemented via software.</P>
+    <h1> Roles of Layers with Protocal</h1>
+    <h3>Layer 7 - Application Layer</h3>
+    <ul style="list-style-type:square;">
+      <li>HTTP ("Hypertext Transfer Protocol") - Enables us to access web applications.</li>
+      <li>FTP ("File Transfer Protocol") - Allows users to transfer files.</li>
+      <li>SNMP ("Simple Network Management Protocol") - Protocol to read and update network device configurations.</li>
+    </ul>
+    <p>Note: There are many applications which uses these protocols like Google Chrome, Microsoft Edge and FileZilla.
+    </p>
+    <hr />
+    <h3>Layer 6 - Presentation Layer</h3>
+    <ul style="list-style-type:square;">
+      <li>Encoding Schemes used to represent text and data, for example ASCII(American Standard Code for Information
+        Interchange) and UTF(Unicode Transformation Format).</li>
+      <li>Encryption for services, for example SSL ("Secure Sockets Layer") and TLS ("Transport Security Layer").</li>
+      <li>Compression, for example GZip in use in many implementations of HTTP.</li>
+    </ul>
+    <hr />
+    <h3>Layer 5 - Session Layer</h3>
+    <ul style="list-style-type:square;">
+      <li>SOCKS - A protocol for sending packets through a proxy server.</li>
+      <li>NetBIOS - An older Windows protocol for establishing sessions and resolving names.</li>
+      <li>SIP ("Session Initiation Protocol") - For engaging in VOIP ("Voice Over IP") communications.</li>
+    </ul>
+    <hr />
+    <h3>Layer 4 - Transport Layer</h3>
+    <ul style="list-style-type:square;">
+      <li>TCP ("Transmission Control Protocol") - Used for many applications, ensuring stability, control of how much
+        data can be sent at any given time, reliability and more.</li>
+      <li>UDP ("User Datagram Protocol") - Lightweight and quick protocol use for many services.</li>
+      <li>QUIC ("Quick UDP Internet Connections") - A protocol designed for faster connections and goes hand-in-hand
+        with the version 2 of the HTTP protocol.</li>
+    </ul>
+    <hr />
+    <h3>Layer 3 - Network Layer</h3>
+    <ul style="list-style-type:square;">
+      <li>IP ("Internet Protocol") - Used everyday when accessing the Internet. Comes in two versions, IP version
+        4(192.168.0.1) and
+        6(2a00:1450:400f:80a::200e).</li>
+      <li>ICMP ("Internet Control Message Protocol") - Used by network devices and network operators, to diagnose
+        network connections or for devices to send and respond to error conditions and more.</li>
+      <li>IPSec ("Internet Protocol Security") - Allows encrypted and secure connections between two network devices.
+      </li>
+    </ul>
+    <hr />
+    <h3>Layer 2 - Data-Link Layer</h3>
+    <ul style="list-style-type:square;">
+      <li>Ethernet - An essential protocol used by most operating systems when connecting to networks using a physical
+        cable.</li>
+      <li>Wi-Fi ("Wireless Fidelity") - For accessing networks via radio signals. It uses a family of protocols called
+        IEEE 802.11.xx.</li>
+      <li>NDP ("Neighbor Discovery Protocol") - IP version 6(IPv6) uses this protocol on the Link Layer to gather
+        information required to communicate via IPv6.</li>
+    </ul>
+    <hr />
+    <h3>Layer 1 - Physical Layer</h3>
+    <ul style="list-style-type:square;">
+      <li>Ethernet - An essential protocol used by most operating systems when connecting to networks using a physical
+        cable.</li>
+      <li>Wi-Fi ("Wireless Fidelity") - For accessing networks via radio signals. It uses a family of protocols called
+        IEEE 802.11.xx.</li>
+      <li>NDP ("Neighbor Discovery Protocol") - IP version 6(IPv6) uses this protocol on the Link Layer to gather
+        information required to communicate via IPv6.</li>
+    </ul>
+
+
+    <img src="osi.jpg" alt="special symbols" width="70%" />
+    <hr />
+    <h1>VPN ("Virtual Private Network")</h1>
+    <p>A VPN is a system which enables two system to establish encrypted forms for communication, enabling network
+      traffic to be encrypted in transit. Many VPN's is a client to server architecture, allowing the client to access
+      multiple services behind the VPN. VPN's hosted by your work place is also likely to provide access to resources
+      otherwise only accessible from the inside.</p>
+
+    <hr />
+    <div class="card text-center ">
+      <div class="card-header bg-dark text-white">
+        About Us
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Spread Knowledge with Practical</h5>
+        <p class="card-text text-center"><BR> THIS WEBSITE HAS A MOTIVE TO SPREAD THE INFORMATION ABOUT Web
+          Development.<br>
+          Developed by Tarun Kumar</p>
+      </div>
+      <hr />
+
+      <a class="btn btn-primary active btn-outline-primary" href="blog.html" role="button">Click here for Blog</a>
+
+
+
+
+      <div class="card-footer text-muted">
+        Thank you for visiting
+
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+</body>
+
 </html>
