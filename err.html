@@ -4,18 +4,21 @@
   <head>
     <style>
       .pro {
-        padding-top: 10%;
+        
         text-align: center;
         background-color: gainsbor;
+        color: black;
       }
       p {
-        text-align: justify;
+        text-align: center;
       }
       table {
   border-collapse: collapse;
   border-spacing: 0;
-  width: 100%;
-  border: 1px solid #ddd;
+  width: 95%;
+  padding: 10%;
+    border: 1px solid #ddd;
+    border-spacing: 10px;
 }
 
  td {
@@ -25,6 +28,8 @@
 th{
     text-align:center;
     padding: 16px;
+    background-color: black;
+    color: white;
 }
 tr:nth-child(even) {
   background-color: #f2f2f2;
@@ -32,51 +37,56 @@ tr:nth-child(even) {
       
     </style>
     <meta charset="UTF-8" />
-    <title>BLOG / LOVE COMPUTER</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>HTTP-Errors / LOVE COMPUTER</title>
+    
     <!-- Boxicons CDN Link -->
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="HTTP Errors">
+  <meta name="keywords" content="HTTP Web">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9046404486667166"
      crossorigin="anonymous"></script>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </head>
   <body>
-    <nav>
-      <div class="navbar">
-        <i class="bx bx-menu"></i>
-        <div class="logo"><a href="index.html">Love Computer</a></div>
-        <div class="nav-links">
-          <div class="sidebar-logo">
-            <span class="logo"><a href="index.html">LoveComputer</a></span>
-            <i class="bx bx-x"></i>
-          </div>
-          <ul class="links">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="blog.html">BLOG</a></li>
-
-            <li>
-              <a href="">WEB DEVELOPMENT</a>
-              <i class="bx bxs-chevron-down htmlcss-arrow arrow"></i>
-              <ul class="htmlCss-sub-menu sub-menu">
-                <li><a href="ht.html">HTML</a></li>
-                <li><a href="cs.html">CSS</a></li>
-                <li><a href="JavaScript.html">JAVASCRIPT</a></li>
-                <li><a href="py.html">Python</a></li>
-                <li><a href="sql.html">SQL</a></li>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">LOVE COMPUTER</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus.html">About Us</a>
+            </li>
+  
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Web Development
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="ht.html">HTML</a></li>
+                <li><a class="dropdown-item" href="cs.html">CSS</a></li>
+                <li><a class="dropdown-item" href="JavaScript.html">JavaScript</a></li>
+                <li><a class="dropdown-item" href="py.html">Python</a></li>
+                <li><a class="dropdown-item" href="sql.html">SQL</a></li>
+                <li><a class="dropdown-item" href="PostgreSQL.html">PostgreSQL</a></li>
               </ul>
             </li>
-            <li><a href="aboutus.html">ABOUT US</a></li>
-            <li><a href="contactus.html">CONTACT US</a></li>
           </ul>
-        </div>
-        <div class="search-box">
-          <i class="bx bx-search"></i>
-          <div class="input-box">
-            <input type="text" placeholder="Search..." />
-          </div>
         </div>
       </div>
     </nav>
@@ -299,6 +309,32 @@ tr:nth-child(even) {
             <td>The client needs to authenticate to gain network access</td>
         </tr>
         </table>
-    <script src="script.js"></script>
+        <hr/>
+  <div class="card text-center ">
+    <div class="card-header bg-dark text-white">
+      About Us
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Spread Knowledge with Practical</h5>
+      <p class="card-text text-center"><BR> THIS WEBSITE HAS A MOTIVE TO SPREAD THE INFORMATION ABOUT Web Development.<br>
+      Developed by Tarun Kumar</p>
+    </div>
+    <hr/>
+
+    <a class="btn btn-primary active btn-outline-primary" href="blog.html" role="button">Click here for Blog</a> 
+
+      
+       
+    
+    <div class="card-footer text-muted">
+      Thank you for visiting 
+      
+    </div>
+  </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
   </body>
 </html>
