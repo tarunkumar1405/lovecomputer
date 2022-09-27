@@ -9,12 +9,12 @@
             text-align: justify;
             width: 100%;
             text-decoration: none;
-            padding-left: 20px;
+            
             
 
         }    
         .head{
-          padding: 70px 5px 10px 15px;
+         padding-top:10px;
             text-align: center;
             
         }
@@ -25,41 +25,28 @@
 
         }
         .btn {
-            color:blue;
-           
-            height: 40px;
-            width: 90px;
-            padding: 2px;
-            
-            text-decoration: none;
-        }
-        .line{
-            border: 2px dashed red;
-        }
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
         p,h2,h3,h4   {
             text-align: justify;
             padding-left: 20px;
             padding-right: 20px;
         }
-        #myBtn {
-display: none;
-position: fixed;
-bottom: 20px;
-right: 30px;
-z-index: 99;
-font-size: 12px;
-border: none;
-outline: none;
-background-color: blue;
-color: white;
-cursor: pointer;
-padding: 15px;
-border-radius: 4px;
-}
+        
 
-#myBtn:hover {
-background-color: #555;
-}
 
 td{
   text-align: left;
@@ -67,14 +54,13 @@ td{
 .responsive {
   width: 100%;
   height: auto;
-
+  
 </style>
         
         
     <meta charset="UTF-8">
     <title> SQL / LOVE COMPUTER</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="ht.css">
+    
     
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -85,41 +71,41 @@ td{
      crossorigin="anonymous"></script>
    </head>
 <body>
-  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-  <nav>
-    <div class="navbar">
-      <i class="bx bx-menu"></i>
-      <div class="logo"><a href="index.html">Love Computer</a></div>
-      <div class="nav-links">
-        <div class="sidebar-logo">
-          <span class="logo-name">Love Computer</span>
-          <i class="bx bx-x"></i>
-        </div>
-        <ul class="links">
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="blog.html">BLOG</a></li>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">LOVE COMPUTER</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About Us</a>
+          </li>
 
-          <li>
-            <a href="#">WEB DEVELOPMENT</a>
-            <i class="bx bxs-chevron-down js-arrow arrow"></i>
-            <ul class="js-sub-menu sub-menu">
-              <li><a href="ht.html">HTML</a></li>
-              <li><a href="cs.html">CSS</a></li>
-              <li><a href="JavaScript.html">JAVASCRIPT</a></li>
-              <li><a href="py.html">Python</a></li>
-              <li><a href="sql.html">SQL</a></li>
-              <li><a href="PostgreSQL.html">PostgreSQL</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Web Development
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="ht.html">HTML</a></li>
+              <li><a class="dropdown-item" href="cs.html">CSS</a></li>
+              <li><a class="dropdown-item" href="JavaScript.html">JavaScript</a></li>
+              <li><a class="dropdown-item" href="py.html">Python</a></li>
+              <li><a class="dropdown-item" href="sql.html">SQL</a></li>
+              <li><a class="dropdown-item" href="PostgreSQL.html">PostgreSQL</a></li>
             </ul>
           </li>
-          <li><a href="aboutus.html">ABOUT US</a></li>
-          <li><a href="contactus.html">CONTACT US</a></li>
         </ul>
-      </div>
-      <div class="search-box">
-        <i class="bx bx-search"></i>
-        <div class="input-box">
-          <input type="text" placeholder="Search..." />
-        </div>
       </div>
     </div>
   </nav>
@@ -977,8 +963,30 @@ td{
     </div>
     
   </div>
-  <script src="script.js"></script>
-  <script src="top.js"></script>
+  <hr/>
+  <div class="card text-center ">
+    <div class="card-header bg-dark text-white">
+      About Us
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Spread Knowledge with Practical</h5>
+      <p class="card-text text-center"><BR> THIS WEBSITE HAS A MOTIVE TO SPREAD THE INFORMATION ABOUT Web Development.<br>
+      Developed by Tarun Kumar</p>
+    </div>
+    <hr/>
+
+    <a class="btn btn-primary active btn-outline-primary" href="blog.html" role="button">Click here for Blog</a> 
+
+      
+       
+    
+    <div class="card-footer text-muted">
+      Thank you for visiting 
+      
+    </div>
+  </div>
+  
+ 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   </body>
 
