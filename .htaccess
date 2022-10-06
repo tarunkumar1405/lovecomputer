@@ -1,0 +1,3 @@
+RewriteEngin On
+Rewritecond %[HTTPS] off
+RewriteRule (.*) https://<common_name>%[REQUEST_URI]
