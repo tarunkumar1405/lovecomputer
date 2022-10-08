@@ -1,0 +1,172 @@
+﻿{
+    "records": [
+        {
+            "S No.": "1",
+            "States": "Andhra Pradesh",
+            "Chief Minister Name": "Y.S. Jagan Mohan Reddy",
+            "Governor Name": "Biswabhushan Harichandan"
+        },
+        {
+            "S No.": "2",
+            "States": "Arunachal Pradesh",
+            "Chief Minister Name": "Pema Khandu",
+            "Governor Name": "Brigadier B.D Mishra (retd)"
+        },
+        {
+            "S No.": "3",
+            "States": "Assam",
+            "Chief Minister Name": "Himanta Biswa Sarma",
+            "Governor Name": "Jagdish Mukhi"
+        },
+        {
+            "S No.": "4",
+            "States": "Bihar",
+            "Chief Minister Name": "Nitish Kumar",
+            "Governor Name": "Phagu Chauhan"
+        },
+        {
+            "S No.": "5",
+            "States": "Chhattisgarh",
+            "Chief Minister Name": "Bhupesh Bhagel",
+            "Governor Name": "Anusuiya Uikey"
+        },
+        {
+            "S No.": "6",
+            "States": "Goa",
+            "Chief Minister Name": "Pramod Sawant",
+            "Governor Name": "PS Sreedharan Pillai"
+        },
+        {
+            "S No.": "7",
+            "States": "Gujarat",
+            "Chief Minister Name": "Bhupendrabhai Patel",
+            "Governor Name": "Acharaya Devvrat"
+        },
+        {
+            "S No.": "8",
+            "States": "Haryana",
+            "Chief Minister Name": "Manohar Lal Khattar",
+            "Governor Name": "Bandaru Dattatreya"
+        },
+        {
+            "S No.": "9",
+            "States": "Himachal Pradesh",
+            "Chief Minister Name": "Jai Ram Thakur",
+            "Governor Name": "Rajendra Vishwanath Arlekar"
+        },
+        {
+            "S No.": "10",
+            "States": "Jharkhand",
+            "Chief Minister Name": "Hemant Soren",
+            "Governor Name": "Ramesh Bais"
+        },
+        {
+            "S No.": "11",
+            "States": "Karnataka",
+            "Chief Minister Name": "Sri Basavaraj Bommai",
+            "Governor Name": "Thawar Chand Gehlot"
+        },
+        {
+            "S No.": "12",
+            "States": "Kerala",
+            "Chief Minister Name": "Pinarayi Vijayan",
+            "Governor Name": "Arif Mohammed Khan"
+        },
+        {
+            "S No.": "13",
+            "States": "Madhya Pradesh",
+            "Chief Minister Name": "Shivraj Singh Chouhan",
+            "Governor Name": "Mangubhai Chaganbhai Patel"
+        },
+        {
+            "S No.": "14",
+            "States": "Maharashtra",
+            "Chief Minister Name": "Eknath Shinde",
+            "Governor Name": "Bhagat Singh Koshyari"
+        },
+        {
+            "S No.": "15",
+            "States": "Manipur",
+            "Chief Minister Name": "N. Biren Singh",
+            "Governor Name": "Shri La. Ganesan"
+        },
+        {
+            "S No.": "16",
+            "States": "Meghalaya",
+            "Chief Minister Name": "Conrad Kongkal Sangma",
+            "Governor Name": "Satya Pal Malik"
+        },
+        {
+            "S No.": "17",
+            "States": "Mizoram",
+            "Chief Minister Name": "Zoramthanga",
+            "Governor Name": "Dr. Kambhampati Haribabu"
+        },
+        {
+            "S No.": "18",
+            "States": "Nagaland",
+            "Chief Minister Name": "Neiphiu Rio",
+            "Governor Name": "Jagdish Mukhi"
+        },
+        {
+            "S No.": "19",
+            "States": "Odisha",
+            "Chief Minister Name": "Naveen Patnaik",
+            "Governor Name": "Prof. Ganesh Lal Mathur"
+        },
+        {
+            "S No.": "20",
+            "States": "Punjab",
+            "Chief Minister Name": "Bhagwant Mann",
+            "Governor Name": "Shri Banwarilal Purohit"
+        },
+        {
+            "S No.": "21",
+            "States": "Rajasthan",
+            "Chief Minister Name": "Ashok Gehlot",
+            "Governor Name": "Kalraj Mishra"
+        },
+        {
+            "S No.": "22",
+            "States": "Sikkim",
+            "Chief Minister Name": "Prem Singh Tamang (PS Golay)",
+            "Governor Name": "Ganga Prasad"
+        },
+        {
+            "S No.": "23",
+            "States": "Tamil Nadu",
+            "Chief Minister Name": "M.K Stalin",
+            "Governor Name": "R.N. Ravi"
+        },
+        {
+            "S No.": "24",
+            "States": "Telangana",
+            "Chief Minister Name": "K.Chandrashekhar Rao",
+            "Governor Name": "Dr. Tamilisai Soundararajan"
+        },
+        {
+            "S No.": "25",
+            "States": "Tripura",
+            "Chief Minister Name": "Manik Saha",
+            "Governor Name": "Satyadev Narayan Arya"
+        },
+        {
+            "S No.": "26",
+            "States": "Uttar Pradesh",
+            "Chief Minister Name": "Yogi Adityanath",
+            "Governor Name": "Anandiben Patel"
+        },
+        {
+            "S No.": "27",
+            "States": "Uttarakhand",
+            "Chief Minister Name": "Shri Pushkar Singh Dhami",
+            "Governor Name": "Gurmit Singh"
+        },
+        {
+            "S No.": "28",
+            "States": "West Bengal",
+            "Chief Minister Name": "Mamata Banerjee",
+            "Governor Name": "Jagdeep Dhankar"
+        }
+    ]
+}

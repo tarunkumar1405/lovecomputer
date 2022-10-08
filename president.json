@@ -1,0 +1,113 @@
+﻿{
+    "records" : [
+    {
+        "S No.": "1",
+        "President Name": "Rajendra Prasad",
+        "From": "26-Jan-50",
+        "To": "13-May-62"
+    },
+    {
+        "S No.": "2",
+        "President Name": "Sarvepalli Radhakrishnan",
+        "From": "13-May-62",
+        "To": "13-May-67"
+    },
+    {
+        "S No.": "3",
+        "President Name": "Zakir Husain",
+        "From": "13-May-67",
+        "To": "3-May-69"
+    },
+    {
+        "S No.": "4",
+        "President Name": "Varahagiri Venkata Giri",
+        "From": "3-May-69",
+        "To": "20-Jul-69"
+    },
+    
+    {
+        "S No.": "5",
+        "President Name": "Mohammad Hidayatullah",
+        "From": "20-Jul-69",
+        "To": "24-Aug-69"
+    },
+    {
+        "S No.": "6",
+        "President Name": "  Varahagiri Venkata Giri",
+        "From": "24-Aug-69",
+        "To": "24-Aug-74"
+    },
+    {
+        "S No.": "7",
+        "President Name": "Fakhruddin Ali Ahmed",
+        "From": "24-Aug-74",
+        "To": "11-Feb-77"
+    },
+    {
+        "S No.": "8",
+        "President Name": "B. D. Jatti",
+        "From": "11-Feb-77",
+        "To": "25-Jul-77"
+    },
+    {
+        "S No.": "9",
+        "President Name": "Neelam Sanjiva Reddy",
+        "From": "25-Jul-77",
+        "To": "25-Jul-82"
+    },
+    {
+        "S No.": "10",
+        "President Name": "Zail Singh",
+        "From": "25-Jul-82",
+        "To": "25-Jul-87"
+    },
+    {
+        "S No.": "11",
+        "President Name": "Ramaswamy Venkataraman",
+        "From": "25-Jul-87",
+        "To": "25-Jul-92"
+    },
+    {
+        "S No.": "12",
+        "President Name": "Shankar Dayal Sharma",
+        "From": "25-Jul-92",
+        "To": "25-Jul-97"
+    },
+    {
+        "S No.": "13",
+        "President Name": "K. R. Narayanan",
+        "From": "25-Jul-97",
+        "To": "25-Jul-02"
+    },
+    {
+        "S No.": "14",
+        "President Name": "A. P. J. Abdul Kalam",
+        "From": "25-Jul-02",
+        "To": "25-Jul-07"
+    },
+    {
+        "S No.": "15",
+        "President Name": "Pratibha Patil",
+        "From": "25-Jul-07",
+        "To": "25-Jul-12"
+    },
+    {
+        "S No.": "16",
+        "President Name": "Pranab Mukherjee",
+        "From": "25-Jul-12",
+        "To": "25-Jul-17"
+    },
+    {
+        "S No.": "17",
+        "President Name": "Ram Nath Kovind",
+        "From": "25-Jul-17",
+        "To": "25-Jul-22"
+    },
+    {
+        "S No.": "18",
+        "President Name": "Draupadi Murmu",
+        "From": "25-Jul-22",
+        "To": "Current (Term ends on 25 July 2027)"
+    }
+]
+}

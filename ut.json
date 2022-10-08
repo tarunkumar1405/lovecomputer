@@ -1,0 +1,52 @@
+﻿{
+    "records": [
+        {
+            "S No.": "1",
+            "Union Territories": "Andaman & Nicobar",
+            "Chief Minister Name": "",
+            "Governor Name": " Shri. Devendra Kumar Joshi (Lieutenant Governor)"
+        },
+        {
+            "S No.": "2",
+            "Union Territories": "Chandigarh",
+            "Chief Minister Name": "",
+            "Governor Name": " Shri. V.P. Singh Badnore (Administrator)"
+        },
+        {
+            "S No.": "3",
+            "Union Territories": "Dadra and Nagar Haveli and Daman and Diu",
+            "Chief Minister Name": "",
+            "Governor Name": " Shri Praful Patel (Administrator)"
+        },
+        {
+            "S No.": "4",
+            "Union Territories": "Delhi",
+            "Chief Minister Name": "Arvind Kejriwal",
+            "Governor Name": " Shri Vinai Kumar Saxena (Lieutenant Governor)"
+        },
+        {
+            "S No.": "5",
+            "Union Territories": "Jammu and Kashmir",
+            "Chief Minister Name": "",
+            "Governor Name": " Shri Manoj Sinha (Lieutenant Governor)"
+        },
+        {
+            "S No.": "6",
+            "Union Territories": "Lakshadweep",
+            "Chief Minister Name": "",
+            "Governor Name": " Shri Praful Patel (Administrator)"
+        },
+        {
+            "S No.": "7",
+            "Union Territories": "Puducherry",
+            "Chief Minister Name": "N. Rangaswamy",
+            "Governor Name": " Dr. Tamilisai Soundararajan (Lieutenant Governor)"
+        },
+        {
+            "S No.": "8",
+            "Union Territories": "Ladakh",
+            "Chief Minister Name": "",
+            "Governor Name": " Shri Radha Krishna Mathur (Lieutenant Governor)"
+        }
+    ]
+}
