@@ -6,6 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>General Knowledge/ Love Comptuer</title>
     <style>
+      * {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+
+
+.menu {
+  width: 25%;
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
+}
+
+.main {
+  width: 75%;
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
+}
         body {
   font: 14px Verdana, sans-serif;
   
@@ -61,9 +81,7 @@ a:hover {
 a:active {
   color: blue;
 }
-#sec{
-    text-align: center;
-}
+
 #myBtn {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
@@ -129,14 +147,16 @@ a:active {
           </div>
         </div>
       </nav>
-      <div id="sec">
+      <div class="container mt-3">
+  <div class="row">
+    <div class="col-sm-10 text-center">
       <a href="#section1" >List of Hon'ble President of India-2022</a><br>
       <a href="#section2" >List of Hon'ble Vice President of India-2022</a><br>
       <a href="#section3" >List of Hon'ble Prime Minister of India-2022</a><br>
       <a href="#section4" >All States CM and Governor List 2022</a><br>
       <a href="#section5" >Chief Minister and Governor List 2022 (Union Territory)</a><br>
     </div>
-      <div style="overflow-x:auto;">
+      <div class="col-sm-11">
     <h1 id="section1">List of Hon'ble President of India-2022</h1>
 
 <table>
@@ -504,6 +524,8 @@ a:active {
 </tr>
 </table>
 </div>
+</div>
+
 <hr>
 
 <div class="card text-center ">
