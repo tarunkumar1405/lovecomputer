@@ -1,0 +1,1508 @@
+{
+  "records":[
+   {
+   "Word": "Administrator General",
+   "MEANING": "महाप्रशासक"
+ },
+ {
+   "Word": "Admiralty",
+   "MEANING": "नौकाधिकरण, नावाधिकरण"
+ },
+ {
+   "Word": "Abandonment",
+   "MEANING": "परित्यजन, परित्याग"
+ },
+ {
+   "Word": "Abridgement",
+   "MEANING": "न्यूनन"
+ },
+ {
+   "Word": "Abrogation",
+   "MEANING": "निराकरण"
+ },
+ {
+   "Word": "Access",
+   "MEANING": "प्रवेश, पहुँच"
+ },
+ {
+   "Word": "Admissible",
+   "MEANING": "ग्राह्य"
+ },
+ {
+   "Word": "Adoption",
+   "MEANING": "दत्तक ग्रहण, दत्तक स्वीकरण"
+ },
+ {
+   "Word": "Account",
+   "MEANING": "लेखा गणना"
+ },
+ {
+   "Word": "Accrual",
+   "MEANING": "प्रापण, प्रोद्भवन"
+ },
+ {
+   "Word": "Accrued",
+   "MEANING": "प्राप्त, प्रोद्भूत, उपार्जित"
+ },
+ {
+   "Word": "Adulteration",
+   "MEANING": "अपमिश्रण"
+ },
+ {
+   "Word": "Adult suffrage",
+   "MEANING": "वयस्क मताधिकार"
+ },
+ {
+   "Word": "Advance",
+   "MEANING": "अग्रिम, धन पेशगी"
+ },
+ {
+   "Word": "Advise",
+   "MEANING": "मन्त्रणा देना"
+ },
+ {
+   "Word": "Advice",
+   "MEANING": "मन्त्रणा, उपदेश,सलाह"
+ },
+ {
+   "Word": "Accusation",
+   "MEANING": "अभियोग"
+ },
+ {
+   "Word": "Accused",
+   "MEANING": "अभियुक्त"
+ },
+ {
+   "Word": "Acquisition",
+   "MEANING": "अर्जन"
+ },
+ {
+   "Word": "Act",
+   "MEANING": "अधिनियम"
+ },
+ {
+   "Word": "Acting",
+   "MEANING": "कार्यकारी"
+ },
+ {
+   "Word": "Actionable wrong",
+   "MEANING": "अभियोज्य दोष"
+ },
+ {
+   "Word": "Adaptation",
+   "MEANING": "अनुकूलन"
+ },
+ {
+   "Word": "Addressed",
+   "MEANING": "सम्बोधित"
+ },
+ {
+   "Word": "Adherence",
+   "MEANING": "अवलम्बन"
+ },
+ {
+   "Word": "Ad Hoc",
+   "MEANING": "तदर्थ"
+ },
+ {
+   "Word": "Adjournment",
+   "MEANING": "स्थगन, अवधिदान, कालदान"
+ },
+ {
+   "Word": "Administer",
+   "MEANING": "प्रशासन करना"
+ },
+ {
+   "Word": "Administered",
+   "MEANING": "प्रशासित"
+ },
+ {
+   "Word": "Administration",
+   "MEANING": "प्रशासन"
+ },
+ {
+   "Word": "Administrative",
+   "MEANING": "प्रशासकीय"
+ },
+ {
+   "Word": "Administrative function",
+   "MEANING": "प्रशासकीय कृत्य"
+ },
+ {
+   "Word": "Advisory Council",
+   "MEANING": "मन्त्रणा परिषद्"
+ },
+ {
+   "Word": "Advocate",
+   "MEANING": "अधिवक्ता"
+ },
+ {
+   "Word": "Advocate-General",
+   "MEANING": "महाधिवक्ता"
+ },
+ {
+   "Word": "Affect",
+   "MEANING": "प्रतिकूल प्रभाव डालना"
+ },
+ {
+   "Word": "prejudicially Affirmation",
+   "MEANING": "प्रतिज्ञान"
+ },
+ {
+   "Word": "Agency",
+   "MEANING": "अभिकरण"
+ },
+ {
+   "Word": "Agent",
+   "MEANING": "अभिकर्ता"
+ },
+ {
+   "Word": "Agreement",
+   "MEANING": "करार, समझौता"
+ },
+ {
+   "Word": "Air Force",
+   "MEANING": "वायुसेना"
+ },
+ {
+   "Word": "Air navigation",
+   "MEANING": "विमान परिवहन"
+ },
+ {
+   "Word": "Air traffic",
+   "MEANING": "विमान यातायात"
+ },
+ {
+   "Word": "Airways",
+   "MEANING": "वायु पथ"
+ },
+ {
+   "Word": "Alien",
+   "MEANING": "अन्य देशी, परदेशी"
+ },
+ {
+   "Word": "Alienate",
+   "MEANING": "पराधीन करना"
+ },
+ {
+   "Word": "Alienation",
+   "MEANING": "अन्य संक्रमण, परकीयकरण"
+ },
+ {
+   "Word": "Allegation",
+   "MEANING": "अभिकथन, आरोप"
+ },
+ {
+   "Word": "Allegiance",
+   "MEANING": "निष्ठा"
+ },
+ {
+   "Word": "Allocation",
+   "MEANING": "बँटवारा"
+ },
+ {
+   "Word": "Allot",
+   "MEANING": "बाँटना"
+ },
+ {
+   "Word": "Allotment",
+   "MEANING": "बँटवारा"
+ },
+ {
+   "Word": "Amnesty",
+   "MEANING": "सर्वक्षमा"
+ },
+ {
+   "Word": "Amount",
+   "MEANING": "राशि"
+ },
+ {
+   "Word": "Annual",
+   "MEANING": "वार्षिक"
+ },
+ {
+   "Word": "Annual Financial",
+   "MEANING": "वार्षिक वित्त विवरण"
+ },
+ {
+   "Word": "Statement Annuity",
+   "MEANING": "वार्षिका"
+ },
+ {
+   "Word": "Annulment",
+   "MEANING": "अस्वीकृति"
+ },
+ {
+   "Word": "Appeal",
+   "MEANING": "पुनर्विचार - प्रार्थना"
+ },
+ {
+   "Word": "Appear",
+   "MEANING": "उपस्थित होना"
+ },
+ {
+   "Word": "Appended",
+   "MEANING": "संलग्न"
+ },
+ {
+   "Word": "Application",
+   "MEANING": "आवेदन-पत्र"
+ },
+ {
+   "Word": "Appointment",
+   "MEANING": "नियुक्ति"
+ },
+ {
+   "Word": "Appropriation",
+   "MEANING": "विनियोग"
+ },
+ {
+   "Word": "Armed forces",
+   "MEANING": "सशस्त्र सेना"
+ },
+ {
+   "Word": "Arrest",
+   "MEANING": "बन्दीकरण"
+ },
+ {
+   "Word": "Article",
+   "MEANING": "अनुच्छेद"
+ },
+ {
+   "Word": "Assemble",
+   "MEANING": "जमा होना"
+ },
+ {
+   "Word": "Assent",
+   "MEANING": "अनुमति"
+ },
+ {
+   "Word": "Assessment",
+   "MEANING": "कर-निर्धारण"
+ },
+ {
+   "Word": "Assignment",
+   "MEANING": "समर्पण, सुपुर्दगी"
+ },
+ {
+   "Word": "Association",
+   "MEANING": "संस्था, संघ"
+ },
+ {
+   "Word": "Assurance of property",
+   "MEANING": "सम्पत्ति हस्तान्तरण"
+ },
+ {
+   "Word": "As the case may be Attachment",
+   "MEANING": "यथास्थिति, यथा प्रसंग"
+ },
+ {
+   "Word": "Atachment",
+   "MEANING": "कुर्की, टांच"
+ },
+ {
+   "Word": "Attorney-General",
+   "MEANING": "महान्यायवादी"
+ },
+ {
+   "Word": "Audit",
+   "MEANING": "लेखा परीक्षण, गणना परीक्षण"
+ },
+ {
+   "Word": "Auditor-General",
+   "MEANING": "महालेखा परीक्षक"
+ },
+ {
+   "Word": "Authentication",
+   "MEANING": "प्रमाणीकरण"
+ },
+ {
+   "Word": "Authority",
+   "MEANING": "प्राधिकारी"
+ },
+ {
+   "Word": "Authorize",
+   "MEANING": "प्राधिकृत करना"
+ },
+ {
+   "Word": "Autonomous",
+   "MEANING": "स्वायत्त"
+ },
+ {
+   "Word": "Autonomy",
+   "MEANING": "स्वायत्तता, स्वायत्त शासन"
+ },
+ {
+   "Word": "Auxiliary",
+   "MEANING": "सहायक"
+ },
+ {
+   "Word": "Award",
+   "MEANING": "पंचाज्ञा, निर्णय देना"
+ },
+ {
+   "Word": "Appropriation bill",
+   "MEANING": "विनियोग विधेयक"
+ },
+ {
+   "Word": "Approval",
+   "MEANING": "अनुमोदन"
+ },
+ {
+   "Word": "Approve",
+   "MEANING": "अनुमोदन करना"
+ },
+ {
+   "Word": "Arbitral tribunal",
+   "MEANING": "मध्यस्थ न्यायाधिकरण"
+ },
+ {
+   "Word": "Arbitration",
+   "MEANING": "मध्यस्थ निर्णय"
+ },
+ {
+   "Word": "Bail",
+   "MEANING": "प्रतिभूति, जमानत"
+ },
+ {
+   "Word": "Ballot",
+   "MEANING": "शलाका, शलाका पद्धति, गूढ़पत्र"
+ },
+ {
+   "Word": "Bank",
+   "MEANING": "बैंक, अधिकोष"
+ },
+ {
+   "Word": "Banking",
+   "MEANING": "महाजनी, अधिकोषण"
+ },
+ {
+   "Word": "Bankruptcy",
+   "MEANING": "दिवाला"
+ },
+ {
+   "Word": "Bar",
+   "MEANING": "रुकावट"
+ },
+ {
+   "Word": "Benefit",
+   "MEANING": "हित"
+ },
+ {
+   "Word": "Bicameral",
+   "MEANING": "दोघरा, द्विगृही"
+ },
+ {
+   "Word": "Bill",
+   "MEANING": "विधेयक, बिल"
+ },
+ {
+   "Word": "Betting",
+   "MEANING": "पण लगाना, पण क्रिया"
+ },
+ {
+   "Word": "Bill of exchange",
+   "MEANING": "विनिमय-पत्र"
+ },
+ {
+   "Word": "Bill of indemnity",
+   "MEANING": "परिहान विधेयक"
+ },
+ {
+   "Word": "Bill of lading",
+   "MEANING": "वहन पत्र"
+ },
+ {
+   "Word": "Board",
+   "MEANING": "मण्डली, बोर्ड, परिषद्"
+ },
+ {
+   "Word": "Body",
+   "MEANING": "निकाय"
+ },
+ {
+   "Word": "Body (Corporate)",
+   "MEANING": "निगम निकाय"
+ },
+ {
+   "Word": "Body (Governing)",
+   "MEANING": "शासी निकाय"
+ },
+ {
+   "Word": "Borrowing",
+   "MEANING": "उधार ग्रहण"
+ },
+ {
+   "Word": "Business",
+   "MEANING": "कारोबार"
+ },
+ {
+   "Word": "Broadcasting",
+   "MEANING": "प्रसारण"
+ },
+ {
+   "Word": "By-election",
+   "MEANING": "उपनिर्वाचन"
+ },
+ {
+   "Word": "Bona Vacancia",
+   "MEANING": "स्वामिहीनत्व"
+ },
+ {
+   "Word": "By-law",
+   "MEANING": "उपविधि"
+ },
+ {
+   "Word": "Chief Commissioner",
+   "MEANING": "मुख्य आयुक्त"
+ },
+ {
+   "Word": "Chief Election",
+   "MEANING": "मुख्य निर्वचन"
+ },
+ {
+   "Word": "Commissioner",
+   "MEANING": "आयुक्त"
+ },
+ {
+   "Word": "Chief Judge",
+   "MEANING": "मुख्य न्यायाधीश"
+ },
+ {
+   "Word": "Chief Justice",
+   "MEANING": "मुख्य न्यायाधिपति"
+ },
+ {
+   "Word": "Chief Minister",
+   "MEANING": "मुख्यमन्त्री"
+ },
+ {
+   "Word": "Citizenship",
+   "MEANING": "नागरिकता"
+ },
+ {
+   "Word": "Civil",
+   "MEANING": "व्यवहारिक, असैनिक"
+ },
+ {
+   "Word": "Casting vote",
+   "MEANING": "निर्णायक मत"
+ },
+ {
+   "Word": "Cattle pound",
+   "MEANING": "पशु अवरोध"
+ },
+ {
+   "Word": "Civil Court",
+   "MEANING": "व्यय न्यायालय, दीवानी न्यायालय, व्यवहार न्यायालय,"
+ },
+ {
+   "Word": "Civil power",
+   "MEANING": "व्यवहार शक्ति, असैनिक"
+ },
+ {
+   "Word": "Civil wrong",
+   "MEANING": "व्यवहार विषयक अपकृत्य"
+ },
+ {
+   "Word": "Calling",
+   "MEANING": "आजीविका"
+ },
+ {
+   "Word": "Camp",
+   "MEANING": "शिविर"
+ },
+ {
+   "Word": "Candidate",
+   "MEANING": "अभ्यर्थी, उम्मीदवार"
+ },
+ {
+   "Word": "Cantonment",
+   "MEANING": "छावनी"
+ },
+ {
+   "Word": "Capacity",
+   "MEANING": "सामर्थ्य"
+ },
+ {
+   "Word": "Capital",
+   "MEANING": "मूल धन, पूँजी"
+ },
+ {
+   "Word": "Capital value",
+   "MEANING": "मूल धन मूल्य"
+ },
+ {
+   "Word": "Capitation tax",
+   "MEANING": "प्रति व्यक्ति कर"
+ },
+ {
+   "Word": "Carriage",
+   "MEANING": "परिवहन"
+ },
+ {
+   "Word": "Cause",
+   "MEANING": "वाद"
+ },
+ {
+   "Word": "Cause of action",
+   "MEANING": "वाद मूल"
+ },
+ {
+   "Word": "Central Intelligence Bureau",
+   "MEANING": "केन्द्रीय गुप्त वार्ता विभाग"
+ },
+ {
+   "Word": "Certificate",
+   "MEANING": "प्रमाण-पत्र"
+ },
+ {
+   "Word": "Certiorari",
+   "MEANING": "उत्प्रेरण लेख"
+ },
+ {
+   "Word": "Cess",
+   "MEANING": "उप-कर"
+ },
+ {
+   "Word": "Chairman",
+   "MEANING": "सभापति, अध्यक्ष"
+ },
+ {
+   "Word": "Charge",
+   "MEANING": "दोषारोप, अभियुक्त भार"
+ },
+ {
+   "Word": "Charitable and religious endowments",
+   "MEANING": "दातव्य तथा धार्मिक धर्मस्व"
+ },
+ {
+   "Word": "Charitable institution",
+   "MEANING": "दातव्य संस्था"
+ },
+ {
+   "Word": "Charity",
+   "MEANING": "दयालुता, उदारता, कृपा"
+ },
+ {
+   "Word": "Cheque",
+   "MEANING": "चैक, धनादेश"
+ },
+ {
+   "Word": "Chief",
+   "MEANING": "मुख्य प्रधान"
+ },
+ {
+   "Word": "Claim",
+   "MEANING": "दावा"
+ },
+ {
+   "Word": "Common seal",
+   "MEANING": "सामान्य मुद्रा, सामान्य मुहर"
+ },
+ {
+   "Word": "Clarification",
+   "MEANING": "स्पष्टीकरण"
+ },
+ {
+   "Word": "Clause",
+   "MEANING": "धारा"
+ },
+ {
+   "Word": "Code",
+   "MEANING": "संहिता"
+ },
+ {
+   "Word": "Coinage",
+   "MEANING": "टंकण"
+ },
+ {
+   "Word": "Colonization",
+   "MEANING": "उपनिवेशन"
+ },
+ {
+   "Word": "Commerce",
+   "MEANING": "वाणिज्य"
+ },
+ {
+   "Word": "Commercial",
+   "MEANING": "वाणिज्य सम्बन्धी"
+ },
+ {
+   "Word": "Commission",
+   "MEANING": "आयोग"
+ },
+ {
+   "Word": "Committee",
+   "MEANING": "समिति"
+ },
+ {
+   "Word": "Committee, select",
+   "MEANING": "प्रवर समिति"
+ },
+ {
+   "Word": "Common good",
+   "MEANING": "सार्वजनिक कल्याण"
+ },
+ {
+   "Word": "Communicate",
+   "MEANING": "संचार करना"
+ },
+ {
+   "Word": "Communication, Means of",
+   "MEANING": "संचार साधन"
+ },
+ {
+   "Word": "Community",
+   "MEANING": "लोकसमाज, समुदाय"
+ },
+ {
+   "Word": "Controversy",
+   "MEANING": "प्रतिवाद"
+ },
+ {
+   "Word": "Convention",
+   "MEANING": "अभिसमय, प्रथा, रूढ़ि, परम्परा"
+ },
+ {
+   "Word": "Conveyance",
+   "MEANING": "सम्पत्ति हस्तान्तरण सिद्ध दोष, अभिशस्त, दोष प्रमाणित"
+ },
+ {
+   "Word": "Conviction",
+   "MEANING": "दोष सिद्ध अभिशस्त"
+ },
+ {
+   "Word": "Co-operative society",
+   "MEANING": "सहकारी संस्था"
+ },
+ {
+   "Word": "Copy",
+   "MEANING": "प्रतिलिपि, प्रतिकृति"
+ },
+ {
+   "Word": "Copyright",
+   "MEANING": "प्रकाशनाधिकार, कृति स्वाम्य"
+ },
+ {
+   "Word": "Corporation",
+   "MEANING": "निगम"
+ },
+ {
+   "Word": "Corresponding",
+   "MEANING": "तत्स्थानी"
+ },
+ {
+   "Word": "Corrupt",
+   "MEANING": "भ्रष्ट"
+ },
+ {
+   "Word": "Cost",
+   "MEANING": "परिव्यय, खर्च, लागत"
+ },
+ {
+   "Word": "Council",
+   "MEANING": "परिषद्"
+ },
+ {
+   "Word": "Council of States",
+   "MEANING": "राज्य परिषद्"
+ },
+ {
+   "Word": "Council of Tribals",
+   "MEANING": "जनजातीय परिषद्"
+ },
+ {
+   "Word": "Countervailing duty",
+   "MEANING": "प्रतिशुल्क"
+ },
+ {
+   "Word": "Court",
+   "MEANING": "न्यायालय"
+ },
+ {
+   "Word": "Court (District)",
+   "MEANING": "जिला न्यायालय"
+ },
+ {
+   "Word": "Court (Federal)",
+   "MEANING": "संघ न्यायालय"
+ },
+ {
+   "Word": "Court (Magisterial)",
+   "MEANING": "दण्डाधिकारी"
+ },
+ {
+   "Word": "Company",
+   "MEANING": "समवाय, कम्पनी"
+ },
+ {
+   "Word": "Commutation",
+   "MEANING": "लघुकरण"
+ },
+ {
+   "Word": "Compensation",
+   "MEANING": "प्रतिकर क्षतिपूर्ति"
+ },
+ {
+   "Word": "Complaint",
+   "MEANING": "फरियाद"
+ },
+ {
+   "Word": "Competent",
+   "MEANING": "सक्षम"
+ },
+ {
+   "Word": "Comptroller and",
+   "MEANING": "नियन्त्रक तथा"
+ },
+ {
+   "Word": "Auditor-General Computation",
+   "MEANING": "महालेखा परीक्षक"
+ },
+ {
+   "Word": "Computation",
+   "MEANING": "संगणना"
+ },
+ {
+   "Word": "Concurrence",
+   "MEANING": "सहमति"
+ },
+ {
+   "Word": "Condition",
+   "MEANING": "शर्त"
+ },
+ {
+   "Word": "Conditions of service",
+   "MEANING": "सेवा की शर्तें"
+ },
+ {
+   "Word": "Conference want of",
+   "MEANING": "विश्वास का अभाव"
+ },
+ {
+   "Word": "Conscience",
+   "MEANING": "अन्तःकरण"
+ },
+ {
+   "Word": "Consent",
+   "MEANING": "सम्मति"
+ },
+ {
+   "Word": "Consideration",
+   "MEANING": "विचार"
+ },
+ {
+   "Word": "Consent (Previous)",
+   "MEANING": "पूर्व सम्मति"
+ },
+ {
+   "Word": "Consequential",
+   "MEANING": "आनुषंगिक"
+ },
+ {
+   "Word": "Consolidated fund",
+   "MEANING": "संचित निधि"
+ },
+ {
+   "Word": "Constituency",
+   "MEANING": "निर्वाचन क्षेत्र"
+ },
+ {
+   "Word": "Constituent Assembly",
+   "MEANING": "संविधान सभा"
+ },
+ {
+   "Word": "Constitution",
+   "MEANING": "संविधान"
+ },
+ {
+   "Word": "Construe",
+   "MEANING": "अर्थ करना"
+ },
+ {
+   "Word": "Consul",
+   "MEANING": "वाणिज्य दूत"
+ },
+ {
+   "Word": "Consultation",
+   "MEANING": "परामर्श"
+ },
+ {
+   "Word": "Consumption",
+   "MEANING": "उपभोग"
+ },
+ {
+   "Word": "Contact",
+   "MEANING": "सम्पर्क"
+ },
+ {
+   "Word": "Contagious",
+   "MEANING": "सांसर्गिक"
+ },
+ {
+   "Word": "Contempt",
+   "MEANING": "अवमानना"
+ },
+ {
+   "Word": "Contempt of Court",
+   "MEANING": "न्यायालय की अवमानना"
+ },
+ {
+   "Word": "Court Martial",
+   "MEANING": "सैन्य न्यायालय"
+ },
+ {
+   "Word": "Court of Appeal",
+   "MEANING": "पुनर्विचार न्यायालय"
+ },
+ {
+   "Word": "Court of Wards",
+   "MEANING": "प्रतिपालक अधिकरण"
+ },
+ {
+   "Word": "Court of Revenue",
+   "MEANING": "राजस्व न्यायालय"
+ },
+ {
+   "Word": "Court of Session",
+   "MEANING": "सत्र न्यायालय"
+ },
+ {
+   "Word": "Court Subordinate",
+   "MEANING": "अधीन न्यायालय"
+ },
+ {
+   "Word": "Credit",
+   "MEANING": "प्रत्यय साख, पत्त, आकलन"
+ },
+ {
+   "Word": "Currency",
+   "MEANING": "चल अर्थ, मुद्रा"
+ },
+ {
+   "Word": "Custody",
+   "MEANING": "अभिरक्षा, निरोध,"
+ },
+ {
+   "Word": "Custom",
+   "MEANING": "रूढ़ि, आचार"
+ },
+ {
+   "Word": "Custom duty",
+   "MEANING": "बहिर्शुल्क, सीमा शुल्क"
+ },
+ {
+   "Word": "Custom, Frontier",
+   "MEANING": "सीमान्त शुल्क"
+ },
+ {
+   "Word": "Contribution",
+   "MEANING": "अशंदान"
+ },
+ {
+   "Word": "Dealings",
+   "MEANING": "व्यवहार, लेनदेन"
+ },
+ {
+   "Word": "Debate",
+   "MEANING": "वाद-विवाद"
+ },
+ {
+   "Word": "Debenture",
+   "MEANING": "ऋण-पत्र"
+ },
+ {
+   "Word": "Debit",
+   "MEANING": "विकलन"
+ },
+ {
+   "Word": "Debt",
+   "MEANING": "ऋण"
+ },
+ {
+   "Word": "Disperse",
+   "MEANING": "विसर्जन करना"
+ },
+ {
+   "Word": "Decree",
+   "MEANING": "घोषणा"
+ },
+ {
+   "Word": "Dedication",
+   "MEANING": "समर्पण, उत्सर्ग"
+ },
+ {
+   "Word": "Deed",
+   "MEANING": "विलेख"
+ },
+ {
+   "Word": "Dissent",
+   "MEANING": "विमति"
+ },
+ {
+   "Word": "Defamation",
+   "MEANING": "मानहानि"
+ },
+ {
+   "Word": "Dissolution",
+   "MEANING": "विघटन"
+ },
+ {
+   "Word": "Domicile",
+   "MEANING": "अधिवास गृह, घर"
+ },
+ {
+   "Word": "Deprive",
+   "MEANING": "वंचित करना"
+ },
+ {
+   "Word": "Entitled",
+   "MEANING": "अधिकारी, हकदार"
+ },
+ {
+   "Word": "Entrust",
+   "MEANING": "न्यस्त करना, सौंपना"
+ },
+ {
+   "Word": "Escheat",
+   "MEANING": "राजगामी धन"
+ },
+ {
+   "Word": "Establishment",
+   "MEANING": "स्थापना, संस्थापन कर्मचारी वर्ग"
+ },
+ {
+   "Word": "Estate",
+   "MEANING": "सम्पदा"
+ },
+ {
+   "Word": "Efficiency of Administration",
+   "MEANING": "प्रशासन कार्यक्षमता"
+ },
+ {
+   "Word": "Elect",
+   "MEANING": "निर्वाचित करना"
+ },
+ {
+   "Word": "Elected",
+   "MEANING": "निर्वाचित, चुने हुए"
+ },
+ {
+   "Word": "Election",
+   "MEANING": "निर्वाचन"
+ },
+ {
+   "Word": "Election Commissioner",
+   "MEANING": "निर्वाचन आयुक्त"
+ },
+ {
+   "Word": "Eligibility",
+   "MEANING": "पात्रता, योग्यता"
+ },
+ {
+   "Word": "Eligible",
+   "MEANING": "पात्र, योग्य"
+ },
+ {
+   "Word": "Emergency",
+   "MEANING": "आपात"
+ },
+ {
+   "Word": "Emergent",
+   "MEANING": "आपाती"
+ },
+ {
+   "Word": "Emigration",
+   "MEANING": "उत्प्रवास"
+ },
+ {
+   "Word": "Emoluments",
+   "MEANING": "उपलब्धियाँ"
+ },
+ {
+   "Word": "Enactment",
+   "MEANING": "अधिनियम"
+ },
+ {
+   "Word": "Estimate",
+   "MEANING": "आकप्राक्लन, आगणन, अनुमान"
+ },
+ {
+   "Word": "Evidence",
+   "MEANING": "साक्ष्य"
+ },
+ {
+   "Word": "Excess profit",
+   "MEANING": "अतिक्ति लाभ"
+ },
+ {
+   "Word": "Exclude",
+   "MEANING": "अपवर्जन करना"
+ },
+ {
+   "Word": "Exclusion",
+   "MEANING": "अपवर्जन"
+ },
+ {
+   "Word": "Exclusive jurisdiction",
+   "MEANING": "अनन्य क्षेत्राधिकार"
+ },
+ {
+   "Word": "Executive",
+   "MEANING": "कार्यपालिका"
+ },
+ {
+   "Word": "Exempt",
+   "MEANING": "मुक्त"
+ },
+ {
+   "Word": "Exercise",
+   "MEANING": "प्रयोग, अनुष्ठान"
+ },
+ {
+   "Word": "Ex-officio",
+   "MEANING": "पदेन"
+ },
+ {
+   "Word": "Encumbered",
+   "MEANING": "भारग्रस्त सम्पदा"
+ },
+ {
+   "Word": "Endorse",
+   "MEANING": "पृष्ठांकन करना, समर्थन करना"
+ },
+ {
+   "Word": "Freight",
+   "MEANING": "वस्तु-भाड़ा"
+ },
+ {
+   "Word": "Frontiers",
+   "MEANING": "सीमान्त प्रदेश"
+ },
+ {
+   "Word": "Administrative Fund",
+   "MEANING": "निधि"
+ },
+ {
+   "Word": "Future market",
+   "MEANING": "वायदा बाजार"
+ },
+ {
+   "Word": "Gazette",
+   "MEANING": "सूचना पत्र, राज-पत्र"
+ },
+ {
+   "Word": "Grant",
+   "MEANING": "अनुदान"
+ },
+ {
+   "Word": "Grant-in-aid",
+   "MEANING": "सहायक अनुदान"
+ },
+ {
+   "Word": "Guarantee",
+   "MEANING": "प्रत्याभूति"
+ },
+ {
+   "Word": "Habeas Corpus",
+   "MEANING": "बन्दी प्रत्क्षीकरण"
+ },
+ {
+   "Word": "Immuned",
+   "MEANING": "उन्मुक्त"
+ },
+ {
+   "Word": "Immunity",
+   "MEANING": "उन्मुक्ति"
+ },
+ {
+   "Word": "Implementing",
+   "MEANING": "परिपालन"
+ },
+ {
+   "Word": "Impose",
+   "MEANING": "दोषारोपण"
+ },
+ {
+   "Word": "Impeachment",
+   "MEANING": "महाभियोग"
+ },
+ {
+   "Word": "Imprisonment",
+   "MEANING": "कारावास"
+ },
+ {
+   "Word": "Improvement Trust",
+   "MEANING": "सुधार प्रन्यास"
+ },
+ {
+   "Word": "Incidental",
+   "MEANING": "प्रासंगिक"
+ },
+ {
+   "Word": "Incompetency",
+   "MEANING": "अक्षमता"
+ },
+ {
+   "Word": "Imcompetent",
+   "MEANING": "अक्षम"
+ },
+ {
+   "Word": "Incorporation",
+   "MEANING": "निगमन"
+ },
+ {
+   "Word": "Incumbent of an office",
+   "MEANING": "पदधारी"
+ },
+ {
+   "Word": "Indebtedness",
+   "MEANING": "ऋणग्रस्तता"
+ },
+ {
+   "Word": "Ineligible",
+   "MEANING": "अपात्र"
+ },
+ {
+   "Word": "Inheritance",
+   "MEANING": "दाय, उत्तराधिकार"
+ },
+ {
+   "Word": "Initiate",
+   "MEANING": "उपक्रमण करना, दीक्षा देना"
+ },
+ {
+   "Word": "Inland waterways",
+   "MEANING": "अन्तर्देशीय जलपथ"
+ },
+ {
+   "Word": "Inoperative",
+   "MEANING": "अप्रवृत्त"
+ },
+ {
+   "Word": "Inquiry",
+   "MEANING": "परिपत्र जाँच"
+ },
+ {
+   "Word": "Insolvency",
+   "MEANING": "दिवाला"
+ },
+ {
+   "Word": "Inspection",
+   "MEANING": "पर्यवेक्षण, निरीक्षण"
+ },
+ {
+   "Word": "Institution",
+   "MEANING": "संस्थान"
+ },
+ {
+   "Word": "Instruction",
+   "MEANING": "शिक्षा, अनुदेश,"
+ },
+ {
+   "Word": "Instrument",
+   "MEANING": "लिखित, संविदा, विलेख दलील, उपकरण, साधन"
+ },
+ {
+   "Word": "Intestacy",
+   "MEANING": "इच्छापत्र, हीनत्व, निर्वासीयतता"
+ },
+ {
+   "Word": "Intestate",
+   "MEANING": "इच्छा-पत्र-हीन, निर्वसीयत"
+ },
+ {
+   "Word": "Investigation",
+   "MEANING": "अनुसन्धान"
+ },
+ {
+   "Word": "Involve",
+   "MEANING": "अन्तर्ग्रस्त करना"
+ },
+ {
+   "Word": "Joining time",
+   "MEANING": "कार्यग्रहण काल"
+ },
+ {
+   "Word": "Issue",
+   "MEANING": "विवाद पद"
+ },
+ {
+   "Word": "Khewat",
+   "MEANING": "लेखापाल की पंजी बोध"
+ },
+ {
+   "Word": "Kept in abayance",
+   "MEANING": "अस्थगित"
+ },
+ {
+   "Word": "List Concurrent",
+   "MEANING": "समवर्ती सूची"
+ },
+ {
+   "Word": "Assembly Legislative",
+   "MEANING": "विधानपरिषद्"
+ },
+ {
+   "Word": "Letters of Credit",
+   "MEANING": "प्रत्यय पत्र"
+ },
+ {
+   "Word": "Local authorities",
+   "MEANING": "स्थानीय क्षेत्र"
+ },
+ {
+   "Word": "Local board",
+   "MEANING": "स्थानीय मण्डली"
+ },
+ {
+   "Word": "Lockup",
+   "MEANING": "बन्दीखाना"
+ },
+ {
+   "Word": "Lunacy",
+   "MEANING": "उन्माद, पागलपन"
+ },
+ {
+   "Word": "Maintain",
+   "MEANING": "पोषण रखना"
+ },
+ {
+   "Word": "Mind Unsound",
+   "MEANING": "विकृत चित्त"
+ },
+ {
+   "Word": "Morality",
+   "MEANING": "सदाचार"
+ },
+ {
+   "Word": "Mandamus",
+   "MEANING": "परमादेश"
+ },
+ {
+   "Word": "Manufacture",
+   "MEANING": "निर्माण"
+ },
+ {
+   "Word": "Maritime shipping",
+   "MEANING": "समुद्र नौवहन"
+ },
+ {
+   "Word": "Maternity relief",
+   "MEANING": "प्रसूति सहायता, प्रसूति साहाम्य"
+ },
+ {
+   "Word": "Memo",
+   "MEANING": "ज्ञाप, स्मृतिपत्र"
+ },
+ {
+   "Word": "Memorandum",
+   "MEANING": "ज्ञापन"
+ },
+ {
+   "Word": "Memorial",
+   "MEANING": "स्मारक"
+ },
+ {
+   "Word": "National Highway",
+   "MEANING": "राष्ट्रीय राजपथ"
+ },
+ {
+   "Word": "Nomination",
+   "MEANING": "नाम निर्देशन"
+ },
+ {
+   "Word": "Notification",
+   "MEANING": "अधिसूचना"
+ },
+ {
+   "Word": "Obligation",
+   "MEANING": "वैधानिक या नैतिक"
+ },
+ {
+   "Word": "Occupation",
+   "MEANING": "उपजीविका"
+ },
+ {
+   "Word": "Port-quarantine",
+   "MEANING": "पत्तन निरोधा"
+ },
+ {
+   "Word": "Possession",
+   "MEANING": "स्ववश अधिकार, कब्जा"
+ },
+ {
+   "Word": "Preamble",
+   "MEANING": "प्रस्तावना"
+ },
+ {
+   "Word": "Perference",
+   "MEANING": "अधिमान"
+ },
+ {
+   "Word": "Prejudice",
+   "MEANING": "प्रतिकूल प्रभाव, पक्षपात की भावना"
+ },
+ {
+   "Word": "Preside",
+   "MEANING": "पीठासीन होना"
+ },
+ {
+   "Word": "Presiding officer",
+   "MEANING": "अधिष्ठाता"
+ },
+ {
+   "Word": "Preventive",
+   "MEANING": "निवारक"
+ },
+ {
+   "Word": "Passport",
+   "MEANING": "पारपत्र"
+ },
+ {
+   "Word": "Patent",
+   "MEANING": "एकस्व"
+ },
+ {
+   "Word": "Prisoner",
+   "MEANING": "काराबन्दी"
+ },
+ {
+   "Word": "Qualification",
+   "MEANING": "अर्हता"
+ },
+ {
+   "Word": "Quarantine",
+   "MEANING": "निरोधा"
+ },
+ {
+   "Word": "Question of law",
+   "MEANING": "विधि प्रश्न"
+ },
+ {
+   "Word": "Quorum",
+   "MEANING": "गणपूर्ति"
+ },
+ {
+   "Word": "Quo warranto",
+   "MEANING": "अधिकार-पृच्छा"
+ },
+ {
+   "Word": "Regulation",
+   "MEANING": "अनुसमर्थन"
+ },
+ {
+   "Word": "Sue",
+   "MEANING": "वाद लाना"
+ },
+ {
+   "Word": "Summon",
+   "MEANING": "आह्वान"
+ },
+ {
+   "Word": "Superintendence",
+   "MEANING": "अधीक्षण"
+ },
+ {
+   "Word": "Supplementary Grant",
+   "MEANING": "अनुपूरक अनुदान"
+ },
+ {
+   "Word": "Supreme command",
+   "MEANING": "सर्वोच्च समादेश"
+ },
+ {
+   "Word": "Suspend",
+   "MEANING": "निलम्बित करना"
+ },
+ {
+   "Word": "Tax (Calling)",
+   "MEANING": "आजीविका कर"
+ },
+ {
+   "Word": "Tax (Entertainment)",
+   "MEANING": "प्रमोद कर"
+ },
+ {
+   "Word": "Tax (Capitation)",
+   "MEANING": "प्रति व्यक्ति कर"
+ },
+ {
+   "Word": "Tax ( Corporation)",
+   "MEANING": "निगम कर"
+ },
+ {
+   "Word": "Tax ( Employment)",
+   "MEANING": "सेवा कर"
+ },
+ {
+   "Word": "Tax (Export)",
+   "MEANING": "निर्यात कर"
+ },
+ {
+   "Word": "Tax (Sales)",
+   "MEANING": "विक्रय कर"
+ },
+ {
+   "Word": "Tax (Profession)",
+   "MEANING": "वृत्ति कर"
+ },
+ {
+   "Word": "Tax ( Income)",
+   "MEANING": "आयकर"
+ },
+ {
+   "Word": "Tax Trades",
+   "MEANING": "व्यापार कर"
+ },
+ {
+   "Word": "Tax (Terminal)",
+   "MEANING": "सीमा कर"
+ },
+ {
+   "Word": "Technical Training",
+   "MEANING": "शिल्पी प्रशिक्षण"
+ },
+ {
+   "Word": "Tender, legal",
+   "MEANING": "विधि मान्य"
+ },
+ {
+   "Word": "Tenure",
+   "MEANING": "पदावधि"
+ },
+ {
+   "Word": "Tolls",
+   "MEANING": "पथ कर"
+ },
+ {
+   "Word": "Transition",
+   "MEANING": "संक्रमण"
+ },
+ {
+   "Word": "Winding up",
+   "MEANING": "समापन"
+ },
+ {
+   "Word": "Will",
+   "MEANING": "इच्छा-पत्र"
+ },
+ {
+   "Word": "Writ",
+   "MEANING": "कानूनी आज्ञापत्र"
+ },
+ {
+   "Word": "Yield",
+   "MEANING": "उपज, देना"
+ },
+ {
+   "Word": "Zone",
+   "MEANING": "क्षेत्र"
+ },
+ {
+   "Word": "Zeal",
+   "MEANING": "उत्साह"
+ }
+]
+}
