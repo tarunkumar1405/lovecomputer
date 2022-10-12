@@ -12,44 +12,55 @@
       content="HTML, CSS, JavaScript, computer knowledge, special symbols"
     />
 
-    <title>BLOG / LOVE COMPUTER</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Special Symbols / LOVE COMPUTER</title>
+    
 
-    <link
-      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    
     <style>
-        table {
-          border-collapse: collapse;
-          border-spacing: 0;
-          width: 75%;
-          
-        }
-  
-        th{ text-align: center;
-            background-color:green;
-            color: white;
+      table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 75%;
+           
+            margin-left: auto;
+            margin-right: auto;
 
         }
+
         td {
-          padding: 10px;
-          text-align: center;
+            text-align: left;
+            padding: 16px;
+            color: black;
+            border: 2px solid black;
+            font-size: 20px;
+
         }
-  
+
+        th {
+            text-align: center;
+            padding: 16px;
+            background-color: darkgreen;
+            color: white;
+            font-size: 18px;
+            border: 2px solid black;
+        }
+
         tr:nth-child(even) {
-          background-color: #f2f2f2;
+            background-color: #f2f2f2;
         }
+        
         h1 {
           text-align: center;
           text-decoration: underline;
           color:blue;
-          padding-top: 10%;
+          
+        }
+        h2{
+          text-align: center;
+          text-decoration: underline;
+          color:blue;
+          padding-top: 15px;
+
         }
         p{text-align: left;}
        
@@ -58,47 +69,58 @@
             width:auto;
         }
         p{
-            text-align: justify
+            text-align: justify;
+            padding-left: 25px;
+            padding-right: 25px;
+            
         }
       </style>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
   </head>
   <body>
-    <nav>
-      <div class="navbar">
-        <i class="bx bx-menu"></i>
-        <div class="logo"><a href="index.html">Love Computer</a></div>
-        <div class="nav-links">
-          <div class="sidebar-logo">
-            <span class="logo"><a href="index.html">LoveComputer</a></span>
-            <i class="bx bx-x"></i>
-          </div>
-          <ul class="links">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="blog.html">BLOG</a></li>
-            
-            <li>
-              <a href="">WEB DEVELOPMENT</a>
-              <i class="bx bxs-chevron-down htmlcss-arrow arrow"></i>
-              <ul class="htmlCss-sub-menu sub-menu">
-                <li><a href="ht.html">HTML</a></li>
-                <li><a href="cs.html">CSS</a></li>
-                <li><a href="JavaScript.html">JAVASCRIPT</a></li>
-                <li><a href="py.html">Python</a></li>
-                <li><a href="sql.html">SQL</a></li>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">LOVE COMPUTER</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="blog.html">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="aboutus.html">About Us</a>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Web Development
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="ht.html">HTML</a></li>
+                          <li><a class="dropdown-item" href="cs.html">CSS</a></li>
+                          <li><a class="dropdown-item" href="JavaScript.html">JavaScript</a></li>
+                          <li><a class="dropdown-item" href="py.html">Python</a></li>
+                          <li><a class="dropdown-item" href="sql.html">SQL</a></li>
+                          <li><a class="dropdown-item" href="PostgreSQL.html">PostgreSQL</a></li>
+                      </ul>
+                  </li>
               </ul>
-            </li>
-            <li><a href="aboutus.html">ABOUT US</a></li>
-            <li><a href="contactus.html">CONTACT US</a></li>
-          </ul>
-        </div>
-        <div class="search-box">
-          <i class="bx bx-search"></i>
-          <div class="input-box">
-            <input type="text" placeholder="Search..." />
           </div>
-        </div>
       </div>
-    </nav>
+  </nav>
     <h1>SPECIAL SYMBOLS</h1>
     
     <div class="fakeimg" style="height: 200px">
@@ -124,10 +146,7 @@
         <td>""</td>
         <td>Double Quote</td>
       </tr>
-      <tr>
-        <td>#</td>
-        <td>A number Sign(Hash)</td>
-      </tr>
+      
       <tr>
         <td>#</td>
         <td>A number Sign(Hash)</td>
@@ -201,10 +220,7 @@
         <td>=</td>
         <td>Equal Sign</td>
       </tr>
-      <tr>
-        <td></td>
-        <td>A number Sign(Hash)</td>
-      </tr>
+      
       <tr>
         <td>?</td>
         <td>Question Mark</td>
@@ -243,8 +259,214 @@
       </tr>
     </table>
   </div> 
-  
+  <div>
+    <h2>Greek alphabet letters</h2>
+    <table>
+      <tr>
+          <th>Upper Case Letter</th>
+          <th>Lower Case Letter</th>
+          <th>Greek Letter Name</th>
+          <th>English Equivalent</th>
+          <th>Letter Name Pronounce</th>
+      </tr>
+      <tr>
+          <td>Α</td>
+          <td>α</td>
+          <td>Alpha</td>
+          <td>a</td>
+          <td>al-fa</td>
+      </tr>
+      <tr>
+          <td>Β</td>
+          <td>β</td>
+          <td>Beta</td>
+          <td>b</td>
+          <td>be-ta</td>
+      </tr>
+      <tr>
+          <td>Γ</td>
+          <td>γ</td>
+          <td>Gamma</td>
+          <td>g</td>
+          <td>ga-ma</td>
+      </tr>
+      <tr>
+          <td>Δ</td>
+          <td>δ</td>
+          <td>Delta</td>
+          <td>d</td>
+          <td>del-ta</td>
+      </tr>
+      <tr>
+          <td>Ε</td>
+          <td>ε</td>
+          <td>Epsilon</td>
+          <td>e</td>
+          <td>ep-si-lon</td>
+      </tr>
+      <tr>
+          <td>Ζ</td>
+          <td>ζ</td>
+          <td>Zeta</td>
+          <td>z</td>
+          <td>ze-ta</td>
+      </tr>
+      <tr>
+          <td>Η</td>
+          <td>η</td>
+          <td>Eta</td>
+          <td>h</td>
+          <td>eh-ta</td>
+      </tr>
+      <tr>
+          <td>Θ</td>
+          <td>θ</td>
+          <td>Theta</td>
+          <td>th</td>
+          <td>te-ta</td>
+      </tr>
+      <tr>
+          <td>Ι</td>
+          <td>ι</td>
+          <td>Iota</td>
+          <td>i</td>
+          <td>io-ta</td>
+      </tr>
+      <tr>
+          <td>Κ</td>
+          <td>κ</td>
+          <td>Kappa</td>
+          <td>k</td>
+          <td>ka-pa</td>
+      </tr>
+      <tr>
+          <td>Λ</td>
+          <td>λ</td>
+          <td>Lambda</td>
+          <td>l</td>
+          <td>lam-da</td>
+      </tr>
+      <tr>
+          <td>Μ</td>
+          <td>μ</td>
+          <td>Mu</td>
+          <td>m</td>
+          <td>m-yoo</td>
+      </tr>
+      <tr>
+          <td>Ν</td>
+          <td>ν</td>
+          <td>Nu</td>
+          <td>n</td>
+          <td>noo</td>
+      </tr>
+      <tr>
+          <td>Ξ</td>
+          <td>ξ</td>
+          <td>Xi</td>
+          <td>x</td>
+          <td>x-ee</td>
+      </tr>
+      <tr>
+          <td>Ο</td>
+          <td>ο</td>
+          <td>Omicron</td>
+          <td>o</td>
+          <td>o-mee-c-ron</td>
+      </tr>
+      <tr>
+          <td>Π</td>
+          <td>π</td>
+          <td>Pi</td>
+          <td>p</td>
+          <td>pa-yee</td>
+      </tr>
+      <tr>
+          <td>Ρ</td>
+          <td>ρ</td>
+          <td>Rho</td>
+          <td>r</td>
+          <td>row</td>
+      </tr>
+      <tr>
+          <td>Σ</td>
+          <td>σ</td>
+          <td>Sigma</td>
+          <td>s</td>
+          <td>sig-ma</td>
+      </tr>
+      <tr>
+          <td>Τ</td>
+          <td>τ</td>
+          <td>Tau</td>
+          <td>t</td>
+          <td>ta-oo</td>
+      </tr>
+      <tr>
+          <td>Υ</td>
+          <td>υ</td>
+          <td>Upsilon</td>
+          <td>u</td>
+          <td>oo-psi-lon</td>
+      </tr>
+      <tr>
+          <td>Φ</td>
+          <td>φ</td>
+          <td>Phi</td>
+          <td>ph</td>
+          <td>f-ee</td>
+      </tr>
+      <tr>
+          <td>Χ</td>
+          <td>χ</td>
+          <td>Chi</td>
+          <td>ch</td>
+          <td>kh-ee</td>
+      </tr>
+      <tr>
+          <td>Ψ</td>
+          <td>ψ</td>
+          <td>Psi</td>
+          <td>ps</td>
+          <td>p-see</td>
+      </tr>
+      <tr>
+          <td>Ω</td>
+          <td>ω</td>
+          <td>Omega</td>
+          <td>o</td>
+          <td>o-me-ga</td>
+      </tr>
+  </table>
+  </div>
+  <footer>
+    <hr />
+    <div class="card text-center ">
+        <div class="card-header bg-dark text-white">
+            About Us
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Spread Knowledge with Practical</h5>
+            <p class="card-text text-center"><BR> THIS WEBSITE HAS A MOTIVE TO SPREAD THE INFORMATION ABOUT Web
+                Development.<br>
+                Developed by Tarun Kumar</p>
+        </div>
+        <hr />
 
-    <script src="script.js"></script>
+        <a class="btn btn-primary active btn-outline-primary" href="blog.html" role="button">Click here for Blog</a>
+
+
+
+
+        <div class="card-footer text-muted">
+            Thank you for visiting
+
+        </div>
+    </div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  crossorigin="anonymous"></script>
+    
   </body>
 </html>
