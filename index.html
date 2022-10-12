@@ -6,65 +6,120 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/x-icon" href="favicon2.ico" />
   <style>
     * {
-  box-sizing: border-box;
-}
+      box-sizing: border-box;
+    }
 
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-}
+    /* Create two equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 50%;
+      padding: 10px;
+    }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* Style the buttons */
-.btn {
-  border: none;
-  outline: none;
-  padding: 12px 16px;
-  background-color: #f1f1f1;
-  cursor: pointer;
-}
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
 
-.btn:hover {
-  background-color: #ddd;
-}
+    /* Style the buttons */
+    .btn {
+      border: none;
+      outline: none;
+      padding: 12px 16px;
+      background-color: #f1f1f1;
+      cursor: pointer;
+    }
 
-.btn.active {
-  background-color: #666;
-  color: white;
-}
-.faa {
-  padding: 20px;
-  font-size: 30px;
-  width: 30px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
-}
-/* Facebook */
-.faa-facebook {
-  background: #3B5998;
-  color: white;
-}
-.faa:hover {
-    opacity: 0.7;
-}
-.faa-twitter {
-  background: #55ACEE;
-  color: white;
-}
+    .btn:hover {
+      background-color: #ddd;
+    }
+
+    .btn.active {
+      background-color: #666;
+      color: white;
+    }
+
+    .faa {
+      padding: 20px;
+      font-size: 30px;
+      width: 30px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 50%;
+    }
+
+    /* Facebook */
+    .faa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+
+    .faa:hover {
+      opacity: 0.7;
+    }
+
+    .faa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
+
+    body {
+      padding: 20px;
+      font-family: 'Inconsolata', monospace;
+
+    }
+
+
+
+    .icon-bar {
+      position: fixed;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+
+    .icon-bar a {
+      display: block;
+      text-align: center;
+      padding: 16px;
+      transition: all 0.3s ease;
+      color: white;
+      font-size: 20px;
+    }
+
+    .icon-bar a:hover {
+      background-color: #000;
+    }
+
+    .facebook {
+      background: #3B5998;
+      color: white;
+    }
+
+    .twitter {
+      background: #55ACEE;
+      color: white;
+    }
+
+
+
+    .instagram {
+      color: white;
+      background: #E1306C;
+    }
+
+    .youtube {
+      background: #bb0000;
+      color: white;
+    }
   </style>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -76,14 +131,14 @@
   <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
- <link rel="stylesheet" href="slide.css">
+  <link rel="stylesheet" href="slide.css">
 </head>
 
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index">LOVE COMPUTER</a>
+      <a class="navbar-brand" href="index.html">LOVE COMPUTER</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -91,13 +146,13 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index">Home</a>
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="blog">Blog</a>
+            <a class="nav-link" href="blog.html">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="aboutus">About Us</a>
+            <a class="nav-link" href="aboutus.html">About Us</a>
           </li>
 
           <li class="nav-item dropdown">
@@ -106,250 +161,255 @@
               Web Development
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="ht">HTML</a></li>
-              <li><a class="dropdown-item" href="cs">CSS</a></li>
-              <li><a class="dropdown-item" href="JavaScript">JavaScript</a></li>
-              <li><a class="dropdown-item" href="py">Python</a></li>
-              <li><a class="dropdown-item" href="sql">SQL</a></li>
-              <li><a class="dropdown-item" href="PostgreSQL">PostgreSQL</a></li>
+              <li><a class="dropdown-item" href="ht.html">HTML</a></li>
+              <li><a class="dropdown-item" href="cs.html">CSS</a></li>
+              <li><a class="dropdown-item" href="JavaScript.html">JavaScript</a></li>
+              <li><a class="dropdown-item" href="py.html">Python</a></li>
+              <li><a class="dropdown-item" href="sql.html">SQL</a></li>
+              <li><a class="dropdown-item" href="PostgreSQL.html">PostgreSQL</a></li>
             </ul>
           </li>
           <li class="nav-item">
-                <a class="nav-link" href="Disclaimer">Disclaimer</a>
-              </li>
+            <a class="nav-link" href="Disclaimer">Disclaimer</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
+  <div class="icon-bar">
+    <a href="https://www.facebook.com/taruncomputerclass" class="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="https://twitter.com/tarunkumar1405" class="twitter"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://www.instagram.com/tarungola1405/" class="instagram"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.youtube.com/channel/UCXFASZjD4m9SyKHvs7h1JTg" class="youtube"><i class="fa fa-youtube"></i></a>
+  </div>
   <div class="slideshow-container">
 
     <div class="mySlides fade">
       <div class="numbertext">1 / 3</div>
-      <img src="slide1.jpg" alt="HTML" style="width:100%">
+      <img src="slide1.jpg" style="width:100%">
       <div class="text">HYPERTEXT MARKUP LANGUAGE</div>
     </div>
-    
+
     <div class="mySlides fade">
       <div class="numbertext">2 / 3</div>
-      <img src="slide2.jpg" alt="CSS" style="width:100%">
+      <img src="slide2.jpg" style="width:100%">
       <div class="text">CASCADING STYLE SHEET</div>
     </div>
-    
+
     <div class="mySlides fade">
       <div class="numbertext">3 / 3</div>
-      <img src="slide3.jpg" alt="Javascript" style="width:100%">
+      <img src="slide3.jpg" style="width:100%">
       <div class="text"></div>
     </div>
-    
-    </div>
-    <br>
-    
-    <div style="text-align:center">
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-    </div>
-    <hr/>
-    <div style="text-align: center;">
-      <p><b>Click the Geo Location button to get your current coordinates.</b></p>
-  
-  <button onclick="getLocation()" style="color: white; background-color:blue;">Geo location</button>
-  
-  <p id="geo" style="color:blue"></p>
-    </div>
-    <div id="btnContainer">
-      <button class="btn" onclick="listView()">
-        <i class="fa fa-bars"></i> List
-      </button>
-      <button class="btn active" onclick="gridView()">
-        <i class="fa fa-th-large"></i> Grid
-      </button>
-    </div>
-    <br />
 
-    <div class="row">
-      <div class="column1" style="background-color: yellow">
-        <h2>HTML</h2>
-        <p>HTML is the standard markup language for creating Web pages.</p>
-        <ul>
-          <li>HTML stands for Hyper Text Markup Language.</li>
-          <li>HTML is the standard markup language for creating Web pages</li>
-          <li>HTML describes the structure of a Web page.</li>
-          <li>HTML consists of a series of elements.</li>
-          <li>HTML elements tell the browser how to display the content.</li>
-          <li>
-            HTML elements label pieces of content such as "this is a heading",
-            "this is a paragraph", "this is a link", etc.
-          </li>
-        </ul>
-      </div>
-      <div class="column1" style="background-color: lightgreen">
-        <h2>CSS</h2>
-        <p>CSS is the language we use to style a Web page.</p>
-        <ul>
-          <li>CSS stands for Cascading Style Sheets.</li>
-          <li>
-            CSS describes how HTML elements are to be displayed on screen,
-            paper, or in other media.
-          </li>
-          <li>
-            CSS saves a lot of work. It can control the layout of multiple web
-            pages all at once.
-          </li>
-          <li>External stylesheets are stored in CSS files.</li>
-          <li>CSS Syntax: Selector {Property:value;}</li>
-        </ul>
-      </div>
-    </div>
+  </div>
+  <br>
 
-    <div class="row">
-      <div class="column1" style="background-color: lightgoldenrodyellow">
-        <h2>JAVASCRIPT</h2>
-        <p>JavaScript is the world's most popular programming language.</p>
-        <ul>
-          <li>JavaScript is the programming language of the Web.</li>
-          <li>JavaScript is easy to learn.</li>
-          <li>JavaScript runs on the client side of the web.</li>
-          <li>
-            avaScript (often shortened to JS) is a lightweight, interpreted,
-            object-oriented language with first-class functions.
-          </li>
-          <li>
-            You can place the "script" tags, containing your JavaScript,
-            anywhere within your web page.
-          </li>
-        </ul>
-      </div>
-      <div class="column1" style="background-color: lightseagreen">
-        <h2>PHP</h2>
-        <p>
-          PHP is a server scripting language, and a powerful tool for making
-          dynamic and interactive Web pages.
-        </p>
-        <ul>
-          <li>PHP is an acronym for "PHP: Hypertext Preprocessor"</li>
-          <li>PHP is a widely-used, open source scripting language</li>
-          <li>
-            PHP files can contain text, HTML, CSS, JavaScript, and PHP code
-          </li>
-          <li>
-            PHP code is executed on the server, and the result is returned to
-            the browser as plain HTML
-          </li>
-          <li>PHP files have extension ".php"</li>
-        </ul>
-      </div>
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+  <hr />
+  <div style="text-align: center;">
+    <p><b>Click the Geo Location button to get your current coordinates.</b></p>
+
+    <button onclick="getLocation()" style="color: white; background-color:blue;">Geo location</button>
+
+    <p id="geo" style="color:blue"></p>
+  </div>
+
+  <div id="btnContainer">
+    <button class="btn" onclick="listView()">
+      <i class="fa fa-bars"></i> List
+    </button>
+    <button class="btn active" onclick="gridView()">
+      <i class="fa fa-th-large"></i> Grid
+    </button>
+  </div>
+  <br />
+
+  <div class="row">
+    <div class="column1" style="background-color: yellow">
+      <h2>HTML</h2>
+      <p>HTML is the standard markup language for creating Web pages.</p>
+      <ul>
+        <li>HTML stands for Hyper Text Markup Language.</li>
+        <li>HTML is the standard markup language for creating Web pages</li>
+        <li>HTML describes the structure of a Web page.</li>
+        <li>HTML consists of a series of elements.</li>
+        <li>HTML elements tell the browser how to display the content.</li>
+        <li>
+          HTML elements label pieces of content such as "this is a heading",
+          "this is a paragraph", "this is a link", etc.
+        </li>
+      </ul>
     </div>
-    <div class="row">
-      <div class="column1" style="background-color: lightgreen">
-        <h2>PYTHON</h2>
-        <p>
-          Python is a popular programming language. Python can be used on a
-          server to create web applications.
-        </p>
-        <ul>
-          <li>
-            Python is a popular programming language. It was created by Guido
-            van Rossum, and released in 1991.
-          </li>
-          <li>
-            It is used for: web development (server-side), software development,
-            mathematics, system scripting.
-          </li>
-          <li>Python can be used on a server to create web applications.</li>
-        </ul>
-      </div>
-      <div class="column1" style="background-color: lightyellow">
-        <h2>SQL</h2>
-        <p>
-          SQL is a standard language for storing, manipulating and retrieving
-          data in databases.
-        </p>
-        <ul>
-          <li>SQL stands for Structured Query Language.</li>
-          <li>SQL lets you access and manipulate databases.</li>
-          <li>
-            SQL became a standard of the American National Standards Institute
-            (ANSI) in 1986, and of the International Organization for
-            Standardization (ISO) in 1987.
-          </li>
-        </ul>
-      </div>
+    <div class="column1" style="background-color: lightgreen">
+      <h2>CSS</h2>
+      <p>CSS is the language we use to style a Web page.</p>
+      <ul>
+        <li>CSS stands for Cascading Style Sheets.</li>
+        <li>
+          CSS describes how HTML elements are to be displayed on screen,
+          paper, or in other media.
+        </li>
+        <li>
+          CSS saves a lot of work. It can control the layout of multiple web
+          pages all at once.
+        </li>
+        <li>External stylesheets are stored in CSS files.</li>
+        <li>CSS Syntax: Selector {Property:value;}</li>
+      </ul>
     </div>
-<hr/>
+  </div>
+
+  <div class="row">
+    <div class="column1" style="background-color: lightgoldenrodyellow">
+      <h2>JAVASCRIPT</h2>
+      <p>JavaScript is the world's most popular programming language.</p>
+      <ul>
+        <li>JavaScript is the programming language of the Web.</li>
+        <li>JavaScript is easy to learn.</li>
+        <li>JavaScript runs on the client side of the web.</li>
+        <li>
+          avaScript (often shortened to JS) is a lightweight, interpreted,
+          object-oriented language with first-class functions.
+        </li>
+        <li>
+          You can place the "script" tags, containing your JavaScript,
+          anywhere within your web page.
+        </li>
+      </ul>
+    </div>
+    <div class="column1" style="background-color: lightseagreen">
+      <h2>PHP</h2>
+      <p>
+        PHP is a server scripting language, and a powerful tool for making
+        dynamic and interactive Web pages.
+      </p>
+      <ul>
+        <li>PHP is an acronym for "PHP: Hypertext Preprocessor"</li>
+        <li>PHP is a widely-used, open source scripting language</li>
+        <li>
+          PHP files can contain text, HTML, CSS, JavaScript, and PHP code
+        </li>
+        <li>
+          PHP code is executed on the server, and the result is returned to
+          the browser as plain HTML
+        </li>
+        <li>PHP files have extension ".php"</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column1" style="background-color: lightgreen">
+      <h2>PYTHON</h2>
+      <p>
+        Python is a popular programming language. Python can be used on a
+        server to create web applications.
+      </p>
+      <ul>
+        <li>
+          Python is a popular programming language. It was created by Guido
+          van Rossum, and released in 1991.
+        </li>
+        <li>
+          It is used for: web development (server-side), software development,
+          mathematics, system scripting.
+        </li>
+        <li>Python can be used on a server to create web applications.</li>
+      </ul>
+    </div>
+    <div class="column1" style="background-color: lightyellow">
+      <h2>SQL</h2>
+      <p>
+        SQL is a standard language for storing, manipulating and retrieving
+        data in databases.
+      </p>
+      <ul>
+        <li>SQL stands for Structured Query Language.</li>
+        <li>SQL lets you access and manipulate databases.</li>
+        <li>
+          SQL became a standard of the American National Standards Institute
+          (ANSI) in 1986, and of the International Organization for
+          Standardization (ISO) in 1987.
+        </li>
+      </ul>
+    </div>
+  </div>
+  <hr />
   <div class="card text-center ">
     <div class="card-header bg-dark text-white">
       About Us
     </div>
     <div class="card-body">
       <h5 class="card-title">Spread Knowledge with Practical</h5>
-      <p class="card-text text-center"><BR> THIS WEBSITE HAS A MOTIVE TO SPREAD THE INFORMATION ABOUT Web Development.<br>
-      Developed by Tarun Kumar</p>
+      <p class="card-text text-center"><BR> THIS WEBSITE HAS A MOTIVE TO SPREAD THE INFORMATION ABOUT Web
+        Development.<br>
+        Developed by Tarun Kumar</p>
     </div>
-    <hr/>
+    <hr />
 
-    <a class="btn btn-primary active btn-outline-primary" href="blog.html" role="button">Click here for Blog</a> 
+    <a class="btn btn-primary active btn-outline-primary" href="blog.html" role="button">Click here for Blog</a>
 
-      
-       
-    
+
+
+
     <div class="card-footer text-muted">
-      Thank you for visiting 
-      <audio controls autoplay>
-  
-  <source src="love.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
+      Thank you for visiting
+
     </div>
   </div>
   <script>
     // Get the elements with class="column"
     var elements = document.getElementsByClassName("column1");
-    
+
     // Declare a loop variable
     var i;
-    
+
     // List View
     function listView() {
       for (i = 0; i < elements.length; i++) {
         elements[i].style.width = "100%";
       }
     }
-    
+
     // Grid View
     function gridView() {
       for (i = 0; i < elements.length; i++) {
         elements[i].style.width = "50%";
       }
     }
-    
+
     /* Optional: Add active class to the current button (highlight it) */
     var container = document.getElementById("btnContainer");
     var btns = container.getElementsByClassName("btn");
     for (var i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", function() {
+      btns[i].addEventListener("click", function () {
         var current = document.getElementsByClassName("active");
         current[0].className = current[0].className.replace(" active", "");
         this.className += " active";
       });
     }
-    </script>
-    <script>
-      const x = document.getElementById("geo");
-      
-      function getLocation() {
-        try {
-          navigator.geolocation.getCurrentPosition(showPosition);
-        } catch {
-          x.innerHTML = err;
-        }
+  </script>
+  <script>
+    const x = document.getElementById("geo");
+
+    function getLocation() {
+      try {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } catch {
+        x.innerHTML = err;
       }
-      
-      function showPosition(position) {
-        x.innerHTML = "Latitude: " + position.coords.latitude + 
+    }
+
+    function showPosition(position) {
+      x.innerHTML = "Latitude: " + position.coords.latitude +
         "<br>Longitude: " + position.coords.longitude;
-      }
-      </script>
+    }
+  </script>
   <script src="slide.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
