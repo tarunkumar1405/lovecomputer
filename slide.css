@@ -63,14 +63,14 @@ img {vertical-align: middle;}
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: red;
+  background-color: black;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.8s ease;
+  transition: background-color 0.4s ease;
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+  background-color: red;
 }
 
 /* Fading animation */
