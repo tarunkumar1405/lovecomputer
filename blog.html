@@ -1,377 +1,615 @@
+<!DOCTYPE html>
+<html>
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Computer awareness and knowledge" />
-    <meta
-      name="keywords"
-      content="HTML, CSS, JavaScript, computer knowledge, special symbols"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
+<head>
+  <title>Blog/ Love Computer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Computer awareness and knowledge" />
+  <meta name="keywords" content="HTML, CSS, JavaScript, computer knowledge, special symbols" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: "Raleway", sans-serif
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9046404486667166"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</head>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<body class="w3-light-grey">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index">LOVE COMPUTER</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus">Contact Us</a>
+          </li>
+          <span class="navbar-text text-center">
+            A little knowledge is a dangerous thing...
+          </span>
 
-    <title>Blog/ Love Computer</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9046404486667166"
-     crossorigin="anonymous"></script>
-     <style>
-       .ma {
-            background-color: aliceblue;
+        </ul>
 
-        }
-       body{
-        overflow-x: hidden;
-        background-color: #F0F8FF;
-      }
-       /* Float four columns side by side */
-       .column {
-        float: left;
-        width: 100%;
-        padding: 15px 15px 15px;
-      }
+      </div>
+    </div>
+  </nav>
+  <!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+  <div class="w3-content" style="max-width:1400px">
 
-      /* Remove extra left and right margins, due to padding */
+    <!-- Header -->
+    <header class="w3-container w3-center w3-padding-32">
+      <h1><b>MY BLOG</b></h1>
+      <p>Welcome to the blog of <span class="w3-tag">Love Computer</span></p>
+    </header>
 
-      /* Clear floats after the columns */
-      .column:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-      .column {
-        margin: 0 -5px;
-      }
+    <!-- Grid -->
+    <div class="w3-row">
 
-      /* Responsive columns */
-      @media screen and (max-width: 600px) {
-        .column {
-          width: 100%;
-          display: block;
-          margin-bottom: 20px;
-        }
-      }
+      <!-- Blog entries -->
+      <div class="w3-col l8 s12">
+        <!-- Blog entry -->
+        <div class="w3-card-4 w3-margin w3-white">
+          <img src="india.jpg" alt="India" style="width:100%">
+          Photo by Aaditya Arora
+          <div class="w3-container">
+            <h3><b>Geography of India</b></h3>
 
-      /* Style the counter cards */
-      .card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        padding: 25px;
-        text-align: center;
-        background-color: #f1f1f1;
-      }
-      p {
-        text-align: justify;
-      }
-      .fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 30px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
-  }
-/* Facebook */
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-.fa:hover {
-    opacity: 0.7;
-}
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-button{
-  padding-left: 10px ;}
-       
-  .img{
-  padding-top:10px;}
-   
+          </div>
 
-     </style>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index">LOVE COMPUTER</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index">Home</a>
+          <div class="w3-container">
+            <p>India is situated north of the equator between 8°4' north to 37°6' north latitude and
+              68°7' east to 97°25' east longitude. It is the seventh-largest country in the world, with a total area
+              of 3,287,263 square kilometres. India measures 3,214 km from north
+              to south and 2,933 km from east to west. It has a land frontier of 15,200 km and a
+              coastline of 7,516.6 km.</p>
+            <div class="w3-row">
+              <div class="w3-col m8 s12">
+                <p><button class="w3-button w3-padding-large w3-white w3-border w3-white w3-text-black "><b><a
+                        href="geo" style="text-decoration: none; color: black;">READ MORE »</a></b></button></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+
+        <!-- Blog entry -->
+        <div class="w3-card-4 w3-margin w3-white">
+          <img src="computer.jpg" alt="Computer" style="width:100%">
+          Photo by Nao Triponez
+          <div class="w3-container">
+            <h3><b>Computer Full Forms</b></h3>
+
+          </div>
+
+          <div class="w3-container">
+            <p>Full form of Computer: A computer is an electronic machine that accepts data from the user, processes the
+              data by performing calculations and operations on it and generates the desired outcome or result. The
+              computer is derived from the Latin word ‘computerae’ which means ‘to compute’. The full form of the
+              Computer is Common Operating Machine Purposely Used for Technological and Educational Research.</p>
+            <div class="w3-row">
+              <div class="w3-col m8 s12">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b><a href="fullform"
+                        style="text-decoration: none; color: black;">READ MORE »</a></b></button></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white">
+          <img src="computer1.jpg" alt="computer" style="width:100%">
+          Photo by Pixabay
+
+          <div class="w3-container">
+            <h3><b>Computer Facts</b></h3>
+
+          </div>
+
+          <div class="w3-container">
+            <p>Some Important Facts related to Computers</p>
+            <div class="w3-row">
+              <div class="w3-col m8 s12">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b><a href="facts"
+                        style="text-decoration: none; color: black;">READ MORE »</a></b></button></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white">
+          <img src="shortcuts.jpg" alt="shortcut" style="width:100%">
+
+
+          <div class="w3-container">
+            <h3><b>Microsoft Word Shortcuts</b></h3>
+
+          </div>
+
+          <div class="w3-container">
+            <p>The more commonly used shortcut keys in Microsoft Word.</p>
+            <div class="w3-row">
+              <div class="w3-col m8 s12">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b><a href="msword"
+                        style="text-decoration: none; color: black;">READ MORE »</a></b></button></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white">
+          <img src="shortcuts1" alt="shortcut" style="width:100%">
+
+
+          <div class="w3-container">
+            <h3><b>Microsoft Excel Shortcuts</b></h3>
+
+          </div>
+
+          <div class="w3-container">
+            <p>The more commonly used shortcut keys in Microsoft Excel.</p>
+            <div class="w3-row">
+              <div class="w3-col m8 s12">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b><a href="msexcel"
+                        style="text-decoration: none; color: black;">READ MORE »</a></b></button></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white">
+          <img src="delhi.jpg" alt="Delhi" style="width:100%">
+          Photo by Rohit Gangwar
+
+          <div class="w3-container">
+            <h3><b>Delhi Pincode</b></h3>
+
+          </div>
+
+          <div class="w3-container">
+            <p>You can search pincode of whole Delhi.</p>
+            <div class="w3-row">
+              <div class="w3-col m8 s12">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b><a href="pincode"
+                        style="text-decoration: none; color: black;">READ MORE »</a></b></button></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white">
+          <img src="symbol" alt="symbol" style="width:100%">
+
+
+          <div class="w3-container">
+            <h3><b>SPECIAL SYMBOLS</b></h3>
+
+          </div>
+
+          <div class="w3-container">
+            <p>There are 34 types of special symbols on the keyboard as below with their Unicode. Unicode: an
+              international encoding standard for use with different languages and scripts, by which each letter, digit,
+              or symbol is assigned a unique numeric value that applies across different platforms and programs.</p>
+            <div class="w3-row">
+              <div class="w3-col m8 s12">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b><a href="spsy"
+                        style="text-decoration: none; color: black;">READ MORE »</a></b></button></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white">
+          <img src="usb.jpg" alt="USB" style="width:100%">
+          Photo by Matthias Zomer
+
+          <div class="w3-container">
+            <h3><b>TYPES OF USB (UNIVERSAL SERIAL BUS)</b></h3>
+
+          </div>
+
+          <div class="w3-container">
+            <p>There are so many types of Universal Serial Bus (USB).Universal Serial Bus (USB) is an industry standard
+              that establishes specifications for cables, connectors and protocols for connection, communication and
+              power supply (interfacing) between computers, peripherals and other computers. A broad variety of USB
+              hardware exists, including 14 different connector types, of which USB-C is the most recent and the only
+              one not currently deprecated. First released in 1996, the USB standards are maintained by the USB
+              Implementers Forum (USB-IF).</p>
+            <div class="w3-row">
+              <div class="w3-col m8 s12">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b><a href="usb"
+                        style="text-decoration: none; color: black;">READ MORE »</a></b></button></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white">
+          <img src="network.jpg" alt="Network" style="width:100%">
+
+
+          <div class="w3-container">
+            <h3><b>INTERNET NETWORK</b></h3>
+
+          </div>
+
+          <div class="w3-container">
+            <p>Network: When two or more computers are connected with wired and wireless and share their resources(in
+              the form of Images, Videos, etc) it is called a Network.</p>
+            <div class="w3-row">
+              <div class="w3-col m8 s12">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b><a href="net"
+                        style="text-decoration: none; color: black;">READ MORE »</a></b></button></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white">
+          <img src="vlookup" alt="vlookup" style="width:100%">
+
+
+          <div class="w3-container">
+            <h3><b>Excel VLOOKUP Function</b></h3>
+
+          </div>
+
+          <div class="w3-container">
+            <p>Use VLOOKUP when you need to find things in a table or a range by row.</p>
+            <div class="w3-row">
+              <div class="w3-col m8 s12">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b><a href="vlook"
+                        style="text-decoration: none; color: black;">READ MORE »</a></b></button></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white">
+          <img src="language.png" alt="language" style="width:100%">
+
+
+          <div class="w3-container">
+            <h3><b>What is Language?</b></h3>
+
+          </div>
+
+          <div class="w3-container">
+            <p>Read about what is language? भाषा क्या होती है ...
+              दुनिया की सबसे पुरानी भाषा "संस्कृत" और इस भाषा की व्याकरण को जिस विद्वान ने दुनिया को बतलाया, समझाया, कि
+              भाषा कैसे बोली जाएँगी, पढ़ी जाएँगी, और लिखी जाएँगी, उनका नाम था "महर्षि पाणिनि"(Panini)। उन्होंने
+              अष्टाध्यायी = आठ अध्यायों वाली (8 chaptars) में उस सबकी पूरी व्याख्या की है।</p>
+            <div class="w3-row">
+              <div class="w3-col m8 s12">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b><a href="lang"
+                        style="text-decoration: none; color: black;">READ MORE »</a></b></button></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white">
+          <img src="ikagai.jpg" alt="ikagai" style="width:100%">
+
+
+          <div class="w3-container">
+            <h3><b>What is IKIGAI?</b></h3>
+
+          </div>
+
+          <div class="w3-container">
+            <p>IKIGAI: The Japanese secret to a long and happy life ...<br>
+              इकिगाई: दीर्घायु, तंदुरुस्त और आनंदित जीवन का जापानी रहस्य</p>
+            <div class="w3-row ">
+              <div class="w3-col m8 s12 ">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b><a href="Ikigai"
+                        style="text-decoration: none; color: black;">READ MORE »</a></b></button></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white">
+          <img src="html.jpg" alt="HTML" style="width:100%">
+
+
+          <div class="w3-container">
+            <h3><b>HTML Error Messages</b></h3>
+
+          </div>
+
+          <div class="w3-container">
+            <p>When a browser requests a service from a web server, an error might occur, and the server might return an
+              error code like "404 Not Found". It is common to name these errors HTML error messages. But these messages
+              are something called HTTP status messages. In fact, the server always returns a message for every request.
+              The most common message is 200 OK.</p>
+            <div class="w3-row">
+              <div class="w3-col m8 s12">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b><a href="err"
+                        style="text-decoration: none; color: black;">READ MORE »</a></b></button></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white">
+          <img src="Pivot" alt="HTML" style="width:100%">
+
+
+          <div class="w3-container">
+            <h3><b>Learn Pivot Table in MS-Excel</b></h3>
+
+          </div>
+
+          <div class="w3-container">
+            <p>Pivot tables are the fastest and easiest way to quickly analyze data in Excel.</p>
+            <div class="w3-row">
+              <div class="w3-col m8 s12">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b><a href="pivot"
+                        style="text-decoration: none; color: black;">READ MORE »</a></b></button></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white">
+          <img src="hindi" alt="HTML" style="width:100%">
+
+
+          <div class="w3-container">
+            <h3><b>मुहावरें</b></h3>
+
+          </div>
+
+          <div class="w3-container">
+            <p>किसी भाषा में प्रचलित वाक्यांश या पद समूह, जो अभिधा या शाब्दिक अर्थ से भिन्न लक्षणायुक्त विशेष अर्थ देता
+              है, मुहावरा कहलाता है। अतः विद्यार्थियों, लेखकों को इनका ज्ञान होना आवश्यक है। यहाँ हम कुछ प्रमुख मुहावरे
+              प्रस्तुत कर रहे है।</p>
+            <div class="w3-row">
+              <div class="w3-col m8 s12">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b><a href="hindi"
+                        style="text-decoration: none; color: black;">READ MORE »</a></b></button></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white">
+          <img src="information.png" alt="info" style="width:100%">
+
+
+          <div class="w3-container">
+            <h3><b>List of Hon'ble President, Vice President, Prime Minister, Governor(States and UT) and Chief
+                Minister(states and UT) of India-2022</b></h3>
+
+          </div>
+
+          <div class="w3-container">
+            <p>List of Hon'ble President, Vice President, Prime Minister, Governor(States and UT) and Chief
+              Minister(states and UT) of India</p>
+            <div class="w3-row">
+              <div class="w3-col m8 s12">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b><a href="info"
+                        style="text-decoration: none; color: black;">READ MORE »</a></b></button></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white">
+          <img src="words.png" alt="words" style="width:100%">
+
+
+          <div class="w3-container">
+            <h3><b>Latest Constitutional words</b></h3>
+
+          </div>
+
+          <div class="w3-container">
+            <p>Latest Constitutional words</p>
+            <div class="w3-row">
+              <div class="w3-col m8 s12">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b><a href="words"
+                        style="text-decoration: none; color: black;">READ MORE »</a></b></button></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white">
+          <img src="words1.png" alt="words" style="width:100%">
+
+
+          <div class="w3-container">
+            <h3><b>English Useful words</b></h3>
+
+          </div>
+
+          <div class="w3-container">
+            <p>English Useful words, increase your English vocabulary. Words make language stronger.</p>
+            <div class="w3-row">
+              <div class="w3-col m8 s12">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b><a href="english"
+                        style="text-decoration: none; color: black;">READ MORE »</a></b></button></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-card-4 w3-margin w3-white">
+          <img src="dance.gif" alt="words" style="width:100%">
+
+
+          <div class="w3-container">
+            <h3><b>भारत के 6 शास्त्रीय नृत्य</b></h3>
+
+          </div>
+
+          <div class="w3-container">
+            <p>नृत्य भारत में एक प्राचीन और प्रसिद्ध सांस्कृतिक परंपरा है। पूरे देश में लोक नृत्यों की भरमार है, और
+              लोगों की भारी भीड़ त्योहारों और शादियों में नाचती हुई देखी जा सकती है। भारतीय सिनेमा (तथाकथित "बॉलीवुड"
+              फिल्मों) में भी नृत्य और गीत बहुत अधिक हैं। लेकिन भारतीय नृत्य की जड़ें कहां से आती हैं? यहाँ भारत के सबसे
+              महत्वपूर्ण शास्त्रीय नृत्य रूपों में से 6 हैं।</p>
+            <div class="w3-row">
+              <div class="w3-col m8 s12">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b><a href="dance"
+                        style="text-decoration: none; color: black;">READ MORE »</a></b></button></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- END BLOG ENTRIES -->
+      </div>
+
+      <!-- Introduction menu -->
+      <div class="w3-col l4">
+        <!-- About Card -->
+        <div class="w3-card w3-margin w3-margin-top">
+          <img src="blog1.jpg" style="width:100%">
+          Photo by Miguel Á
+          <div class="w3-container w3-white">
+            <h4><b>Tarun Kumar</b></h4>
+            <p>THIS BLOG HAS A MOTIVE TO SPREAD THE INFORMATION ABOUT COMPUTER AND OTHERS</p>
+          </div>
+        </div>
+        <hr>
+
+        <!-- Posts -->
+        <div class="w3-card w3-margin">
+          <div class="w3-container w3-padding">
+            <h4>Popular Posts</h4>
+          </div>
+          <ul class="w3-ul w3-hoverable w3-white">
+            <li class="w3-padding-16"><a href="lang" style="text-decoration: none; color: black;">
+              <img src="workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+              <span class="w3-large">What is Language?</span><br>
+              <span>#language</span>
+            </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="blog">Blog</a>
+            <li class="w3-padding-16"><a href="fullform" style="text-decoration: none; color: black;">
+              <img src="gondol.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+              <span class="w3-large">Computer Full Forms</span><br>
+              <span>#computer</span>
+            </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="aboutus">About Us</a>
+            <li class="w3-padding-16"><a href="net" style="text-decoration: none; color: black;">
+              <img src="skies.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+              <span class="w3-large">INTERNET NETWORK</span><br>
+              <span>#network</span>
+            </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contactus">Contact Us</a>
+            <li class="w3-padding-16 w3-hide-medium w3-hide-small"><a href="err" style="text-decoration: none; color: black;">
+              <img src="rock.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+              <span class="w3-large">HTML Error Messages</span><br>
+              <span>#htmlerrors</span>
+            </a>
             </li>
-            <span class="navbar-text text-center">
-              A little knowledge is a dangerous thing...
-            </span>
-            
           </ul>
-          
         </div>
-      </div>
-    </nav>
-    
-    <div class="img">
-      <img src="header1.gif" class="img-fluid" alt="responsive">
-    </div>
-    <button onclick="history.back()">Go Back</button>
-    <main class="ma">
-    <div class="row">
-      <div class="column">
-        <div class="card">
-          <h3>Computer Full Forms</h3>
-          <p>
-            Full form of Computer: A computer is an electronic machine that
-            accepts data from the user, processes the data by performing
-            calculations and operations on it and generates the desired outcome
-            or result. The computer is derived from the Latin word ‘computerae’
-            which means ‘to compute’. The full form of the Computer is Common
-            Operating Machine Purposely Used for Technological and Educational
-            Research.
-          </p>
-          <a href="fullform">Read More</a>
+        <hr>
+
+        <!-- Labels / tags -->
+        <div class="w3-card w3-margin">
+          <div class="w3-container w3-padding">
+            <h4>Tags</h4>
+          </div>
+          <div class="w3-container w3-white">
+            <p><span class="w3-tag w3-black w3-margin-bottom">LANGUAGE</span> <span
+                class="w3-tag w3-light-grey w3-small w3-margin-bottom">NEW DELHI</span> <span
+                class="w3-tag w3-light-grey w3-small w3-margin-bottom">sPECIAL SYMBOLS</span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">English </span> <span
+                class="w3-tag w3-light-grey w3-small w3-margin-bottom">INDIA</span> <span
+                class="w3-tag w3-light-grey w3-small w3-margin-bottom">Microsoft Word </span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">HINDI</span> <span
+                class="w3-tag w3-light-grey w3-small w3-margin-bottom">IKIGAI</span> <span
+                class="w3-tag w3-light-grey w3-small w3-margin-bottom">COMPUTER FACTS </span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Geography</span> <span
+                class="w3-tag w3-light-grey w3-small w3-margin-bottom">VLOOKUP</span> <span
+                class="w3-tag w3-light-grey w3-small w3-margin-bottom">FULL FORMS</span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">HTML</span> <span
+                class="w3-tag w3-light-grey w3-small w3-margin-bottom">USB </span>
+            </p>
+          </div>
         </div>
+
+        <!-- END Introduction Menu -->
       </div>
 
-      <div class="column">
-        <div class="card">
-          <h3>Computer Facts</h3>
-          <p>Some Important Facts related to Computers</p>
-          <a href="facts">Read More</a>
-        </div>
-      </div>
+      <!-- END GRID -->
+    </div><br>
 
-      <div class="column">
-        <div class="card">
-          <h3>Microsoft Word Shortcuts</h3>
-          <p>The more commonly used shortcut keys in Microsoft Word.</p>
-          <a href="msword">Read More</a>
-        </div>
-      </div>
+    <!-- END w3-content -->
 
-      <div class="column">
-        <div class="card">
-          <h3>Microsoft Excel Shortcuts</h3>
-          <p>The more commonly used shortcut keys in Microsoft Excel.</p>
-          <a href="msexcel">Read More</a>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="card">
-        <h3>Delhi's Pincode</h3>
-        <p>You can search pincode of whole Delhi</p>
-        <a href="pincode">Read More</a>
-      </div>
-    </div>
-    <div class="column">
-      <div class="card">
-        <h3>SPECIAL SYMBOLS</h3>
-        <p>
-          There are 34 types of special symbols on the keyboard as below with
-          their Unicode. Unicode: an international encoding standard for use
-          with different languages and scripts, by which each letter, digit, or
-          symbol is assigned a unique numeric value that applies across
-          different platforms and programs.
-        </p>
-        <a href="spsy">Read More</a>
-      </div>
-    </div>
-    <div class="column">
-        <div class="card">
-          <h3>TYPES OF USB (UNIVERSAL SERIAL BUS)</h3>
-          <p>
-            There are so many types of USB
-          </p>
-          <a href="usb">Read More</a>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card">
-          <h3>INTERNET NETWORK</h3>
-          <p>
-            Network: When two or more computers are connected with wired and wireless and share their resources(in the form of Images, Videos, etc) it is called a Network.
-          </p>
-          <a href="net">Read More</a>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card">
-          <h3>Excel VLOOKUP Function</h3>
-          <p>
-            Use VLOOKUP when you need to find things in a table or a range by row.
-          </p>
-          <a href="vlook">Read More</a>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card">
-          <h3>Print any Table</h3>
-          <p>
-            Print table of any Number....
-          </p>
-          <a href="table">Read More</a>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card">
-          <h3>Calculate your Age from date of birth</h3>
-          <p>
-            Easiest way to calculate your age from date of birth...
-          </p>
-          <a href="age">Read More...</a>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card">
-          <h3>What is Language?</h3>
-          <p>
-            Read about what is language? भाषा क्या होती है ...<br>
-            दुनिया की सबसे पुरानी भाषा "संस्कृत" और इस भाषा की व्याकरण को जिस विद्वान ने दुनिया को बतलाया, समझाया, कि भाषा कैसे बोली जाएँगी, पढ़ी जाएँगी, और लिखी जाएँगी, उनका नाम था "महर्षि पाणिनि"(Panini)। उन्होंने अष्टाध्यायी = आठ अध्यायों वाली (8 chaptars) में उस सबकी पूरी व्याख्या की है।
-          </p>
-          <a href="lang">Read More...</a>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card">
-          <h3>What is IKIGAI?</h3>
-          <p>
-            IKIGAI: The Japanese secret to a long and happy life ...<br>
-            इकिगाई: दीर्घायु, तंदुरुस्त और आनंदित जीवन का जापानी रहस्य
-          </p>
-          <a href="Ikigai">Read More...</a>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card">
-          <h3>HTML Error Messages</h3>
-          <p>
-            When a browser requests a service from a web server, an error might occur, and the server might return an error code like "404 Not Found".
 
-It is common to name these errors HTML error messages.
 
-But these messages are something called HTTP status messages. In fact, the server always returns a message for every request. The most common message is 200 OK.
-          </p>
-          <a href="err">Read More...</a>
-        </div>
+  </div>
+  <!-- Footer -->
+  <footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top w3-text-black">
+
+    <div class="card text-center">
+      <div class="card-header">
+        About Us
       </div>
-      <div class="column">
-        <div class="card">
-          <h3>Learn Pivot Table in MS-Excel</h3>
-          <p>
-            Pivot tables are the fastest and easiest way to quickly analyze data in Excel.
-          </p>
-          <a href="pivot">Read More...</a>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card">
-          <h3>मुहावरें </h3>
-          <p>
-            किसी भाषा में प्रचलित वाक्यांश या पद समूह, जो अभिधा या शाब्दिक अर्थ से
-          भिन्न लक्षणायुक्त विशेष अर्थ देता है, मुहावरा कहलाता है। अतः
-          विद्यार्थियों, लेखकों को इनका ज्ञान होना आवश्यक है। यहाँ हम कुछ प्रमुख
-          मुहावरे प्रस्तुत कर रहे है।
-          </p>
-          <a href="hindi">Read More...</a>
-        </div>
-      </div>
-    <div class="column">
-        <div class="card">
-          <h3>List of Hon'ble President, Vice President, Prime Minister, Governor(States and UT) and Chief Minister(states and UT) of India-2022 </h3>
-          <p>
-            List of Hon'ble President, Vice President, Prime Minister, Governor(States and UT) and Chief Minister(states and UT) of India
-          </p>
-          <a href="info">Read More...</a>
-          
-        </div>
-      </div>
-    <div class="column">
-        <div class="card">
-          <h3>latest Constitutional words </h3>
-          <p>
-            latest Constitutional words
-          </p>
-          <a href="words">Read More...</a>
-          
-        </div>
-      </div>
-    <div class="column">
-        <div class="card">
-          <h3>English Useful words </h3>
-          <p>
-            English Useful words, increase your English vocabulary... Words make language stronger.
-          </p>
-          <a href="english">Read More...</a>
-          
-        </div>
-      </div>
-    <div class="column">
-        <div class="card">
-          <h3>Geography of India </h3>
-          <p>
-            useful information for competitive examinations
-          </p>
-          <a href="geo">Read More...</a>
-          
-        </div>
-      </div>
-    <div class="column">
-        <div class="card">
-          <h3>भारत के 6 शास्त्रीय नृत्य </h3>
-          <p>
-            नृत्य भारत में एक प्राचीन और प्रसिद्ध सांस्कृतिक परंपरा है। पूरे देश में लोक नृत्यों की भरमार है, और लोगों की भारी भीड़ त्योहारों और शादियों में नाचती हुई देखी जा सकती है। भारतीय सिनेमा (तथाकथित "बॉलीवुड" फिल्मों) में भी नृत्य और गीत बहुत अधिक हैं। लेकिन भारतीय नृत्य की जड़ें कहां से आती हैं? यहाँ भारत के सबसे महत्वपूर्ण शास्त्रीय नृत्य रूपों में से 6 हैं।
-          </p>
-          <a href="dance">Read More...</a>
-          
-        </div>
-      </div>
-    </main>
-      <div class="card text-center">
-        <div class="card-header">
-          About Us
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Spread knowledge with practical</h5>
-          <p class="card-text text-center"><BR> THIS WEBSITE HAS A MOTIVE TO SPREAD THE INFORMATION ABOUT COMPUTER.<br>
+      <div class="card-body">
+        <h5 class="card-title">Spread knowledge with practical</h5>
+        <p class="card-text text-center"><BR> THIS WEBSITE HAS A MOTIVE TO SPREAD THE INFORMATION ABOUT COMPUTER.<br>
           Developed by Tarun Kumar</p>
-          <a href="index" class="btn btn-primary">HOME</a>
-        </div>
-        <div class="card-footer text-muted">
-          Thank you for visiting 
-        </div>
-        
-      
+        <a href="index" class="btn btn-primary">HOME</a>
       </div>
-      
-      <a href="https://www.facebook.com/taruncomputerclass/" class="fa fa-facebook"></a>
-      <a href="https://twitter.com/tarunkumar1405" class="fa fa-twitter"></a>
-    <!-- Optional JavaScript; choose one of the two! -->
+      <div class="card-footer text-muted">
+        Thank you for visiting
+      </div>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
-  </body>
+    </div>
+  </footer>
+
+</body>
+
 </html>
-
-
