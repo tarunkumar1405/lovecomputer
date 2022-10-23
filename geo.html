@@ -71,7 +71,8 @@
             padding: 5px;
         }
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    <script src="https://www.gstatic.com/charts/loader.js">
+    </script>
     </script>
 </head>
 
@@ -332,10 +333,9 @@
                 </td>
             </tr>
         </table>
-        <div style="width:100%; align-items: center; max-width: 1000px; padding-left: 15px;">
-            <canvas id="myChart"></canvas>
-        </div>
 
+        <div id="myChart" style="width:100%; max-width:900px; height:500px; margin: auto;"></div>
+    
         <div style="overflow-x:auto;" class="na">
             <table>
                 <tr>
@@ -736,29 +736,38 @@
         }
     </script>
     <script>
-        var xValues = ["Andaman and Nicobar Islands", "Gujarat", "Andhra Pradesh", "Tamil Nadu", "Maharashtra", "Kerala", "Odisha", "Karnataka", "West Bengal", "Lakshadweep", "Goa", "Puducherry", "Dadra & Nagar Haveli and Daman & Diu",];
-        var yValues = [1962, 1214.70, 973.70, 906.90, 652.60, 569.70, 476.40, 280, 157.50, 132, 101, 47.60, 42.50];
-        var barColors = ["red", "green", "blue", "orange", "brown", "black", "purple","mahroon","Magenta","Cyan","Yellow","#bf80ff","#cccc00"];
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Contry', 'KM'],
+                ["Andaman and Nicobar", 1962],
+                ["Gujarat", 1214.70],
+                ["Andhra Pradesh", 973.70],
+                ["Tamil Nadu", 906.90],
+                ["Maharashtra", 652.60],
+                ["Kerala", 569.70],
+                ["Odisha", 476.40],
+                ["Karnataka", 280],
+                ["West Bengal", 157.50],
+                ["Lakshadweep", 132],
+                ["Goa", 101],
+                ["Puducherry", 47.60],
+                ['Dadra & Nagar Haveli and Daman & Diu', 42.50]
 
-        new Chart("myChart", {
-            type: "bar",
-            data: {
-                labels: xValues,
-                datasets: [{
-                    backgroundColor: barColors,
-                    data: yValues
-                }]
-            },
-            options: {
-                legend: { display: false },
-                title: {
-                    display: true,
-                    text: "Coastal States and Union Territories of India 2022",
-                   
-                    
-                }
-            }
-        });
+            ]);
+
+            var options = {
+                title: 'Coastal States and Union Territories of India',
+                hAxis: { title: 'KM' },
+                vAxis: { title: 'States/UTs' },
+                legend: 'none'
+            };
+
+            var chart = new google.visualization.BarChart(document.getElementById('myChart'));
+            chart.draw(data, options);
+        }
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
