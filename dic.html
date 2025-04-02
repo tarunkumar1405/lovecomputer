@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search for word meanings in English and Hindi with our free online dictionary. Get accurate translations and definitions instantly!">
+    <meta name="keywords" content="Online Dictionary, English to Hindi Dictionary, Word Meaning Finder, Free Dictionary Online, Dictionary with Translations, Find word meanings in English and Hindi, Best free online dictionary for English and Hindi, English to Hindi word translator online, Learn English words with Hindi meanings">
+    <meta name="author" content="Your Name">
+    <title>Online Dictionary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        input {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Online Dictionary</h1>
+    <input type="text" id="word" placeholder="Enter a word...">
+    <button onclick="getDefinition()">Search</button>
+    <div id="result"></div>
+
+    <script>
+        async function getDefinition() {
+            const word = document.getElementById('word').value;
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = 'Loading...';
+            try {
+                const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
+                const data = await response.json();
+                if (data.title) {
+                    resultDiv.innerHTML = 'Word not found';
+                } else {
+                    const meanings = data[0].meanings.map(m => `<p><strong>${m.partOfSpeech}:</strong> ${m.definitions[0].definition}</p>`).join('');
+                    
+                    const hindiResponse = await fetch(`https://api.mymemory.translated.net/get?q=${word}&langpair=en|hi`);
+                    const hindiData = await hindiResponse.json();
+                    const hindiMeaning = hindiData.responseData.translatedText;
+                    
+                    resultDiv.innerHTML = `<h2>${data[0].word}</h2>` + meanings + `<p><strong>Hindi:</strong> ${hindiMeaning}</p>`;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = 'Error fetching data';
+            }
+        }
+    </script>
+</body>
+</html>
