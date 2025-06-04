@@ -1,171 +1,206 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Age Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<html lang="en" dir="ltr">
-  <head>
-    <link rel="icon" type="image/x-icon" href="favicon2.ico" />
-
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Computer awareness and knowledge" />
-    <meta
-      name="keywords"
-      content="HTML, CSS, JavaScript, computer knowledge, special symbols"
-    />
-
-    <title>BLOG / LOVE COMPUTER</title>
-    <link rel="stylesheet" href="style.css" />
-
-    <link
-      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    
-      <script>
-
-        function ageCalculator() {
-            //collect input from HTML form and convert into date format
-            var userinput = document.getElementById("DOB").value;
-            var dob = new Date(userinput);
-            
-            //check user provide input or not
-            if(userinput==null || userinput==''){
-              document.getElementById("message").innerHTML = "**Choose a date please!";  
-              return false; 
-            } 
-            
-            //execute if the user entered a date 
-            else {
-            //extract the year, month, and date from user date input
-            var dobYear = dob.getYear();
-            var dobMonth = dob.getMonth();
-            var dobDate = dob.getDate();
-            
-            //get the current date from the system
-            var now = new Date();
-            //extract the year, month, and date from current date
-            var currentYear = now.getYear();
-            var currentMonth = now.getMonth();
-            var currentDate = now.getDate();
-          
-            //declare a variable to collect the age in year, month, and days
-            var age = {};
-            var ageString = "";
-          
-            //get years
-            yearAge = currentYear - dobYear;
-          
-            //get months
-            if (currentMonth >= dobMonth)
-              //get months when current month is greater
-              var monthAge = currentMonth - dobMonth;
-            else {
-              yearAge--;
-              var monthAge = 12 + currentMonth - dobMonth;
-            }
-        
-            //get days
-            if (currentDate >= dobDate)
-              //get days when the current date is greater
-              var dateAge = currentDate - dobDate;
-            else {
-              monthAge--;
-              var dateAge = 31 + currentDate - dobDate;
-        
-              if (monthAge < 0) {
-                monthAge = 11;
-                yearAge--;
-              }
-            }
-            //group the age in a single variable
-            age = {
-            years: yearAge,
-            months: monthAge,
-            days: dateAge
-            };
-              
-              
-            if ( (age.years > 0) && (age.months > 0) && (age.days > 0) )
-               ageString = age.years + " years, " + age.months + " months, and " + age.days + " days old.";
-            else if ( (age.years == 0) && (age.months == 0) && (age.days > 0) )
-               ageString = "Only " + age.days + " days old!";
-            //when current month and date is same as birth date and month
-            else if ( (age.years > 0) && (age.months == 0) && (age.days == 0) )
-               ageString = age.years +  " years old. Happy Birthday!!";
-            else if ( (age.years > 0) && (age.months > 0) && (age.days == 0) )
-               ageString = age.years + " years and " + age.months + " months old.";
-            else if ( (age.years == 0) && (age.months > 0) && (age.days > 0) )
-               ageString = age.months + " months and " + age.days + " days old.";
-            else if ( (age.years > 0) && (age.months == 0) && (age.days > 0) )
-               ageString = age.years + " years, and" + age.days + " days old.";
-            else if ( (age.years == 0) && (age.months > 0) && (age.days == 0) )
-               ageString = age.months + " months old.";
-            //when current date is same as dob(date of birth)
-            else ageString = "Welcome to Earth! <br> It's first day on Earth!"; 
-        
-            //display the calculated age
-            return document.getElementById("result").innerHTML = ageString; 
-                     
-          }
-        }
-        </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9046404486667166"
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9046404486667166"
      crossorigin="anonymous"></script>
-      
-  </head>
-  <body>
-    <nav>
-      <div class="navbar">
-        <i class="bx bx-menu"></i>
-        <div class="logo"><a href="index.html">Love Computer</a></div>
-        <div class="nav-links">
-          <div class="sidebar-logo">
-            <span class="logo"><a href="index.html">LoveComputer</a></span>
-            <i class="bx bx-x"></i>
-          </div>
-          <ul class="links">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="blog.html">BLOG</a></li>
-            
-            <li>
-              <a href="">WEB DEVELOPMENT</a>
-              <i class="bx bxs-chevron-down htmlcss-arrow arrow"></i>
-              <ul class="htmlCss-sub-menu sub-menu">
-                <li><a href="ht.html">HTML</a></li>
-                <li><a href="cs.html">CSS</a></li>
-                <li><a href="JavaScript.html">JAVASCRIPT</a></li>
-                <li><a href="py.html">Python</a></li>
-                <li><a href="sql.html">SQL</a></li>
-              </ul>
-            </li>
-            <li><a href="aboutus.html">ABOUT US</a></li>
-            <li><a href="contactus.html">CONTACT US</a></li>
+
+  <!-- jsPDF for PDF download -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <style>
+    :root {
+      --bg-color: #1e1e2f;
+      --text-color: #fff;
+      --container-bg: #2b2b3d;
+      --result-bg: #191927;
+    }
+
+    body.light {
+      --bg-color: #f2f2f2;
+      --text-color: #000;
+      --container-bg: #fff;
+      --result-bg: #e9e9e9;
+    }
+
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      padding-top: 70px;
+    }
+
+    .container {
+      background: var(--container-bg);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      max-width: 600px;
+      margin: auto;
+      text-align: center;
+    }
+
+    input[type="date"], button {
+      padding: 10px;
+      font-size: 16px;
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      border: none;
+    }
+
+    .result {
+      background: var(--result-bg);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: left;
+    }
+
+    footer {
+      background-color: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    .share-buttons button {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ✅ NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">LOVE COMPUTER</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Web Development</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="ht.html">HTML</a></li>
+            <li><a class="dropdown-item" href="cs.html">CSS</a></li>
+            <li><a class="dropdown-item" href="JavaScript.html">JavaScript</a></li>
+            <li><a class="dropdown-item" href="py.html">Python</a></li>
+            <li><a class="dropdown-item" href="sql.html">SQL</a></li>
+            <li><a class="dropdown-item" href="PostgreSQL.html">PostgreSQL</a></li>
           </ul>
-        </div>
-        <div class="search-box">
-          <i class="bx bx-search"></i>
-          <div class="input-box">
-            <input type="text" placeholder="Search..." />
-          </div>
-        </div>
-      </div>
-    </nav>
-    <center>
-      <h2 style="padding: 80px 5px 10px 15px; color:blue;"> Calculate Age from Date of Birth <br> <br> </h2> 
-      
-      <b> Enter Date of Birth: <input type=date id = DOB>  </b>
-      <span id = "message" style="color:red"> </span> <br><br>  
-      <button type="submit" onclick = "ageCalculator()"> Calculate age </button> <br><br>
-      <h3 style="color:32A80F" id="result" align="center"></h3> 
-      </center>
-    
+        </li>
+      </ul>
+      <button onclick="toggleTheme()" class="btn btn-outline-info btn-sm">🌗 Toggle Theme</button>
+    </div>
+  </div>
+</nav>
 
-    <script src="script.js"></script>
-  </body>
+<!-- ✅ AGE CALCULATOR -->
+<div class="container mt-4">
+  <h1>🕰️ Age Calculator</h1>
+  <input type="date" id="dob">
+  <button class="btn btn-success" onclick="calculateAge()">Calculate Age</button>
+  
+  <div class="result mt-3" id="ageResult"></div>
+
+  <!-- ✅ Extra Buttons -->
+  <div class="mt-3 share-buttons d-none" id="shareButtons">
+    <button class="btn btn-primary" onclick="downloadPDF()">📥 Download PDF</button>
+    <button class="btn btn-info" onclick="copyResult()">📋 Copy Result</button>
+    <a id="whatsappShare" class="btn btn-success" target="_blank">📤 Share on WhatsApp</a>
+  </div>
+</div>
+
+<!-- ✅ FOOTER -->
+<footer>
+  <h5>About Us</h5>
+  <p>This website spreads information about Web Development.</p>
+  <p>Developed by <strong>Tarun Kumar</strong></p>
+  <a href="blog.html" class="btn btn-primary mt-2">Click here for Blog</a>
+  <div class="mt-3">Thank you for visiting ❤️</div>
+</footer>
+
+<script>
+  function calculateAge() {
+    const dobInput = document.getElementById("dob").value;
+    const resultDiv = document.getElementById("ageResult");
+    const shareButtons = document.getElementById("shareButtons");
+
+    if (!dobInput) {
+      resultDiv.innerHTML = "<div>Please select your Date of Birth.</div>";
+      shareButtons.classList.add("d-none");
+      return;
+    }
+
+    const dob = new Date(dobInput);
+    const now = new Date();
+
+    if (dob > now) {
+      resultDiv.innerHTML = "<div>Date of Birth cannot be in the future.</div>";
+      shareButtons.classList.add("d-none");
+      return;
+    }
+
+    const diffMs = now - dob;
+    const diffDate = new Date(diffMs);
+
+    const years = diffDate.getUTCFullYear() - 1970;
+    const months = diffDate.getUTCMonth();
+    const days = diffDate.getUTCDate() - 1;
+    const totalDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+    const weeks = Math.floor(totalDays / 7);
+    const hours = Math.floor(diffMs / (1000 * 60 * 60));
+    const minutes = Math.floor(diffMs / (1000 * 60));
+    const seconds = Math.floor(diffMs / 1000);
+
+    const result = `
+      🗓️ Years: ${years}
+      📅 Months: ${months}
+      📆 Days: ${days}
+      🕰️ Weeks: ${weeks}
+      ⏱️ Total Days: ${totalDays}
+      ⏲️ Hours: ${hours.toLocaleString()}
+      ⏳ Minutes: ${minutes.toLocaleString()}
+      🔁 Seconds: ${seconds.toLocaleString()}
+    `;
+
+    resultDiv.innerHTML = result.replace(/\n/g, "<br>");
+    shareButtons.classList.remove("d-none");
+
+    document.getElementById("whatsappShare").href =
+      `https://wa.me/?text=${encodeURIComponent("My Age:\n" + result)}`;
+  }
+
+  function downloadPDF() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    const resultText = document.getElementById("ageResult").innerText;
+    doc.text("🕰️ Age Calculator Result", 10, 10);
+    doc.text(resultText, 10, 20);
+    doc.save("Age_Result.pdf");
+  }
+
+  function copyResult() {
+    const resultText = document.getElementById("ageResult").innerText;
+    navigator.clipboard.writeText(resultText).then(() => {
+      alert("Result copied to clipboard!");
+    });
+  }
+
+  function toggleTheme() {
+    document.body.classList.toggle("light");
+  }
+</script>
+
+</body>
 </html>
-
-
