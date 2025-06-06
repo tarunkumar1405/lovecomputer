@@ -2,60 +2,83 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LOVE COMPUTER</title>
   <style>
+    :root {
+      --primary: #2e8b57;
+      --secondary: #4caf50;
+      --light-bg: #f9f9f9;
+      --dark-bg: #121212;
+      --text-dark: #333;
+      --text-light: #ddd;
+    }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
+      background-color: var(--light-bg);
+      color: var(--text-dark);
       transition: background-color 0.3s, color 0.3s;
+      font-size: 16px;
     }
 
     header {
-      background-color: #2e8b57;
+      background-color: var(--primary);
       padding: 15px 20px;
       color: white;
-      font-size: 28px;
-      font-weight: bold;
-      letter-spacing: 2px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
-    /* Logo text on left */
     .logo {
       display: flex;
       align-items: center;
       gap: 10px;
-      cursor: default;
+      font-size: 24px;
+      font-weight: bold;
     }
+
     .logo img {
       height: 32px;
       width: 32px;
     }
 
+    #toggleDarkMode {
+      cursor: pointer;
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-weight: 600;
+      transition: 0.3s;
+      font-size: 14px;
+    }
+
+    #toggleDarkMode:hover {
+      background-color: white;
+      color: var(--primary);
+    }
+
     nav {
-      background-color: #4caf50;
+      background-color: var(--secondary);
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      align-items: center;
-      gap: 20px;
-      padding: 10px 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      gap: 15px;
+      padding: 10px;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      font-size: 16px;
-      padding: 8px 15px;
+      padding: 10px 18px;
       border-radius: 4px;
-      transition: background-color 0.3s;
+      font-size: 17px;
     }
 
     nav a:hover,
@@ -63,117 +86,137 @@
       background-color: #388e3c;
     }
 
-    /* Dark mode styles */
-    body.dark-mode {
-      background-color: #121212;
-      color: #ddd;
-    }
-    body.dark-mode nav {
-      background-color: #1b5e20;
-    }
-    body.dark-mode nav a {
-      color: #eee;
-    }
-    body.dark-mode nav a:hover,
-    body.dark-mode nav a.active {
-      background-color: #4caf50;
-    }
-    body.dark-mode header {
-      background-color: #1b5e20;
-      color: #ddd;
-    }
-    body.dark-mode table {
-      background-color: #1e1e1e;
-      color: #ddd;
-      border-color: #444;
-    }
-    body.dark-mode th, body.dark-mode td {
-      border-color: #444;
-    }
-    body.dark-mode th {
-      background-color: #388e3c;
-      color: white;
-    }
-    body.dark-mode footer {
-      background-color: #1b5e20;
-      color: #ddd;
-    }
-
-    /* Light/Dark toggle button */
-    #toggleDarkMode {
-      cursor: pointer;
-      background: transparent;
-      border: 2px solid white;
-      color: white;
-      padding: 5px 12px;
-      border-radius: 20px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      user-select: none;
-    }
-    #toggleDarkMode:hover {
-      background-color: white;
-      color: #4caf50;
-    }
-
     h2 {
       text-align: center;
-      color: #2e8b57;
-      font-size: 32px;
-      margin: 30px 0 10px;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      font-size: 2rem;
+      margin-top: 30px;
+      color: var(--primary);
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    }
+
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      padding: 10px;
     }
 
     table {
       border-collapse: collapse;
-      width: 90%;
+      width: 100%;
       margin: 20px auto;
       background-color: white;
+      min-width: 600px;
     }
 
     th, td {
       border: 1px solid #ccc;
-      padding: 10px;
+      padding: 12px;
       text-align: left;
+      font-size: 16px;
     }
 
     th {
-      background-color: #4caf50;
+      background-color: var(--secondary);
       color: white;
     }
 
     footer {
-      background-color: #2e8b57;
+      background-color: var(--primary);
       color: white;
       text-align: center;
       padding: 20px 10px;
       margin-top: 40px;
-      font-size: 15px;
+      font-size: 16px;
       line-height: 1.6;
+    }
+
+    /* Dark mode */
+    body.dark-mode {
+      background-color: var(--dark-bg);
+      color: var(--text-light);
+    }
+
+    body.dark-mode nav,
+    body.dark-mode header,
+    body.dark-mode footer {
+      background-color: #1b5e20;
+    }
+
+    body.dark-mode nav a {
+      color: #eee;
+    }
+
+    body.dark-mode nav a:hover,
+    body.dark-mode nav a.active {
+      background-color: var(--secondary);
+    }
+
+    body.dark-mode table {
+      background-color: #1e1e1e;
+      color: #ddd;
+    }
+
+    body.dark-mode th,
+    body.dark-mode td {
+      border-color: #444;
+    }
+
+    body.dark-mode th {
+      background-color: #388e3c;
+    }
+
+    /* Responsive text sizes */
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 1.5rem;
+      }
+      nav a {
+        font-size: 15px;
+        padding: 8px 12px;
+      }
+      th, td {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 20px;
+      }
+      #toggleDarkMode {
+        font-size: 12px;
+        padding: 5px 10px;
+      }
     }
   </style>
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <div class="logo">
-      <!-- You can replace this emoji with an actual logo image -->
-      <span style="font-size:32px;">💻</span>
-      <span>LOVE COMPUTER</span>
+      💻 <span>LOVE COMPUTER</span>
     </div>
-    <button id="toggleDarkMode" aria-label="Toggle dark mode">Dark Mode</button>
+    <button id="toggleDarkMode">Dark Mode</button>
   </header>
 
+  <!-- Navigation -->
   <nav>
     <a href="index.html" class="active">Home</a>
     <a href="blog.html">Blog</a>
-    <a href="about.html">About Us</a>
+    <a href="aboutus.html">About Us</a>
   </nav>
 
+  <!-- Heading -->
   <h2>📊 All States CM and Governor List 2025</h2>
 
-  <table id="sheetTable"></table>
+  <!-- Table Container -->
+  <div class="table-container">
+    <table id="sheetTable"></table>
+  </div>
 
+  <!-- Footer -->
   <footer>
     <strong>About Us</strong><br>
     Spread knowledge with practical.<br><br>
@@ -182,8 +225,8 @@
     Thank you for visiting 💻
   </footer>
 
+  <!-- Script -->
   <script>
-    // Fetch and display the Google Sheet CSV data
     const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQViBqMliYJkLOFRlseAWFmxtg7aH9BIHiw49-Vu8f8Sr0UrbI2UUteifwimRqTVSma4DGyYzFGe5vG/pub?output=csv';
 
     fetch(csvUrl)
@@ -199,16 +242,13 @@
       })
       .catch(err => console.error('Error fetching CSV:', err));
 
-    // Dark Mode Toggle
-    const toggleBtn = document.getElementById('toggleDarkMode');
-    toggleBtn.addEventListener('click', () => {
+    // Dark mode toggle
+    document.getElementById('toggleDarkMode').addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
-      if(document.body.classList.contains('dark-mode')) {
-        toggleBtn.textContent = 'Light Mode';
-      } else {
-        toggleBtn.textContent = 'Dark Mode';
-      }
+      const modeBtn = document.getElementById('toggleDarkMode');
+      modeBtn.textContent = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
     });
   </script>
+
 </body>
 </html>
