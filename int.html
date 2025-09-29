@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Interest Calculator</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f0f8ff;
+        display: flex;
+        min-height: 100vh;
+        flex-direction: row;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 200px;
+        background-color: #1e90ff;
+        color: white;
+        padding: 20px;
+        flex-shrink: 0;
+    }
+    .sidebar h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .sidebar a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .sidebar a:hover {
+        background-color: #0b75d1;
+    }
+
+    /* Main content */
+    .main {
+        flex-grow: 1;
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: auto;
+        background: #fff;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    label {
+        display: block;
+        margin: 10px 0 5px;
+    }
+
+    input, select, button {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        background-color: #1e90ff;
+        color: white;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0b75d1;
+    }
+
+    .result {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #e6f7ff;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    footer {
+        text-align: center;
+        padding: 15px;
+        background-color: #1e90ff;
+        color: white;
+        margin-top: 30px;
+    }
+
+    canvas {
+        margin-top: 25px;
+        max-width: 100%;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        body {
+            flex-direction: column;
+        }
+        .sidebar {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        .sidebar h2 {
+            display: none;
+        }
+        .sidebar a {
+            margin: 0;
+            padding: 10px 15px;
+        }
+        .container {
+            width: 100%;
+            margin: 10px auto;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .container {
+            padding: 15px;
+        }
+        input, select, button {
+            font-size: 14px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>Love Computer</h2>
+    <a href="index.html">Home</a>
+    <a href="contactus.html">Contact</a>
+</div>
+
+<!-- Main content -->
+<div class="main">
+    <div class="container">
+        <h1>Simple & Compound Interest Calculator</h1>
+
+        <label for="principal">Principal Amount (₹):</label>
+        <input type="number" id="principal" placeholder="Enter principal amount">
+
+        <label for="rate">Rate of Interest (% per year):</label>
+        <input type="number" id="rate" placeholder="Enter interest rate">
+
+        <label for="time">Time Period (years):</label>
+        <input type="number" id="time" placeholder="Enter time period">
+
+        <label for="type">Interest Type:</label>
+        <select id="type" onchange="toggleFrequency()">
+            <option value="simple">Simple Interest</option>
+            <option value="compound">Compound Interest</option>
+        </select>
+
+        <div id="frequencyDiv" style="display:none;">
+            <label for="frequency">Compounding Frequency:</label>
+            <select id="frequency">
+                <option value="1">Yearly</option>
+                <option value="2">Half-Yearly</option>
+                <option value="4">Quarterly</option>
+                <option value="12">Monthly</option>
+                <option value="365">Daily</option>
+            </select>
+        </div>
+
+        <button onclick="calculateInterest()">Calculate</button>
+
+        <div class="result" id="result"></div>
+        <canvas id="chart" width="400" height="250"></canvas>
+    </div>
+
+    <footer>
+        &copy; 2025 Interest Calculator | All Rights Reserved
+    </footer>
+</div>
+
+<script>
+let chart;
+
+function toggleFrequency() {
+    const type = document.getElementById('type').value;
+    document.getElementById('frequencyDiv').style.display = type === 'compound' ? 'block' : 'none';
+}
+
+function calculateInterest() {
+    const P = parseFloat(document.getElementById('principal').value);
+    const R = parseFloat(document.getElementById('rate').value);
+    const T = parseFloat(document.getElementById('time').value);
+    const type = document.getElementById('type').value;
+    const freq = parseInt(document.getElementById('frequency')?.value) || 1;
+
+    if (isNaN(P) || isNaN(R) || isNaN(T) || P <= 0 || R <= 0 || T <= 0) {
+        document.getElementById('result').innerHTML = "Please enter valid positive numbers!";
+        return;
+    }
+
+    let interest, total;
+    let yearlyAmounts = [];
+
+    if (type === "simple") {
+        interest = (P * R * T) / 100;
+        total = P + interest;
+        document.getElementById('result').innerHTML = 
+            `Simple Interest: ₹${interest.toFixed(2)} <br> Total Amount: ₹${total.toFixed(2)}`;
+
+        for (let i = 1; i <= T; i++) {
+            yearlyAmounts.push(P + (P * R * i / 100));
+        }
+    } else {
+        total = P * Math.pow((1 + R/(100*freq)), freq*T);
+        interest = total - P;
+        document.getElementById('result').innerHTML = 
+            `Compound Interest: ₹${interest.toFixed(2)} <br> Total Amount: ₹${total.toFixed(2)}`;
+
+        for (let i = 1; i <= T; i++) {
+            yearlyAmounts.push(P * Math.pow((1 + R/(100*freq)), freq*i));
+        }
+    }
+
+    drawChart(yearlyAmounts);
+}
+
+function drawChart(data) {
+    const ctx = document.getElementById('chart').getContext('2d');
+    if (chart) chart.destroy();
+
+    chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: data.map((_, i) => `Year ${i+1}`),
+            datasets: [{
+                label: 'Amount Over Time (₹)',
+                data: data,
+                backgroundColor: 'rgba(30,144,255,0.2)',
+                borderColor: 'rgba(30,144,255,1)',
+                borderWidth: 2,
+                fill: true,
+                tension: 0.3
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'top'
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: false
+                }
+            }
+        }
+    });
+}
+</script>
+
+</body>
+</html>
