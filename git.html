@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Git Guide: VS Code & Command Line</title>
+  <style>
+    :root {
+      --primary: #0366d6;
+      --dark: #24292e;
+      --light: #f9f9f9;
+      --text: #333;
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--light);
+      color: var(--text);
+    }
+
+    header {
+      background: var(--dark);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background: var(--primary);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0.75rem 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0.5rem 1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-top: 2rem;
+    }
+
+    pre {
+      background: #eee;
+      padding: 1rem;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+    }
+
+    .emoji {
+      font-size: 1.2rem;
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav a {
+        margin: 0.5rem 0;
+      }
+
+      main {
+        padding: 0 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🚀 Git Guide: VS Code & Command Line</h1>
+  </header>
+
+  <nav>
+    <a href="index">Home</a>
+    <a href="blog">Blog</a>
+    <a href="contactus">Contact</a>
+  </nav>
+
+  <main>
+    <h2 class="emoji">🧠 What is Git?</h2>
+    <p>Git is a <strong>version control system</strong> — it tracks your code changes, so you can:</p>
+    <ul>
+      <li>Save progress safely (like checkpoints)</li>
+      <li>Work in teams without overwriting code</li>
+      <li>Go back to any previous version</li>
+    </ul>
+
+    <h2 class="emoji">⚙️ Step 1: Install Git</h2>
+    <p>👉 Download from <a href="https://git-scm.com/" target="_blank">git-scm.com</a></p>
+    <ul>
+      <li>Keep default settings</li>
+      <li>After install, run:</li>
+    </ul>
+    <pre><code>git --version</code></pre>
+    <p>✅ If you see a version number, you’re ready!</p>
+
+    <h2 class="emoji">🧩 Step 2: Set Up Git (only once)</h2>
+    <pre><code>git config --global user.name "Your Name"
+git config --global user.email "your@email.com"</code></pre>
+
+    <h2 class="emoji">📁 Step 3: Create or Open a Project</h2>
+    <pre><code>cd path/to/your/project
+git init</code></pre>
+    <p>This creates a hidden <code>.git</code> folder — your project is now version-controlled!</p>
+
+    <h2 class="emoji">🧾 Step 4: Check Status</h2>
+    <pre><code>git status</code></pre>
+    <p>Shows which files are new, changed, or staged.</p>
+
+    <h2 class="emoji">💾 Step 5: Stage and Commit Changes</h2>
+    <pre><code>git add filename        # add single file
+git add .               # add all files
+git commit -m "Your message here"</code></pre>
+
+    <h2 class="emoji">🌍 Step 6: Connect to GitHub</h2>
+    <ol>
+      <li>Create a new repo on GitHub</li>
+      <li>Copy the repo URL (HTTPS)</li>
+      <li>Link it:</li>
+    </ol>
+    <pre><code>git remote add origin https://github.com/username/repo-name.git
+git push -u origin main</code></pre>
+
+    <h2 class="emoji">🔄 Step 7: Everyday Git Workflow</h2>
+    <pre><code>git status              # check what changed
+git add .               # stage
+git commit -m "explain your change"
+git push                # upload to GitHub</code></pre>
+    <pre><code>git pull                # get latest updates</code></pre>
+
+    <h2 class="emoji">🌱 (Optional) Branching</h2>
+    <pre><code>git checkout -b new-feature
+git checkout main
+git merge new-feature</code></pre>
+
+    <h2 class="emoji">💡 Bonus: Using Git in VS Code</h2>
+    <ul>
+      <li>Open your project in VS Code</li>
+      <li>Click <strong>Source Control</strong> icon (left sidebar)</li>
+      <li>You’ll see all changed files</li>
+      <li>Click <strong>+</strong> to stage, type a commit message, click ✅ to commit</li>
+      <li>Click “Sync Changes” to push/pull from GitHub</li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>© 2025 Git Guide by Tarun. All rights reserved.</p>
+  </footer>
+</body>
+</html>
