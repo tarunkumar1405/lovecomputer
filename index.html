@@ -1,435 +1,380 @@
 <!DOCTYPE html>
-
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQPH8FMYS6"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-NQPH8FMYS6');
-  </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    /* Create two equal columns that floats next to each other */
-    .column1 {
-      float: left;
-      width: 50%;
-      padding: 10px;
-    }
-
-    /* Clear floats after the columns */
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-
-    /* Style the buttons */
-    .btn {
-      border: none;
-      outline: none;
-      padding: 12px 16px;
-      background-color: #f1f1f1;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      background-color: #ddd;
-    }
-
-    .btn.active {
-      background-color: #666;
-      color: white;
-    }
-
-    .faa {
-      padding: 20px;
-      font-size: 30px;
-      width: 30px;
-      text-align: center;
-      text-decoration: none;
-      border-radius: 50%;
-    }
-
-    /* Facebook */
-    .faa-facebook {
-      background: #3B5998;
-      color: white;
-    }
-
-    .faa:hover {
-      opacity: 0.7;
-    }
-
-    .faa-twitter {
-      background: #55ACEE;
-      color: white;
-    }
-
-    @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
-
-    body {
-
-      font-family: 'Inconsolata', monospace;
-
-    }
-
-
-
-    .icon-bar {
-      position: fixed;
-      padding: 5px;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-    }
-
-    .icon-bar a {
-      display: block;
-      text-align: center;
-      padding: 16px;
-      transition: all 0.3s ease;
-      color: white;
-      font-size: 20px;
-    }
-
-    .icon-bar a:hover {
-      background-color: #000;
-    }
-
-    .facebook {
-      background: #3B5998;
-      color: white;
-    }
-
-    .twitter {
-      background: #55ACEE;
-      color: white;
-    }
-
-
-
-    .instagram {
-      color: white;
-      background: #E1306C;
-    }
-
-    .youtube {
-      background: #bb0000;
-      color: white;
-    }
-
-    img {
-      padding: 3px 40px 0px 40px;
-      width: 100%;
-      height: auto;
-    }
-  </style>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Computer awareness and knowledge" />
-  <meta name="keywords" content="HTML, CSS, JavaScript, computer knowledge, special symbols" />
-
-  <title>HOME | LOVE COMPUTER</title>
-
-  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-  <link rel="stylesheet" href="slide.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LOVE COMPUTER - Practical tutorials on MySQL, PostgreSQL, SQL, programming, web development and data analytics.">
+  <title>LOVE COMPUTER | Learn Technology. Build Skills.</title>
+  <link rel="stylesheet" href="style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9046404486667166"
+     crossorigin="anonymous"></script>
 </head>
-
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" style="color:#A8D379;" href="index">Love<span style="color:#F07974;"> Computer</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="blog">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="aboutus">About Us</a>
-          </li>
+<header>
+  <div class="container nav">
+    <a href="index.html" class="logo">LOVE <span>COMPUTER</span></a>
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="blog" id="navbarDropdownMenuLink" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Web Development
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="ht">HTML</a></li>
-              <li><a class="dropdown-item" href="cs">CSS</a></li>
-              <li><a class="dropdown-item" href="JavaScript">JavaScript</a></li>
-              <li><a class="dropdown-item" href="py">Python</a></li>
-              <li><a class="dropdown-item" href="sql">MySQL</a></li>
-              <li><a class="dropdown-item" href="PostgreSQL">PostgreSQL</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Disclaimer">Disclaimer</a>
-          </li>
-        </ul>
+    <nav class="nav-links">
+      <a href="#topics">Topics</a>
+      <a href="#tutorials">Tutorials</a>
+      <a href="#blog">Blog</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="menu" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge">PRACTICAL TECHNOLOGY TUTORIALS</span>
+
+        <h1>Learn Technology.<br><span>Build Skills.</span></h1>
+
+        <p>
+          Practical tutorials on SQL, databases, programming, web development
+          and data analytics — explained simply and with real examples.
+        </p>
+
+        <div class="buttons">
+          <a class="btn btn-primary" href="#topics">Explore Tutorials</a>
+          <a class="btn btn-light" href="#blog">Read the Blog</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="terminal-top">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+
+        <div class="code">
+          <div><span class="blue">SELECT</span> knowledge, skills</div>
+          <div><span class="blue">FROM</span> tutorials</div>
+          <div><span class="blue">WHERE</span> learning = <span class="green">'practical'</span>;</div>
+          <br>
+          <div><span class="green">-- Keep learning. Keep building.</span></div>
+        </div>
       </div>
     </div>
-  </nav>
-  <div class="icon-bar">
-    <a href="https://www.facebook.com/taruncomputerclass" class="facebook"><i class="fa fa-facebook"></i></a>
-    <a href="https://twitter.com/tarunkumar1405" class="twitter"><i class="fa fa-twitter"></i></a>
+  </section>
 
-    <a href="https://www.instagram.com/mysql.2023/" class="instagram"><i class="fa fa-instagram"></i></a>
-    <a href="https://www.youtube.com/channel/UCXFASZjD4m9SyKHvs7h1JTg" class="youtube"><i class="fa fa-youtube"></i></a>
-  </div>
-  <div>
+  <!-- AD SLOT 1 -->
+  <div class="container">
+    <div class="ad-container">
+      <span>ADVERTISEMENT</span>
 
+      <!--
+      PASTE YOUR EXISTING ADSENSE CODE HERE
 
-    <img src="mysql.webp" alt="MySQL Commands" style="width:100%" height: auto;>
+      Example:
 
-
-  </div>
-  <br>
-
-
-  <hr style="color: red;">
-  <div style="text-align: center;">
-    <p><b>Click the Geo Location button to get your current coordinates.</b></p>
-
-    <button onclick="getLocation()" style="color: white; background-color:blue;">Geo location</button>
-
-    <p id="geo" style="color:blue"></p>
-  </div>
-
-  <div id="btnContainer">
-    <button class="btn" onclick="listView()">
-      <i class="fa fa-bars"></i> List
-    </button>
-    <button class="btn active" onclick="gridView()">
-      <i class="fa fa-th-large"></i> Grid
-    </button>
-  </div>
-  <br />
-
-  <div class="row">
-    <div class="column1" style="background-color: yellow">
-      <h1>HTML</h1>
-      <p>HTML is the standard markup language for creating Web pages.</p>
-      <ul>
-        <li>HTML stands for Hyper Text Markup Language.</li>
-        <li>HTML is the standard markup language for creating Web pages</li>
-        <li>HTML describes the structure of a Web page.</li>
-        <li>HTML consists of a series of elements.</li>
-        <li>HTML elements tell the browser how to display the content.</li>
-        <li>
-          HTML elements label pieces of content such as "this is a heading",
-          "this is a paragraph", "this is a link", etc.
-        </li>
-      </ul>
-    </div>
-    <div class="column1" style="background-color: lightgreen">
-      <h1>CSS</h1>
-      <p>CSS is the language we use to style a Web page.</p>
-      <ul>
-        <li>CSS stands for Cascading Style Sheets.</li>
-        <li>
-          CSS describes how HTML elements are to be displayed on screen,
-          paper, or in other media.
-        </li>
-        <li>
-          CSS saves a lot of work. It can control the layout of multiple web
-          pages all at once.
-        </li>
-        <li>External stylesheets are stored in CSS files.</li>
-        <li>CSS Syntax: Selector {Property:value;}</li>
-      </ul>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="YOUR-PUBLISHER-ID"
+           data-ad-slot="YOUR-AD-SLOT"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      -->
     </div>
   </div>
 
-  <div class="row">
-    <div class="column1" style="background-color: lightgoldenrodyellow">
-      <h1>JavaScript</h1>
-      <p>JavaScript is the world's most popular programming language.</p>
-      <ul>
-        <li>JavaScript is the programming language of the Web.</li>
-        <li>JavaScript is easy to learn.</li>
-        <li>JavaScript runs on the client side of the web.</li>
-        <li>
-          avaScript (often shortened to JS) is a lightweight, interpreted,
-          object-oriented language with first-class functions.
-        </li>
-        <li>
-          You can place the "script" tags, containing your JavaScript,
-          anywhere within your web page.
-        </li>
-      </ul>
+  <!-- SEARCH -->
+  <div class="container search">
+    <input
+      id="searchBox"
+      type="search"
+      placeholder="Search tutorials, e.g. MySQL, PostgreSQL, JavaScript..."
+      oninput="filterCards()"
+    >
+  </div>
+
+  <!-- TOPICS -->
+  <section id="topics">
+    <div class="container">
+      <div class="section-head">
+        <h2>Explore Topics</h2>
+        <p>Choose a technology and start learning with practical examples.</p>
+      </div>
+
+      <div class="grid">
+
+        <a class="card searchable" href="html.html">
+          <div class="icon">H</div>
+          <h3>HTML</h3>
+          <p>Learn the building blocks of modern web pages.</p>
+          <span class="link">Start learning →</span>
+        </a>
+
+        <a class="card searchable" href="css.html">
+          <div class="icon">C</div>
+          <h3>CSS</h3>
+          <p>Create clean, responsive and attractive web designs.</p>
+          <span class="link">Start learning →</span>
+        </a>
+
+        <a class="card searchable" href="javascript.html">
+          <div class="icon">JS</div>
+          <h3>JavaScript</h3>
+          <p>Add logic, interaction and dynamic features to websites.</p>
+          <span class="link">Start learning →</span>
+        </a>
+
+        <a class="card searchable" href="python.html">
+          <div class="icon">Py</div>
+          <h3>Python</h3>
+          <p>Explore programming, automation and data-focused concepts.</p>
+          <span class="link">Start learning →</span>
+        </a>
+
+        <a class="card searchable" href="mysql.html">
+          <div class="icon">DB</div>
+          <h3>MySQL</h3>
+          <p>Master SQL queries, databases, optimization and practical tips.</p>
+          <span class="link">Start learning →</span>
+        </a>
+
+        <a class="card searchable" href="postgresql.html">
+          <div class="icon">PG</div>
+          <h3>PostgreSQL</h3>
+          <p>Learn PostgreSQL from fundamentals to advanced SQL.</p>
+          <span class="link">Start learning →</span>
+        </a>
+
+        <a class="card searchable" href="#">
+          <div class="icon">PHP</div>
+          <h3>PHP</h3>
+          <p>Understand server-side development and dynamic websites.</p>
+          <span class="link">Explore →</span>
+        </a>
+
+        <a class="card searchable" href="#">
+          <div class="icon">N</div>
+          <h3>Node</h3>
+          <p>Build server-side applications using JavaScript.</p>
+          <span class="link">Explore →</span>
+        </a>
+
+      </div>
     </div>
-    <div class="column1" style="background-color: lightseagreen">
-      <h2>PHP</h2>
-      <p>
-        PHP is a server scripting language, and a powerful tool for making
-        dynamic and interactive Web pages.
-      </p>
-      <ul>
-        <li>PHP is an acronym for "PHP: Hypertext Preprocessor"</li>
-        <li>PHP is a widely-used, open source scripting language</li>
-        <li>
-          PHP files can contain text, HTML, CSS, JavaScript, and PHP code
-        </li>
-        <li>
-          PHP code is executed on the server, and the result is returned to
-          the browser as plain HTML
-        </li>
-        <li>PHP files have extension ".php"</li>
-      </ul>
+  </section>
+
+  <!-- AD SLOT 2 -->
+  <div class="container">
+    <div class="ad-container">
+      <span>ADVERTISEMENT</span>
+      <!-- Paste your existing responsive AdSense code here -->
     </div>
   </div>
-  <div class="row">
-    <div class="column1" style="background-color: lightgreen">
-      <h2>Node.js</h2>
-      <p>
-        Node.js is an open source server environment.
-      </p>
-      <ul>
-        <li>
-          Node.js allows you to run JavaScript on the server.
-        </li>
-        <li>
-          Node.js uses JavaScript on the server
-        </li>
-        <li>Node.js uses asynchronous programming!</li>
-        <li>Node.js eliminates the waiting, and simply continues with the next request.</li>
-        <li>Download Node.js from the official Node.js web site: https://nodejs.org
 
-        </li>
-      </ul>
+  <!-- TUTORIALS -->
+  <section id="tutorials" class="featured">
+    <div class="container">
+
+      <div class="section-head">
+        <h2>Popular Learning Paths</h2>
+        <p>Structured topics that make it easier to learn one step at a time.</p>
+      </div>
+
+      <div class="tutorials">
+
+        <article class="tutorial searchable">
+          <span class="tag">DATABASE</span>
+          <h3>MySQL from Basics to Advanced</h3>
+          <p>
+            SQL queries, joins, subqueries, indexes, views, procedures,
+            optimization and interview preparation.
+          </p>
+          <a class="link" href="mysql.html">Explore MySQL →</a>
+        </article>
+
+        <article class="tutorial searchable">
+          <span class="tag">DATABASE</span>
+          <h3>PostgreSQL in 30 Days</h3>
+          <p>
+            A practical day-by-day journey covering PostgreSQL concepts,
+            commands and examples.
+          </p>
+          <a class="link" href="postgresql.html">Explore PostgreSQL →</a>
+        </article>
+
+        <article class="tutorial searchable">
+          <span class="tag">WEB DEVELOPMENT</span>
+          <h3>Web Development Fundamentals</h3>
+          <p>
+            Build a strong foundation with HTML, CSS, JavaScript
+            and server-side technologies.
+          </p>
+          <a class="link" href="html.html">Start Web Development →</a>
+        </article>
+
+      </div>
     </div>
-    <div class="column1" style="background-color: lightyellow">
-      <h2>MySQL</h2>
-      <p>
-        MySQL is a standard language for storing, manipulating and retrieving
-        data in databases.
-      </p>
-      <ul>
-        <li>MySQL stands for Structured Query Language.</li>
-        <li>MySQL lets you access and manipulate databases.</li>
-        <li>
-          MySQL became a standard of the American National Standards Institute
-          (ANSI) in 1986, and of the International Organization for
-          Standardization (ISO) in 1987.
-        </li>
-      </ul>
+  </section>
+
+  <!-- BLOG -->
+  <section id="blog">
+    <div class="container">
+
+      <div class="section-head">
+        <h2>Latest from the Blog</h2>
+        <p>Practical articles, tips and insights for technology learners.</p>
+      </div>
+
+      <div class="tutorials">
+
+        <article class="tutorial searchable">
+          <span class="tag">MYSQL</span>
+          <h3>10 MySQL Tips Every Developer Should Know</h3>
+          <p>
+            Practical MySQL tips for writing cleaner queries,
+            improving performance and working efficiently.
+          </p>
+          <a class="link" href="blog.html">Read Article →</a>
+        </article>
+
+        <article class="tutorial searchable">
+          <span class="tag">POSTGRESQL</span>
+          <h3>PostgreSQL: Where Should You Start?</h3>
+          <p>
+            A simple introduction to PostgreSQL and the essential
+            concepts beginners should learn first.
+          </p>
+          <a class="link" href="blog.html">Read Article →</a>
+        </article>
+
+        <article class="tutorial searchable">
+          <span class="tag">SQL</span>
+          <h3>How to Improve Your SQL Skills</h3>
+          <p>
+            A practical approach to improving SQL through
+            real-world examples and regular practice.
+          </p>
+          <a class="link" href="blog.html">Read Article →</a>
+        </article>
+
+      </div>
+
+      <div class="center-button">
+        <a class="btn btn-primary" href="blog.html">View All Blog Posts</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- AD SLOT 3 -->
+  <div class="container">
+    <div class="ad-container">
+      <span>ADVERTISEMENT</span>
+      <!-- Paste your existing responsive AdSense code here -->
     </div>
   </div>
-  <hr />
-  <div style="padding-left: 5%;">
-    <div
-      class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
-      <p><a class="twitter-timeline" data-height="350" data-width="400" href="https://twitter.com/mysql_2023">Tweets by
-          MySQL </a>
-        <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      </p>
+
+  <!-- ABOUT -->
+  <section id="about" class="about-section">
+    <div class="container about">
+
+      <div>
+        <div class="section-head left">
+          <h2>Technology should be easier to learn.</h2>
+          <p>
+            LOVE COMPUTER is built around one simple idea:
+            explain technology clearly, practically and without unnecessary complexity.
+          </p>
+        </div>
+
+        <p class="muted">
+          Whether you are learning SQL, databases, programming or web development,
+          the goal is to give you useful knowledge that you can actually apply.
+        </p>
+      </div>
+
+      <div class="about-box">
+        <h2>Keep Learning.</h2>
+        <p>Keep building your skills with practical tutorials and examples.</p>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>SQL</strong>
+            <span>Databases</span>
+          </div>
+
+          <div class="stat">
+            <strong>WEB</strong>
+            <span>Development</span>
+          </div>
+
+          <div class="stat">
+            <strong>DATA</strong>
+            <span>Analytics</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact">
+    <div class="container">
+      <div class="cta">
+        <h2>Ready to learn something new?</h2>
+        <p>Explore the tutorials and start building your skills today.</p>
+        <a class="btn btn-light" href="#topics">Browse Topics</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+        <h3>LOVE COMPUTER</h3>
+        <p>
+          Practical tutorials for technology, programming,
+          databases and web development.
+        </p>
+      </div>
+
+      <div>
+        <h4>Learn</h4>
+        <a href="mysql.html">MySQL</a>
+        <a href="postgresql.html">PostgreSQL</a>
+        <a href="html.html">HTML</a>
+        <a href="javascript.html">JavaScript</a>
+      </div>
+
+      <div>
+        <h4>Website</h4>
+        <a href="#tutorials">Tutorials</a>
+        <a href="blog.html">Blog</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © <span id="year"></span> LOVE COMPUTER. All rights reserved.
     </div>
 
   </div>
-  </div>
-  <hr />
-  <div class="card text-center ">
-    <div class="card-header bg-dark text-white">
-      About Us
-    </div>
-    <div class="card-body">
-      <h5 class="card-title"
-        style="color: #bb0000; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-        Spread Knowledge with Practical</h5>
-      <p class="card-text text-center" style="color:blue"><BR> THIS WEBSITE HAS A MOTIVE TO SPREAD THE INFORMATION ABOUT
-        Web
-        Development.<br>
-        Developed by Tarun Kumar</p>
-    </div>
-    <hr />
+</footer>
 
-    <a class="btn btn-primary active btn-outline-primary" style="color: yellow;" href="blog" role="button">Click here
-      for Blog</a>
-
-
-
-
-    <div class="card-footer text-muted">
-      Thank you for visiting
-
-    </div>
-  </div>
-  <script>
-    // Get the elements with class="column"
-    var elements = document.getElementsByClassName("column1");
-
-    // Declare a loop variable
-    var i;
-
-    // List View
-    function listView() {
-      for (i = 0; i < elements.length; i++) {
-        elements[i].style.width = "100%";
-      }
-    }
-
-    // Grid View
-    function gridView() {
-      for (i = 0; i < elements.length; i++) {
-        elements[i].style.width = "50%";
-      }
-    }
-
-    /* Optional: Add active class to the current button (highlight it) */
-    var container = document.getElementById("btnContainer");
-    var btns = container.getElementsByClassName("btn");
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", function () {
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-      });
-    }
-  </script>
-  <script>
-    const x = document.getElementById("geo");
-
-    function getLocation() {
-      try {
-        navigator.geolocation.getCurrentPosition(showPosition);
-      } catch {
-        x.innerHTML = err;
-      }
-    }
-
-    function showPosition(position) {
-      x.innerHTML = "Latitude: " + position.coords.latitude +
-        "<br>Longitude: " + position.coords.longitude;
-    }
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-  <script> (function (ss, ex) { window.ldfdr = window.ldfdr || function () { (ldfdr._q = ldfdr._q || []).push([].slice.call(arguments)); }; (function (d, s) { fs = d.getElementsByTagName(s)[0]; function ce(src) { var cs = d.createElement(s); cs.src = src; cs.async = 1; fs.parentNode.insertBefore(cs, fs); }; ce('https://sc.lfeeder.com/lftracker_v1_' + ss + (ex ? '_' + ex : '') + '.js'); })(document, 'script'); })('lAxoEaKGW6baOYGd'); </script>
+<script src="script.js"></script>
 </body>
-
 </html>

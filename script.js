@@ -1,39 +1,43 @@
-// search-box open close js code
-let navbar = document.querySelector(".navbar");
-let searchBox = document.querySelector(".search-box .bx-search");
-// let searchBoxCancel = document.querySelector(".search-box .bx-x");
+function toggleMenu() {
+    const nav = document.querySelector(".nav-links");
 
-searchBox.addEventListener("click", ()=>{
-  navbar.classList.toggle("showInput");
-  if(navbar.classList.contains("showInput")){
-    searchBox.classList.replace("bx-search" ,"bx-x");
-  }else {
-    searchBox.classList.replace("bx-x" ,"bx-search");
-  }
+    if (!nav) return;
+
+    const isOpen = nav.style.display === "flex";
+
+    nav.style.display = isOpen ? "none" : "flex";
+
+    if (!isOpen) {
+        nav.style.position = "absolute";
+        nav.style.top = "72px";
+        nav.style.left = "0";
+        nav.style.right = "0";
+        nav.style.background = "#fff";
+        nav.style.padding = "20px";
+        nav.style.flexDirection = "column";
+        nav.style.borderBottom = "1px solid #e7ebf2";
+    }
+}
+
+function filterCards() {
+    const searchBox = document.getElementById("searchBox");
+
+    if (!searchBox) return;
+
+    const query = searchBox.value.toLowerCase().trim();
+    const cards = document.querySelectorAll(".searchable");
+
+    cards.forEach(function(card) {
+        const text = card.innerText.toLowerCase();
+
+        card.style.display = text.includes(query) ? "" : "none";
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const yearElement = document.getElementById("year");
+
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
 });
-
-// sidebar open close js code
-let navLinks = document.querySelector(".nav-links");
-let menuOpenBtn = document.querySelector(".navbar .bx-menu");
-let menuCloseBtn = document.querySelector(".nav-links .bx-x");
-menuOpenBtn.onclick = function() {
-navLinks.style.left = "0";
-}
-menuCloseBtn.onclick = function() {
-navLinks.style.left = "-100%";
-}
-
-
-// sidebar submenu open close js code
-let htmlcssArrow = document.querySelector(".htmlcss-arrow");
-htmlcssArrow.onclick = function() {
- navLinks.classList.toggle("show1");
-}
-let moreArrow = document.querySelector(".more-arrow");
-moreArrow.onclick = function() {
- navLinks.classList.toggle("show2");
-}
-let jsArrow = document.querySelector(".js-arrow");
-jsArrow.onclick = function() {
- navLinks.classList.toggle("show3");
-}
