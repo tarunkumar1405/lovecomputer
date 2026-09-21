@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Five foundational SQL concepts that make it easier to write queries, understand data and move toward advanced SQL.">
+  <title>5 SQL Concepts You Should Master First | LOVE COMPUTER</title>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9046404486667166"
+       crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="logo">LOVE <span>COMPUTER</span></a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <div class="dropdown">
+        <button class="drop-btn">Databases ▾</button>
+        <div class="dropdown-menu">
+          <a href="mysql.html">MySQL</a>
+          <a href="postgresql.html">PostgreSQL</a>
+          <a href="sql.html">SQL</a>
+          <a href="database-administration.html">Database Administration</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="drop-btn">Programming ▾</button>
+        <div class="dropdown-menu">
+          <a href="python.html">Python</a>
+          <a href="javascript.html">JavaScript</a>
+          <a href="php.html">PHP</a>
+          <a href="nodejs.html">Node.js</a>
+        </div>
+      </div>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<main>
+<div class="container article-layout">
+
+<article class="article-content">
+  <div class="breadcrumb">
+    <a href="blog.html">Blog</a>
+    <span>›</span>
+    <span>SQL</span>
+  </div>
+
+  <header class="article-header">
+    <span class="article-category">SQL</span>
+    <h1>5 SQL Concepts You Should Master First</h1>
+    <p class="article-intro">Five foundational SQL concepts that make it easier to write queries, understand data and move toward advanced SQL.</p>
+    <div class="article-meta">
+      <span>📅 September 12, 2026</span>
+      <span>•</span>
+      <span>⏱ 7 min read</span>
+    </div>
+  </header>
+
+  <div class="article-ad"><span>ADVERTISEMENT</span></div>
+
+  
+<p>If you are learning SQL, it is tempting to jump directly into advanced topics. A better approach is to build a strong foundation first.</p>
+
+<h2>1. SELECT and WHERE</h2>
+<p>SELECT chooses the data you want to see, while WHERE filters the rows.</p>
+<pre><code>SELECT name, salary
+FROM employees
+WHERE salary &gt; 50000;</code></pre>
+
+<h2>2. ORDER BY</h2>
+<p>ORDER BY controls the order of the result set.</p>
+<pre><code>SELECT name, salary
+FROM employees
+ORDER BY salary DESC;</code></pre>
+
+<h2>3. GROUP BY and Aggregate Functions</h2>
+<p>GROUP BY is used with functions such as COUNT, SUM, AVG, MIN and MAX to create summaries.</p>
+<pre><code>SELECT department, COUNT(*) AS employees
+FROM employees
+GROUP BY department;</code></pre>
+
+<h2>4. JOINs</h2>
+<p>JOINs allow you to combine related information stored in different tables.</p>
+<pre><code>SELECT c.name, o.order_date
+FROM customers c
+JOIN orders o
+  ON c.id = o.customer_id;</code></pre>
+
+<h2>5. NULL and Data Conditions</h2>
+<p>Understanding NULL, missing values and conditional filtering is important for writing reliable SQL.</p>
+
+<div class="tip-box"><strong>Practical tip:</strong> Practice each concept with a small database instead of only reading syntax.</div>
+
+<h2>How to Practice</h2>
+<p>Start with SELECT and WHERE, then add sorting, grouping and JOINs. Once these become comfortable, move to subqueries, CTEs and window functions.</p>
+
+<h2>Final Thoughts</h2>
+<p>A strong SQL foundation makes advanced topics much easier. Focus on understanding the result of each query, not just memorizing commands.</p>
+
+
+  <div class="article-tags">
+    <a href="mysql.html">MySQL</a>
+    <a href="sql.html">SQL</a>
+    <a href="database-administration.html">Database</a>
+  </div>
+
+  <div class="share-box">
+    <strong>Share this article</strong>
+    <div class="share-buttons">
+      <button onclick="shareArticle()">Share</button>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</article>
+
+<aside class="sidebar">
+  <div class="sidebar-box search-box">
+    <h3>Search Blog</h3>
+    <form id="blogSearch">
+      <input type="search" id="searchInput" placeholder="Search articles..." aria-label="Search articles">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  <div class="sidebar-box">
+    <div class="sidebar-heading">
+      <h3>Latest Blogs</h3>
+      <a href="articles.html">View All</a>
+    </div>
+    <ul class="blog-list">
+      <li><a href="mysql-tips.html">10 MySQL Tips Every Developer Should Know</a></li>
+      <li><a href="mysql-select-star.html">Why You Should Avoid SELECT * in Production Queries</a></li>
+      <li><a href="postgresql-where.html">PostgreSQL WHERE Clause: A Beginner's Guide</a></li>
+      <li><a href="sql-fundamentals.html">5 SQL Concepts You Should Master First</a></li>
+      <li><a href="programming-practice.html">How to Practice Programming Effectively</a></li>
+      <li><a href="html-css-javascript.html">HTML, CSS and JavaScript: Where to Start?</a></li>
+      <li><a href="improve-sql-skills.html">How to Improve Your SQL Skills</a></li>
+    </ul>
+  </div>
+
+  <div class="sidebar-box">
+    <h3>Categories</h3>
+    <div class="category-list">
+      <a href="mysql.html">MySQL</a>
+      <a href="postgresql.html">PostgreSQL</a>
+      <a href="sql.html">SQL</a>
+      <a href="python.html">Programming</a>
+      <a href="index.html">Web Development</a>
+      <a href="blog.html">Career</a>
+    </div>
+  </div>
+
+  <div class="sidebar-ad"><span>ADVERTISEMENT</span></div>
+</aside>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-logo">LOVE COMPUTER</div>
+      <p>Practical tutorials for databases, programming and web development.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>
+      <h4>Topics</h4>
+      <a href="mysql.html">MySQL</a>
+      <a href="postgresql.html">PostgreSQL</a>
+      <a href="sql.html">SQL</a>
+      <a href="python.html">Python</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © <span id="year"></span> LOVE COMPUTER. All rights reserved.
+  </div>
+</footer>
+
+<script>
+window.articleShareText = '5 SQL Concepts You Should Master First';
+</script>
+<script src="article.js"></script>
+</body>
+</html>

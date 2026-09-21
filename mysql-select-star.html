@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Understand why explicitly selecting columns can make MySQL queries clearer, more predictable and easier to maintain.">
+  <title>Why You Should Avoid SELECT * in Production Queries | LOVE COMPUTER</title>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9046404486667166"
+       crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="logo">LOVE <span>COMPUTER</span></a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <div class="dropdown">
+        <button class="drop-btn">Databases ▾</button>
+        <div class="dropdown-menu">
+          <a href="mysql.html">MySQL</a>
+          <a href="postgresql.html">PostgreSQL</a>
+          <a href="sql.html">SQL</a>
+          <a href="database-administration.html">Database Administration</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="drop-btn">Programming ▾</button>
+        <div class="dropdown-menu">
+          <a href="python.html">Python</a>
+          <a href="javascript.html">JavaScript</a>
+          <a href="php.html">PHP</a>
+          <a href="nodejs.html">Node.js</a>
+        </div>
+      </div>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<main>
+<div class="container article-layout">
+
+<article class="article-content">
+  <div class="breadcrumb">
+    <a href="blog.html">Blog</a>
+    <span>›</span>
+    <span>MySQL</span>
+  </div>
+
+  <header class="article-header">
+    <span class="article-category">MySQL</span>
+    <h1>Why You Should Avoid SELECT * in Production Queries</h1>
+    <p class="article-intro">Understand why explicitly selecting columns can make MySQL queries clearer, more predictable and easier to maintain.</p>
+    <div class="article-meta">
+      <span>📅 September 18, 2026</span>
+      <span>•</span>
+      <span>⏱ 6 min read</span>
+    </div>
+  </header>
+
+  <div class="article-ad"><span>ADVERTISEMENT</span></div>
+
+  
+<p>The asterisk in <code>SELECT *</code> tells MySQL to return every column from the selected table or tables. It is convenient while exploring data, but production queries often benefit from explicitly naming the required columns.</p>
+
+<h2>What SELECT * Does</h2>
+<pre><code>SELECT *
+FROM users
+WHERE status = 'active';</code></pre>
+
+<p>This query returns all columns for matching rows. If the table contains columns that the application does not need, those values are still returned.</p>
+
+<h2>Prefer Explicit Columns</h2>
+<pre><code>SELECT id, name, email
+FROM users
+WHERE status = 'active';</code></pre>
+
+<p>The second query clearly communicates which data the application expects. That makes it easier to read and maintain.</p>
+
+<h2>It Helps Keep Data Transfer Focused</h2>
+<p>Large tables may contain text, JSON or other wide columns. Returning only the required fields can reduce unnecessary data transfer between the database and application.</p>
+
+<h2>It Makes JOINs Clearer</h2>
+<pre><code>SELECT
+    c.id,
+    c.name,
+    o.order_date
+FROM customers c
+INNER JOIN orders o
+    ON c.id = o.customer_id;</code></pre>
+
+<h2>When SELECT * Is Fine</h2>
+<p>SELECT * can be perfectly reasonable for quick database exploration or a controlled administrative check. The goal is not to ban it everywhere, but to be intentional in application code.</p>
+
+<div class="tip-box"><strong>Practical tip:</strong> Ask yourself, “Do I really need every column?” If not, list the columns you actually need.</div>
+
+<h2>Final Thoughts</h2>
+<p>Explicit SELECT lists are a small habit that can make SQL easier to understand and maintain, especially as applications and database schemas grow.</p>
+
+
+  <div class="article-tags">
+    <a href="mysql.html">MySQL</a>
+    <a href="sql.html">SQL</a>
+    <a href="database-administration.html">Database</a>
+  </div>
+
+  <div class="share-box">
+    <strong>Share this article</strong>
+    <div class="share-buttons">
+      <button onclick="shareArticle()">Share</button>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</article>
+
+<aside class="sidebar">
+  <div class="sidebar-box search-box">
+    <h3>Search Blog</h3>
+    <form id="blogSearch">
+      <input type="search" id="searchInput" placeholder="Search articles..." aria-label="Search articles">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  <div class="sidebar-box">
+    <div class="sidebar-heading">
+      <h3>Latest Blogs</h3>
+      <a href="articles.html">View All</a>
+    </div>
+    <ul class="blog-list">
+      <li><a href="mysql-tips.html">10 MySQL Tips Every Developer Should Know</a></li>
+      <li><a href="mysql-select-star.html">Why You Should Avoid SELECT * in Production Queries</a></li>
+      <li><a href="postgresql-where.html">PostgreSQL WHERE Clause: A Beginner's Guide</a></li>
+      <li><a href="sql-fundamentals.html">5 SQL Concepts You Should Master First</a></li>
+      <li><a href="programming-practice.html">How to Practice Programming Effectively</a></li>
+      <li><a href="html-css-javascript.html">HTML, CSS and JavaScript: Where to Start?</a></li>
+      <li><a href="improve-sql-skills.html">How to Improve Your SQL Skills</a></li>
+    </ul>
+  </div>
+
+  <div class="sidebar-box">
+    <h3>Categories</h3>
+    <div class="category-list">
+      <a href="mysql.html">MySQL</a>
+      <a href="postgresql.html">PostgreSQL</a>
+      <a href="sql.html">SQL</a>
+      <a href="python.html">Programming</a>
+      <a href="index.html">Web Development</a>
+      <a href="blog.html">Career</a>
+    </div>
+  </div>
+
+  <div class="sidebar-ad"><span>ADVERTISEMENT</span></div>
+</aside>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-logo">LOVE COMPUTER</div>
+      <p>Practical tutorials for databases, programming and web development.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>
+      <h4>Topics</h4>
+      <a href="mysql.html">MySQL</a>
+      <a href="postgresql.html">PostgreSQL</a>
+      <a href="sql.html">SQL</a>
+      <a href="python.html">Python</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © <span id="year"></span> LOVE COMPUTER. All rights reserved.
+  </div>
+</footer>
+
+<script>
+window.articleShareText = 'Why You Should Avoid SELECT * in Production Queries';
+</script>
+<script src="article.js"></script>
+</body>
+</html>

@@ -1,100 +1,66 @@
-function toggleMenu() {
-    const nav = document.querySelector(".nav-links");
+document.addEventListener("DOMContentLoaded", function () {
+  const year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
 
-    if (!nav) return;
+  const menuToggle = document.querySelector(".menu-toggle");
+  const mainNav = document.querySelector(".main-nav");
 
-    const isOpen = nav.style.display === "flex";
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener("click", function () {
+      mainNav.classList.toggle("show");
+    });
+  }
 
-    nav.style.display = isOpen ? "none" : "flex";
+  const cards = Array.from(document.querySelectorAll(".article-card"));
+  const buttons = Array.from(document.querySelectorAll(".category-btn"));
+  const searchInput = document.getElementById("searchInput");
+  const searchForm = document.getElementById("blogSearch");
+  const noResults = document.getElementById("noResults");
 
-    if (!isOpen) {
-        nav.style.position = "absolute";
-        nav.style.top = "72px";
-        nav.style.left = "0";
-        nav.style.right = "0";
-        nav.style.background = "#fff";
-        nav.style.padding = "20px";
-        nav.style.flexDirection = "column";
-        nav.style.borderBottom = "1px solid #e7ebf2";
-    }
-}
+  let selectedCategory = "all";
 
-
-function filterPosts() {
-    const input = document.getElementById("blogSearch");
-
-    if (!input) return;
-
-    const query = input.value.toLowerCase().trim();
-    const posts = document.querySelectorAll(".searchable-post");
+  function filterArticles() {
+    const query = (searchInput.value || "").trim().toLowerCase();
     let visible = 0;
 
-    posts.forEach(function(post) {
-        const text = post.innerText.toLowerCase();
+    cards.forEach(function (card) {
+      const category = card.dataset.category || "";
+      const text = (card.dataset.search || card.textContent).toLowerCase();
 
-        if (text.includes(query)) {
-            post.style.display = "";
-            visible++;
-        } else {
-            post.style.display = "none";
-        }
+      const categoryMatch = selectedCategory === "all" || category === selectedCategory;
+      const searchMatch = !query || text.includes(query);
+
+      if (categoryMatch && searchMatch) {
+        card.style.display = "";
+        visible++;
+      } else {
+        card.style.display = "none";
+      }
     });
 
-    updateNoResults(visible);
-}
+    noResults.style.display = visible ? "none" : "block";
+  }
 
-
-function filterCategory(category, button) {
-    const posts = document.querySelectorAll(".searchable-post");
-    const searchInput = document.getElementById("blogSearch");
-
-    if (searchInput) {
-        searchInput.value = "";
-    }
-
-    document.querySelectorAll(".category").forEach(function(item) {
-        item.classList.remove("active");
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      buttons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+      selectedCategory = button.dataset.category;
+      filterArticles();
     });
+  });
 
-    if (button) {
-        button.classList.add("active");
-    }
-
-    let visible = 0;
-
-    posts.forEach(function(post) {
-        const categories = (post.dataset.category || "").split(" ");
-
-        if (category === "all" || categories.includes(category)) {
-            post.style.display = "";
-            visible++;
-        } else {
-            post.style.display = "none";
-        }
+  if (searchForm) {
+    searchForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      filterArticles();
+      document.querySelector(".latest-section").scrollIntoView({ behavior: "smooth" });
     });
+  }
 
-    updateNoResults(visible);
-}
+  if (searchInput) {
+    searchInput.addEventListener("input", filterArticles);
+  }
 
-
-function updateNoResults(visible) {
-    const message = document.getElementById("noResults");
-
-    if (!message) return;
-
-    message.style.display = visible === 0 ? "block" : "none";
-}
-
-
-function showMessage() {
-    alert("More articles will be added soon.");
-}
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    const year = document.getElementById("year");
-
-    if (year) {
-        year.textContent = new Date().getFullYear();
-    }
+  filterArticles();
 });

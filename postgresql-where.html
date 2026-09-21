@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn how the PostgreSQL WHERE clause filters rows using comparisons, logical operators and practical examples.">
+  <title>PostgreSQL WHERE Clause: A Beginner's Guide | LOVE COMPUTER</title>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9046404486667166"
+       crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="logo">LOVE <span>COMPUTER</span></a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <div class="dropdown">
+        <button class="drop-btn">Databases ▾</button>
+        <div class="dropdown-menu">
+          <a href="mysql.html">MySQL</a>
+          <a href="postgresql.html">PostgreSQL</a>
+          <a href="sql.html">SQL</a>
+          <a href="database-administration.html">Database Administration</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="drop-btn">Programming ▾</button>
+        <div class="dropdown-menu">
+          <a href="python.html">Python</a>
+          <a href="javascript.html">JavaScript</a>
+          <a href="php.html">PHP</a>
+          <a href="nodejs.html">Node.js</a>
+        </div>
+      </div>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<main>
+<div class="container article-layout">
+
+<article class="article-content">
+  <div class="breadcrumb">
+    <a href="blog.html">Blog</a>
+    <span>›</span>
+    <span>PostgreSQL</span>
+  </div>
+
+  <header class="article-header">
+    <span class="article-category">PostgreSQL</span>
+    <h1>PostgreSQL WHERE Clause: A Beginner's Guide</h1>
+    <p class="article-intro">Learn how the PostgreSQL WHERE clause filters rows using comparisons, logical operators and practical examples.</p>
+    <div class="article-meta">
+      <span>📅 September 15, 2026</span>
+      <span>•</span>
+      <span>⏱ 6 min read</span>
+    </div>
+  </header>
+
+  <div class="article-ad"><span>ADVERTISEMENT</span></div>
+
+  
+<p>The WHERE clause is one of the first SQL concepts you should learn. It allows you to filter rows and return only the records that satisfy a condition.</p>
+
+<h2>Basic WHERE Example</h2>
+<pre><code>SELECT id, name, city
+FROM customers
+WHERE city = 'Delhi';</code></pre>
+
+<p>The query returns only customers whose city is Delhi.</p>
+
+<h2>Comparison Operators</h2>
+<p>You can use operators such as <code>=</code>, <code>&lt;&gt;</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code> and <code>&lt;=</code>.</p>
+<pre><code>SELECT *
+FROM products
+WHERE price &gt; 1000;</code></pre>
+
+<h2>Using AND and OR</h2>
+<pre><code>SELECT *
+FROM employees
+WHERE department = 'IT'
+  AND salary &gt; 50000;</code></pre>
+
+<p>AND requires both conditions to be true. OR allows either condition to match.</p>
+
+<h2>Using IN</h2>
+<pre><code>SELECT *
+FROM customers
+WHERE city IN ('Delhi', 'Mumbai', 'Pune');</code></pre>
+
+<h2>Using LIKE</h2>
+<pre><code>SELECT *
+FROM customers
+WHERE name LIKE 'A%';</code></pre>
+
+<p>This finds names beginning with the letter A.</p>
+
+<h2>Handling NULL</h2>
+<p>NULL should be checked with IS NULL or IS NOT NULL rather than using the normal equality operator.</p>
+<pre><code>SELECT *
+FROM employees
+WHERE manager_id IS NULL;</code></pre>
+
+<div class="tip-box"><strong>Practical tip:</strong> Start with simple WHERE conditions, then combine operators as your queries become more complex.</div>
+
+<h2>Final Thoughts</h2>
+<p>A strong understanding of WHERE makes filtering, reporting and troubleshooting much easier in PostgreSQL and SQL in general.</p>
+
+
+  <div class="article-tags">
+    <a href="mysql.html">MySQL</a>
+    <a href="sql.html">SQL</a>
+    <a href="database-administration.html">Database</a>
+  </div>
+
+  <div class="share-box">
+    <strong>Share this article</strong>
+    <div class="share-buttons">
+      <button onclick="shareArticle()">Share</button>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</article>
+
+<aside class="sidebar">
+  <div class="sidebar-box search-box">
+    <h3>Search Blog</h3>
+    <form id="blogSearch">
+      <input type="search" id="searchInput" placeholder="Search articles..." aria-label="Search articles">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  <div class="sidebar-box">
+    <div class="sidebar-heading">
+      <h3>Latest Blogs</h3>
+      <a href="articles.html">View All</a>
+    </div>
+    <ul class="blog-list">
+      <li><a href="mysql-tips.html">10 MySQL Tips Every Developer Should Know</a></li>
+      <li><a href="mysql-select-star.html">Why You Should Avoid SELECT * in Production Queries</a></li>
+      <li><a href="postgresql-where.html">PostgreSQL WHERE Clause: A Beginner's Guide</a></li>
+      <li><a href="sql-fundamentals.html">5 SQL Concepts You Should Master First</a></li>
+      <li><a href="programming-practice.html">How to Practice Programming Effectively</a></li>
+      <li><a href="html-css-javascript.html">HTML, CSS and JavaScript: Where to Start?</a></li>
+      <li><a href="improve-sql-skills.html">How to Improve Your SQL Skills</a></li>
+    </ul>
+  </div>
+
+  <div class="sidebar-box">
+    <h3>Categories</h3>
+    <div class="category-list">
+      <a href="mysql.html">MySQL</a>
+      <a href="postgresql.html">PostgreSQL</a>
+      <a href="sql.html">SQL</a>
+      <a href="python.html">Programming</a>
+      <a href="index.html">Web Development</a>
+      <a href="blog.html">Career</a>
+    </div>
+  </div>
+
+  <div class="sidebar-ad"><span>ADVERTISEMENT</span></div>
+</aside>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-logo">LOVE COMPUTER</div>
+      <p>Practical tutorials for databases, programming and web development.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>
+      <h4>Topics</h4>
+      <a href="mysql.html">MySQL</a>
+      <a href="postgresql.html">PostgreSQL</a>
+      <a href="sql.html">SQL</a>
+      <a href="python.html">Python</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © <span id="year"></span> LOVE COMPUTER. All rights reserved.
+  </div>
+</footer>
+
+<script>
+window.articleShareText = "PostgreSQL WHERE Clause: A Beginner's Guide";
+</script>
+<script src="article.js"></script>
+</body>
+</html>
