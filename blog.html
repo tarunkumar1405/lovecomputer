@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LOVE COMPUTER Blog - Practical articles, tips and insights on MySQL, PostgreSQL, SQL, programming and web development.">
+  <title>Blog | LOVE COMPUTER</title>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9046404486667166"
+       crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="index.html" class="logo">LOVE <span>COMPUTER</span></a>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#topics">Topics</a>
+      <a href="index.html#tutorials">Tutorials</a>
+      <a class="active" href="blog.html">Blog</a>
+      <a href="index.html#about">About</a>
+    </nav>
+
+    <button class="menu" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- BLOG HERO -->
+  <section class="blog-hero">
+    <div class="container">
+      <span class="badge">LOVE COMPUTER BLOG</span>
+      <h1>Learn something <span>new.</span></h1>
+      <p>
+        Practical articles, database tips, programming guides and technology
+        insights — written to help you learn and build useful skills.
+      </p>
+
+      <div class="blog-search">
+        <input id="blogSearch" type="search"
+          placeholder="Search articles, e.g. MySQL, SQL, PostgreSQL..."
+          oninput="filterPosts()">
+      </div>
+    </div>
+  </section>
+
+  <!-- TOP AD -->
+  <div class="container">
+    <div class="ad-container">
+      <span>ADVERTISEMENT</span>
+
+      <!-- Optional manual AdSense unit can be placed here.
+           Auto Ads are already enabled in the <head>. -->
+    </div>
+  </div>
+
+  <!-- CATEGORIES -->
+  <section class="categories-section">
+    <div class="container">
+      <div class="categories">
+        <button class="category active" onclick="filterCategory('all', this)">All</button>
+        <button class="category" onclick="filterCategory('mysql', this)">MySQL</button>
+        <button class="category" onclick="filterCategory('postgresql', this)">PostgreSQL</button>
+        <button class="category" onclick="filterCategory('sql', this)">SQL</button>
+        <button class="category" onclick="filterCategory('programming', this)">Programming</button>
+        <button class="category" onclick="filterCategory('web', this)">Web Development</button>
+        <button class="category" onclick="filterCategory('career', this)">Career</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED -->
+  <section>
+    <div class="container">
+
+      <div class="section-title">
+        <div>
+          <span class="eyebrow">FEATURED ARTICLE</span>
+          <h2>Practical knowledge, explained simply.</h2>
+        </div>
+      </div>
+
+      <article class="featured-post searchable-post" data-category="mysql sql">
+        <div class="featured-visual">
+          <div class="visual-code">
+            <span>SELECT</span> better_queries<br>
+            <span>FROM</span> mysql<br>
+            <span>WHERE</span> skills = <b>'growing'</b>;
+          </div>
+        </div>
+
+        <div class="featured-content">
+          <span class="tag">MYSQL</span>
+          <h2>10 MySQL Tips Every Developer Should Know</h2>
+          <p>
+            Learn practical MySQL techniques that can help you write cleaner,
+            faster and more maintainable SQL queries.
+          </p>
+
+          <div class="post-meta">
+            <span>MySQL</span>
+            <span>•</span>
+            <span>5 min read</span>
+          </div>
+
+          <a class="read-link" href="#">Read Article →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- MIDDLE AD -->
+  <div class="container">
+    <div class="ad-container">
+      <span>ADVERTISEMENT</span>
+    </div>
+  </div>
+
+  <!-- LATEST POSTS -->
+  <section class="latest-section">
+    <div class="container">
+
+      <div class="section-title">
+        <div>
+          <span class="eyebrow">LATEST ARTICLES</span>
+          <h2>Latest from the Blog</h2>
+        </div>
+      </div>
+
+      <div class="post-grid">
+
+        <article class="post-card searchable-post" data-category="mysql sql">
+          <div class="post-image mysql-image">
+            <span>MySQL</span>
+          </div>
+          <div class="post-body">
+            <span class="tag">MYSQL</span>
+            <h3>Why You Should Avoid SELECT * in Production Queries</h3>
+            <p>Understand why selecting only the columns you need can make your queries cleaner and more efficient.</p>
+            <div class="post-meta"><span>4 min read</span><span>•</span><span>MySQL</span></div>
+            <a href="#" class="read-link">Read Article →</a>
+          </div>
+        </article>
+
+        <article class="post-card searchable-post" data-category="postgresql sql">
+          <div class="post-image postgres-image">
+            <span>PostgreSQL</span>
+          </div>
+          <div class="post-body">
+            <span class="tag">POSTGRESQL</span>
+            <h3>PostgreSQL WHERE Clause: A Beginner's Guide</h3>
+            <p>Learn how to filter records with WHERE and combine conditions using practical examples.</p>
+            <div class="post-meta"><span>5 min read</span><span>•</span><span>PostgreSQL</span></div>
+            <a href="#" class="read-link">Read Article →</a>
+          </div>
+        </article>
+
+        <article class="post-card searchable-post" data-category="sql">
+          <div class="post-image sql-image">
+            <span>SQL</span>
+          </div>
+          <div class="post-body">
+            <span class="tag">SQL</span>
+            <h3>5 SQL Concepts You Should Master First</h3>
+            <p>A practical starting point for beginners who want to build a strong SQL foundation.</p>
+            <div class="post-meta"><span>6 min read</span><span>•</span><span>SQL</span></div>
+            <a href="#" class="read-link">Read Article →</a>
+          </div>
+        </article>
+
+        <article class="post-card searchable-post" data-category="programming">
+          <div class="post-image programming-image">
+            <span>Programming</span>
+          </div>
+          <div class="post-body">
+            <span class="tag">PROGRAMMING</span>
+            <h3>How to Practice Programming Effectively</h3>
+            <p>Simple ways to turn programming concepts into practical skills through consistent practice.</p>
+            <div class="post-meta"><span>5 min read</span><span>•</span><span>Programming</span></div>
+            <a href="#" class="read-link">Read Article →</a>
+          </div>
+        </article>
+
+        <article class="post-card searchable-post" data-category="web">
+          <div class="post-image web-image">
+            <span>Web Development</span>
+          </div>
+          <div class="post-body">
+            <span class="tag">WEB DEVELOPMENT</span>
+            <h3>HTML, CSS and JavaScript: Where to Start?</h3>
+            <p>A simple roadmap for beginners who want to understand the core technologies of the web.</p>
+            <div class="post-meta"><span>7 min read</span><span>•</span><span>Web</span></div>
+            <a href="#" class="read-link">Read Article →</a>
+          </div>
+        </article>
+
+        <article class="post-card searchable-post" data-category="career sql">
+          <div class="post-image career-image">
+            <span>Career</span>
+          </div>
+          <div class="post-body">
+            <span class="tag">CAREER</span>
+            <h3>How to Improve Your SQL Skills</h3>
+            <p>A practical learning approach using real-world problems, projects and regular SQL practice.</p>
+            <div class="post-meta"><span>6 min read</span><span>•</span><span>Career</span></div>
+            <a href="#" class="read-link">Read Article →</a>
+          </div>
+        </article>
+
+      </div>
+
+      <div id="noResults" class="no-results">
+        No articles found. Try another search term.
+      </div>
+
+      <div class="load-more">
+        <button class="btn btn-primary" onclick="showMessage()">Load More Articles</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LOWER AD -->
+  <div class="container">
+    <div class="ad-container">
+      <span>ADVERTISEMENT</span>
+    </div>
+  </div>
+
+  <!-- NEWSLETTER / CTA -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-box">
+        <div>
+          <span class="eyebrow">KEEP LEARNING</span>
+          <h2>New tutorials. New ideas.</h2>
+          <p>Keep visiting LOVE COMPUTER for practical technology articles and tutorials.</p>
+        </div>
+        <a class="btn btn-light" href="index.html#topics">Explore Tutorials</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+        <h3>LOVE COMPUTER</h3>
+        <p>
+          Practical tutorials and articles about technology,
+          programming, databases and web development.
+        </p>
+      </div>
+
+      <div>
+        <h4>Topics</h4>
+        <a href="mysql.html">MySQL</a>
+        <a href="postgresql.html">PostgreSQL</a>
+        <a href="index.html#topics">Programming</a>
+        <a href="index.html#topics">Web Development</a>
+      </div>
+
+      <div>
+        <h4>Website</h4>
+        <a href="index.html">Home</a>
+        <a href="index.html#tutorials">Tutorials</a>
+        <a href="blog.html">Blog</a>
+        <a href="index.html#about">About</a>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © <span id="year"></span> LOVE COMPUTER. All rights reserved.
+    </div>
+
+  </div>
+</footer>
+
+<script src="blog.js"></script>
+</body>
+</html>

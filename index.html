@@ -16,11 +16,28 @@
     <a href="index.html" class="logo">LOVE <span>COMPUTER</span></a>
 
     <nav class="nav-links">
-      <a href="#topics">Topics</a>
+      <a href="index.html">Home</a>
       <a href="#tutorials">Tutorials</a>
-      <a href="#blog">Blog</a>
+      <div class="nav-dropdown">
+        <button class="nav-drop-btn" type="button">Databases <span>⌄</span></button>
+        <div class="nav-dropdown-menu">
+          <a href="mysql.html">MySQL</a>
+          <a href="postgresql.html">PostgreSQL</a>
+          <a href="sql.html">SQL</a>
+          <a href="database-administration.html">Database Administration</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button class="nav-drop-btn" type="button">Programming <span>⌄</span></button>
+        <div class="nav-dropdown-menu">
+          <a href="python.html">Python</a>
+          <a href="javascript.html">JavaScript</a>
+          <a href="php.html">PHP</a>
+          <a href="nodejs.html">Node.js</a>
+        </div>
+      </div>
+      <a href="blog.html">Blog</a>
       <a href="#about">About</a>
-      <a href="#contact">Contact</a>
     </nav>
 
     <button class="menu" aria-label="Open menu" onclick="toggleMenu()">☰</button>

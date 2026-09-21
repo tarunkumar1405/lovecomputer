@@ -41,3 +41,15 @@ document.addEventListener("DOMContentLoaded", function() {
         yearElement.textContent = new Date().getFullYear();
     }
 });
+
+document.addEventListener("DOMContentLoaded",function(){
+  document.querySelectorAll(".nav-drop-btn").forEach(function(btn){
+    btn.addEventListener("click",function(){
+      const menu=btn.nextElementSibling;
+      if(!menu)return;
+      const open=menu.style.display==="block";
+      document.querySelectorAll(".nav-dropdown-menu").forEach(function(m){m.style.display="none";});
+      menu.style.display=open?"none":"block";
+    });
+  });
+});
