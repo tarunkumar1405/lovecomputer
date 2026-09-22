@@ -6,11 +6,11 @@ body{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",san
 a{text-decoration:none;color:inherit}
 .container{width:min(1120px,92%);margin:auto}
 header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
-.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:25px}
-.logo{font-size:1.45rem;font-weight:800;letter-spacing:-.5px}.logo span{color:var(--primary)}
-.nav-links{display:flex;gap:24px;align-items:center;font-size:.95rem;font-weight:600;white-space:nowrap}.nav-links a:hover{color:var(--primary)}
+.nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{font-size:1.45rem;font-weight:800;letter-spacing:-.5px;white-space:nowrap;flex:0 0 auto}.logo span{color:var(--primary)}
+.nav-links{display:flex;flex:1;justify-content:flex-end;gap:20px;align-items:center;font-size:.92rem;font-weight:600;white-space:nowrap;min-width:0}.nav-links a:hover{color:var(--primary)}
 .menu{display:none;border:0;background:none;font-size:1.7rem;cursor:pointer}
-.nav-dropdown{position:relative}.nav-drop-btn{border:0;background:transparent;color:var(--text);font:inherit;font-size:.95rem;font-weight:600;cursor:pointer;padding:0;line-height:1.6}.nav-drop-btn:hover{color:var(--primary)}
+.nav-dropdown{position:relative}.nav-drop-btn{border:0;background:transparent;color:var(--text);font:inherit;font-size:.92rem;font-weight:600;cursor:pointer;padding:0;line-height:1.4;white-space:nowrap}.nav-drop-btn:hover{color:var(--primary)}
 .nav-dropdown-menu{position:absolute;top:calc(100% + 18px);left:50%;transform:translateX(-50%);min-width:220px;padding:8px;background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow);opacity:0;visibility:hidden;pointer-events:none}
 .nav-dropdown-menu a{display:block;padding:10px 12px;border-radius:8px;font-size:.9rem}.nav-dropdown-menu a:hover{background:#edf3ff;color:var(--primary)}
 .nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown:focus-within .nav-dropdown-menu{opacity:1;visibility:visible;pointer-events:auto}
@@ -35,8 +35,26 @@ footer{background:#0b1220;color:#d0d5dd;padding:45px 0 20px}.footer-grid{display
 @media(max-width:600px){.hero{padding:60px 0 55px}.grid,.tutorials,.stats{grid-template-columns:1fr}section{padding:55px 0}h1{letter-spacing:-1.3px}.footer-grid{grid-template-columns:1fr}.ad-container{min-height:90px}}
 
 
-/* India & World navigation */
-.nav-dropdown-menu a { white-space: nowrap; }
+/* Final navigation alignment */
+.nav-links > a,
+.nav-dropdown { display:flex; align-items:center; }
+.nav-drop-btn { display:inline-flex; align-items:center; gap:4px; }
+@media (max-width: 1100px) and (min-width: 901px) {
+  .nav { gap:14px; }
+  .nav-links { gap:15px; font-size:.88rem; }
+  .nav-drop-btn { font-size:.88rem; }
+}
 @media (max-width: 900px) {
-  .nav-dropdown-menu { max-width: calc(100vw - 32px); overflow-x: hidden; }
+  .nav { height:68px; }
+  .logo { white-space:nowrap; }
+  .nav-links { display:none; }
+  .menu { display:block; }
+  .nav-dropdown { width:100%; text-align:center; }
+  .nav-drop-btn { padding:5px 0; background:transparent; border:0; }
+  .nav-dropdown-menu { position:static; transform:none; opacity:1; visibility:visible; pointer-events:auto; display:none; box-shadow:none; border:0; padding:4px 0 8px; max-width:100%; overflow-x:hidden; }
+  .nav-dropdown:hover .nav-dropdown-menu,
+  .nav-dropdown:focus-within .nav-dropdown-menu { display:block; }
+}
+@media (max-width:600px) {
+  .nav { height:64px; }
 }

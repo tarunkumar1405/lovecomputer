@@ -1,4 +1,4 @@
-LOVE COMPUTER homepage - India & World menu fixed.
-
-The India & World menu now uses the same dropdown styling as Databases, Programming and Computer Problems.
-Upload/replace index.html, style.css and script.js, along with the India & World HTML/CSS/JS files.
+LOVE COMPUTER - States & Union Territories page fixed.
+The old '#' placeholder links have been replaced with working internal links.
+The page now contains 28 states and 8 Union Territories with capital quick-reference sections.
+Official reference links are included to the National Portal of India.
