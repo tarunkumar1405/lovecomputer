@@ -31,5 +31,57 @@ section{padding:75px 0}.section-head{text-align:center;max-width:700px;margin:0 
 .about-box{background:var(--dark);color:#fff;border-radius:22px;padding:35px}.about-box h2{font-size:2rem;margin-bottom:12px}.about-box p{color:#d0d5dd}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:25px}.stat{background:#fff;color:var(--text);border-radius:12px;padding:18px;text-align:center}.stat strong{font-size:1.4rem;display:block;color:var(--primary)}
 .cta{background:var(--primary);color:#fff;text-align:center;border-radius:22px;padding:55px 25px}.cta p{opacity:.9;margin:10px auto 25px;max-width:600px}.cta .btn-light{color:var(--text)}
 footer{background:#0b1220;color:#d0d5dd;padding:45px 0 20px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:35px}footer h3,footer h4{color:#fff;margin-bottom:12px}footer p,footer a{font-size:.9rem;color:#98a2b3}footer a{display:block;margin:7px 0}footer a:hover{color:#fff}.copyright{border-top:1px solid #273244;margin-top:35px;padding-top:18px;text-align:center;font-size:.82rem;color:#667085}
-@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.hero-grid,.about{grid-template-columns:1fr}.tutorials{grid-template-columns:1fr 1fr}.nav-links{display:none}.menu{display:block}.nav-dropdown{width:100%;text-align:center}.nav-drop-btn{padding:5px 0}.nav-dropdown-menu{position:static;transform:none;opacity:1;visibility:visible;pointer-events:auto;display:none;box-shadow:none;border:0;padding:4px 0 8px}.nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown:focus-within .nav-dropdown-menu{display:block}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){
+.grid{grid-template-columns:repeat(2,1fr)}
+.hero-grid,.about{grid-template-columns:1fr}
+.tutorials{grid-template-columns:1fr 1fr}
+.nav-links{
+display:none;
+position:absolute;
+top:72px;
+left:0;
+right:0;
+z-index:1000;
+background:#fff;
+padding:14px 20px 20px;
+flex-direction:column;
+align-items:stretch;
+gap:4px;
+max-height:calc(100vh - 72px);
+overflow-y:auto;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+border-top:1px solid var(--border);
+}
+.nav-links.mobile-open{display:flex}
+.nav-links>a,.nav-drop-btn{
+display:block;
+width:100%;
+padding:12px 10px;
+text-align:center;
+border-radius:8px;
+}
+.nav-dropdown{width:100%;text-align:center}
+.nav-drop-btn{padding:12px 10px}
+.nav-dropdown-menu{
+position:static;
+transform:none;
+width:100%;
+min-width:0;
+opacity:1;
+visibility:visible;
+pointer-events:auto;
+display:none;
+box-shadow:none;
+border:0;
+padding:3px 8px 8px;
+background:#f7f9fc;
+border-radius:8px;
+}
+.nav-dropdown-menu.open{display:block}
+.nav-dropdown-menu a{text-align:center;padding:10px 8px}
+.nav-dropdown:hover .nav-dropdown-menu{display:none}
+.nav-dropdown:focus-within .nav-dropdown-menu{display:none}
+.nav-dropdown:focus-within .nav-dropdown-menu.open{display:block}
+.footer-grid{grid-template-columns:1fr 1fr}
+}
 @media(max-width:600px){.hero{padding:60px 0 55px}.grid,.tutorials,.stats{grid-template-columns:1fr}section{padding:55px 0}h1{letter-spacing:-1.3px}.footer-grid{grid-template-columns:1fr}.ad-container{min-height:90px}}
