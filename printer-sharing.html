@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Learn how to share a printer on a network in Windows and connect to it from another computer.">
+<title>How to Share a Printer on a Network in Windows | Love Computer</title>
+<link rel="stylesheet" href="computer-problem-article.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-9046404486667166" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">LOVE COMPUTER</a>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="computer-problems.html">Computer Problems</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="article-layout">
+    <article class="article-content">
+      <div class="breadcrumb"><a href="computer-problems.html">Computer Problems</a> → <a href="printer-problems.html">Printer Problems</a></div>
+
+      <h1>How to Share a Printer on a Network in Windows</h1>
+      <p class="article-meta">Printer Problems · September 22, 2026</p>
+
+      <p>If a printer is connected to one Windows computer and you want other computers on the same local network to use it, you can share the printer through Windows.</p>
+
+      <div class="ad-box">ADVERTISEMENT</div>
+
+      <h2>Before You Start</h2>
+      <ul>
+        <li>Make sure the printer works normally on the main computer.</li>
+        <li>Both computers should be connected to the same local network.</li>
+        <li>The main computer should remain switched on when another computer wants to print.</li>
+      </ul>
+
+      <h2>Step 1: Turn On Network Discovery and Printer Sharing</h2>
+      <ol>
+        <li>Open <strong>Settings</strong> or <strong>Control Panel</strong>.</li>
+        <li>Open <strong>Network and Sharing Center</strong> and choose <strong>Change advanced sharing settings</strong>.</li>
+        <li>Turn on <strong>Network discovery</strong>.</li>
+        <li>Turn on <strong>File and printer sharing</strong>.</li>
+        <li>Save the changes.</li>
+      </ol>
+
+      <h2>Step 2: Share the Printer</h2>
+      <ol>
+        <li>Open <strong>Settings → Bluetooth & devices → Printers & scanners</strong>.</li>
+        <li>Select the printer you want to share.</li>
+        <li>Open <strong>Printer properties</strong>.</li>
+        <li>Go to the <strong>Sharing</strong> tab.</li>
+        <li>Select <strong>Share this printer</strong>.</li>
+        <li>Enter a simple <strong>Share name</strong>, then click <strong>Apply</strong> and <strong>OK</strong>.</li>
+      </ol>
+
+      <div class="tip-box">
+        <strong>Tip:</strong> Use a short, easy-to-remember printer share name without unnecessary spaces.
+      </div>
+
+      <h2>Step 3: Find the Computer Name</h2>
+      <p>On the computer where the printer is connected:</p>
+      <ol>
+        <li>Open <strong>Settings → System → About</strong>.</li>
+        <li>Find the <strong>Device name</strong>.</li>
+        <li>Note this name because the other computer will use it to access the shared printer.</li>
+      </ol>
+
+      <h2>Step 4: Connect from Another Computer</h2>
+      <p>On the second Windows computer:</p>
+      <ol>
+        <li>Press <strong>Windows + R</strong>.</li>
+        <li>Type the following format:</li>
+      </ol>
+
+      <pre>\\ComputerName\PrinterShareName</pre>
+
+      <p>For example:</p>
+      <pre>\\OFFICE-PC\HP-LaserJet</pre>
+
+      <ol start="3">
+        <li>Press <strong>Enter</strong>.</li>
+        <li>Windows should display the shared printer.</li>
+        <li>Double-click the printer to connect it.</li>
+        <li>Allow Windows to install the required printer driver if prompted.</li>
+      </ol>
+
+      <h2>If the Shared Printer Is Not Found</h2>
+      <ul>
+        <li>Check that both computers are connected to the same network.</li>
+        <li>Make sure Network discovery is enabled.</li>
+        <li>Make sure File and printer sharing is enabled.</li>
+        <li>Check that the printer is actually shared.</li>
+        <li>Restart both computers and try again.</li>
+        <li>Check Windows Firewall settings if network sharing is blocked.</li>
+      </ul>
+
+      <h2>Important</h2>
+      <p>A printer connected by USB to one computer usually depends on that computer being powered on and connected to the network. If you want the printer to be available independently, a network-enabled or Wi-Fi printer may be more convenient.</p>
+
+      <div class="ad-box">ADVERTISEMENT</div>
+
+      <div class="article-nav">
+        <a href="printer-queue-stuck.html">← Previous: Printer Queue Stuck</a>
+        <a href="printer-problems.html">Back to Printer Problems</a>
+      </div>
+    </article>
+
+    <aside class="sidebar">
+      <div class="sidebar-box">
+        <h3>Search Computer Problems</h3>
+        <input type="search" id="problemSearch" placeholder="Search problems...">
+        <div id="searchResults"></div>
+      </div>
+      <div class="sidebar-box">
+        <h3>Printer Problems</h3>
+        <a href="printer-not-printing.html">Printer Not Printing</a>
+        <a href="printer-offline.html">Printer Shows Offline</a>
+        <a href="printer-not-detected.html">Printer Not Detected</a>
+        <a href="print-spooler-not-working.html">Print Spooler Not Working</a>
+        <a href="printer-queue-stuck.html">Printer Queue Stuck</a>
+        <a href="printer-sharing.html">Share a Printer on a Network</a>
+      </div>
+      <div class="sidebar-box">
+        <h3>ADVERTISEMENT</h3>
+        <div class="ad-box">ADVERTISEMENT</div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> Love Computer. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="computer-problem-article.js"></script>
+</body>
+</html>
