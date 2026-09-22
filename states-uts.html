@@ -3,21 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="India's 28 states and 8 Union Territories with capitals and detailed information pages.">
+<meta name="description" content="India's 28 states and 8 Union Territories with capital, language, major cities, rivers, famous places and detailed information pages.">
 <title>States &amp; Union Territories | LOVE COMPUTER</title>
 <link rel="stylesheet" href="india-world.css">
 <style>
-.state-list{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.state-card{display:block;border:1px solid #e1e6ee;border-radius:12px;padding:17px;background:#fff;transition:.2s}
-.state-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(25,45,80,.08)}
-.state-card strong{display:block;color:#202938;font-size:1rem}
-.state-card span{display:block;color:#697386;font-size:.88rem;margin-top:5px}
-.state-card em{display:block;color:#1456c0;font-style:normal;font-weight:700;font-size:.85rem;margin-top:12px}
-.summary{display:flex;gap:14px;flex-wrap:wrap;margin:18px 0 30px}
-.summary-box{border:1px solid #e1e6ee;border-radius:12px;padding:15px 20px;background:#fff}
-.summary-box strong{display:block;font-size:1.4rem;color:#1456c0}
-@media(max-width:900px){.state-list{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.state-list{grid-template-columns:1fr}}
+.directory{max-width:1150px;margin:auto}
+.directory-intro{max-width:820px;color:#5c6879;line-height:1.7}
+.summary{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0 34px}
+.summary-box{border:1px solid #e1e6ee;border-radius:12px;padding:14px 20px;background:#fff}
+.summary-box strong{display:block;color:#1456c0;font-size:1.35rem}
+.state-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.state-card{border:1px solid #e1e6ee;border-radius:14px;padding:20px;background:#fff;box-shadow:0 3px 12px rgba(20,35,60,.035);display:flex;flex-direction:column}
+.state-card-top h2{font-size:1.2rem;margin:8px 0 0;color:#1e293b}
+.tag{display:inline-block;padding:5px 9px;border-radius:999px;background:#eaf2ff;color:#1456c0;font-size:.78rem;font-weight:700}
+.quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:17px 0 12px}
+.quick-grid>div{padding:10px 11px;border-radius:9px;background:#f7f9fc}
+.quick-grid small{display:block;color:#7a8494;font-size:.75rem;margin-bottom:3px}
+.quick-grid strong,.quick-grid span{display:block;color:#263246;font-size:.88rem;line-height:1.45}
+.intro{color:#596679;line-height:1.55;font-size:.9rem;margin:4px 0 15px}
+.details-btn{display:inline-block;align-self:flex-start;padding:9px 13px;border-radius:8px;background:#1456c0;color:#fff;font-size:.86rem;font-weight:700;text-decoration:none}
+.details-btn:hover{opacity:.9}
+@media(max-width:760px){.state-list{grid-template-columns:1fr}}
+@media(max-width:480px){.quick-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -25,13 +32,18 @@
 <a class="logo" href="index.html">LOVE COMPUTER</a>
 <button class="menu" onclick="toggleMenu()" aria-label="Open menu">☰</button>
 <nav class="nav-links">
-<a href="index.html">Home</a><a href="india-world.html">India &amp; World</a><a href="blog.html">Blog</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+<a href="index.html">Home</a>
+<a href="india-world.html">India &amp; World</a>
+<a href="blog.html">Blog</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
 </nav></div></header>
 
-<main class="section"><div class="container">
+<main class="section"><div class="container directory">
 <span class="badge">INDIA REFERENCE</span>
 <h1>States &amp; Union Territories</h1>
-<p>Browse India's states and Union Territories. Each entry now has its own detailed information page.</p>
+<p class="directory-intro">Explore India's 28 States and 8 Union Territories. Each card gives a quick overview, while <b>View Full Details</b> opens a dedicated page with more information.</p>
+
 <div class="summary">
 <div class="summary-box"><strong>28</strong>States</div>
 <div class="summary-box"><strong>8</strong>Union Territories</div>
@@ -39,157 +51,555 @@
 </div>
 
 <h2>States</h2>
-<div class="state-list"><a class="state-card" href="andhra-pradesh.html">
-      <strong>Andhra Pradesh</strong>
-      <span>State · Capital: Amaravati</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="arunachal-pradesh.html">
-      <strong>Arunachal Pradesh</strong>
-      <span>State · Capital: Itanagar</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="assam.html">
-      <strong>Assam</strong>
-      <span>State · Capital: Dispur</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="bihar.html">
-      <strong>Bihar</strong>
-      <span>State · Capital: Patna</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="chhattisgarh.html">
-      <strong>Chhattisgarh</strong>
-      <span>State · Capital: Raipur</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="goa.html">
-      <strong>Goa</strong>
-      <span>State · Capital: Panaji</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="gujarat.html">
-      <strong>Gujarat</strong>
-      <span>State · Capital: Gandhinagar</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="haryana.html">
-      <strong>Haryana</strong>
-      <span>State · Capital: Chandigarh</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="himachal-pradesh.html">
-      <strong>Himachal Pradesh</strong>
-      <span>State · Capital: Shimla</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="jharkhand.html">
-      <strong>Jharkhand</strong>
-      <span>State · Capital: Ranchi</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="karnataka.html">
-      <strong>Karnataka</strong>
-      <span>State · Capital: Bengaluru</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="kerala.html">
-      <strong>Kerala</strong>
-      <span>State · Capital: Thiruvananthapuram</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="madhya-pradesh.html">
-      <strong>Madhya Pradesh</strong>
-      <span>State · Capital: Bhopal</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="maharashtra.html">
-      <strong>Maharashtra</strong>
-      <span>State · Capital: Mumbai</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="manipur.html">
-      <strong>Manipur</strong>
-      <span>State · Capital: Imphal</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="meghalaya.html">
-      <strong>Meghalaya</strong>
-      <span>State · Capital: Shillong</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="mizoram.html">
-      <strong>Mizoram</strong>
-      <span>State · Capital: Aizawl</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="nagaland.html">
-      <strong>Nagaland</strong>
-      <span>State · Capital: Kohima</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="odisha.html">
-      <strong>Odisha</strong>
-      <span>State · Capital: Bhubaneswar</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="punjab.html">
-      <strong>Punjab</strong>
-      <span>State · Capital: Chandigarh</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="rajasthan.html">
-      <strong>Rajasthan</strong>
-      <span>State · Capital: Jaipur</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="sikkim.html">
-      <strong>Sikkim</strong>
-      <span>State · Capital: Gangtok</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="tamil-nadu.html">
-      <strong>Tamil Nadu</strong>
-      <span>State · Capital: Chennai</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="telangana.html">
-      <strong>Telangana</strong>
-      <span>State · Capital: Hyderabad</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="tripura.html">
-      <strong>Tripura</strong>
-      <span>State · Capital: Agartala</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="uttar-pradesh.html">
-      <strong>Uttar Pradesh</strong>
-      <span>State · Capital: Lucknow</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="uttarakhand.html">
-      <strong>Uttarakhand</strong>
-      <span>State · Capital: Dehradun</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="west-bengal.html">
-      <strong>West Bengal</strong>
-      <span>State · Capital: Kolkata</span>
-      <em>View details →</em>
-    </a></div>
-<h2 style="margin-top:42px">Union Territories</h2>
-<div class="state-list"><a class="state-card" href="andaman-and-nicobar-islands.html">
-      <strong>Andaman and Nicobar Islands</strong>
-      <span>Union Territory · Capital: Sri Vijaya Puram</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="chandigarh.html">
-      <strong>Chandigarh</strong>
-      <span>Union Territory · Capital: Chandigarh</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="dadra-and-nagar-haveli-and-daman-and-diu.html">
-      <strong>Dadra and Nagar Haveli and Daman and Diu</strong>
-      <span>Union Territory · Capital: Daman</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="delhi.html">
-      <strong>Delhi</strong>
-      <span>Union Territory (NCT) · Capital: New Delhi</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="jammu-and-kashmir.html">
-      <strong>Jammu and Kashmir</strong>
-      <span>Union Territory · Capital: Srinagar (summer), Jammu (winter)</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="ladakh.html">
-      <strong>Ladakh</strong>
-      <span>Union Territory · Capital: Leh</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="lakshadweep.html">
-      <strong>Lakshadweep</strong>
-      <span>Union Territory · Capital: Kavaratti</span>
-      <em>View details →</em>
-    </a><a class="state-card" href="puducherry.html">
-      <strong>Puducherry</strong>
-      <span>Union Territory · Capital: Puducherry</span>
-      <em>View details →</em>
-    </a></div>
+<div class="state-list">
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">State</span>
+    <h2>Andhra Pradesh</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Amaravati</strong></div>
+    <div><small>Language</small><strong>Telugu</strong></div>
+    <div><small>Major Cities</small><span>Visakhapatnam, Vijayawada, Tirupati, Guntur</span></div>
+    <div><small>Major Rivers</small><span>Godavari, Krishna, Penna</span></div>
+    <div><small>Famous Places</small><span>Tirumala, Araku Valley, Amaravati</span></div>
+  </div>
+  <p class="intro">A state with a long coastal history and important Telugu cultural traditions.</p>
+  <a class="details-btn" href="andhra-pradesh.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">State</span>
+    <h2>Arunachal Pradesh</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Itanagar</strong></div>
+    <div><small>Language</small><strong>English</strong></div>
+    <div><small>Major Cities</small><span>Itanagar, Tawang, Pasighat, Naharlagun</span></div>
+    <div><small>Major Rivers</small><span>Siang, Subansiri, Kameng</span></div>
+    <div><small>Famous Places</small><span>Tawang Monastery, Ziro Valley, Sela Pass</span></div>
+  </div>
+  <p class="intro">Known for Himalayan landscapes and diverse indigenous cultures.</p>
+  <a class="details-btn" href="arunachal-pradesh.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">State</span>
+    <h2>Assam</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Dispur</strong></div>
+    <div><small>Language</small><strong>Assamese</strong></div>
+    <div><small>Major Cities</small><span>Guwahati, Dibrugarh, Jorhat, Silchar</span></div>
+    <div><small>Major Rivers</small><span>Brahmaputra, Barak</span></div>
+    <div><small>Famous Places</small><span>Kaziranga, Majuli, Kamakhya Temple</span></div>
+  </div>
+  <p class="intro">Known for tea, the Brahmaputra and rich biodiversity.</p>
+  <a class="details-btn" href="assam.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">State</span>
+    <h2>Bihar</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Patna</strong></div>
+    <div><small>Language</small><strong>Hindi</strong></div>
+    <div><small>Major Cities</small><span>Patna, Gaya, Muzaffarpur, Bhagalpur</span></div>
+    <div><small>Major Rivers</small><span>Ganga, Son, Gandak</span></div>
+    <div><small>Famous Places</small><span>Bodh Gaya, Nalanda, Rajgir</span></div>
+  </div>
+  <p class="intro">A major historical region associated with ancient learning and Buddhist heritage.</p>
+  <a class="details-btn" href="bihar.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">State</span>
+    <h2>Chhattisgarh</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Raipur</strong></div>
+    <div><small>Language</small><strong>Hindi</strong></div>
+    <div><small>Major Cities</small><span>Raipur, Bilaspur, Durg, Jagdalpur</span></div>
+    <div><small>Major Rivers</small><span>Mahanadi, Indravati, Hasdeo</span></div>
+    <div><small>Famous Places</small><span>Chitrakote Falls, Bastar, Barnawapara</span></div>
+  </div>
+  <p class="intro">Known for forests, tribal heritage and mineral resources.</p>
+  <a class="details-btn" href="chhattisgarh.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">State</span>
+    <h2>Goa</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Panaji</strong></div>
+    <div><small>Language</small><strong>Konkani</strong></div>
+    <div><small>Major Cities</small><span>Panaji, Vasco da Gama, Margao, Mapusa</span></div>
+    <div><small>Major Rivers</small><span>Mandovi, Zuari</span></div>
+    <div><small>Famous Places</small><span>Baga, Old Goa, Dudhsagar Falls</span></div>
+  </div>
+  <p class="intro">Known for beaches, Indo-Portuguese heritage and tourism.</p>
+  <a class="details-btn" href="goa.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">State</span>
+    <h2>Gujarat</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Gandhinagar</strong></div>
+    <div><small>Language</small><strong>Gujarati</strong></div>
+    <div><small>Major Cities</small><span>Ahmedabad, Surat, Vadodara, Rajkot</span></div>
+    <div><small>Major Rivers</small><span>Narmada, Tapi, Sabarmati</span></div>
+    <div><small>Famous Places</small><span>Gir National Park, Rann of Kutch, Somnath</span></div>
+  </div>
+  <p class="intro">Known for trade, industry, crafts and diverse landscapes.</p>
+  <a class="details-btn" href="gujarat.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">State</span>
+    <h2>Haryana</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Chandigarh</strong></div>
+    <div><small>Language</small><strong>Hindi</strong></div>
+    <div><small>Major Cities</small><span>Gurugram, Faridabad, Panipat, Hisar</span></div>
+    <div><small>Major Rivers</small><span>Yamuna, Ghaggar</span></div>
+    <div><small>Famous Places</small><span>Sultanpur National Park, Kurukshetra, Morni Hills</span></div>
+  </div>
+  <p class="intro">A major agricultural and industrial region around the National Capital Region.</p>
+  <a class="details-btn" href="haryana.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">State</span>
+    <h2>Himachal Pradesh</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Shimla</strong></div>
+    <div><small>Language</small><strong>Hindi</strong></div>
+    <div><small>Major Cities</small><span>Shimla, Dharamshala, Manali, Solan</span></div>
+    <div><small>Major Rivers</small><span>Sutlej, Beas, Ravi, Chenab</span></div>
+    <div><small>Famous Places</small><span>Rohtang Pass, Spiti Valley, Shimla</span></div>
+  </div>
+  <p class="intro">Known for mountain tourism, orchards and Himalayan culture.</p>
+  <a class="details-btn" href="himachal-pradesh.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">State</span>
+    <h2>Jharkhand</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Ranchi</strong></div>
+    <div><small>Language</small><strong>Hindi</strong></div>
+    <div><small>Major Cities</small><span>Ranchi, Jamshedpur, Dhanbad, Bokaro</span></div>
+    <div><small>Major Rivers</small><span>Damodar, Subarnarekha, Koel</span></div>
+    <div><small>Famous Places</small><span>Hundru Falls, Betla National Park, Deoghar</span></div>
+  </div>
+  <p class="intro">Known for forests, waterfalls, tribal traditions and mineral resources.</p>
+  <a class="details-btn" href="jharkhand.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">State</span>
+    <h2>Karnataka</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Bengaluru</strong></div>
+    <div><small>Language</small><strong>Kannada</strong></div>
+    <div><small>Major Cities</small><span>Bengaluru, Mysuru, Mangaluru, Hubballi</span></div>
+    <div><small>Major Rivers</small><span>Kaveri, Krishna, Tungabhadra</span></div>
+    <div><small>Famous Places</small><span>Hampi, Coorg, Mysuru Palace</span></div>
+  </div>
+  <p class="intro">Known for technology, classical arts, heritage sites and varied geography.</p>
+  <a class="details-btn" href="karnataka.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">State</span>
+    <h2>Kerala</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Thiruvananthapuram</strong></div>
+    <div><small>Language</small><strong>Malayalam</strong></div>
+    <div><small>Major Cities</small><span>Thiruvananthapuram, Kochi, Kozhikode, Thrissur</span></div>
+    <div><small>Major Rivers</small><span>Periyar, Bharathapuzha, Pamba</span></div>
+    <div><small>Famous Places</small><span>Alappuzha, Munnar, Fort Kochi</span></div>
+  </div>
+  <p class="intro">Known for backwaters, high literacy, Ayurveda traditions and rich biodiversity.</p>
+  <a class="details-btn" href="kerala.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">State</span>
+    <h2>Madhya Pradesh</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Bhopal</strong></div>
+    <div><small>Language</small><strong>Hindi</strong></div>
+    <div><small>Major Cities</small><span>Indore, Bhopal, Jabalpur, Gwalior</span></div>
+    <div><small>Major Rivers</small><span>Narmada, Chambal, Betwa</span></div>
+    <div><small>Famous Places</small><span>Khajuraho, Sanchi, Kanha</span></div>
+  </div>
+  <p class="intro">Known for wildlife, heritage monuments and its central location.</p>
+  <a class="details-btn" href="madhya-pradesh.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">State</span>
+    <h2>Maharashtra</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Mumbai</strong></div>
+    <div><small>Language</small><strong>Marathi</strong></div>
+    <div><small>Major Cities</small><span>Mumbai, Pune, Nagpur, Nashik</span></div>
+    <div><small>Major Rivers</small><span>Godavari, Krishna, Tapi</span></div>
+    <div><small>Famous Places</small><span>Ajanta-Ellora, Mahabaleshwar, Gateway of India</span></div>
+  </div>
+  <p class="intro">Known for major urban centres, industry, agriculture and cultural heritage.</p>
+  <a class="details-btn" href="maharashtra.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">State</span>
+    <h2>Manipur</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Imphal</strong></div>
+    <div><small>Language</small><strong>Meitei</strong></div>
+    <div><small>Major Cities</small><span>Imphal, Thoubal, Churachandpur</span></div>
+    <div><small>Major Rivers</small><span>Imphal, Barak</span></div>
+    <div><small>Famous Places</small><span>Loktak Lake, Keibul Lamjao, Kangla</span></div>
+  </div>
+  <p class="intro">Known for Loktak Lake, classical dance and diverse communities.</p>
+  <a class="details-btn" href="manipur.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">State</span>
+    <h2>Meghalaya</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Shillong</strong></div>
+    <div><small>Language</small><strong>English</strong></div>
+    <div><small>Major Cities</small><span>Shillong, Tura, Jowai, Cherrapunji</span></div>
+    <div><small>Major Rivers</small><span>Umiam, Myntdu</span></div>
+    <div><small>Famous Places</small><span>Cherrapunji, Mawsynram, Living Root Bridges</span></div>
+  </div>
+  <p class="intro">Known for waterfalls, caves and living root bridges.</p>
+  <a class="details-btn" href="meghalaya.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">State</span>
+    <h2>Mizoram</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Aizawl</strong></div>
+    <div><small>Language</small><strong>Mizo, English</strong></div>
+    <div><small>Major Cities</small><span>Aizawl, Lunglei, Champhai</span></div>
+    <div><small>Major Rivers</small><span>Tlawng, Tuirial, Kolodyne</span></div>
+    <div><small>Famous Places</small><span>Phawngpui, Reiek, Vantawng Falls</span></div>
+  </div>
+  <p class="intro">Known for green landscapes, bamboo culture and Mizo traditions.</p>
+  <a class="details-btn" href="mizoram.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">State</span>
+    <h2>Nagaland</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Kohima</strong></div>
+    <div><small>Language</small><strong>English</strong></div>
+    <div><small>Major Cities</small><span>Kohima, Dimapur, Mokokchung, Tuensang</span></div>
+    <div><small>Major Rivers</small><span>Dhansiri, Doyang</span></div>
+    <div><small>Famous Places</small><span>Dzukou Valley, Kisama, Japfu</span></div>
+  </div>
+  <p class="intro">Known for indigenous cultures, festivals and mountain landscapes.</p>
+  <a class="details-btn" href="nagaland.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">State</span>
+    <h2>Odisha</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Bhubaneswar</strong></div>
+    <div><small>Language</small><strong>Odia</strong></div>
+    <div><small>Major Cities</small><span>Bhubaneswar, Cuttack, Puri, Rourkela</span></div>
+    <div><small>Major Rivers</small><span>Mahanadi, Brahmani, Baitarani</span></div>
+    <div><small>Famous Places</small><span>Jagannath Temple, Konark, Chilika Lake</span></div>
+  </div>
+  <p class="intro">Known for temples, classical arts, crafts and coastal ecology.</p>
+  <a class="details-btn" href="odisha.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">State</span>
+    <h2>Punjab</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Chandigarh</strong></div>
+    <div><small>Language</small><strong>Punjabi</strong></div>
+    <div><small>Major Cities</small><span>Ludhiana, Amritsar, Jalandhar, Patiala</span></div>
+    <div><small>Major Rivers</small><span>Sutlej, Beas, Ravi</span></div>
+    <div><small>Famous Places</small><span>Golden Temple, Wagah-Attari border, Anandpur Sahib</span></div>
+  </div>
+  <p class="intro">Known for Sikh heritage, agriculture, food and vibrant culture.</p>
+  <a class="details-btn" href="punjab.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">State</span>
+    <h2>Rajasthan</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Jaipur</strong></div>
+    <div><small>Language</small><strong>Hindi</strong></div>
+    <div><small>Major Cities</small><span>Jaipur, Jodhpur, Udaipur, Kota</span></div>
+    <div><small>Major Rivers</small><span>Luni, Chambal, Banas</span></div>
+    <div><small>Famous Places</small><span>Jaipur forts, Udaipur lakes, Jaisalmer Fort</span></div>
+  </div>
+  <p class="intro">Known for forts, palaces, desert landscapes and folk traditions.</p>
+  <a class="details-btn" href="rajasthan.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">State</span>
+    <h2>Sikkim</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Gangtok</strong></div>
+    <div><small>Language</small><strong>Nepali, English</strong></div>
+    <div><small>Major Cities</small><span>Gangtok, Namchi, Gyalshing, Mangan</span></div>
+    <div><small>Major Rivers</small><span>Teesta, Rangeet</span></div>
+    <div><small>Famous Places</small><span>Tsomgo Lake, Nathula, Khangchendzonga</span></div>
+  </div>
+  <p class="intro">Known for Himalayan scenery, monasteries and biodiversity.</p>
+  <a class="details-btn" href="sikkim.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">State</span>
+    <h2>Tamil Nadu</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Chennai</strong></div>
+    <div><small>Language</small><strong>Tamil</strong></div>
+    <div><small>Major Cities</small><span>Chennai, Coimbatore, Madurai, Tiruchirappalli</span></div>
+    <div><small>Major Rivers</small><span>Kaveri, Vaigai, Tamiraparani</span></div>
+    <div><small>Famous Places</small><span>Meenakshi Temple, Mahabalipuram, Ooty</span></div>
+  </div>
+  <p class="intro">Known for temples, classical Tamil culture, manufacturing and coastal cities.</p>
+  <a class="details-btn" href="tamil-nadu.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">State</span>
+    <h2>Telangana</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Hyderabad</strong></div>
+    <div><small>Language</small><strong>Telugu, Urdu</strong></div>
+    <div><small>Major Cities</small><span>Hyderabad, Warangal, Nizamabad, Karimnagar</span></div>
+    <div><small>Major Rivers</small><span>Godavari, Krishna, Musi</span></div>
+    <div><small>Famous Places</small><span>Charminar, Golconda Fort, Ramappa Temple</span></div>
+  </div>
+  <p class="intro">Known for Hyderabad&amp;#x27;s technology and heritage and rich Deccan culture.</p>
+  <a class="details-btn" href="telangana.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">State</span>
+    <h2>Tripura</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Agartala</strong></div>
+    <div><small>Language</small><strong>Bengali, Kokborok</strong></div>
+    <div><small>Major Cities</small><span>Agartala, Udaipur, Dharmanagar</span></div>
+    <div><small>Major Rivers</small><span>Gomati, Manu, Khowai</span></div>
+    <div><small>Famous Places</small><span>Neermahal, Unakoti, Sepahijala</span></div>
+  </div>
+  <p class="intro">Known for royal heritage, temples, forests and indigenous traditions.</p>
+  <a class="details-btn" href="tripura.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">State</span>
+    <h2>Uttar Pradesh</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Lucknow</strong></div>
+    <div><small>Language</small><strong>Hindi</strong></div>
+    <div><small>Major Cities</small><span>Lucknow, Kanpur, Varanasi, Agra</span></div>
+    <div><small>Major Rivers</small><span>Ganga, Yamuna, Gomti, Ghaghara</span></div>
+    <div><small>Famous Places</small><span>Taj Mahal, Varanasi, Ayodhya</span></div>
+  </div>
+  <p class="intro">Known for major historical cities, monuments, pilgrimage centres and crafts.</p>
+  <a class="details-btn" href="uttar-pradesh.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">State</span>
+    <h2>Uttarakhand</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Dehradun</strong></div>
+    <div><small>Language</small><strong>Hindi</strong></div>
+    <div><small>Major Cities</small><span>Dehradun, Haridwar, Rishikesh, Haldwani</span></div>
+    <div><small>Major Rivers</small><span>Ganga, Yamuna, Alaknanda, Bhagirathi</span></div>
+    <div><small>Famous Places</small><span>Valley of Flowers, Kedarnath, Nainital</span></div>
+  </div>
+  <p class="intro">Known for Himalayan pilgrimage routes, rivers and hill stations.</p>
+  <a class="details-btn" href="uttarakhand.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">State</span>
+    <h2>West Bengal</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Kolkata</strong></div>
+    <div><small>Language</small><strong>Bengali</strong></div>
+    <div><small>Major Cities</small><span>Kolkata, Siliguri, Durgapur, Howrah</span></div>
+    <div><small>Major Rivers</small><span>Ganga/Hooghly, Teesta, Damodar</span></div>
+    <div><small>Famous Places</small><span>Sundarbans, Darjeeling, Victoria Memorial</span></div>
+  </div>
+  <p class="intro">Known for literature, arts, food, tea-growing regions and the Sundarbans.</p>
+  <a class="details-btn" href="west-bengal.html">View Full Details →</a>
+</article></div>
 
-<div class="notice" style="margin-top:42px">
-<b>Official reference:</b> The National Portal of India provides State/UT services and directories. 
-<a href="https://www.india.gov.in/services/state" target="_blank" rel="noopener">View State/UT Services</a>.
+<h2 style="margin-top:44px">Union Territories</h2>
+<div class="state-list">
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">Union Territory</span>
+    <h2>Andaman and Nicobar Islands</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Sri Vijaya Puram</strong></div>
+    <div><small>Language</small><strong>Hindi, English</strong></div>
+    <div><small>Major Cities</small><span>Sri Vijaya Puram, Diglipur, Mayabunder</span></div>
+    <div><small>Major Rivers</small><span>No major perennial mainland-style river system</span></div>
+    <div><small>Famous Places</small><span>Cellular Jail, Radhanagar Beach, Baratang</span></div>
+  </div>
+  <p class="intro">Known for marine biodiversity, island ecosystems and historical sites.</p>
+  <a class="details-btn" href="andaman-and-nicobar-islands.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">Union Territory</span>
+    <h2>Chandigarh</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Chandigarh</strong></div>
+    <div><small>Language</small><strong>Hindi, Punjabi, English</strong></div>
+    <div><small>Major Cities</small><span>Chandigarh</span></div>
+    <div><small>Major Rivers</small><span>Sukhna Lake catchment</span></div>
+    <div><small>Famous Places</small><span>Rock Garden, Sukhna Lake, Capitol Complex</span></div>
+  </div>
+  <p class="intro">A planned modern city and the capital of both Punjab and Haryana.</p>
+  <a class="details-btn" href="chandigarh.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">Union Territory</span>
+    <h2>Dadra and Nagar Haveli and Daman and Diu</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Daman</strong></div>
+    <div><small>Language</small><strong>Gujarati, Hindi, Marathi</strong></div>
+    <div><small>Major Cities</small><span>Daman, Silvassa, Diu</span></div>
+    <div><small>Major Rivers</small><span>Daman Ganga, Kolak</span></div>
+    <div><small>Famous Places</small><span>Diu Fort, beaches of Daman, Silvassa</span></div>
+  </div>
+  <p class="intro">A Union Territory formed by the merger of two former UT administrations.</p>
+  <a class="details-btn" href="dadra-and-nagar-haveli-and-daman-and-diu.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">Union Territory (NCT)</span>
+    <h2>Delhi</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>New Delhi</strong></div>
+    <div><small>Language</small><strong>Hindi, English, Punjabi, Urdu</strong></div>
+    <div><small>Major Cities</small><span>New Delhi, Delhi</span></div>
+    <div><small>Major Rivers</small><span>Yamuna</span></div>
+    <div><small>Famous Places</small><span>Red Fort, Qutub Minar, India Gate</span></div>
+  </div>
+  <p class="intro">India&amp;#x27;s national capital territory with extensive historical and modern urban landmarks.</p>
+  <a class="details-btn" href="delhi.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">Union Territory</span>
+    <h2>Jammu and Kashmir</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Srinagar (summer), Jammu (winter)</strong></div>
+    <div><small>Language</small><strong>Kashmiri, Dogri, Urdu, Hindi, English</strong></div>
+    <div><small>Major Cities</small><span>Srinagar, Jammu, Anantnag, Baramulla</span></div>
+    <div><small>Major Rivers</small><span>Jhelum, Chenab</span></div>
+    <div><small>Famous Places</small><span>Dal Lake, Gulmarg, Pahalgam</span></div>
+  </div>
+  <p class="intro">Known for lakes, valleys, mountain scenery, crafts and cultural heritage.</p>
+  <a class="details-btn" href="jammu-and-kashmir.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">Union Territory</span>
+    <h2>Ladakh</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Leh</strong></div>
+    <div><small>Language</small><strong>English, Hindi, Ladakhi and other local languages</strong></div>
+    <div><small>Major Cities</small><span>Leh, Kargil, Diskit</span></div>
+    <div><small>Major Rivers</small><span>Indus, Zanskar, Shyok</span></div>
+    <div><small>Famous Places</small><span>Pangong Lake, Nubra Valley, monasteries of Ladakh</span></div>
+  </div>
+  <p class="intro">Known for high-altitude landscapes, Buddhist monasteries and unique mountain culture.</p>
+  <a class="details-btn" href="ladakh.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">Union Territory</span>
+    <h2>Lakshadweep</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Kavaratti</strong></div>
+    <div><small>Language</small><strong>Malayalam, English</strong></div>
+    <div><small>Major Cities</small><span>Kavaratti, Agatti, Amini</span></div>
+    <div><small>Major Rivers</small><span>Island lagoons and coastal waters</span></div>
+    <div><small>Famous Places</small><span>Agatti, Bangaram, Kavaratti</span></div>
+  </div>
+  <p class="intro">Known for coral reefs, lagoons, beaches and marine biodiversity.</p>
+  <a class="details-btn" href="lakshadweep.html">View Full Details →</a>
+</article>
+<article class="state-card">
+  <div class="state-card-top">
+    <span class="tag">Union Territory</span>
+    <h2>Puducherry</h2>
+  </div>
+  <div class="quick-grid">
+    <div><small>Capital</small><strong>Puducherry</strong></div>
+    <div><small>Language</small><strong>Tamil, Telugu, Malayalam, English</strong></div>
+    <div><small>Major Cities</small><span>Puducherry, Karaikal, Mahe, Yanam</span></div>
+    <div><small>Major Rivers</small><span>Gingee/nearby regional drainage; coastal waterways</span></div>
+    <div><small>Famous Places</small><span>Promenade Beach, Auroville, French Quarter</span></div>
+  </div>
+  <p class="intro">Known for French colonial heritage, coastal tourism and cultural diversity.</p>
+  <a class="details-btn" href="puducherry.html">View Full Details →</a>
+</article></div>
+
+<div class="notice" style="margin-top:40px">
+<b>Reference:</b> India's National Portal provides State/UT services and directories. 
+<a href="https://www.india.gov.in/services/state" target="_blank" rel="noopener">State/UT Services</a>.
+The National Portal's current listings cover 28 States and 8 Union Territories. 
 </div>
 </div></main>
 <footer><div class="container">© <span id="year"></span> LOVE COMPUTER. All rights reserved.</div></footer>
