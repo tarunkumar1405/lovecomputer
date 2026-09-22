@@ -6,7 +6,7 @@ body{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",san
 a{text-decoration:none;color:inherit}
 .container{width:min(1120px,92%);margin:auto}
 header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
-.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:15px}
 .logo{font-size:1.45rem;font-weight:800;letter-spacing:-.5px}.logo span{color:var(--primary)}
 .nav-links{display:flex;gap:25px;align-items:center;font-size:.95rem;font-weight:600}.nav-links a:hover{color:var(--primary)}
 .menu{display:none;border:0;background:none;font-size:1.7rem;cursor:pointer}
@@ -32,6 +32,7 @@ section{padding:75px 0}.section-head{text-align:center;max-width:700px;margin:0 
 .cta{background:var(--primary);color:#fff;text-align:center;border-radius:22px;padding:55px 25px}.cta p{opacity:.9;margin:10px auto 25px;max-width:600px}.cta .btn-light{color:var(--text)}
 footer{background:#0b1220;color:#d0d5dd;padding:45px 0 20px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:35px}footer h3,footer h4{color:#fff;margin-bottom:12px}footer p,footer a{font-size:.9rem;color:#98a2b3}footer a{display:block;margin:7px 0}footer a:hover{color:#fff}.copyright{border-top:1px solid #273244;margin-top:35px;padding-top:18px;text-align:center;font-size:.82rem;color:#667085}
 @media(max-width:900px){
+.menu{display:block}
 .grid{grid-template-columns:repeat(2,1fr)}
 .hero-grid,.about{grid-template-columns:1fr}
 .tutorials{grid-template-columns:1fr 1fr}
