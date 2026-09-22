@@ -1,4 +1,4 @@
-LOVE COMPUTER - States & Union Territories page fixed.
-The old '#' placeholder links have been replaced with working internal links.
-The page now contains 28 states and 8 Union Territories with capital quick-reference sections.
-Official reference links are included to the National Portal of India.
+LOVE COMPUTER - detailed States & Union Territories section.
+Includes 28 state detail pages + 8 Union Territory detail pages.
+states-uts.html is now a compact directory linking to each detail page.
+Content is designed as a quick-reference foundation; fast-changing administrative information should be checked against official sources.
