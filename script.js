@@ -42,11 +42,3 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// India & World dropdown compatibility
-document.querySelectorAll('.nav-dropdown-toggle').forEach(function(btn) {
-  btn.addEventListener('click', function(e) {
-    e.stopPropagation();
-    const menu = btn.nextElementSibling;
-    if (menu) menu.classList.toggle('open');
-  });
-});

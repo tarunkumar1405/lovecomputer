@@ -8,9 +8,9 @@ a{text-decoration:none;color:inherit}
 header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
 .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:25px}
 .logo{font-size:1.45rem;font-weight:800;letter-spacing:-.5px}.logo span{color:var(--primary)}
-.nav-links{display:flex;gap:25px;align-items:center;font-size:.95rem;font-weight:600}.nav-links a:hover{color:var(--primary)}
+.nav-links{display:flex;gap:24px;align-items:center;font-size:.95rem;font-weight:600;white-space:nowrap}.nav-links a:hover{color:var(--primary)}
 .menu{display:none;border:0;background:none;font-size:1.7rem;cursor:pointer}
-.nav-dropdown{position:relative}.nav-drop-btn{border:0;background:transparent;color:var(--text);font:inherit;font-weight:600;cursor:pointer;padding:0}.nav-drop-btn:hover{color:var(--primary)}
+.nav-dropdown{position:relative}.nav-drop-btn{border:0;background:transparent;color:var(--text);font:inherit;font-size:.95rem;font-weight:600;cursor:pointer;padding:0;line-height:1.6}.nav-drop-btn:hover{color:var(--primary)}
 .nav-dropdown-menu{position:absolute;top:calc(100% + 18px);left:50%;transform:translateX(-50%);min-width:220px;padding:8px;background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow);opacity:0;visibility:hidden;pointer-events:none}
 .nav-dropdown-menu a{display:block;padding:10px 12px;border-radius:8px;font-size:.9rem}.nav-dropdown-menu a:hover{background:#edf3ff;color:var(--primary)}
 .nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown:focus-within .nav-dropdown-menu{opacity:1;visibility:visible;pointer-events:auto}
@@ -31,13 +31,12 @@ section{padding:75px 0}.section-head{text-align:center;max-width:700px;margin:0 
 .about-box{background:var(--dark);color:#fff;border-radius:22px;padding:35px}.about-box h2{font-size:2rem;margin-bottom:12px}.about-box p{color:#d0d5dd}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:25px}.stat{background:#fff;color:var(--text);border-radius:12px;padding:18px;text-align:center}.stat strong{font-size:1.4rem;display:block;color:var(--primary)}
 .cta{background:var(--primary);color:#fff;text-align:center;border-radius:22px;padding:55px 25px}.cta p{opacity:.9;margin:10px auto 25px;max-width:600px}.cta .btn-light{color:var(--text)}
 footer{background:#0b1220;color:#d0d5dd;padding:45px 0 20px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:35px}footer h3,footer h4{color:#fff;margin-bottom:12px}footer p,footer a{font-size:.9rem;color:#98a2b3}footer a{display:block;margin:7px 0}footer a:hover{color:#fff}.copyright{border-top:1px solid #273244;margin-top:35px;padding-top:18px;text-align:center;font-size:.82rem;color:#667085}
-@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.hero-grid,.about{grid-template-columns:1fr}.tutorials{grid-template-columns:1fr 1fr}.nav-links{display:none}.menu{display:block}.nav-dropdown{width:100%;text-align:center}.nav-drop-btn{padding:5px 0}.nav-dropdown-menu{position:static;transform:none;opacity:1;visibility:visible;pointer-events:auto;display:none;box-shadow:none;border:0;padding:4px 0 8px}.nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown:focus-within .nav-dropdown-menu{display:block}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.hero-grid,.about{grid-template-columns:1fr}.tutorials{grid-template-columns:1fr 1fr}.nav-links{display:none}.menu{display:block}.nav-dropdown{width:100%;text-align:center}.nav-drop-btn{padding:5px 0;background:transparent;border:0}.nav-dropdown-menu{position:static;transform:none;opacity:1;visibility:visible;pointer-events:auto;display:none;box-shadow:none;border:0;padding:4px 0 8px}.nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown:focus-within .nav-dropdown-menu{display:block}.footer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.hero{padding:60px 0 55px}.grid,.tutorials,.stats{grid-template-columns:1fr}section{padding:55px 0}h1{letter-spacing:-1.3px}.footer-grid{grid-template-columns:1fr}.ad-container{min-height:90px}}
 
 
-/* India & World navigation + mobile safety */
+/* India & World navigation */
 .nav-dropdown-menu a { white-space: nowrap; }
 @media (max-width: 900px) {
   .nav-dropdown-menu { max-width: calc(100vw - 32px); overflow-x: hidden; }
-  .feature-section { max-width: 100%; overflow: hidden; }
 }
