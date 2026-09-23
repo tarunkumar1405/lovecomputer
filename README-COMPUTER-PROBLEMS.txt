@@ -15,3 +15,5 @@ New article added:
 
 Upload these files into the same GitHub Pages root as your existing index.html.
 Do not delete your existing index.html, style.css or script.js.
+
+New networking article: lan-rj45.html — LAN Wire & RJ45 Connector Kaise Banaye? (T568B)
