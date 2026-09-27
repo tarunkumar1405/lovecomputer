@@ -1,8 +1,8 @@
-LOVE COMPUTER – WiFi Extender Complete Setup
+LOVE COMPUTER – Full Website Setup
 
-Files included:
-1. wifi-problems.html – Computer Problems → Internet & Wi-Fi category
-2. wifi-extender-kaise-connect-kare.html – WiFi Extender article
-
-Upload both HTML files to the same website root folder.
-The category page links to the WiFi Extender article.
+Upload all files in this folder to the website root.
+index.html is the main homepage.
+This package includes Database, Programming, Computer Problems,
+Computer Configuration, Internet & Wi-Fi, WiFi Extender, LAN/RJ45,
+India & World, State/UT pages, UI/UX & Figma, Blog, Articles,
+About and Contact pages.
