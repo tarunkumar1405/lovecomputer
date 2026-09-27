@@ -1,8 +1,8 @@
-LOVE COMPUTER - Homepage updated for UI/UX & Figma
+LOVE COMPUTER – WiFi Extender Complete Setup
 
-Updated:
-- Programming dropdown now includes UI/UX & Figma
-- Homepage Explore Topics includes UI/UX & Figma
-- Popular Learning Paths includes UI/UX & Figma
-- Footer Learn includes UI/UX & Figma
-- Existing uploaded index.html, style.css and script.js preserved
+Files included:
+1. wifi-problems.html – Computer Problems → Internet & Wi-Fi category
+2. wifi-extender-kaise-connect-kare.html – WiFi Extender article
+
+Upload both HTML files to the same website root folder.
+The category page links to the WiFi Extender article.

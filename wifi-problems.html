@@ -1,50 +1,102 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Internet & Wi-Fi | Computer Problems | LOVE COMPUTER</title><meta name="description" content="Fix common internet and Wi-Fi problems such as no internet, slow Wi-Fi, DNS errors and connection issues."><script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-9046404486667166" crossorigin="anonymous"></script><link rel="stylesheet" href="computer-problems.css"></head><body>
-
-<header class="site-header">
-  <div class="container nav-wrap">
-    <a class="brand" href="index.html"><span>LOVE</span> COMPUTER</a>
-    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open menu">☰</button>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="tutorials.html">Tutorials</a>
-      <div class="nav-dropdown">
-        <button class="nav-drop-btn">Databases ▾</button>
-        <div class="nav-dropdown-menu">
-          <a href="mysql.html">MySQL</a><a href="postgresql.html">PostgreSQL</a>
-          <a href="sql.html">SQL</a><a href="database-administration.html">Database Administration</a>
-        </div>
-      </div>
-      <div class="nav-dropdown">
-        <button class="nav-drop-btn">Programming ▾</button>
-        <div class="nav-dropdown-menu">
-          <a href="python.html">Python</a><a href="javascript.html">JavaScript</a>
-          <a href="php.html">PHP</a><a href="nodejs.html">Node.js</a><a href="program-solving.html">Program Solving</a>
-        </div>
-      </div>
-      <div class="nav-dropdown">
-        <button class="nav-drop-btn">Computer Problems ▾</button>
-        <div class="nav-dropdown-menu">
-          <a href="computer-problems.html">All Computer Problems</a>
-          <a href="slow-computer.html">Slow Computer</a><a href="windows-problems.html">Windows Problems</a>
-          <a href="wifi-problems.html">Internet &amp; Wi-Fi</a><a href="bluetooth-audio.html">Bluetooth &amp; Audio</a>
-          <a href="printer-problems.html">Printer Problems</a><a href="storage-files.html">Storage &amp; Files</a>
-          <a href="browser-problems.html">Browser Problems</a><a href="keyboard-mouse-usb.html">Keyboard, Mouse &amp; USB</a>
-          <a href="security-malware.html">Security &amp; Malware</a>
-        </div>
-      </div>
-      <a href="blog.html">Blog</a><a href="about.html">About</a><a href="contact.html">Contact</a>
-    </nav>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Internet & Wi-Fi Problems – Solutions & Guides | LOVE COMPUTER</title>
+<meta name="description" content="Internet and Wi-Fi problems ke practical solutions: Wi-Fi connected but no internet, slow internet, Wi-Fi not showing, DNS errors, Ethernet problems, network reset, extender setup and more.">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9046404486667166" crossorigin="anonymous"></script>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f6f8fb;color:#20252b;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.header{background:#fff;border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:10}
+.nav{max-width:1180px;margin:auto;padding:17px 22px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:23px;font-weight:800;color:#111827}
+.logo span{color:#2563eb}
+.back{font-size:14px;color:#2563eb;font-weight:600}
+.hero{background:#111827;color:#fff;padding:58px 20px}
+.hero-inner{max-width:1180px;margin:auto}
+.badge{display:inline-block;background:#2563eb;padding:6px 12px;border-radius:20px;font-size:12px;font-weight:700;letter-spacing:.4px}
+h1{font-size:42px;line-height:1.15;margin:18px 0 12px}
+.hero p{max-width:760px;color:#d1d5db;font-size:17px;margin:0}
+.container{max-width:1180px;margin:35px auto;padding:0 20px}
+.ad{min-height:90px;border:1px dashed #cbd5e1;background:#fff;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:13px;margin-bottom:32px}
+.intro{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:28px;margin-bottom:28px}
+.intro h2{margin-top:0;font-size:25px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:13px;padding:22px;transition:.2s}
+.card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(15,23,42,.07)}
+.card .tag{font-size:11px;font-weight:700;color:#2563eb;text-transform:uppercase}
+.card h3{font-size:19px;margin:7px 0}
+.card p{font-size:14px;color:#64748b;margin:0 0 13px}
+.read{font-size:14px;color:#2563eb;font-weight:700}
+.section-title{font-size:28px;margin:42px 0 18px}
+.tips{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tip{background:#fff;border:1px solid #e5e7eb;border-radius:13px;padding:20px}
+.tip strong{display:block;margin-bottom:7px}
+.tip p{font-size:14px;color:#64748b;margin:0}
+footer{margin-top:50px;background:#111827;color:#cbd5e1;padding:28px 20px}
+.footer-inner{max-width:1180px;margin:auto;font-size:13px}
+@media(max-width:700px){
+h1{font-size:31px}.grid,.tips{grid-template-columns:1fr}.hero{padding:44px 20px}
+.nav{padding:14px 18px}.container{padding:0 15px}
+}
+</style>
+</head>
+<body>
+<header class="header">
+  <nav class="nav">
+    <a class="logo" href="index.html">LOVE <span>COMPUTER</span></a>
+    <a class="back" href="computer-problems.html">← Computer Problems</a>
+  </nav>
 </header>
 
-<main><section class="hero"><div class="container"><h1>Internet & Wi-Fi</h1><p>Fix common internet and Wi-Fi problems such as no internet, slow Wi-Fi, DNS errors and connection issues.</p><div class="search"><input id="problemSearch" type="search" placeholder="Search problems in Internet & Wi-Fi..."></div></div></section>
-<section class="section"><div class="container"><h2>Common Internet & Wi-Fi</h2><p class="section-intro">Select a problem below. Individual detailed guides can be linked here as they are published.</p>
-<div class="problem-list"><a class="problem searchable" href="lan-rj45.html">LAN Wire & RJ45 Connector →</a></div><div class="problem-list"><a class="problem searchable" href="wifi-connected-no-internet.html">Wi-Fi Connected But No Internet →</a><a class="problem searchable" href="laptop-wifi-not-working.html">Laptop Wi-Fi Not Working →</a><a class="problem searchable" href="wifi-network-not-showing.html">Wi-Fi Network Not Showing →</a><a class="problem searchable" href="internet-very-slow.html">Internet Is Very Slow →</a><a class="problem searchable" href="dns-server-not-responding.html">DNS Server Not Responding →</a><a class="problem searchable" href="windows-network-problems.html">Windows Network Problems →</a><a class="problem searchable" href="reset-network-settings.html">How to Reset Network Settings →</a><a class="problem searchable" href="flush-dns-cache.html">How to Flush DNS Cache →</a><a class="problem searchable" href="ethernet-not-working.html">Ethernet Not Working →</a><a class="problem searchable" href="internet-disconnects.html">Internet Disconnects Frequently →</a></div><div class="ad">ADVERTISEMENT</div><div class="grid"><article class="card searchable" id="article-1"><h3>Wi-Fi Connected But No Internet</h3><p>Practical troubleshooting steps, common causes and useful checks for this problem.</p><a class="more" href="wifi-connected-no-internet.html">Read Guide →</a></article><article class="card searchable" id="article-2"><h3>Laptop Wi-Fi Not Working</h3><p>Practical troubleshooting steps, common causes and useful checks for this problem.</p><a class="more" href="laptop-wifi-not-working.html">Read Guide →</a></article><article class="card searchable" id="article-3"><h3>Wi-Fi Network Not Showing</h3><p>Practical troubleshooting steps, common causes and useful checks for this problem.</p><a class="more" href="wifi-network-not-showing.html">Read Guide →</a></article><article class="card searchable" id="article-4"><h3>Internet Is Very Slow</h3><p>Practical troubleshooting steps, common causes and useful checks for this problem.</p><a class="more" href="internet-very-slow.html">Read Guide →</a></article><article class="card searchable" id="article-5"><h3>DNS Server Not Responding</h3><p>Practical troubleshooting steps, common causes and useful checks for this problem.</p><a class="more" href="dns-server-not-responding.html">Read Guide →</a></article><article class="card searchable" id="article-6"><h3>Windows Network Problems</h3><p>Practical troubleshooting steps, common causes and useful checks for this problem.</p><a class="more" href="windows-network-problems.html">Read Guide →</a></article><article class="card searchable" id="article-7"><h3>How to Reset Network Settings</h3><p>Practical troubleshooting steps, common causes and useful checks for this problem.</p><a class="more" href="reset-network-settings.html">Read Guide →</a></article><article class="card searchable" id="article-8"><h3>How to Flush DNS Cache</h3><p>Practical troubleshooting steps, common causes and useful checks for this problem.</p><a class="more" href="flush-dns-cache.html">Read Guide →</a></article><article class="card searchable" id="article-9"><h3>Ethernet Not Working</h3><p>Practical troubleshooting steps, common causes and useful checks for this problem.</p><a class="more" href="ethernet-not-working.html">Read Guide →</a></article><article class="card searchable" id="article-10"><h3>Internet Disconnects Frequently</h3><p>Practical troubleshooting steps, common causes and useful checks for this problem.</p><a class="more" href="internet-disconnects.html">Read Guide →</a></article></div></div></section></main>
-<footer class="site-footer"><div class="container footer-grid">
-<div><h3>LOVE COMPUTER</h3><p>Practical computer, database and programming tutorials in simple language.</p></div>
-<div><h3>Computer Problems</h3><a href="computer-problems.html">All Problems</a><a href="slow-computer.html">Slow Computer</a><a href="windows-problems.html">Windows</a></div>
-<div><h3>Internet &amp; Devices</h3><a href="wifi-problems.html">Wi-Fi</a><a href="bluetooth-audio.html">Bluetooth &amp; Audio</a><a href="printer-problems.html">Printer</a></div>
-<div><h3>More</h3><a href="storage-files.html">Storage &amp; Files</a><a href="browser-problems.html">Browser</a><a href="security-malware.html">Security</a></div>
-</div><div class="container copyright">© <span id="year"></span> LOVE COMPUTER. All rights reserved.</div></footer>
-<script src="computer-problems.js"></script></body></html>
+<section class="hero">
+  <div class="hero-inner">
+    <span class="badge">COMPUTER PROBLEMS</span>
+    <h1>Internet & Wi-Fi Problems</h1>
+    <p>Internet slow hai, Wi-Fi connect nahi ho raha, DNS error aa raha hai ya Ethernet kaam nahi kar raha? Yahan common network problems ke simple, step-by-step solutions milenge.</p>
+  </div>
+</section>
+
+<main class="container">
+  <div class="ad">Advertisement</div>
+
+  <section class="intro">
+    <h2>Internet & Wi-Fi Problems kaise solve karein?</h2>
+    <p>Internet problem hamesha ISP ki wajah se nahi hoti. Kabhi router, Wi-Fi adapter, DNS, Windows network settings, cable ya incorrect configuration bhi problem ka reason ho sakti hai.</p>
+    <p>Is section mein common Internet aur Wi-Fi issues ko beginner-friendly steps mein cover kiya gaya hai, taaki aap problem ko identify karke safely troubleshoot kar saken.</p>
+  </section>
+
+  <h2 class="section-title">Internet & Wi-Fi Guides</h2>
+  <section class="grid">
+    <article class="card"><span class="tag">Wi-Fi</span><h3>Wi-Fi Connected But No Internet</h3><p>Wi-Fi connected hai lekin internet nahi chal raha? Router, DNS aur Windows settings check karein.</p><a class="read" href="wifi-connected-no-internet.html">Read Guide →</a></article>
+    <article class="card"><span class="tag">Wi-Fi</span><h3>Laptop Wi-Fi Not Working</h3><p>Laptop mein Wi-Fi option missing ya disabled hai to basic troubleshooting steps dekhein.</p><a class="read" href="laptop-wifi-not-working.html">Read Guide →</a></article>
+    <article class="card"><span class="tag">Wi-Fi</span><h3>Wi-Fi Network Not Showing</h3><p>Aapka Wi-Fi network list mein nahi aa raha? Adapter aur router related checks karein.</p><a class="read" href="wifi-network-not-showing.html">Read Guide →</a></article>
+    <article class="card"><span class="tag">Internet</span><h3>Internet Very Slow</h3><p>Internet speed expected se kam hai? Speed, background apps, router aur connection check karein.</p><a class="read" href="internet-very-slow.html">Read Guide →</a></article>
+    <article class="card"><span class="tag">DNS</span><h3>DNS Server Not Responding</h3><p>DNS error ki wajah se websites open nahi ho rahi? DNS aur network settings troubleshoot karein.</p><a class="read" href="dns-server-not-responding.html">Read Guide →</a></article>
+    <article class="card"><span class="tag">Windows</span><h3>Windows Network Problems</h3><p>Windows mein network connection issues ke liye common diagnostic steps follow karein.</p><a class="read" href="windows-network-problems.html">Read Guide →</a></article>
+    <article class="card"><span class="tag">Windows</span><h3>Reset Network Settings</h3><p>Network configuration corrupt ya confusing ho gayi ho to Windows Network Reset ka use samjhein.</p><a class="read" href="reset-network-settings.html">Read Guide →</a></article>
+    <article class="card"><span class="tag">DNS</span><h3>Flush DNS Cache</h3><p>Old DNS information ki wajah se website issue ho to DNS cache flush karna seekhein.</p><a class="read" href="flush-dns-cache.html">Read Guide →</a></article>
+    <article class="card"><span class="tag">Ethernet</span><h3>Ethernet Not Working</h3><p>LAN cable connected hone ke baad bhi internet nahi aa raha? Ethernet troubleshooting steps dekhein.</p><a class="read" href="ethernet-not-working.html">Read Guide →</a></article>
+    <article class="card"><span class="tag">Internet</span><h3>Internet Disconnects Frequently</h3><p>Internet baar-baar disconnect hota hai to router, Wi-Fi signal aur Windows settings check karein.</p><a class="read" href="internet-disconnects.html">Read Guide →</a></article>
+    <article class="card"><span class="tag">Wi-Fi</span><h3>Wi-Fi Extender Kaise Connect Karein?</h3><p>Wi-Fi range badhane ke liye extender ko WPS ya browser/mobile setup se connect karna seekhein.</p><a class="read" href="wifi-extender-kaise-connect-kare.html">Read Guide →</a></article>
+    <article class="card"><span class="tag">LAN</span><h3>LAN / RJ45 Cable Setup</h3><p>RJ45 cable wiring, T568B color order aur basic LAN troubleshooting ke baare mein padhein.</p><a class="read" href="lan-rj45.html">Read Guide →</a></article>
+  </section>
+
+  <h2 class="section-title">Quick Troubleshooting</h2>
+  <section class="tips">
+    <div class="tip"><strong>1. Router Restart</strong><p>Router ko power off karke kuch seconds baad restart karein. Lights aur connection status check karein.</p></div>
+    <div class="tip"><strong>2. Check Another Device</strong><p>Phone ya kisi doosre laptop par same Wi-Fi test karein. Isse problem device ki hai ya network ki, pata chal sakta hai.</p></div>
+    <div class="tip"><strong>3. Check Cable & Signal</strong><p>Ethernet cable properly connected hai ya Wi-Fi signal weak hai, ye verify karein.</p></div>
+  </section>
+
+  <div class="ad" style="margin-top:32px">Advertisement</div>
+</main>
+
+<footer>
+  <div class="footer-inner">© 2026 LOVE COMPUTER · Internet & Wi-Fi Problems</div>
+</footer>
+</body>
+</html>
