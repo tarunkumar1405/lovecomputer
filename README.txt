@@ -1,9 +1,10 @@
-LOVE COMPUTER Utilities package
+LOVE COMPUTER - Mobile Navigation Fix
 
-Files:
-- utilities.html (main Utilities page)
-- 20 utility tool pages
+Upload these 3 files to the repository root and replace the existing files:
+1. index.html
+2. style.css
+3. script.js
 
-Upload these files to the ROOT of your GitHub Pages repository.
-favicon.ico is not included because your existing repository already has it.
-After upload, add Utilities to your website navigation and link it to utilities.html.
+This version also includes the Utilities link.
+
+After upload, clear browser cache or open the site in Incognito once to avoid an old CSS/JS cache.
