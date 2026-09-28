@@ -1,10 +1,4 @@
-LOVE COMPUTER - Mobile Navigation Fix
-
-Upload these 3 files to the repository root and replace the existing files:
-1. index.html
-2. style.css
-3. script.js
-
-This version also includes the Utilities link.
-
-After upload, clear browser cache or open the site in Incognito once to avoid an old CSS/JS cache.
+LOVE COMPUTER Utilities — Advanced V2
+This package keeps the original 20 utility tools but upgrades their UI, validation, controls and outputs.
+All tool pages contain their own CSS and JavaScript. No separate utilities.css or utilities.js is required.
+Upload/replace all 21 HTML files (20 tools + utilities.html) in the website root. favicon.ico is referenced but not included.

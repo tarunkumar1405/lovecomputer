@@ -1,31 +1,16 @@
-<!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Percentage Calculator | LOVE COMPUTER</title>
-<meta name="description" content="Percentage Calculator - free online utility tool from LOVE COMPUTER.">
-<link rel="icon" href="favicon.ico">
-<style>
-:root{--blue:#2563eb;--dark:#111827;--muted:#64748b;--bg:#f5f7fb}
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:#172033}
-header{background:var(--dark);color:#fff;padding:16px 5%;display:flex;justify-content:space-between;align-items:center}
-header a{color:#fff;text-decoration:none;font-weight:700}.brand{font-size:21px}.back{font-size:14px}
-main{max-width:1100px;margin:auto;padding:30px 18px}.hero,.tool,.card{background:#fff;border-radius:16px;box-shadow:0 5px 20px #0000000c}
-.hero{padding:28px;margin-bottom:22px}.hero h1{margin:0 0 8px}.hero p{margin:0;color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:15px}
-.card{padding:19px;text-decoration:none;color:#172033;border:1px solid #e5e7eb;transition:.18s}.card:hover{transform:translateY(-2px);box-shadow:0 9px 25px #00000012}
-.card h2{font-size:18px;margin:0 0 8px}.card p{font-size:14px;color:var(--muted);line-height:1.45;margin:0}
-.tool{padding:28px;max-width:760px;margin:auto}.tool h1{margin-top:0}.row{display:flex;gap:10px;flex-wrap:wrap;margin:15px 0}
-input,select,textarea,button{font:inherit;padding:11px 12px;border:1px solid #cbd5e1;border-radius:9px}
-input,select{min-width:190px}textarea{width:100%;min-height:180px;resize:vertical}
-button{background:var(--blue);color:#fff;border:0;cursor:pointer}button.secondary{background:#475569}
-.result{margin-top:15px;padding:15px;background:#f1f5f9;border-radius:10px;white-space:pre-wrap;line-height:1.6;overflow:auto}
-.note{font-size:13px;color:var(--muted);margin-top:14px}
-footer{text-align:center;color:var(--muted);padding:30px 15px}
-.qr{max-width:240px;margin-top:15px}
-@media(max-width:600px){header{padding:14px}.row>*{width:100%;min-width:0}.tool{padding:21px}main{padding:20px 13px}}
-</style>
-</head><body>
-<header><a class="brand" href="index.html">LOVE COMPUTER</a><a class="back" href="utilities.html">← All Utilities</a></header>
-<main><div class="tool"><h1>Percentage Calculator</h1><div class="row"><input id="p" type="number" placeholder="Percentage"><input id="n" type="number" placeholder="Number"><button onclick="calc()">Calculate</button></div><div id="out" class="result"></div></div></main>
-<footer>LOVE COMPUTER — Free Online Utilities</footer>
-<script>function calc(){let p=+document.getElementById('p').value,n=+document.getElementById('n').value;out.textContent=isNaN(p)||isNaN(n)?'Enter both values.':(p*n/100).toFixed(2)}</script></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Calculate percentages quickly with a clean reusable form."><title>Advanced Percentage Calculator | LOVE COMPUTER</title><link rel="icon" href="favicon.ico"><style>
+:root{--bg:#f6f8fc;--card:#fff;--text:#172033;--muted:#667085;--primary:#2563eb;--primary2:#1d4ed8;--border:#e4e9f2;--dark:#0b1220;--soft:#eef4ff;--danger:#b42318;--ok:#067647}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:20}.nav{width:min(1120px,92%);margin:auto;min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:15px}.brand{font-size:1.25rem;font-weight:800;text-decoration:none;color:var(--text)}.brand span{color:var(--primary)}
+main{width:min(1120px,92%);margin:auto;padding:35px 0 65px}.back{color:var(--primary);font-weight:700;text-decoration:none}.hero{text-align:center;margin:18px auto 25px;max-width:780px}.eyebrow{color:var(--primary);font-size:.75rem;font-weight:800;letter-spacing:.1em}.hero h1{font-size:clamp(2rem,5vw,3.1rem);line-height:1.1;margin:7px 0 10px}.hero p{color:var(--muted);margin:0}
+.tool{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:24px;box-shadow:0 10px 28px #1018280b}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.field{min-width:0}label{display:block;font-size:.88rem;font-weight:750;margin:0 0 7px}input,select,textarea{width:100%;border:1px solid #d7deea;border-radius:10px;padding:11px 12px;font:inherit;background:#fff;outline:none}textarea{min-height:220px;resize:vertical;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.9rem}input:focus,select:focus,textarea:focus{border-color:#8eb0ff;box-shadow:0 0 0 3px var(--soft)}
+.actions{display:flex;gap:9px;flex-wrap:wrap;margin:14px 0}.btn{border:0;border-radius:9px;padding:10px 15px;background:var(--primary);color:#fff;font-weight:750;cursor:pointer}.btn:hover{background:var(--primary2)}.btn.secondary{background:#eef2f7;color:#344054}.btn.danger{background:#fee4e2;color:var(--danger)}
+.result{margin-top:14px;background:#0b1220;color:#e6edf5;border-radius:11px;padding:15px;min-height:80px;white-space:pre-wrap;overflow:auto;font:13px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace}.status{margin-top:9px;color:var(--muted);font-size:.88rem}.ok{color:var(--ok)}.error{color:var(--danger)}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card{background:#fff;border:1px solid var(--border);border-radius:15px;padding:18px;box-shadow:0 6px 20px #10182808}.card h2{font-size:1rem;margin:6px 0}.card p{color:var(--muted);font-size:.86rem;margin:0}.card a{display:inline-block;margin-top:12px;color:var(--primary);font-weight:750;text-decoration:none}
+.note{color:var(--muted);font-size:.82rem;margin-top:12px}.preview{max-width:100%;border-radius:10px;border:1px solid var(--border);margin-top:12px}.meter{height:9px;background:#e9edf3;border-radius:99px;overflow:hidden}.meter span{display:block;height:100%;background:var(--primary);width:0}
+footer{text-align:center;color:var(--muted);padding:30px 15px;font-size:.82rem}
+@media(max-width:850px){.cards{grid-template-columns:repeat(2,1fr)}.grid3{grid-template-columns:1fr 1fr}}@media(max-width:650px){main{padding-top:22px}.grid,.grid3,.cards{grid-template-columns:1fr}.tool{padding:17px}.nav{min-height:60px}}
+</style></head>
+<body><header><div class="nav"><a class="brand" href="index.html">LOVE <span>COMPUTER</span></a><a class="back" href="utilities.html">Utilities</a></div></header>
+<main><a class="back" href="utilities.html">← All Utilities</a><div class="hero"><span class="eyebrow">LOVE COMPUTER UTILITY</span><h1>Advanced Percentage Calculator</h1><p>Calculate percentages quickly with a clean reusable form.</p></div><div class="tool"><div class="grid3"><div><label>Percentage</label><input id="p" type="number"></div><div><label>Of</label><input id="n" type="number"></div><div><label>Result</label><input id="o" readonly></div></div><div class="actions"><button class="btn" onclick="go()">Calculate</button></div><div class="note">Example: 18% of 500 = 90.</div></div></main><footer>LOVE COMPUTER — Practical browser utilities</footer><script>function go(){o.value=(Number(p.value)*Number(n.value)/100).toLocaleString(undefined,{maximumFractionDigits:8})}</script></body></html>
