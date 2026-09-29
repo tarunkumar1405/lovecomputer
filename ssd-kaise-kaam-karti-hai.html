@@ -2,59 +2,57 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="SSD mein NAND flash, controller aur logical-to-physical mapping kaise milkar fast storage banate hain.">
-<title>SSD Kaise Kaam Karti Hai? | LOVE COMPUTER</title>
+<meta name="description" content="A simple explanation of how an ssd work?">
+<title>How Does an SSD Work? | LOVE COMPUTER</title>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9046404486667166" crossorigin="anonymous"></script>
-<link rel="icon" href="favicon.ico"><link rel="stylesheet" href="article.css">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="article.css">
 </head>
 <body>
 <header class="site-header"><div class="container nav-wrap">
 <a href="index.html" class="logo">LOVE <span>COMPUTER</span></a>
-<nav class="main-nav"><a href="index.html">Home</a><a href="blog.html">Blog</a>
+<nav class="main-nav">
+<a href="index.html">Home</a><a href="blog.html">Blog</a><a href="articles.html">Articles</a>
 <div class="dropdown"><button class="drop-btn">Databases ▾</button><div class="dropdown-menu"><a href="mysql.html">MySQL</a><a href="postgresql.html">PostgreSQL</a><a href="sql.html">SQL</a><a href="database-administration.html">Database Administration</a></div></div>
 <div class="dropdown"><button class="drop-btn">Programming ▾</button><div class="dropdown-menu"><a href="python.html">Python</a><a href="javascript.html">JavaScript</a><a href="php.html">PHP</a><a href="nodejs.html">Node.js</a></div></div>
-<a href="about.html">About</a><a href="contact.html">Contact</a></nav>
-<button class="menu-toggle" aria-label="Open menu">☰</button></div></header>
+<a href="about.html">About</a><a href="contact.html">Contact</a>
+</nav><button class="menu-toggle" aria-label="Open menu">☰</button></div></header>
 <main><div class="container article-layout">
 <article class="article-content">
-<div class="breadcrumb"><a href="blog.html">Blog</a><span>›</span><span>Storage</span></div>
-<header class="article-header"><span class="article-category">Storage</span>
-<h1>SSD Kaise Kaam Karti Hai?</h1><p class="article-intro">SSD mein NAND flash, controller aur logical-to-physical mapping kaise milkar fast storage banate hain.</p>
-<div class="article-meta"><span>📅 September 29, 2026</span><span>•</span><span>⏱ 7 min</span></div></header>
+<div class="breadcrumb"><a href="articles.html">Articles</a><span>›</span><span>Computer &amp; Technology</span></div>
+<header class="article-header"><span class="article-category">HOW COMPUTER DEVICES WORK</span>
+<h1>How Does an SSD Work?</h1><p class="article-intro">A simple explanation of how an ssd work?</p>
+<div class="article-meta"><span>📅 September 29, 2026</span><span>•</span><span>⏱ 5–8 min read</span></div></header>
 <div class="article-ad"><span>ADVERTISEMENT</span></div>
-<p>SSD mein NAND flash, controller aur logical-to-physical mapping kaise milkar fast storage banate hain.</p>
-
-<div class="tip-box"><strong>Simple flow:</strong> User action → Device hardware → Controller/processing → Data transfer or output</div>
-
-<h2>SSD ke andar kya hota hai?</h2><p>SSD mein NAND flash memory, controller, firmware aur interface electronics hote hain. SATA SSD SATA interface use karti hai; NVMe SSD PCIe ke through communicate karti hai.</p>
-<h2>SSD data kaise read karti hai?</h2><p>Host logical block address par data request karta hai. Controller mapping information ke through relevant NAND pages locate karta hai, data read karta hai, error correction apply kar sakta hai aur result host ko bhejta hai.</p>
-<h2>SSD mein moving parts kyun nahi hote?</h2><p>HDD ke opposite SSD data ko rotating platter aur moving head se nahi, electronic flash cells se store karti hai. Isi wajah se random access latency bahut kam ho sakti hai.</p>
-<h2>Wear leveling aur garbage collection</h2><p>NAND cells ki program/erase life limited hoti hai. Controller writes ko distribute karne ke liye wear leveling aur unused blocks ko reclaim karne ke liye garbage collection jaise techniques use karta hai.</p>
-<h2>SATA vs NVMe</h2><p>SATA SSD SATA storage protocol/interface limits ke andar kaam karti hai. NVMe SSD PCIe par low-latency, parallel command processing ke liye designed protocol use karti hai.</p>
-
+<p>A simple explanation of how an ssd work?</p>
+<pre><code>Computer
+   ↓
+SATA / PCIe
+   ↓
+SSD Controller
+   ↓
+NAND Flash
+   ↓
+Your Data</code></pre>
+<h2>What Is Inside an SSD?</h2><p>An SSD mainly contains NAND flash memory, a controller, firmware and an interface such as SATA or PCIe/NVMe.</p>
+<h2>How Does an SSD Read Data?</h2><p>The computer sends a request for a logical block. The SSD controller uses its mapping information to find the required flash location, reads the data and sends it back to the computer.</p>
+<h2>Why Does an SSD Have No Moving Parts?</h2><p>An SSD stores data electronically in flash memory. It does not use spinning platters or moving read/write heads like a hard disk.</p>
+<h2>What Are Wear Leveling and Garbage Collection?</h2><p>Flash memory has a limited number of program and erase cycles. The SSD controller spreads writes across the memory and reuses blocks that are no longer needed.</p>
+<h2>SATA SSD vs NVMe SSD</h2><p>A SATA SSD uses the SATA interface and protocol. An NVMe SSD normally uses PCIe and is designed for lower latency and higher parallel performance.</p>
+<h2>Quick Takeaway</h2><p>The main idea is simple: the device receives information, processes it using its hardware and controller or processor, and then stores, sends or displays the result. The exact details depend on the technology.</p>
 <h2>FAQ</h2>
-<h3>Is topic ko samajhna kyun useful hai?</h3>
-<p>Is device ka basic working samajhne se common performance, connectivity aur storage behavior ko samajhna easier hota hai.</p>
-<h3>Kya actual performance specifications par depend karti hai?</h3>
-<p>Haan. Hardware generation, interface, controller, workload aur connected system ke capabilities ke according real-world performance change ho sakti hai.</p>
-
-<div class="article-tags"><a href="blog.html">Storage</a><a href="articles.html">All Articles</a></div>
+<h3>Is this technology difficult to understand?</h3><p>No. Once you understand the main parts and the flow of data, the basic working becomes much easier to follow.</p>
+<h3>Does real-world performance always match the specification?</h3><p>Not always. Real performance can depend on the hardware, software, interface, workload and environment.</p>
+<div class="article-tags"><a href="articles.html">How Computer Devices Work</a><a href="blog.html">Blog</a></div>
 <div class="share-box"><strong>Share this article</strong><div class="share-buttons"><button onclick="shareArticle()">Share</button></div></div>
 </article>
 <aside class="sidebar">
 <div class="sidebar-box search-box"><h3>Search Blog</h3><form id="blogSearch"><input type="search" id="searchInput" placeholder="Search articles..." aria-label="Search articles"><button type="submit">Search</button></form></div>
-<div class="sidebar-box"><div class="sidebar-heading"><h3>Latest Blogs</h3><a href="articles.html">View All</a></div><ul class="blog-list"><li><a href="pen-drive-kaise-kaam-karti-hai.html">Pen Drive Kaise Kaam Karti Hai?</a></li>
-<li><a href="ssd-kaise-kaam-karti-hai.html">SSD Kaise Kaam Karti Hai?</a></li>
-<li><a href="hard-disk-kaise-kaam-karti-hai.html">Hard Disk (HDD) Kaise Kaam Karti Hai?</a></li>
-<li><a href="ram-kaise-kaam-karti-hai.html">RAM Kaise Kaam Karti Hai?</a></li>
-<li><a href="cpu-kaise-kaam-karta-hai.html">CPU Kaise Kaam Karta Hai?</a></li></ul></div>
-<div class="sidebar-box"><h3>Categories</h3><div class="category-list"><a href="blog.html">Computer &amp; Technology</a><a href="storage-files.html">Storage &amp; Files</a><a href="computer-problems.html">Computer Problems</a><a href="mysql.html">MySQL</a></div></div>
+<div class="sidebar-box"><div class="sidebar-heading"><h3>How Computer Devices Work</h3><a href="articles.html">View All</a></div>
+<ul class="blog-list"><li><a href="pen-drive-kaise-kaam-karti-hai.html">Pen Drive</a></li><li><a href="ssd-kaise-kaam-karti-hai.html">SSD</a></li><li><a href="hard-disk-kaise-kaam-karti-hai.html">Hard Disk</a></li><li><a href="ram-kaise-kaam-karti-hai.html">RAM</a></li><li><a href="cpu-kaise-kaam-karta-hai.html">CPU</a></li></ul></div>
+<div class="sidebar-box"><h3>Explore</h3><div class="category-list"><a href="computer-problems.html">Computer Problems</a><a href="storage-files.html">Storage &amp; Files</a><a href="wifi-problems.html">Internet &amp; Wi-Fi</a><a href="articles.html">All Articles</a></div></div>
 <div class="sidebar-ad"><span>ADVERTISEMENT</span></div>
 </aside></div></main>
-<footer class="site-footer"><div class="container footer-grid">
-<div><div class="footer-logo">LOVE COMPUTER</div><p>Practical tutorials for databases, programming and technology.</p></div>
-<div><h4>Quick Links</h4><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="articles.html">Articles</a><a href="contact.html">Contact</a></div>
-<div><h4>Topics</h4><a href="mysql.html">MySQL</a><a href="sql.html">SQL</a><a href="computer-problems.html">Computer Problems</a></div>
-</div><div class="footer-bottom">© <span id="year"></span> LOVE COMPUTER. All rights reserved.</div></footer>
-<script>window.articleShareText=SSD Kaise Kaam Karti Hai?;</script><script src="article.js"></script>
+<footer class="site-footer"><div class="container footer-grid"><div><div class="footer-logo">LOVE COMPUTER</div><p>Simple, practical technology tutorials and articles.</p></div><div><h4>Quick Links</h4><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="articles.html">Articles</a><a href="contact.html">Contact</a></div><div><h4>Topics</h4><a href="mysql.html">MySQL</a><a href="sql.html">SQL</a><a href="computer-problems.html">Computer Problems</a></div></div><div class="footer-bottom">© <span id="year"></span> LOVE COMPUTER. All rights reserved.</div></footer>
+<script>window.articleShareText=How Does an SSD Work?;</script><script src="article.js"></script>
 </body></html>
