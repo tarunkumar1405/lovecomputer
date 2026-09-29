@@ -12,18 +12,16 @@ document.addEventListener("DOMContentLoaded",function(){
   if(form){
     form.addEventListener("submit",function(e){
       e.preventDefault();
-      const q=document.getElementById("searchInput").value.trim();
+      const input=document.getElementById("searchInput");
+      const q=input ? input.value.trim() : "";
       if(q) window.location.href="blog.html?search="+encodeURIComponent(q);
     });
   }
 });
 
 function shareArticle(){
-  const data={
-    title:document.title,
-    text:"10 MySQL Tips Every Developer Should Know",
-    url:window.location.href
-  };
+  const title=window.articleShareText || document.title;
+  const data={title:title,text:title,url:window.location.href};
   if(navigator.share){
     navigator.share(data).catch(()=>{});
   }else if(navigator.clipboard){
