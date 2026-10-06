@@ -73,11 +73,11 @@
     .meta span{background:#fff;border:1px solid var(--border);border-radius:999px;padding:5px 10px}
 
     .article-wrap{padding:36px 0 70px}
-    .article-grid{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:28px;align-items:start}
+    .article-grid{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:28px;align-items:start;min-width:0}
     .article-card,.toc-card{
       background:var(--surface);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);
     }
-    .article-card{padding:34px}
+    .article-card{padding:34px;min-width:0;overflow:hidden}
     .toc-card{padding:20px;position:sticky;top:92px}
     .toc-card h3{font-size:1rem;margin-bottom:12px}
     .toc-card a{display:block;font-size:.88rem;color:var(--muted);padding:7px 0}
@@ -94,11 +94,13 @@
     .callout{padding:18px 20px;border-left:4px solid var(--primary);background:#f5f8ff;border-radius:10px;margin:22px 0}
     .workflow,.cheat-sheet{width:100%;overflow:auto}
     pre{
+      max-width:100%;
+      white-space:pre;
       background:var(--code);color:#e5e7eb;padding:18px;border-radius:12px;overflow:auto;margin:18px 0;
       font:500 .88rem/1.65 ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
     }
     code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
-    table{width:100%;border-collapse:collapse;margin:18px 0 6px;min-width:620px}
+    table{width:100%;border-collapse:collapse;margin:18px 0 6px;min-width:0}
     th,td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--border);vertical-align:top}
     th{background:#f8fafc;font-size:.9rem}
     td{font-size:.92rem;color:#344054}
@@ -138,10 +140,14 @@
       .hero{padding-top:55px}
       .footer-grid{grid-template-columns:1fr 1fr}
     }
+    .article-card p,.article-card li,.article-card h2,.article-card h3{overflow-wrap:anywhere;word-break:break-word}
     @media (max-width:600px){
       .container{width:min(94%,1120px)}
       .hero h1{letter-spacing:-1px}
       .article-card{padding:20px}
+      .article-card table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+      .article-card th,.article-card td{white-space:normal;min-width:140px}
+      pre{font-size:.78rem;padding:14px;overflow-x:auto}
       .footer-grid{grid-template-columns:1fr}
     }
   </style>
