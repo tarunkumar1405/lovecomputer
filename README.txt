@@ -1,5 +1,11 @@
-LOVE COMPUTER — हिंदी 7-दिन Daily Quiz
+LOVE COMPUTER — दैनिक ज्ञान परीक्षा
 
-हर दिन 10 प्रश्न। 7 अलग-अलग sets हैं, यानी 70 प्रश्न। 8वें दिन Day 1 फिर शुरू होगा।
-Quiz self-contained है: CSS और JavaScript इसी quiz.html में हैं। GitHub Pages पर सीधे चलेगा।
-मुख्य menu में <a href="quiz.html">Quiz</a> रखें।
+• भाषा: हिंदी
+• 7 दिन के अलग-अलग सेट, हर दिन 10 प्रश्न
+• एक ही दिन में बार-बार प्रयास किया जा सकता है
+• “फिर से प्रयास करें” पर प्रश्न और विकल्प shuffle होते हैं
+• “स्कोर देखें” से अंक दिखते हैं
+• Day 8 पर Day 1 दोबारा आता है
+• Google AdSense Auto Ads का publisher code जोड़ा गया है
+
+नोट: AdSense विज्ञापन तभी दिखेंगे जब आपके AdSense खाते/साइट पर Auto Ads सक्रिय हों और Google की eligibility/review शर्तें पूरी हों। इस फाइल में केवल दिया गया publisher code इस्तेमाल किया गया है; किसी ad-slot ID का अनुमान नहीं लगाया गया है।
