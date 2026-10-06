@@ -1,1 +1,2 @@
-Weekly Quiz for LOVE COMPUTER. 10 questions; quiz set changes automatically each week. Add <a href="quiz.html">Quiz</a> to your main navigation.
+LOVE COMPUTER DAILY QUIZ
+Upload quiz.html and quiz.css. The quiz shows 10 mixed questions and changes automatically each day. No database/server is required.
