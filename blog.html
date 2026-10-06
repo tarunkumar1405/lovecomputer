@@ -22,7 +22,6 @@
       <a href="index.html#topics">Topics</a>
       <a href="index.html#tutorials">Tutorials</a>
       <a class="active" href="blog.html">Blog</a>
-      <a href="articles.html">Articles</a>
       <a href="index.html#about">About</a>
     </nav>
 
@@ -46,9 +45,6 @@
         <input id="blogSearch" type="search"
           placeholder="Search articles, e.g. MySQL, SQL, PostgreSQL..."
           oninput="filterPosts()">
-      </div>
-      <div class="articles-shortcut">
-        <a href="articles.html">📚 Browse All Articles →</a>
       </div>
     </div>
   </section>
@@ -74,7 +70,6 @@
         <button class="category" onclick="filterCategory('programming', this)">Programming</button>
         <button class="category" onclick="filterCategory('web', this)">Web Development</button>
         <button class="category" onclick="filterCategory('career', this)">Career</button>
-        <button class="category" onclick="filterCategory('computer-tech', this)">Computer &amp; Technology</button>
       </div>
     </div>
   </section>
@@ -140,6 +135,19 @@
 
       <div class="post-grid">
 
+        <article class="post-card searchable-post" data-category="programming career">
+          <div class="post-image programming-image">
+            <span>Software Engineering</span>
+          </div>
+          <div class="post-body">
+            <span class="tag">SOFTWARE ENGINEERING</span>
+            <h3>What Software Tools Do Software Engineers Use for Teamwork?</h3>
+            <p>Explore the tools software teams use for code collaboration, task tracking, communication, design, documentation, testing and deployment.</p>
+            <div class="post-meta"><span>12 min read</span><span>•</span><span>Software Engineering</span></div>
+            <a href="software-engineering-teamwork-tools.html" class="read-link">Read Article →</a>
+          </div>
+        </article>
+
         <article class="post-card searchable-post" data-category="mysql sql">
           <div class="post-image mysql-image">
             <span>MySQL</span>
@@ -203,15 +211,6 @@
             <div class="post-meta"><span>7 min read</span><span>•</span><span>Web</span></div>
             <a href="#" class="read-link">Read Article →</a>
           </div>
-        </article>
-
-        <article class="post-card searchable-post" data-category="computer-tech">
-          <div class="post-image computer-image"><span>Computer &amp; Technology</span></div>
-          <div class="post-body"><span class="tag">COMPUTER &amp; TECHNOLOGY</span>
-          <h3>How Computer Devices Work — 20 Part Series</h3>
-          <p>Pen Drive, SSD, HDD, RAM, CPU, Wi-Fi, Router, Bluetooth, Webcam, Cloud Storage and more—explained simply.</p>
-          <div class="post-meta"><span>20 articles</span><span>•</span><span>Computer &amp; Technology</span></div>
-          <a href="how-computer-devices-work.html" class="read-link">Explore Series →</a></div>
         </article>
 
         <article class="post-card searchable-post" data-category="career sql">

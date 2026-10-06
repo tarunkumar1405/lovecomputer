@@ -1,22 +1,100 @@
-function filterPosts(){
-  const q=(document.getElementById("blogSearch")?.value||"").toLowerCase().trim();
-  document.querySelectorAll(".searchable-post").forEach(card=>{
-    card.style.display=(!q || card.textContent.toLowerCase().includes(q))?"":"none";
-  });
+function toggleMenu() {
+    const nav = document.querySelector(".nav-links");
+
+    if (!nav) return;
+
+    const isOpen = nav.style.display === "flex";
+
+    nav.style.display = isOpen ? "none" : "flex";
+
+    if (!isOpen) {
+        nav.style.position = "absolute";
+        nav.style.top = "72px";
+        nav.style.left = "0";
+        nav.style.right = "0";
+        nav.style.background = "#fff";
+        nav.style.padding = "20px";
+        nav.style.flexDirection = "column";
+        nav.style.borderBottom = "1px solid #e7ebf2";
+    }
 }
-function filterCategory(cat,btn){
-  document.querySelectorAll(".category").forEach(b=>b.classList.remove("active"));
-  if(btn) btn.classList.add("active");
-  document.querySelectorAll(".searchable-post").forEach(card=>{
-    const cats=(card.dataset.category||"").toLowerCase().split(/\s+/);
-    card.style.display=(cat==="all" || cats.includes(cat))?"":"none";
-  });
+
+
+function filterPosts() {
+    const input = document.getElementById("blogSearch");
+
+    if (!input) return;
+
+    const query = input.value.toLowerCase().trim();
+    const posts = document.querySelectorAll(".searchable-post");
+    let visible = 0;
+
+    posts.forEach(function(post) {
+        const text = post.innerText.toLowerCase();
+
+        if (text.includes(query)) {
+            post.style.display = "";
+            visible++;
+        } else {
+            post.style.display = "none";
+        }
+    });
+
+    updateNoResults(visible);
 }
-function toggleMenu(){
-  document.querySelector(".nav-links")?.classList.toggle("show");
+
+
+function filterCategory(category, button) {
+    const posts = document.querySelectorAll(".searchable-post");
+    const searchInput = document.getElementById("blogSearch");
+
+    if (searchInput) {
+        searchInput.value = "";
+    }
+
+    document.querySelectorAll(".category").forEach(function(item) {
+        item.classList.remove("active");
+    });
+
+    if (button) {
+        button.classList.add("active");
+    }
+
+    let visible = 0;
+
+    posts.forEach(function(post) {
+        const categories = (post.dataset.category || "").split(" ");
+
+        if (category === "all" || categories.includes(category)) {
+            post.style.display = "";
+            visible++;
+        } else {
+            post.style.display = "none";
+        }
+    });
+
+    updateNoResults(visible);
 }
-function showMessage(){alert("More articles will be added soon.")}
-document.addEventListener("DOMContentLoaded",()=>{
-  const year=document.getElementById("year");
-  if(year) year.textContent=new Date().getFullYear();
+
+
+function updateNoResults(visible) {
+    const message = document.getElementById("noResults");
+
+    if (!message) return;
+
+    message.style.display = visible === 0 ? "block" : "none";
+}
+
+
+function showMessage() {
+    alert("More articles will be added soon.");
+}
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const year = document.getElementById("year");
+
+    if (year) {
+        year.textContent = new Date().getFullYear();
+    }
 });
