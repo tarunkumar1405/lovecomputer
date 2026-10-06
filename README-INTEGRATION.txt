@@ -12,3 +12,5 @@ Your uploaded style.css and script.js are included unchanged.
 Upload/replace these files in the GitHub repository.
 Then open:
 https://lovecomputer.co.in/quiz.html
+
+FIX: quiz.html now contains the quiz JavaScript inline, so the 10 questions render even if quiz.js is missed during upload.
