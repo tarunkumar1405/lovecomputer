@@ -84,3 +84,24 @@ main{padding:42px 0 70px}
   .share-box{align-items:flex-start;flex-direction:column}
   .footer-grid{grid-template-columns:1fr}
 }
+
+
+/* Mobile overflow fixes — review proposal */
+html, body { max-width:100%; overflow-x:clip; }
+img, video, iframe, svg { max-width:100%; }
+.container, .article-layout, .article-content, .article-main, main, section { min-width:0; }
+.article-content { overflow-wrap:anywhere; }
+pre, .code-block { max-width:100%; overflow-x:auto; white-space:pre; }
+.lc-table-wrap { display:block; width:100%; max-width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; overscroll-behavior-x:contain; margin:1rem 0; }
+.lc-table-wrap table { width:100%; min-width:560px; border-collapse:collapse; }
+.lc-table-wrap th, .lc-table-wrap td { overflow-wrap:normal; word-break:normal; }
+@media (max-width: 700px) {
+  .container { width:min(100% - 28px, 1120px); }
+  .nav-wrap { gap:10px; }
+  .logo { font-size:1.12rem; }
+  .article-layout { grid-template-columns:minmax(0,1fr) !important; }
+  .article-content { min-width:0; padding:20px 16px; }
+  .article-content h1 { font-size:clamp(1.65rem,7vw,2.25rem); line-height:1.2; overflow-wrap:anywhere; }
+  .article-content h2 { font-size:clamp(1.25rem,5vw,1.65rem); }
+  .article-content p, .article-content li { overflow-wrap:anywhere; }
+}

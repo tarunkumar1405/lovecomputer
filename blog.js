@@ -1,24 +1,10 @@
 function toggleMenu() {
     const nav = document.querySelector(".nav-links");
-
+    const button = document.querySelector(".menu");
     if (!nav) return;
-
-    const isOpen = nav.style.display === "flex";
-
-    nav.style.display = isOpen ? "none" : "flex";
-
-    if (!isOpen) {
-        nav.style.position = "absolute";
-        nav.style.top = "72px";
-        nav.style.left = "0";
-        nav.style.right = "0";
-        nav.style.background = "#fff";
-        nav.style.padding = "20px";
-        nav.style.flexDirection = "column";
-        nav.style.borderBottom = "1px solid #e7ebf2";
-    }
+    const isOpen = nav.classList.toggle("is-open");
+    if (button) button.setAttribute("aria-expanded", String(isOpen));
 }
-
 
 function filterPosts() {
     const input = document.getElementById("blogSearch");

@@ -434,3 +434,23 @@ footer a:hover{color:white}
   .footer-grid{grid-template-columns:1fr}
   .ad-container{min-height:90px}
 }
+
+
+/* Mobile layout safeguards — review proposal */
+html, body { max-width:100%; overflow-x:clip; }
+img, video, iframe { max-width:100%; }
+.container, main, section, .post-grid, .post-card, .post-body, .featured-post, .newsletter-box { min-width:0; }
+.post-card, .post-body, .featured-content { overflow-wrap:anywhere; }
+pre, code { max-width:100%; overflow-wrap:anywhere; }
+@media (max-width:900px) {
+  .nav { position:relative; }
+  .nav-links { display:none; position:absolute; top:100%; left:0; right:0; z-index:200; background:#fff; padding:16px 20px; flex-direction:column; align-items:flex-start; gap:14px; box-shadow:0 12px 20px rgba(16,24,40,.12); }
+  .nav-links.is-open { display:flex; }
+  .menu { display:block; }
+}
+@media (max-width:560px) {
+  .container { width:calc(100% - 28px); }
+  .hero h1, .blog-hero h1 { font-size:clamp(1.8rem,8vw,2.5rem); overflow-wrap:anywhere; }
+  .featured-content { padding:22px; }
+  .newsletter-box { padding:22px; }
+}
