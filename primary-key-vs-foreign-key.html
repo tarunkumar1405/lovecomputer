@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico">
+<meta name="description" content="Learn primary keys and foreign keys, how they differ, how relationships work, and practical SQL examples for database interviews.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://lovecomputer.co.in/primary-key-vs-foreign-key.html">
+<title>Primary Key vs Foreign Key with SQL Examples | LOVE COMPUTER</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9046404486667166" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="article.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Primary Key vs Foreign Key with SQL Examples",
+  "description": "Learn primary keys and foreign keys, how they differ, how relationships work, and practical SQL examples for database interviews.",
+  "mainEntityOfPage": "https://lovecomputer.co.in/primary-key-vs-foreign-key.html",
+  "publisher": {"@type":"Organization","name":"LOVE COMPUTER","url":"https://lovecomputer.co.in/"}
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="logo">LOVE <span>COMPUTER</span></a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a><a href="blog.html">Blog</a><a href="articles.html">Articles</a>
+      <div class="dropdown"><button class="drop-btn" type="button">Databases ▾</button><div class="dropdown-menu"><a href="mysql.html">MySQL</a><a href="postgresql.html">PostgreSQL</a><a href="sql.html">SQL</a><a href="database-administration.html">Database Administration</a></div></div>
+      <div class="dropdown"><button class="drop-btn" type="button">Programming ▾</button><div class="dropdown-menu"><a href="python.html">Python</a><a href="javascript.html">JavaScript</a><a href="php.html">PHP</a><a href="nodejs.html">Node.js</a></div></div>
+      <a href="about.html">About</a><a href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu" type="button">☰</button>
+  </div>
+</header>
+<main><div class="container article-layout">
+<article class="article-content">
+  <div class="breadcrumb"><a href="articles.html">Articles</a><span>›</span><span>Databases</span></div>
+  <header class="article-header">
+    <span class="article-category">DATABASES</span>
+    <h1>Primary Key vs Foreign Key with SQL Examples</h1>
+    <p class="article-intro">Keys help relational databases identify rows and maintain relationships between tables. A primary key identifies rows in a table, while a foreign key links rows to a key in another or the same table.</p>
+    <div class="article-meta"><span>LOVE COMPUTER</span><span>•</span><span>Practical Tutorial</span></div>
+  </header>
+  <div class="article-ad"><span>ADVERTISEMENT</span></div>
+  <h2>What is a primary key?</h2><p>A primary key uniquely identifies each row in a table. Its values must be unique and cannot be NULL. A table has one primary-key constraint, which can contain one column or multiple columns (a composite key). A primary key may be a natural value, such as a carefully governed code, or a generated identifier.</p><h2>What is a foreign key?</h2><p>A foreign key is a constraint that enforces a relationship between rows. It references a primary key or another eligible unique key in the referenced table. It prevents a row from pointing to a parent record that does not exist, subject to the constraint and database behavior.</p><h2>Example: customers and orders</h2><pre><code>CREATE TABLE customers (
+  customer_id INT PRIMARY KEY,
+  customer_name VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE orders (
+  order_id INT PRIMARY KEY,
+  customer_id INT NOT NULL,
+  order_date DATE NOT NULL,
+  FOREIGN KEY (customer_id)
+    REFERENCES customers(customer_id)
+);</code></pre><p>Here, <code>customers.customer_id</code> is the primary key. <code>orders.order_id</code> is the primary key for orders, while <code>orders.customer_id</code> is a foreign key linking each order to a customer. Many orders can refer to the same customer.</p><h2>Primary key vs foreign key</h2><div class="lc-table-wrap"><table><thead><tr><th>Feature</th><th>Primary key</th><th>Foreign key</th></tr></thead><tbody><tr><td>Main purpose</td><td>Uniquely identifies a row</td><td>Enforces a relationship</td></tr><tr><td>Duplicate values</td><td>Not allowed</td><td>Allowed unless another constraint prevents them</td></tr><tr><td>NULL values</td><td>Not allowed</td><td>May be allowed if the column/constraint permits it</td></tr><tr><td>How many per table?</td><td>One primary-key constraint</td><td>Can have multiple foreign-key constraints</td></tr><tr><td>Index behavior</td><td>Usually backed by a unique index</td><td>Indexing the referencing columns is often beneficial; behavior varies by DBMS</td></tr></tbody></table></div><h2>What happens if a referenced customer is deleted?</h2><p>The foreign-key constraint defines or relies on a referential action. Common choices include restricting the delete, cascading it to related rows, or setting the foreign key to NULL (if allowed). Choose carefully: cascading deletes can be convenient but may remove more data than expected.</p><pre><code>FOREIGN KEY (customer_id)
+  REFERENCES customers(customer_id)
+  ON DELETE RESTRICT</code></pre><p>The supported actions and defaults vary by database. Always check the target DBMS documentation and test the behavior before applying a schema change.</p><h2>Composite keys and nullable foreign keys</h2><p>A composite primary key uses more than one column when the combination uniquely identifies a row, such as <code>(student_id, course_id)</code> in an enrollment table. A foreign key can also contain multiple columns. In many relational systems, a nullable foreign-key column can be NULL when a relationship is optional; exact composite-NULL rules depend on the database and constraint options.</p><h2>Best practices</h2><ul><li>Define primary keys explicitly for tables that represent entities.</li><li>Use matching compatible data types for referenced and referencing columns.</li><li>Index foreign-key columns when joins and parent-row checks need it.</li><li>Decide delete/update actions based on business rules, not convenience alone.</li><li>Use constraints to enforce integrity in the database rather than relying only on application code.</li></ul><h2>Frequently asked questions</h2><h3>Can a table have two primary keys?</h3><p>A table has one primary-key constraint, but that constraint can consist of multiple columns. A table can also have additional unique constraints.</p><h3>Can a foreign key contain duplicate values?</h3><p>Yes. Multiple child rows can normally reference the same parent row, which is how one-to-many relationships work.</p><h3>Can a foreign key be NULL?</h3><p>Yes, if the column permits NULL and the relationship is optional. A NOT NULL constraint prevents it.</p><h3>Does a foreign key automatically create an index?</h3><p>Behavior differs by database engine. Some engines create or require supporting indexes in certain cases; verify the specific DBMS behavior.</p><h3>Can a foreign key reference a non-primary column?</h3><p>Often it can reference a suitable unique key, depending on the database's requirements.</p><h3>Why use foreign keys?</h3><p>They protect referential integrity, helping prevent orphaned child records and inconsistent relationships.</p>
+
+  <p class="article-note"><strong>Learning tip:</strong> Try the examples in a test project before using them in production. Check official documentation for behavior that depends on a tool, database, or version.</p>
+  <div class="article-tags">
+    <a href="articles.html">Articles</a>
+    <a href="blog.html">Blog</a>
+    <a href="mysql.html">Databases</a>
+  </div>
+  <div class="share-box"><strong>Share this article</strong><div class="share-buttons"><button type="button" onclick="shareArticle()">Share</button></div></div>
+</article>
+<aside class="sidebar">
+  <div class="sidebar-box search-box">
+    <h3>Search Blog</h3>
+    <form id="blogSearch"><input type="search" id="searchInput" placeholder="Search articles..." aria-label="Search articles"><button type="submit">Search</button></form>
+  </div>
+  <div class="sidebar-box">
+    <div class="sidebar-heading"><h3>Related Tutorials</h3><a href="articles.html">View All</a></div>
+    <ul class="blog-list"><li><a href="sql-vs-mysql.html">SQL vs MySQL</a></li><li><a href="delete-vs-truncate-vs-drop.html">DELETE vs TRUNCATE vs DROP</a></li><li><a href="mysql.html">MySQL Tutorial</a></li></ul>
+  </div>
+  <div class="sidebar-box">
+    <div class="sidebar-heading"><h3>Latest &amp; Popular</h3><a href="blog.html">View Blog</a></div>
+    <ul class="blog-list"><li><a href="improve-sql-skills.html">How to Improve Your SQL Skills</a></li>
+      <li><a href="mysql.html">MySQL Tutorials</a></li>
+      <li><a href="postgresql.html">PostgreSQL Tutorials</a></li>
+      <li><a href="sql.html">SQL Tutorials</a></li>
+      <li><a href="articles.html">All Articles</a></li></ul>
+  </div>
+  <div class="sidebar-box"><h3>Explore</h3><div class="category-list">
+    <a href="mysql.html">MySQL</a><a href="postgresql.html">PostgreSQL</a><a href="sql.html">SQL</a><a href="javascript.html">JavaScript</a><a href="articles.html">All Articles</a>
+  </div></div>
+  <div class="sidebar-ad"><span>ADVERTISEMENT</span></div>
+</aside>
+</div></main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><div class="footer-logo">LOVE COMPUTER</div><p>Simple, practical technology tutorials and articles.</p></div>
+    <div><h4>Quick Links</h4><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="articles.html">Articles</a><a href="contact.html">Contact</a></div>
+    <div><h4>Topics</h4><a href="mysql.html">MySQL</a><a href="sql.html">SQL</a><a href="computer-problems.html">Computer Problems</a></div>
+  </div>
+  <div class="footer-bottom">© <span id="year"></span> LOVE COMPUTER. All rights reserved.</div>
+</footer>
+<script>window.articleShareText = "Primary Key vs Foreign Key with SQL Examples";</script>
+<script src="article.js"></script>
+</body>
+</html>

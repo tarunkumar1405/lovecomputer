@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico">
+<meta name="description" content="Understand URL, URI, and URN with simple definitions, examples, a comparison table, and frequently asked questions for web development interviews.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://lovecomputer.co.in/url-vs-uri-vs-urn.html">
+<title>URL vs URI vs URN: Key Differences with Examples | LOVE COMPUTER</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9046404486667166" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="article.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "URL vs URI vs URN: Key Differences with Examples",
+  "description": "Understand URL, URI, and URN with simple definitions, examples, a comparison table, and frequently asked questions for web development interviews.",
+  "mainEntityOfPage": "https://lovecomputer.co.in/url-vs-uri-vs-urn.html",
+  "publisher": {"@type":"Organization","name":"LOVE COMPUTER","url":"https://lovecomputer.co.in/"}
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="logo">LOVE <span>COMPUTER</span></a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a><a href="blog.html">Blog</a><a href="articles.html">Articles</a>
+      <div class="dropdown"><button class="drop-btn" type="button">Databases ▾</button><div class="dropdown-menu"><a href="mysql.html">MySQL</a><a href="postgresql.html">PostgreSQL</a><a href="sql.html">SQL</a><a href="database-administration.html">Database Administration</a></div></div>
+      <div class="dropdown"><button class="drop-btn" type="button">Programming ▾</button><div class="dropdown-menu"><a href="python.html">Python</a><a href="javascript.html">JavaScript</a><a href="php.html">PHP</a><a href="nodejs.html">Node.js</a></div></div>
+      <a href="about.html">About</a><a href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu" type="button">☰</button>
+  </div>
+</header>
+<main><div class="container article-layout">
+<article class="article-content">
+  <div class="breadcrumb"><a href="articles.html">Articles</a><span>›</span><span>Web Development</span></div>
+  <header class="article-header">
+    <span class="article-category">WEB DEVELOPMENT</span>
+    <h1>URL vs URI vs URN: Key Differences with Examples</h1>
+    <p class="article-intro">URL, URI, and URN are terms used to identify resources. They are related, but they do not mean exactly the same thing. This guide explains each term with practical examples.</p>
+    <div class="article-meta"><span>LOVE COMPUTER</span><span>•</span><span>Practical Tutorial</span></div>
+  </header>
+  <div class="article-ad"><span>ADVERTISEMENT</span></div>
+  <h2>Start with the resource: what are you identifying?</h2><p>Web applications work with resources such as a web page, image, API endpoint, book record, or document. A URI (Uniform Resource Identifier) is the general term for a string that identifies a resource. URL and URN describe different ways an identifier can work.</p><h2>What is a URI?</h2><p>A URI identifies a resource according to a defined syntax. It does not, by itself, promise that a browser can open the value. Some URIs identify a network location; others identify a resource using a name or another scheme.</p><h2>What is a URL?</h2><p>A URL (Uniform Resource Locator) is a URI that describes where a resource can be found and the mechanism used to access it. For example:</p><pre><code>https://www.example.com:443/products?id=42#details</code></pre><p>Breakdown: <code>https</code> is the scheme; <code>www.example.com</code> is the host; <code>443</code> is the port; <code>/products</code> is the path; <code>?id=42</code> is the query; and <code>#details</code> is the fragment. The default HTTPS port is 443, so browsers commonly omit it.</p><h2>What is a URN?</h2><p>A URN (Uniform Resource Name) identifies a resource by a persistent name within a namespace rather than by telling you its current network location. An example is <code>urn:isbn:9780131103627</code>, which illustrates an ISBN-style name. A URN does not automatically provide a web page to open.</p><h2>Comparison at a glance</h2><div class="lc-table-wrap"><table><thead><tr><th>Term</th><th>Purpose</th><th>Example</th><th>Does it tell you where to fetch it?</th></tr></thead><tbody><tr><td>URI</td><td>General resource identifier</td><td><code>https://example.com/a</code></td><td>Depends on the URI type</td></tr><tr><td>URL</td><td>Identifies a location/access method</td><td><code>https://example.com/a</code></td><td>Usually, yes</td></tr><tr><td>URN</td><td>Identifies by a namespace-based name</td><td><code>urn:isbn:9780131103627</code></td><td>Not by itself</td></tr></tbody></table></div><h2>How to remember the difference</h2><ul><li><strong>URI:</strong> the umbrella term—an identifier.</li><li><strong>URL:</strong> an identifier that describes how/where to access the resource.</li><li><strong>URN:</strong> an identifier based on a name, intended to remain meaningful even if location changes.</li></ul><p>In everyday web development, people often say “URL” when they mean a web address. In specifications and API design, “URI” may be used when the broader concept is intended.</p><h2>Common mistakes</h2><ul><li>Assuming every URI can be pasted into a browser and opened.</li><li>Thinking URL and URI are competing formats. A URL is a kind of URI.</li><li>Assuming a URN automatically resolves to a current location. Resolution requires a separate system or service.</li></ul><h2>Interview quick check</h2><p><strong>Question:</strong> Is every URL a URI? <strong>Answer:</strong> Yes, under the usual terminology, a URL is a type of URI. Is every URI a URL? No; the URI category is broader.</p><h2>Frequently asked questions</h2><h3>Is URL the same as URI?</h3><p>No. URL is a subset/type of URI focused on location and access, while URI is the broader identifier concept.</p><h3>Can a URI be a URL and a URN?</h3><p>URI is the umbrella category. URL and URN are commonly described as different URI forms, with different purposes.</p><h3>Does a URN need the internet?</h3><p>The identifier string itself does not necessarily require a live internet location. Finding a resource from it may require a resolver or registry.</p><h3>Why do developers use the word URI in APIs?</h3><p>It can be a standards-oriented, broader term when the exact identifier is not necessarily a browser-oriented URL.</p><h3>What is a URL example?</h3><p><code>https://example.com/products?id=42</code> is a URL example with a scheme, host, path, and query string.</p><h3>Which term should I use in documentation?</h3><p>Use “URL” for a web address users can visit. Use “URI” when discussing identifiers generally, and define the term if precision matters.</p>
+
+  <p class="article-note"><strong>Learning tip:</strong> Try the examples in a test project before using them in production. Check official documentation for behavior that depends on a tool, database, or version.</p>
+  <div class="article-tags">
+    <a href="articles.html">Articles</a>
+    <a href="blog.html">Blog</a>
+    <a href="mysql.html">Databases</a>
+  </div>
+  <div class="share-box"><strong>Share this article</strong><div class="share-buttons"><button type="button" onclick="shareArticle()">Share</button></div></div>
+</article>
+<aside class="sidebar">
+  <div class="sidebar-box search-box">
+    <h3>Search Blog</h3>
+    <form id="blogSearch"><input type="search" id="searchInput" placeholder="Search articles..." aria-label="Search articles"><button type="submit">Search</button></form>
+  </div>
+  <div class="sidebar-box">
+    <div class="sidebar-heading"><h3>Related Tutorials</h3><a href="articles.html">View All</a></div>
+    <ul class="blog-list"><li><a href="http-vs-https.html">HTTP vs HTTPS</a></li><li><a href="domain-vs-url-vs-ip-address.html">Domain Name vs URL vs IP Address</a></li><li><a href="api-vs-rest-api.html">API vs REST API</a></li></ul>
+  </div>
+  <div class="sidebar-box">
+    <div class="sidebar-heading"><h3>Latest &amp; Popular</h3><a href="blog.html">View Blog</a></div>
+    <ul class="blog-list"><li><a href="improve-sql-skills.html">How to Improve Your SQL Skills</a></li>
+      <li><a href="mysql.html">MySQL Tutorials</a></li>
+      <li><a href="postgresql.html">PostgreSQL Tutorials</a></li>
+      <li><a href="sql.html">SQL Tutorials</a></li>
+      <li><a href="articles.html">All Articles</a></li></ul>
+  </div>
+  <div class="sidebar-box"><h3>Explore</h3><div class="category-list">
+    <a href="mysql.html">MySQL</a><a href="postgresql.html">PostgreSQL</a><a href="sql.html">SQL</a><a href="javascript.html">JavaScript</a><a href="articles.html">All Articles</a>
+  </div></div>
+  <div class="sidebar-ad"><span>ADVERTISEMENT</span></div>
+</aside>
+</div></main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><div class="footer-logo">LOVE COMPUTER</div><p>Simple, practical technology tutorials and articles.</p></div>
+    <div><h4>Quick Links</h4><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="articles.html">Articles</a><a href="contact.html">Contact</a></div>
+    <div><h4>Topics</h4><a href="mysql.html">MySQL</a><a href="sql.html">SQL</a><a href="computer-problems.html">Computer Problems</a></div>
+  </div>
+  <div class="footer-bottom">© <span id="year"></span> LOVE COMPUTER. All rights reserved.</div>
+</footer>
+<script>window.articleShareText = "URL vs URI vs URN: Key Differences with Examples";</script>
+<script src="article.js"></script>
+</body>
+</html>

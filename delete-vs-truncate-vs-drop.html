@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico">
+<meta name="description" content="Compare DELETE, TRUNCATE, and DROP in SQL with examples, transaction considerations, and database interview FAQs.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://lovecomputer.co.in/delete-vs-truncate-vs-drop.html">
+<title>DELETE vs TRUNCATE vs DROP in SQL | LOVE COMPUTER</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9046404486667166" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="article.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "DELETE vs TRUNCATE vs DROP in SQL",
+  "description": "Compare DELETE, TRUNCATE, and DROP in SQL with examples, transaction considerations, and database interview FAQs.",
+  "mainEntityOfPage": "https://lovecomputer.co.in/delete-vs-truncate-vs-drop.html",
+  "publisher": {"@type":"Organization","name":"LOVE COMPUTER","url":"https://lovecomputer.co.in/"}
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="logo">LOVE <span>COMPUTER</span></a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a><a href="blog.html">Blog</a><a href="articles.html">Articles</a>
+      <div class="dropdown"><button class="drop-btn" type="button">Databases ▾</button><div class="dropdown-menu"><a href="mysql.html">MySQL</a><a href="postgresql.html">PostgreSQL</a><a href="sql.html">SQL</a><a href="database-administration.html">Database Administration</a></div></div>
+      <div class="dropdown"><button class="drop-btn" type="button">Programming ▾</button><div class="dropdown-menu"><a href="python.html">Python</a><a href="javascript.html">JavaScript</a><a href="php.html">PHP</a><a href="nodejs.html">Node.js</a></div></div>
+      <a href="about.html">About</a><a href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu" type="button">☰</button>
+  </div>
+</header>
+<main><div class="container article-layout">
+<article class="article-content">
+  <div class="breadcrumb"><a href="articles.html">Articles</a><span>›</span><span>Databases</span></div>
+  <header class="article-header">
+    <span class="article-category">DATABASES</span>
+    <h1>DELETE vs TRUNCATE vs DROP in SQL</h1>
+    <p class="article-intro">DELETE, TRUNCATE, and DROP all affect data, but they operate differently. Exact behavior can vary between database systems, so verify the rules for your chosen RDBMS before running destructive commands.</p>
+    <div class="article-meta"><span>LOVE COMPUTER</span><span>•</span><span>Practical Tutorial</span></div>
+  </header>
+  <div class="article-ad"><span>ADVERTISEMENT</span></div>
+  <h2>Three commands with very different consequences</h2><p><code>DELETE</code>, <code>TRUNCATE</code>, and <code>DROP</code> all remove something, but at different levels. DELETE removes selected rows; TRUNCATE removes all rows while keeping the table structure; DROP removes the table object itself. Exact transaction, identity-reset, trigger, and locking behavior depends on the database system.</p><h2>DELETE</h2><p>DELETE is a Data Manipulation Language (DML) statement that removes rows. Use a WHERE clause when you only want to remove selected records.</p><pre><code>DELETE FROM employees
+WHERE department = 'Temporary';</code></pre><p>Without a WHERE clause, DELETE targets every row in the table. In transactional engines, the operation can often be rolled back before commit. Row-level triggers and logging behavior depend on the DBMS.</p><h2>TRUNCATE</h2><p>TRUNCATE is generally used to empty a table quickly while retaining its table definition. It commonly has less row-by-row overhead than deleting every row, but it is not interchangeable with DELETE in every situation. Foreign-key dependencies may prevent truncation unless related tables are handled appropriately.</p><pre><code>TRUNCATE TABLE staging_import;</code></pre><p>In MySQL, TRUNCATE TABLE is treated as DDL and causes an implicit commit; it is not generally rollbackable like a normal InnoDB DELETE transaction. PostgreSQL supports transactional TRUNCATE, so it can be rolled back within a transaction. Identity/auto-increment behavior and options also differ between systems.</p><h2>DROP</h2><p>DROP TABLE removes the table definition and its data, along with table-associated objects according to the database's dependency rules. It is a schema change, not merely a way to clear rows.</p><pre><code>DROP TABLE old_import_table;</code></pre><p>Depending on the database, dependencies may block the command unless you explicitly handle them. Avoid options that cascade to dependent objects unless you fully understand the impact.</p><h2>Comparison table</h2><div class="lc-table-wrap"><table><thead><tr><th>Feature</th><th>DELETE</th><th>TRUNCATE</th><th>DROP</th></tr></thead><tbody><tr><td>Removes rows</td><td>Yes, selected or all</td><td>All rows</td><td>Removes table and its rows</td></tr><tr><td>Table structure remains</td><td>Yes</td><td>Yes</td><td>No</td></tr><tr><td>WHERE clause</td><td>Supported</td><td>Not supported</td><td>Not applicable</td></tr><tr><td>Typical category</td><td>DML</td><td>Often DDL-like</td><td>DDL</td></tr><tr><td>Rollback</td><td>Often possible before commit in a transaction</td><td>DBMS-specific</td><td>DBMS-specific; may implicitly commit</td></tr><tr><td>Triggers</td><td>Delete triggers may fire</td><td>Behavior differs; do not assume row DELETE triggers fire</td><td>Drop/dependency behavior is DBMS-specific</td></tr><tr><td>Best use</td><td>Remove selected records</td><td>Empty a table but keep it</td><td>Remove a table object</td></tr></tbody></table></div><h2>How to choose safely</h2><ol><li>Confirm the environment and database name before running destructive SQL.</li><li>For selected rows, run a SELECT with the same WHERE clause first.</li><li>Use a transaction where supported, and verify the database's DDL transaction behavior.</li><li>Take or verify a recoverable backup before bulk changes.</li><li>Check foreign keys, triggers, identity counters, and downstream jobs.</li><li>Run the statement with the least destructive scope that meets the requirement.</li></ol><h2>Example: preview before deleting</h2><pre><code>-- Preview the target rows first
+SELECT *
+FROM employees
+WHERE department = 'Temporary';
+
+-- Only after verifying the result:
+DELETE FROM employees
+WHERE department = 'Temporary';</code></pre><h2>Important MySQL and PostgreSQL differences</h2><p>Do not assume that TRUNCATE and DROP behave identically across engines. MySQL TRUNCATE causes an implicit commit and typically resets AUTO_INCREMENT. PostgreSQL TRUNCATE is transactional, supports options such as RESTART IDENTITY, and can specify CASCADE (which should be used cautiously). Exact behavior can also vary with table type, constraints, and version. Check the documentation for the database and version you operate.</p><h2>Frequently asked questions</h2><h3>Which is fastest?</h3><p>TRUNCATE is often efficient for emptying a whole table, but performance depends on the database, constraints, storage engine, and workload. Speed is not a reason to ignore transaction or dependency behavior.</p><h3>Can DELETE remove all rows?</h3><p>Yes. <code>DELETE FROM table_name;</code> removes all rows if permitted, but the table remains.</p><h3>Can I roll back TRUNCATE?</h3><p>It depends on the DBMS. PostgreSQL supports transactional TRUNCATE; MySQL TRUNCATE causes an implicit commit and is not generally rollbackable like a transactional DELETE.</p><h3>Does TRUNCATE reset AUTO_INCREMENT?</h3><p>MySQL typically resets the AUTO_INCREMENT counter. Other systems have different identity behavior and options.</p><h3>Does DROP TABLE delete the database?</h3><p>No. DROP TABLE removes a table. Dropping a database/schema is a separate, broader operation.</p><h3>What is safest for production?</h3><p>There is no universally safe destructive command. Confirm scope, dependencies, backup/recovery, permissions, and rollback options before execution.</p>
+
+  <p class="article-note"><strong>Learning tip:</strong> Try the examples in a test project before using them in production. Check official documentation for behavior that depends on a tool, database, or version.</p>
+  <div class="article-tags">
+    <a href="articles.html">Articles</a>
+    <a href="blog.html">Blog</a>
+    <a href="mysql.html">Databases</a>
+  </div>
+  <div class="share-box"><strong>Share this article</strong><div class="share-buttons"><button type="button" onclick="shareArticle()">Share</button></div></div>
+</article>
+<aside class="sidebar">
+  <div class="sidebar-box search-box">
+    <h3>Search Blog</h3>
+    <form id="blogSearch"><input type="search" id="searchInput" placeholder="Search articles..." aria-label="Search articles"><button type="submit">Search</button></form>
+  </div>
+  <div class="sidebar-box">
+    <div class="sidebar-heading"><h3>Related Tutorials</h3><a href="articles.html">View All</a></div>
+    <ul class="blog-list"><li><a href="sql-vs-mysql.html">SQL vs MySQL</a></li><li><a href="primary-key-vs-foreign-key.html">Primary Key vs Foreign Key</a></li><li><a href="mysql.html">MySQL Tutorial</a></li></ul>
+  </div>
+  <div class="sidebar-box">
+    <div class="sidebar-heading"><h3>Latest &amp; Popular</h3><a href="blog.html">View Blog</a></div>
+    <ul class="blog-list"><li><a href="improve-sql-skills.html">How to Improve Your SQL Skills</a></li>
+      <li><a href="mysql.html">MySQL Tutorials</a></li>
+      <li><a href="postgresql.html">PostgreSQL Tutorials</a></li>
+      <li><a href="sql.html">SQL Tutorials</a></li>
+      <li><a href="articles.html">All Articles</a></li></ul>
+  </div>
+  <div class="sidebar-box"><h3>Explore</h3><div class="category-list">
+    <a href="mysql.html">MySQL</a><a href="postgresql.html">PostgreSQL</a><a href="sql.html">SQL</a><a href="javascript.html">JavaScript</a><a href="articles.html">All Articles</a>
+  </div></div>
+  <div class="sidebar-ad"><span>ADVERTISEMENT</span></div>
+</aside>
+</div></main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><div class="footer-logo">LOVE COMPUTER</div><p>Simple, practical technology tutorials and articles.</p></div>
+    <div><h4>Quick Links</h4><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="articles.html">Articles</a><a href="contact.html">Contact</a></div>
+    <div><h4>Topics</h4><a href="mysql.html">MySQL</a><a href="sql.html">SQL</a><a href="computer-problems.html">Computer Problems</a></div>
+  </div>
+  <div class="footer-bottom">© <span id="year"></span> LOVE COMPUTER. All rights reserved.</div>
+</footer>
+<script>window.articleShareText = "DELETE vs TRUNCATE vs DROP in SQL";</script>
+<script src="article.js"></script>
+</body>
+</html>

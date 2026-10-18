@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico">
+<meta name="description" content="Understand domain names, URLs, IP addresses, hostnames, and DNS with examples and a clear comparison table.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://lovecomputer.co.in/domain-vs-url-vs-ip-address.html">
+<title>Domain Name vs URL vs IP Address: Explained | LOVE COMPUTER</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9046404486667166" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="article.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Domain Name vs URL vs IP Address: Explained",
+  "description": "Understand domain names, URLs, IP addresses, hostnames, and DNS with examples and a clear comparison table.",
+  "mainEntityOfPage": "https://lovecomputer.co.in/domain-vs-url-vs-ip-address.html",
+  "publisher": {"@type":"Organization","name":"LOVE COMPUTER","url":"https://lovecomputer.co.in/"}
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="logo">LOVE <span>COMPUTER</span></a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a><a href="blog.html">Blog</a><a href="articles.html">Articles</a>
+      <div class="dropdown"><button class="drop-btn" type="button">Databases ▾</button><div class="dropdown-menu"><a href="mysql.html">MySQL</a><a href="postgresql.html">PostgreSQL</a><a href="sql.html">SQL</a><a href="database-administration.html">Database Administration</a></div></div>
+      <div class="dropdown"><button class="drop-btn" type="button">Programming ▾</button><div class="dropdown-menu"><a href="python.html">Python</a><a href="javascript.html">JavaScript</a><a href="php.html">PHP</a><a href="nodejs.html">Node.js</a></div></div>
+      <a href="about.html">About</a><a href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu" type="button">☰</button>
+  </div>
+</header>
+<main><div class="container article-layout">
+<article class="article-content">
+  <div class="breadcrumb"><a href="articles.html">Articles</a><span>›</span><span>Networking</span></div>
+  <header class="article-header">
+    <span class="article-category">NETWORKING</span>
+    <h1>Domain Name vs URL vs IP Address: Explained</h1>
+    <p class="article-intro">A domain name, URL, and IP address are connected concepts, but each serves a different purpose when you visit a website.</p>
+    <div class="article-meta"><span>LOVE COMPUTER</span><span>•</span><span>Practical Tutorial</span></div>
+  </header>
+  <div class="article-ad"><span>ADVERTISEMENT</span></div>
+  <h2>Three related terms, three different jobs</h2><p>A domain name, URL, and IP address are connected, but they are not interchangeable. A domain is a human-friendly name, an IP address identifies a network interface or destination, and a URL describes how to access a particular resource.</p><h2>What is a domain name?</h2><p>A domain name such as <code>example.com</code> is a readable name managed through the Domain Name System (DNS). DNS records can map a domain to IPv4 or IPv6 addresses and can point services to other destinations. A domain can have multiple addresses, and addresses can change over time.</p><h2>What is an IP address?</h2><p>An Internet Protocol (IP) address is a numeric address used to route packets across IP networks. IPv4 addresses look like <code>192.0.2.10</code>; IPv6 addresses look like <code>2001:db8::10</code>. The ranges shown here are reserved for documentation, not real public services.</p><h2>What is a URL?</h2><p>A Uniform Resource Locator identifies a resource and its access method. For example:</p><pre><code>https://example.com:443/help/article?id=7</code></pre><p>This contains the scheme (<code>https</code>), host (<code>example.com</code>), optional port (<code>443</code>), path (<code>/help/article</code>), and query (<code>id=7</code>). A URL can identify a specific page or API endpoint, not just a website.</p><h2>Comparison table</h2><div class="lc-table-wrap"><table><thead><tr><th>Item</th><th>Example</th><th>Purpose</th><th>Usually entered by a person?</th></tr></thead><tbody><tr><td>Domain</td><td><code>example.com</code></td><td>Readable name resolved through DNS</td><td>Often</td></tr><tr><td>IP address</td><td><code>192.0.2.10</code></td><td>Network-layer destination address</td><td>Less often</td></tr><tr><td>URL</td><td><code>https://example.com/help</code></td><td>Identifies a resource and access scheme</td><td>Often</td></tr></tbody></table></div><h2>How they work together</h2><ol><li>You enter a URL such as <code>https://example.com/help</code>.</li><li>The browser extracts the hostname, <code>example.com</code>.</li><li>DNS lookup finds an appropriate address for that name.</li><li>The browser connects to the server at the resolved address.</li><li>The HTTP request asks for the path <code>/help</code>, and the server responds.</li></ol><h2>Why not use an IP address for every website?</h2><p>Domains are easier to remember and make hosting flexible. One server address can host multiple websites, and a domain can be moved to another provider by changing DNS. Direct-IP access may also fail when a server relies on the requested hostname for virtual hosting or TLS certificate selection.</p><h2>Common mistakes</h2><ul><li>Calling <code>example.com</code> a full URL; it is a domain/hostname without a scheme or path.</li><li>Assuming one domain always maps to exactly one IP address.</li><li>Confusing DNS with hosting: DNS points clients toward services, while hosting runs the site or application.</li><li>Assuming an IP address identifies a person or exact physical location. Addresses can be shared, dynamic, proxied, or translated.</li></ul><h2>Frequently asked questions</h2><h3>Is a domain name the same as a URL?</h3><p>No. A domain is usually one component of a URL. A URL can also include a scheme, path, query, port, and fragment.</p><h3>Can a website have more than one IP address?</h3><p>Yes. DNS may return multiple IPv4/IPv6 addresses for availability, load distribution, or regional routing.</p><h3>Can one IP host multiple domains?</h3><p>Yes. Virtual hosting allows one server or address to serve multiple domain names.</p><h3>What does DNS do?</h3><p>DNS translates names and provides other records that help clients locate services, such as web and mail servers.</p><h3>Can I open a website by IP address?</h3><p>Sometimes, but virtual hosting and TLS certificates often require the correct hostname, so using the domain is more reliable.</p><h3>Which one should I share with users?</h3><p>Share the full HTTPS URL to a specific page. A bare domain is useful when you want people to visit the site's home page.</p>
+
+  <p class="article-note"><strong>Learning tip:</strong> Try the examples in a test project before using them in production. Check official documentation for behavior that depends on a tool, database, or version.</p>
+  <div class="article-tags">
+    <a href="articles.html">Articles</a>
+    <a href="blog.html">Blog</a>
+    <a href="mysql.html">Databases</a>
+  </div>
+  <div class="share-box"><strong>Share this article</strong><div class="share-buttons"><button type="button" onclick="shareArticle()">Share</button></div></div>
+</article>
+<aside class="sidebar">
+  <div class="sidebar-box search-box">
+    <h3>Search Blog</h3>
+    <form id="blogSearch"><input type="search" id="searchInput" placeholder="Search articles..." aria-label="Search articles"><button type="submit">Search</button></form>
+  </div>
+  <div class="sidebar-box">
+    <div class="sidebar-heading"><h3>Related Tutorials</h3><a href="articles.html">View All</a></div>
+    <ul class="blog-list"><li><a href="url-vs-uri-vs-urn.html">URL vs URI vs URN</a></li><li><a href="http-vs-https.html">HTTP vs HTTPS</a></li><li><a href="api-vs-rest-api.html">API vs REST API</a></li></ul>
+  </div>
+  <div class="sidebar-box">
+    <div class="sidebar-heading"><h3>Latest &amp; Popular</h3><a href="blog.html">View Blog</a></div>
+    <ul class="blog-list"><li><a href="improve-sql-skills.html">How to Improve Your SQL Skills</a></li>
+      <li><a href="mysql.html">MySQL Tutorials</a></li>
+      <li><a href="postgresql.html">PostgreSQL Tutorials</a></li>
+      <li><a href="sql.html">SQL Tutorials</a></li>
+      <li><a href="articles.html">All Articles</a></li></ul>
+  </div>
+  <div class="sidebar-box"><h3>Explore</h3><div class="category-list">
+    <a href="mysql.html">MySQL</a><a href="postgresql.html">PostgreSQL</a><a href="sql.html">SQL</a><a href="javascript.html">JavaScript</a><a href="articles.html">All Articles</a>
+  </div></div>
+  <div class="sidebar-ad"><span>ADVERTISEMENT</span></div>
+</aside>
+</div></main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><div class="footer-logo">LOVE COMPUTER</div><p>Simple, practical technology tutorials and articles.</p></div>
+    <div><h4>Quick Links</h4><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="articles.html">Articles</a><a href="contact.html">Contact</a></div>
+    <div><h4>Topics</h4><a href="mysql.html">MySQL</a><a href="sql.html">SQL</a><a href="computer-problems.html">Computer Problems</a></div>
+  </div>
+  <div class="footer-bottom">© <span id="year"></span> LOVE COMPUTER. All rights reserved.</div>
+</footer>
+<script>window.articleShareText = "Domain Name vs URL vs IP Address: Explained";</script>
+<script src="article.js"></script>
+</body>
+</html>

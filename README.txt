@@ -1,11 +1,9 @@
-LOVE COMPUTER — दैनिक ज्ञान परीक्षा
+LOVE COMPUTER — IMPROVED ARTICLES (CORRECT FILENAMES)
 
-• भाषा: हिंदी
-• 7 दिन के अलग-अलग सेट, हर दिन 10 प्रश्न
-• एक ही दिन में बार-बार प्रयास किया जा सकता है
-• “फिर से प्रयास करें” पर प्रश्न और विकल्प shuffle होते हैं
-• “स्कोर देखें” से अंक दिखते हैं
-• Day 8 पर Day 1 दोबारा आता है
-• Google AdSense Auto Ads का publisher code जोड़ा गया है
+Main proposed website files:
+- blog.html (proposed replacement for the existing blog.html)
+- articles.html (proposed replacement for the existing articles.html)
 
-नोट: AdSense विज्ञापन तभी दिखेंगे जब आपके AdSense खाते/साइट पर Auto Ads सक्रिय हों और Google की eligibility/review शर्तें पूरी हों। इस फाइल में केवल दिया गया publisher code इस्तेमाल किया गया है; किसी ad-slot ID का अनुमान नहीं लगाया गया है।
+10 improved tutorial pages are included in the root folder. Original listing pages are kept under original-files/ for comparison only.
+
+Review-only package. No GitHub files have been changed. Review the HTML and test internal links before publishing. When approved, copy the proposed blog.html and articles.html into the repository, replacing the existing files only after backing them up.

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico">
+<meta name="description" content="Learn what an API is, how REST APIs work, REST principles, HTTP methods, JSON responses, and interview FAQs.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://lovecomputer.co.in/api-vs-rest-api.html">
+<title>API vs REST API: Differences with Examples | LOVE COMPUTER</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9046404486667166" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="article.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "API vs REST API: Differences with Examples",
+  "description": "Learn what an API is, how REST APIs work, REST principles, HTTP methods, JSON responses, and interview FAQs.",
+  "mainEntityOfPage": "https://lovecomputer.co.in/api-vs-rest-api.html",
+  "publisher": {"@type":"Organization","name":"LOVE COMPUTER","url":"https://lovecomputer.co.in/"}
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="logo">LOVE <span>COMPUTER</span></a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a><a href="blog.html">Blog</a><a href="articles.html">Articles</a>
+      <div class="dropdown"><button class="drop-btn" type="button">Databases ▾</button><div class="dropdown-menu"><a href="mysql.html">MySQL</a><a href="postgresql.html">PostgreSQL</a><a href="sql.html">SQL</a><a href="database-administration.html">Database Administration</a></div></div>
+      <div class="dropdown"><button class="drop-btn" type="button">Programming ▾</button><div class="dropdown-menu"><a href="python.html">Python</a><a href="javascript.html">JavaScript</a><a href="php.html">PHP</a><a href="nodejs.html">Node.js</a></div></div>
+      <a href="about.html">About</a><a href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu" type="button">☰</button>
+  </div>
+</header>
+<main><div class="container article-layout">
+<article class="article-content">
+  <div class="breadcrumb"><a href="articles.html">Articles</a><span>›</span><span>Web Development</span></div>
+  <header class="article-header">
+    <span class="article-category">WEB DEVELOPMENT</span>
+    <h1>API vs REST API: Differences with Examples</h1>
+    <p class="article-intro">An API defines how software components communicate. REST is an architectural style often used to design web APIs, so a REST API is one kind of API rather than a separate alternative to all APIs.</p>
+    <div class="article-meta"><span>LOVE COMPUTER</span><span>•</span><span>Practical Tutorial</span></div>
+  </header>
+  <div class="article-ad"><span>ADVERTISEMENT</span></div>
+  <h2>What is an API?</h2><p>An API (Application Programming Interface) is a defined way for software components to communicate. It describes available operations, inputs, outputs, and rules. APIs can be local libraries, operating-system interfaces, database drivers, or network services.</p><p>For example, a payment provider may offer an API to create a payment, check its status, or issue a refund. The API contract tells developers which fields are required and what errors may occur.</p><h2>What is a REST API?</h2><p>REST (Representational State Transfer) is an architectural style for distributed systems. A REST-style web API commonly exposes resources through URLs and uses HTTP methods such as GET, POST, PUT, PATCH, and DELETE. It commonly exchanges JSON, but REST does not require JSON; representations can use other media types.</p><h2>API vs REST API</h2><div class="lc-table-wrap"><table><thead><tr><th>Aspect</th><th>API</th><th>REST API</th></tr></thead><tbody><tr><td>Meaning</td><td>General software interface</td><td>API designed around REST constraints</td></tr><tr><td>Scope</td><td>Local or remote; many styles</td><td>Usually web-based over HTTP</td></tr><tr><td>Data format</td><td>Depends on the interface</td><td>Often JSON; not restricted to it</td></tr><tr><td>Operations</td><td>Any defined interface operations</td><td>Often expressed with HTTP methods and resources</td></tr><tr><td>Examples</td><td>JavaScript API, database API, REST API</td><td><code>GET /api/products/42</code></td></tr></tbody></table></div><h2>Example: a product API</h2><p>A REST-style service might provide the following endpoints:</p><pre><code>GET    /api/products       # list products
+GET    /api/products/42    # read product 42
+POST   /api/products       # create a product
+PATCH  /api/products/42    # update selected fields
+DELETE /api/products/42    # delete product 42</code></pre><p>A successful GET request might return:</p><pre><code>{
+  "id": 42,
+  "name": "Keyboard",
+  "price": 1499
+}</code></pre><p>The endpoint and JSON are examples only; a real API must document authentication, validation, pagination, error responses, and versioning decisions.</p><h2>What makes an API RESTful?</h2><p>REST is more than “JSON over HTTP.” Its commonly discussed constraints include client-server separation, stateless requests, cacheability where appropriate, a uniform interface, a layered system, and optional code-on-demand. Real-world APIs vary in how completely they follow these constraints, so “REST-style” can be more precise than claiming every HTTP API is fully RESTful.</p><h2>When should you use a REST API?</h2><ul><li>When a browser, mobile app, and other services need a broadly supported HTTP interface.</li><li>When resources can be represented clearly and standard HTTP semantics fit the use case.</li><li>When caching, proxies, and common developer tooling are useful.</li></ul><p>Other approaches can fit better for specialized needs: GraphQL supports client-selected data shapes, WebSockets support ongoing two-way communication, and gRPC is useful for strongly typed service-to-service calls. These are not simply “better” or “worse”; requirements decide.</p><h2>Security and design checklist</h2><ul><li>Use HTTPS for traffic in transit.</li><li>Authenticate callers and authorize every protected operation.</li><li>Validate input and avoid exposing stack traces or secrets in errors.</li><li>Use suitable status codes, pagination, rate limits, and monitoring.</li><li>Document request/response schemas and breaking-change policy.</li></ul><h2>Frequently asked questions</h2><h3>Is every API a REST API?</h3><p>No. REST is one architectural style; APIs also include libraries, RPC interfaces, GraphQL APIs, SOAP services, and more.</p><h3>Does REST require JSON?</h3><p>No. JSON is common, but REST does not mandate a single representation format.</p><h3>Is an HTTP API automatically RESTful?</h3><p>No. Using HTTP does not guarantee that an API follows REST constraints or uses HTTP semantics consistently.</p><h3>What is an endpoint?</h3><p>An endpoint is a network address or route through which an API operation can be reached, often a combination of a URL path and HTTP method.</p><h3>What is the difference between API and endpoint?</h3><p>An API is the overall interface or contract; an endpoint is one reachable operation or route within that interface.</p><h3>Which is best for beginners?</h3><p>Learn HTTP basics and build a small REST-style API first. It teaches methods, status codes, JSON, validation, and authentication fundamentals.</p>
+
+  <p class="article-note"><strong>Learning tip:</strong> Try the examples in a test project before using them in production. Check official documentation for behavior that depends on a tool, database, or version.</p>
+  <div class="article-tags">
+    <a href="articles.html">Articles</a>
+    <a href="blog.html">Blog</a>
+    <a href="mysql.html">Databases</a>
+  </div>
+  <div class="share-box"><strong>Share this article</strong><div class="share-buttons"><button type="button" onclick="shareArticle()">Share</button></div></div>
+</article>
+<aside class="sidebar">
+  <div class="sidebar-box search-box">
+    <h3>Search Blog</h3>
+    <form id="blogSearch"><input type="search" id="searchInput" placeholder="Search articles..." aria-label="Search articles"><button type="submit">Search</button></form>
+  </div>
+  <div class="sidebar-box">
+    <div class="sidebar-heading"><h3>Related Tutorials</h3><a href="articles.html">View All</a></div>
+    <ul class="blog-list"><li><a href="http-methods-explained.html">HTTP Methods Explained</a></li><li><a href="json-vs-xml.html">JSON vs XML</a></li><li><a href="http-vs-https.html">HTTP vs HTTPS</a></li></ul>
+  </div>
+  <div class="sidebar-box">
+    <div class="sidebar-heading"><h3>Latest &amp; Popular</h3><a href="blog.html">View Blog</a></div>
+    <ul class="blog-list"><li><a href="improve-sql-skills.html">How to Improve Your SQL Skills</a></li>
+      <li><a href="mysql.html">MySQL Tutorials</a></li>
+      <li><a href="postgresql.html">PostgreSQL Tutorials</a></li>
+      <li><a href="sql.html">SQL Tutorials</a></li>
+      <li><a href="articles.html">All Articles</a></li></ul>
+  </div>
+  <div class="sidebar-box"><h3>Explore</h3><div class="category-list">
+    <a href="mysql.html">MySQL</a><a href="postgresql.html">PostgreSQL</a><a href="sql.html">SQL</a><a href="javascript.html">JavaScript</a><a href="articles.html">All Articles</a>
+  </div></div>
+  <div class="sidebar-ad"><span>ADVERTISEMENT</span></div>
+</aside>
+</div></main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><div class="footer-logo">LOVE COMPUTER</div><p>Simple, practical technology tutorials and articles.</p></div>
+    <div><h4>Quick Links</h4><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="articles.html">Articles</a><a href="contact.html">Contact</a></div>
+    <div><h4>Topics</h4><a href="mysql.html">MySQL</a><a href="sql.html">SQL</a><a href="computer-problems.html">Computer Problems</a></div>
+  </div>
+  <div class="footer-bottom">© <span id="year"></span> LOVE COMPUTER. All rights reserved.</div>
+</footer>
+<script>window.articleShareText = "API vs REST API: Differences with Examples";</script>
+<script src="article.js"></script>
+</body>
+</html>

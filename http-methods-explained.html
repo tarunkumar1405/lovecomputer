@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico">
+<meta name="description" content="Learn GET, POST, PUT, PATCH, and DELETE HTTP methods with examples, differences, idempotency, and API interview FAQs.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://lovecomputer.co.in/http-methods-explained.html">
+<title>HTTP Methods Explained: GET, POST, PUT, PATCH, DELETE | LOVE COMPUTER</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9046404486667166" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="article.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "HTTP Methods Explained: GET, POST, PUT, PATCH, DELETE",
+  "description": "Learn GET, POST, PUT, PATCH, and DELETE HTTP methods with examples, differences, idempotency, and API interview FAQs.",
+  "mainEntityOfPage": "https://lovecomputer.co.in/http-methods-explained.html",
+  "publisher": {"@type":"Organization","name":"LOVE COMPUTER","url":"https://lovecomputer.co.in/"}
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="logo">LOVE <span>COMPUTER</span></a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a><a href="blog.html">Blog</a><a href="articles.html">Articles</a>
+      <div class="dropdown"><button class="drop-btn" type="button">Databases ▾</button><div class="dropdown-menu"><a href="mysql.html">MySQL</a><a href="postgresql.html">PostgreSQL</a><a href="sql.html">SQL</a><a href="database-administration.html">Database Administration</a></div></div>
+      <div class="dropdown"><button class="drop-btn" type="button">Programming ▾</button><div class="dropdown-menu"><a href="python.html">Python</a><a href="javascript.html">JavaScript</a><a href="php.html">PHP</a><a href="nodejs.html">Node.js</a></div></div>
+      <a href="about.html">About</a><a href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu" type="button">☰</button>
+  </div>
+</header>
+<main><div class="container article-layout">
+<article class="article-content">
+  <div class="breadcrumb"><a href="articles.html">Articles</a><span>›</span><span>Web Development</span></div>
+  <header class="article-header">
+    <span class="article-category">WEB DEVELOPMENT</span>
+    <h1>HTTP Methods Explained: GET, POST, PUT, PATCH, DELETE</h1>
+    <p class="article-intro">HTTP methods describe the intended action for a request. Choosing the right method makes web APIs easier to understand and use consistently.</p>
+    <div class="article-meta"><span>LOVE COMPUTER</span><span>•</span><span>Practical Tutorial</span></div>
+  </header>
+  <div class="article-ad"><span>ADVERTISEMENT</span></div>
+  <h2>What is an HTTP method?</h2><p>An HTTP method indicates the intended action for a request. Methods are part of the request line and help clients, servers, caches, and proxies understand how a resource is being accessed or changed. The server still decides what operations are supported at a given route.</p><h2>Common HTTP methods</h2><div class="lc-table-wrap"><table><thead><tr><th>Method</th><th>Typical purpose</th><th>Safe?</th><th>Idempotent?</th></tr></thead><tbody><tr><td><code>GET</code></td><td>Retrieve a representation</td><td>Yes</td><td>Yes</td></tr><tr><td><code>HEAD</code></td><td>Retrieve headers without response body</td><td>Yes</td><td>Yes</td></tr><tr><td><code>POST</code></td><td>Submit data or trigger processing</td><td>No</td><td>Not generally</td></tr><tr><td><code>PUT</code></td><td>Create/replace the target representation</td><td>No</td><td>Yes</td></tr><tr><td><code>PATCH</code></td><td>Apply a partial modification</td><td>No</td><td>Not necessarily</td></tr><tr><td><code>DELETE</code></td><td>Request removal of a resource</td><td>No</td><td>Yes in intended effect</td></tr><tr><td><code>OPTIONS</code></td><td>Discover communication options</td><td>Yes</td><td>Yes</td></tr></tbody></table></div><p><strong>Safe</strong> means the method is defined as read-only in intent. <strong>Idempotent</strong> means repeating the same request has the same intended effect as making it once; responses may still differ.</p><h2>GET vs POST</h2><p>Use GET to retrieve data without changing server state. Use POST when submitting a new command or data for processing, such as creating an order or starting a search operation that is not modeled as a simple retrieval. Do not put secrets in a URL query string: URLs can appear in browser history, logs, and referrer data.</p><h2>PUT vs PATCH</h2><p>PUT generally represents replacing the target resource with the supplied representation (or creating it where the API defines that behavior). PATCH describes applying a set of changes. For example, replacing all editable profile fields could be PUT; changing only the display name could be PATCH. The exact request format is defined by the API.</p><h2>DELETE and repeated requests</h2><p>DELETE asks the server to remove the target resource. It is considered idempotent in HTTP semantics: after the resource is deleted, repeating the request should not cause an additional intended deletion effect. The server may return different status codes, such as success for the first request and not found for a later one.</p><h2>Example API routes</h2><pre><code>GET    /api/users/12       # read user
+POST   /api/users          # create user
+PUT    /api/users/12       # replace user representation
+PATCH  /api/users/12       # update selected fields
+DELETE /api/users/12       # delete user</code></pre><p>These are illustrative conventions, not a universal rule. Good APIs document supported methods, request bodies, authorization requirements, and expected status codes.</p><h2>Common status codes</h2><ul><li><code>200 OK</code>: request succeeded, often with a response body.</li><li><code>201 Created</code>: a resource was created.</li><li><code>204 No Content</code>: request succeeded and there is no response body.</li><li><code>400 Bad Request</code>: request is malformed or invalid.</li><li><code>401 Unauthorized</code>: authentication is missing or invalid.</li><li><code>403 Forbidden</code>: caller is not allowed to perform the action.</li><li><code>404 Not Found</code>: target resource was not found or is not exposed.</li><li><code>405 Method Not Allowed</code>: method is not supported for the target resource.</li></ul><h2>Best practices</h2><ul><li>Use methods according to their semantics, not merely because a framework makes one convenient.</li><li>Protect state-changing operations with authentication, authorization, validation, and appropriate CSRF defenses for cookie-based browser sessions.</li><li>Do not rely on obscurity of a URL to protect an operation.</li><li>Document whether retries are safe, especially for payment or order creation endpoints.</li></ul><h2>Frequently asked questions</h2><h3>Which HTTP methods are safe?</h3><p>GET, HEAD, OPTIONS, and TRACE are defined as safe, although many applications primarily use GET, HEAD, and OPTIONS. Servers should not attach unintended state changes to safe requests.</p><h3>Which methods are idempotent?</h3><p>GET, HEAD, PUT, DELETE, OPTIONS, and TRACE are defined as idempotent. POST and PATCH are not necessarily idempotent.</p><h3>Can GET have a request body?</h3><p>HTTP does not define generally useful semantics for GET content, and some implementations reject it. Put ordinary filters in query parameters or use a documented API design.</p><h3>Should I use POST for every API call?</h3><p>No. Choose the method that matches the operation and HTTP semantics; consistent methods make APIs easier to understand and operate.</p><h3>Does DELETE always erase data permanently?</h3><p>No. The API may soft-delete, queue deletion, or apply retention policies. The contract should explain the behavior.</p><h3>What is the difference between 401 and 403?</h3><p>401 indicates valid authentication is absent or not accepted; 403 indicates the server understood the request but refuses authorization.</p>
+
+  <p class="article-note"><strong>Learning tip:</strong> Try the examples in a test project before using them in production. Check official documentation for behavior that depends on a tool, database, or version.</p>
+  <div class="article-tags">
+    <a href="articles.html">Articles</a>
+    <a href="blog.html">Blog</a>
+    <a href="mysql.html">Databases</a>
+  </div>
+  <div class="share-box"><strong>Share this article</strong><div class="share-buttons"><button type="button" onclick="shareArticle()">Share</button></div></div>
+</article>
+<aside class="sidebar">
+  <div class="sidebar-box search-box">
+    <h3>Search Blog</h3>
+    <form id="blogSearch"><input type="search" id="searchInput" placeholder="Search articles..." aria-label="Search articles"><button type="submit">Search</button></form>
+  </div>
+  <div class="sidebar-box">
+    <div class="sidebar-heading"><h3>Related Tutorials</h3><a href="articles.html">View All</a></div>
+    <ul class="blog-list"><li><a href="api-vs-rest-api.html">API vs REST API</a></li><li><a href="http-vs-https.html">HTTP vs HTTPS</a></li><li><a href="json-vs-xml.html">JSON vs XML</a></li></ul>
+  </div>
+  <div class="sidebar-box">
+    <div class="sidebar-heading"><h3>Latest &amp; Popular</h3><a href="blog.html">View Blog</a></div>
+    <ul class="blog-list"><li><a href="improve-sql-skills.html">How to Improve Your SQL Skills</a></li>
+      <li><a href="mysql.html">MySQL Tutorials</a></li>
+      <li><a href="postgresql.html">PostgreSQL Tutorials</a></li>
+      <li><a href="sql.html">SQL Tutorials</a></li>
+      <li><a href="articles.html">All Articles</a></li></ul>
+  </div>
+  <div class="sidebar-box"><h3>Explore</h3><div class="category-list">
+    <a href="mysql.html">MySQL</a><a href="postgresql.html">PostgreSQL</a><a href="sql.html">SQL</a><a href="javascript.html">JavaScript</a><a href="articles.html">All Articles</a>
+  </div></div>
+  <div class="sidebar-ad"><span>ADVERTISEMENT</span></div>
+</aside>
+</div></main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><div class="footer-logo">LOVE COMPUTER</div><p>Simple, practical technology tutorials and articles.</p></div>
+    <div><h4>Quick Links</h4><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="articles.html">Articles</a><a href="contact.html">Contact</a></div>
+    <div><h4>Topics</h4><a href="mysql.html">MySQL</a><a href="sql.html">SQL</a><a href="computer-problems.html">Computer Problems</a></div>
+  </div>
+  <div class="footer-bottom">© <span id="year"></span> LOVE COMPUTER. All rights reserved.</div>
+</footer>
+<script>window.articleShareText = "HTTP Methods Explained: GET, POST, PUT, PATCH, DELETE";</script>
+<script src="article.js"></script>
+</body>
+</html>

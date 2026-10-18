@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico">
+<meta name="description" content="Learn the difference between HTTP and HTTPS, how TLS protects data, default ports, website security, and common interview questions.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://lovecomputer.co.in/http-vs-https.html">
+<title>HTTP vs HTTPS: Differences, Security, and Examples | LOVE COMPUTER</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9046404486667166" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="article.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "HTTP vs HTTPS: Differences, Security, and Examples",
+  "description": "Learn the difference between HTTP and HTTPS, how TLS protects data, default ports, website security, and common interview questions.",
+  "mainEntityOfPage": "https://lovecomputer.co.in/http-vs-https.html",
+  "publisher": {"@type":"Organization","name":"LOVE COMPUTER","url":"https://lovecomputer.co.in/"}
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="logo">LOVE <span>COMPUTER</span></a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a><a href="blog.html">Blog</a><a href="articles.html">Articles</a>
+      <div class="dropdown"><button class="drop-btn" type="button">Databases ▾</button><div class="dropdown-menu"><a href="mysql.html">MySQL</a><a href="postgresql.html">PostgreSQL</a><a href="sql.html">SQL</a><a href="database-administration.html">Database Administration</a></div></div>
+      <div class="dropdown"><button class="drop-btn" type="button">Programming ▾</button><div class="dropdown-menu"><a href="python.html">Python</a><a href="javascript.html">JavaScript</a><a href="php.html">PHP</a><a href="nodejs.html">Node.js</a></div></div>
+      <a href="about.html">About</a><a href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu" type="button">☰</button>
+  </div>
+</header>
+<main><div class="container article-layout">
+<article class="article-content">
+  <div class="breadcrumb"><a href="articles.html">Articles</a><span>›</span><span>Networking</span></div>
+  <header class="article-header">
+    <span class="article-category">NETWORKING</span>
+    <h1>HTTP vs HTTPS: Differences, Security, and Examples</h1>
+    <p class="article-intro">HTTP and HTTPS are protocols used to transfer information between a browser and a web server. HTTPS adds encryption and server authentication to help protect data in transit.</p>
+    <div class="article-meta"><span>LOVE COMPUTER</span><span>•</span><span>Practical Tutorial</span></div>
+  </header>
+  <div class="article-ad"><span>ADVERTISEMENT</span></div>
+  <h2>What is HTTP?</h2><p>HTTP (Hypertext Transfer Protocol) is an application-layer protocol used by clients and servers to exchange requests and responses. A browser sends a request for a page or resource; the server responds with a status code, headers, and often a body containing HTML, JSON, an image, or other data.</p><h2>What is HTTPS?</h2><p>HTTPS is HTTP carried over a connection protected by TLS (Transport Layer Security). TLS helps encrypt data in transit, detect tampering, and authenticate the server using a certificate. HTTPS does not mean the website itself is honest or that its database is secure; it protects the connection between the client and the server.</p><h2>HTTP vs HTTPS</h2><div class="lc-table-wrap"><table><thead><tr><th>Feature</th><th>HTTP</th><th>HTTPS</th></tr></thead><tbody><tr><td>Typical URL scheme</td><td><code>http://</code></td><td><code>https://</code></td></tr><tr><td>Transport protection</td><td>No TLS by default</td><td>TLS encryption and integrity</td></tr><tr><td>Server identity</td><td>No TLS certificate validation</td><td>Certificate is checked by the client</td></tr><tr><td>Default port</td><td>80</td><td>443</td></tr><tr><td>Suitable for passwords/payments</td><td>No</td><td>Required baseline, alongside other safeguards</td></tr></tbody></table></div><h2>What happens when you open an HTTPS website?</h2><ol><li>The browser resolves the domain to an IP address.</li><li>The client connects to the server, typically on port 443.</li><li>The TLS handshake negotiates security parameters and validates the certificate.</li><li>After the secure channel is established, the browser sends the HTTP request through it.</li><li>The server returns a response, which the browser processes.</li></ol><h2>Why HTTPS matters</h2><ul><li><strong>Confidentiality:</strong> helps prevent network observers from reading the page contents or credentials in transit.</li><li><strong>Integrity:</strong> helps detect unauthorized changes to transmitted data.</li><li><strong>Authentication:</strong> helps the browser confirm that it is communicating with a server presenting a valid certificate for the requested domain.</li><li><strong>Modern web features:</strong> many browser APIs require a secure context.</li></ul><h2>What HTTPS does not guarantee</h2><p>A phishing website can use HTTPS. A valid certificate does not prove that a business is trustworthy, that a page has no malware, or that data is stored safely after it reaches the server. Use secure coding, access controls, backups, patching, and appropriate monitoring too.</p><h2>How to move a site to HTTPS</h2><ol><li>Enable a valid TLS certificate with your hosting provider.</li><li>Test the HTTPS version and fix mixed-content warnings (resources still loaded over HTTP).</li><li>Update canonical URLs, internal links, sitemap entries, and external integrations where appropriate.</li><li>Configure a permanent HTTP-to-HTTPS redirect after testing.</li><li>Renew certificates automatically where possible and monitor expiry.</li></ol><h2>Common mistakes</h2><ul><li>Redirecting to HTTPS while images or scripts still load over HTTP.</li><li>Ignoring certificate renewal and expiration.</li><li>Assuming the padlock is a guarantee of business legitimacy.</li><li>Sending sensitive information before the secure connection is established.</li></ul><h2>Frequently asked questions</h2><h3>Is HTTPS slower than HTTP?</h3><p>TLS adds some setup work, but modern protocols and connection reuse make the overhead small in typical deployments. Security should not be sacrificed for a theoretical speed gain.</p><h3>Is HTTPS mandatory for a login page?</h3><p>Yes. Login credentials and session cookies must be protected in transit. In practice, serve the entire site over HTTPS.</p><h3>What is a TLS certificate?</h3><p>It is a digital certificate used to bind a domain identity to a public key and help clients authenticate the server during the TLS handshake.</p><h3>Does HTTPS stop phishing?</h3><p>No. It protects the connection, not the truthfulness of the site's content or operator.</p><h3>What are ports 80 and 443?</h3><p>They are the standard default ports for HTTP and HTTPS respectively, although servers can be configured to use other ports.</p><h3>Should HTTP redirect to HTTPS?</h3><p>For a public website, normally yes, after confirming the HTTPS site works correctly and all important URLs resolve.</p>
+
+  <p class="article-note"><strong>Learning tip:</strong> Try the examples in a test project before using them in production. Check official documentation for behavior that depends on a tool, database, or version.</p>
+  <div class="article-tags">
+    <a href="articles.html">Articles</a>
+    <a href="blog.html">Blog</a>
+    <a href="mysql.html">Databases</a>
+  </div>
+  <div class="share-box"><strong>Share this article</strong><div class="share-buttons"><button type="button" onclick="shareArticle()">Share</button></div></div>
+</article>
+<aside class="sidebar">
+  <div class="sidebar-box search-box">
+    <h3>Search Blog</h3>
+    <form id="blogSearch"><input type="search" id="searchInput" placeholder="Search articles..." aria-label="Search articles"><button type="submit">Search</button></form>
+  </div>
+  <div class="sidebar-box">
+    <div class="sidebar-heading"><h3>Related Tutorials</h3><a href="articles.html">View All</a></div>
+    <ul class="blog-list"><li><a href="url-vs-uri-vs-urn.html">URL vs URI vs URN</a></li><li><a href="domain-vs-url-vs-ip-address.html">Domain Name vs URL vs IP Address</a></li><li><a href="api-vs-rest-api.html">API vs REST API</a></li></ul>
+  </div>
+  <div class="sidebar-box">
+    <div class="sidebar-heading"><h3>Latest &amp; Popular</h3><a href="blog.html">View Blog</a></div>
+    <ul class="blog-list"><li><a href="improve-sql-skills.html">How to Improve Your SQL Skills</a></li>
+      <li><a href="mysql.html">MySQL Tutorials</a></li>
+      <li><a href="postgresql.html">PostgreSQL Tutorials</a></li>
+      <li><a href="sql.html">SQL Tutorials</a></li>
+      <li><a href="articles.html">All Articles</a></li></ul>
+  </div>
+  <div class="sidebar-box"><h3>Explore</h3><div class="category-list">
+    <a href="mysql.html">MySQL</a><a href="postgresql.html">PostgreSQL</a><a href="sql.html">SQL</a><a href="javascript.html">JavaScript</a><a href="articles.html">All Articles</a>
+  </div></div>
+  <div class="sidebar-ad"><span>ADVERTISEMENT</span></div>
+</aside>
+</div></main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><div class="footer-logo">LOVE COMPUTER</div><p>Simple, practical technology tutorials and articles.</p></div>
+    <div><h4>Quick Links</h4><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="articles.html">Articles</a><a href="contact.html">Contact</a></div>
+    <div><h4>Topics</h4><a href="mysql.html">MySQL</a><a href="sql.html">SQL</a><a href="computer-problems.html">Computer Problems</a></div>
+  </div>
+  <div class="footer-bottom">© <span id="year"></span> LOVE COMPUTER. All rights reserved.</div>
+</footer>
+<script>window.articleShareText = "HTTP vs HTTPS: Differences, Security, and Examples";</script>
+<script src="article.js"></script>
+</body>
+</html>

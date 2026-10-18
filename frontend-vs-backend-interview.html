@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico">
+<meta name="description" content="Prepare for frontend vs backend interviews with clear definitions, technology examples, comparison points, and beginner-friendly FAQs.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://lovecomputer.co.in/frontend-vs-backend-interview.html">
+<title>Frontend vs Backend Development: Interview Questions and Answers | LOVE COMPUTER</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9046404486667166" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="article.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Frontend vs Backend Development: Interview Questions and Answers",
+  "description": "Prepare for frontend vs backend interviews with clear definitions, technology examples, comparison points, and beginner-friendly FAQs.",
+  "mainEntityOfPage": "https://lovecomputer.co.in/frontend-vs-backend-interview.html",
+  "publisher": {"@type":"Organization","name":"LOVE COMPUTER","url":"https://lovecomputer.co.in/"}
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="logo">LOVE <span>COMPUTER</span></a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a><a href="blog.html">Blog</a><a href="articles.html">Articles</a>
+      <div class="dropdown"><button class="drop-btn" type="button">Databases ▾</button><div class="dropdown-menu"><a href="mysql.html">MySQL</a><a href="postgresql.html">PostgreSQL</a><a href="sql.html">SQL</a><a href="database-administration.html">Database Administration</a></div></div>
+      <div class="dropdown"><button class="drop-btn" type="button">Programming ▾</button><div class="dropdown-menu"><a href="python.html">Python</a><a href="javascript.html">JavaScript</a><a href="php.html">PHP</a><a href="nodejs.html">Node.js</a></div></div>
+      <a href="about.html">About</a><a href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu" type="button">☰</button>
+  </div>
+</header>
+<main><div class="container article-layout">
+<article class="article-content">
+  <div class="breadcrumb"><a href="articles.html">Articles</a><span>›</span><span>Interview Preparation</span></div>
+  <header class="article-header">
+    <span class="article-category">INTERVIEW PREPARATION</span>
+    <h1>Frontend vs Backend Development: Interview Questions and Answers</h1>
+    <p class="article-intro">Frontend and backend development work together to deliver a web application. Frontend development focuses on the user-facing experience, while backend development handles server-side logic, data, and integrations.</p>
+    <div class="article-meta"><span>LOVE COMPUTER</span><span>•</span><span>Practical Tutorial</span></div>
+  </header>
+  <div class="article-ad"><span>ADVERTISEMENT</span></div>
+  <h2>What is frontend development?</h2><p>Frontend development builds the part of an application that users see and interact with. It includes page structure, styling, client-side behavior, accessibility, responsive layouts, and communication with backend services. Common technologies include HTML, CSS, JavaScript, and frameworks such as React, Vue, or Angular.</p><h2>What is backend development?</h2><p>Backend development handles server-side business logic, data access, authentication and authorization, integrations, background jobs, and API behavior. Common tools include Node.js, Python, PHP, Java, .NET, SQL databases, caches, queues, and cloud infrastructure.</p><h2>Frontend vs backend</h2><div class="lc-table-wrap"><table><thead><tr><th>Area</th><th>Frontend</th><th>Backend</th></tr></thead><tbody><tr><td>Runs primarily</td><td>In the browser or client app</td><td>On servers or managed services</td></tr><tr><td>Main concern</td><td>Usability, presentation, accessibility</td><td>Business rules, data, security, reliability</td></tr><tr><td>Typical languages</td><td>HTML, CSS, JavaScript/TypeScript</td><td>JavaScript, Python, PHP, Java, C#, Go, etc.</td></tr><tr><td>Data access</td><td>Calls APIs; should not hold database secrets</td><td>Connects to databases and services securely</td></tr><tr><td>Testing examples</td><td>Component, browser, accessibility tests</td><td>Unit, integration, API, load and security tests</td></tr></tbody></table></div><h2>How do they work together?</h2><ol><li>A user fills out a form in the frontend.</li><li>The browser validates obvious input errors for usability.</li><li>The frontend sends an HTTPS request to a backend API.</li><li>The backend authenticates the user, checks permissions, validates the input again, and applies business rules.</li><li>The backend reads or writes the database and returns a response.</li><li>The frontend displays success or a helpful error message.</li></ol><p>Client-side validation improves the experience but is not a security boundary. The backend must repeat all important validation and authorization because a caller can bypass the browser interface and send requests directly.</p><h2>Interview questions with concise answers</h2><h3>1. What is the DOM?</h3><p>The Document Object Model is the browser's structured representation of a document. JavaScript can read and update DOM nodes, though frameworks often manage much of the UI update process.</p><h3>2. What is responsive design?</h3><p>Responsive design adapts layout and content to different viewport sizes and input modes using flexible layouts, media queries, and appropriate sizing.</p><h3>3. What is an API?</h3><p>An API defines how software components communicate, including operations, inputs, outputs, and errors. A frontend commonly uses an HTTP API to request backend data.</p><h3>4. What is authentication vs authorization?</h3><p>Authentication establishes who a user or service is; authorization determines what that identity is allowed to do.</p><h3>5. Why should database credentials not be placed in frontend code?</h3><p>Frontend code is delivered to users and can be inspected. Database secrets belong on the server or in a secure secret-management system.</p><h3>6. What is caching?</h3><p>Caching stores reusable data temporarily to reduce latency and work. It can occur in browsers, CDNs, application servers, or databases; cache invalidation and sensitive-data rules matter.</p><h3>7. What is CORS?</h3><p>Cross-Origin Resource Sharing is a browser-enforced mechanism through which a server declares which origins may read certain cross-origin responses. It is not a replacement for authentication or authorization.</p><h3>8. What is an HTTP status code?</h3><p>It summarizes the result of an HTTP request, such as 200 for success, 404 for not found, or 500 for a server error.</p><h2>Frontend, backend, or full stack?</h2><p>Choose frontend if you enjoy interface design, user experience, browser behavior, and accessibility. Choose backend if you enjoy data models, APIs, business rules, performance, and system reliability. Full-stack work spans both and requires understanding the boundary between them; it does not mean mastering every tool at once.</p><h2>Practical mini-project</h2><p>Build a simple task manager: create a responsive task form and list in the frontend, an API for creating/listing/updating tasks, and a database table for persistence. Add server-side validation, login, authorization so users can only access their own tasks, error handling, and tests. This small project demonstrates the real collaboration between frontend and backend work.</p><h2>Common mistakes</h2><ul><li>Trusting frontend validation without validating on the server.</li><li>Returning secrets or internal stack traces in API responses.</li><li>Confusing authentication with authorization.</li><li>Ignoring accessibility, logging, tests, or failure states.</li></ul><h2>Frequently asked questions</h2><h3>Is HTML a programming language?</h3><p>HTML is a markup language that structures content. CSS styles it, and JavaScript provides programming behavior in the browser.</p><h3>Can a frontend developer work without a backend?</h3><p>Yes, for static sites or projects using mock data and third-party services. Dynamic, user-specific data often requires a backend or managed service.</p><h3>Which career is easier?</h3><p>Neither is universally easier. The better fit depends on your interests, learning style, and the problems you enjoy solving.</p><h3>Is React frontend or backend?</h3><p>React is primarily a UI library for building frontend interfaces, though frameworks built around React may include server-side features.</p><h3>Does backend always mean a database?</h3><p>No. Some backends call external services, process messages, or perform compute tasks without a traditional database.</p><h3>What should I prepare for interviews?</h3><p>Practice fundamentals, explain trade-offs clearly, build a small project, and be ready to discuss testing, security, performance, and debugging—not just definitions.</p>
+
+  <p class="article-note"><strong>Learning tip:</strong> Try the examples in a test project before using them in production. Check official documentation for behavior that depends on a tool, database, or version.</p>
+  <div class="article-tags">
+    <a href="articles.html">Articles</a>
+    <a href="blog.html">Blog</a>
+    <a href="mysql.html">Databases</a>
+  </div>
+  <div class="share-box"><strong>Share this article</strong><div class="share-buttons"><button type="button" onclick="shareArticle()">Share</button></div></div>
+</article>
+<aside class="sidebar">
+  <div class="sidebar-box search-box">
+    <h3>Search Blog</h3>
+    <form id="blogSearch"><input type="search" id="searchInput" placeholder="Search articles..." aria-label="Search articles"><button type="submit">Search</button></form>
+  </div>
+  <div class="sidebar-box">
+    <div class="sidebar-heading"><h3>Related Tutorials</h3><a href="articles.html">View All</a></div>
+    <ul class="blog-list"><li><a href="api-vs-rest-api.html">API vs REST API</a></li><li><a href="http-methods-explained.html">HTTP Methods Explained</a></li><li><a href="javascript.html">JavaScript Tutorial</a></li><li><a href="python.html">Python Tutorial</a></li></ul>
+  </div>
+  <div class="sidebar-box">
+    <div class="sidebar-heading"><h3>Latest &amp; Popular</h3><a href="blog.html">View Blog</a></div>
+    <ul class="blog-list"><li><a href="improve-sql-skills.html">How to Improve Your SQL Skills</a></li>
+      <li><a href="mysql.html">MySQL Tutorials</a></li>
+      <li><a href="postgresql.html">PostgreSQL Tutorials</a></li>
+      <li><a href="sql.html">SQL Tutorials</a></li>
+      <li><a href="articles.html">All Articles</a></li></ul>
+  </div>
+  <div class="sidebar-box"><h3>Explore</h3><div class="category-list">
+    <a href="mysql.html">MySQL</a><a href="postgresql.html">PostgreSQL</a><a href="sql.html">SQL</a><a href="javascript.html">JavaScript</a><a href="articles.html">All Articles</a>
+  </div></div>
+  <div class="sidebar-ad"><span>ADVERTISEMENT</span></div>
+</aside>
+</div></main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><div class="footer-logo">LOVE COMPUTER</div><p>Simple, practical technology tutorials and articles.</p></div>
+    <div><h4>Quick Links</h4><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="articles.html">Articles</a><a href="contact.html">Contact</a></div>
+    <div><h4>Topics</h4><a href="mysql.html">MySQL</a><a href="sql.html">SQL</a><a href="computer-problems.html">Computer Problems</a></div>
+  </div>
+  <div class="footer-bottom">© <span id="year"></span> LOVE COMPUTER. All rights reserved.</div>
+</footer>
+<script>window.articleShareText = "Frontend vs Backend Development: Interview Questions and Answers";</script>
+<script src="article.js"></script>
+</body>
+</html>
