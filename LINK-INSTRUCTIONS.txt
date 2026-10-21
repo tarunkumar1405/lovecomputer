@@ -1,0 +1,19 @@
+LOVE COMPUTER — TYPING SPEED TEST PROPOSAL
+PROPOSED FILES ONLY. No GitHub repository was changed.
+
+Files in this package:
+1. typing-test.html — the interactive typing test page.
+2. index.html — proposed homepage update with a “Free Online Tools” section.
+3. blog.html — proposed Blog listing card linking to the typing test.
+4. LINK-INSTRUCTIONS.txt — publishing notes.
+
+Expected page URL after upload:
+https://lovecomputer.co.in/typing-test.html
+
+Publishing notes:
+- These are proposed replacements for index.html and blog.html based on the versions available for this draft.
+- Review them before uploading. Keep a backup of your current live files.
+- Upload all three HTML files to the repository root together so the relative link works.
+- The page includes the AdSense Auto Ads loader using the publisher ID already present in the supplied LOVE COMPUTER pages. Auto Ads display is controlled by AdSense; this does not guarantee an ad will appear.
+- Existing site CSS/JS filenames are retained. The typing test has its own embedded CSS and JavaScript.
+- No GitHub changes have been made.

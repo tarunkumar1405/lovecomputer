@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Free online typing speed test: measure WPM, accuracy and mistakes in 1, 3 or 5 minutes.">
+<title>Typing Speed Test | LOVE COMPUTER</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9046404486667166" crossorigin="anonymous"></script>
+<style>
+:root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#14283e;background:#f4f7fb}*{box-sizing:border-box}body{margin:0;overflow-x:hidden}a{color:inherit}header{background:#10243a;color:white;padding:19px max(18px,calc((100vw - 1050px)/2));display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}header a{text-decoration:none}.logo{font-size:22px;font-weight:800}.logo span{color:#64caff}nav{display:flex;gap:18px;flex-wrap:wrap}main{max-width:1050px;margin:auto;padding:30px 16px 55px}h1{font-size:clamp(29px,5vw,44px);margin:8px 0}h2{font-size:22px}.muted{color:#5b6d80}.panel{background:white;border:1px solid #e1e8f0;border-radius:16px;padding:clamp(16px,3vw,30px);box-shadow:0 8px 28px #112d4a0b;margin-top:22px}.settings{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.settings label{font-weight:650}select,button{font:inherit;border-radius:9px;padding:11px 15px}select{border:1px solid #b9c9d9;background:white}button{border:0;background:#1566c0;color:white;font-weight:700;cursor:pointer}button.secondary{background:#e9f0f8;color:#17334f}button:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #78baff;outline-offset:2px}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:22px 0}.stat{background:#edf5ff;padding:16px 8px;text-align:center;border-radius:12px}.stat strong{display:block;font-size:clamp(20px,4vw,31px);color:#1157a1}.stat span{font-size:13px}.sample{font-size:19px;line-height:1.9;background:#f7faff;padding:20px;border:1px solid #e0e8f2;border-radius:12px;overflow-wrap:anywhere;white-space:pre-wrap}.sample .correct{color:#128047;background:#e3f7eb}.sample .wrong{color:#c52838;background:#ffe4e7;text-decoration:underline}.sample .current{border-bottom:3px solid #2878d0}textarea{width:100%;min-height:140px;margin-top:17px;padding:16px;border:1px solid #b6c9dc;border-radius:12px;font:18px/1.6 inherit;resize:vertical}textarea:disabled{background:#f1f4f7}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.result{font-weight:700;color:#125d37;min-height:28px;margin-top:15px}@media(max-width:530px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}nav{font-size:14px}.sample{font-size:17px}}
+</style>
+</head>
+<body>
+<header><a class="logo" href="index.html">LOVE <span>COMPUTER</span></a><nav aria-label="Main navigation"><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="computer-problems.html">Computer Problems</a></nav></header>
+<main>
+<p class="muted">HOME / FREE TOOLS / TYPING SPEED TEST</p>
+<h1>Free Online Typing Speed Test</h1>
+<p class="muted">Practice English typing and measure your speed (WPM), accuracy and errors. Timer starts when you begin typing.</p>
+<section class="panel" aria-label="Typing test">
+<div class="settings"><label for="duration">Test duration</label><select id="duration"><option value="60">1 minute</option><option value="180">3 minutes</option><option value="300">5 minutes</option></select><button id="newTest" class="secondary" type="button">New passage</button></div>
+<div class="stats" aria-live="off"><div class="stat"><strong id="timer">01:00</strong><span>Time left</span></div><div class="stat"><strong id="wpm">0</strong><span>WPM</span></div><div class="stat"><strong id="accuracy">100%</strong><span>Accuracy</span></div><div class="stat"><strong id="errors">0</strong><span>Errors</span></div></div>
+<div id="sample" class="sample" aria-label="Text to type"></div>
+<label for="typing"><strong>Start typing here</strong></label>
+<textarea id="typing" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Type the passage shown above..."></textarea>
+<div class="actions"><button id="restart" type="button">Restart Test</button><button id="finish" class="secondary" type="button">Finish Test</button></div>
+<div class="result" id="result" role="status" aria-live="polite"></div>
+</section>
+<section class="panel"><h2>How is WPM calculated?</h2><p>WPM uses the standard formula: correctly typed characters ÷ 5 ÷ elapsed minutes. Accuracy is the percentage of typed characters that match the passage at the same position. Errors count mismatched characters, including extra characters.</p><p class="muted">For the best experience, use a physical keyboard. No text is uploaded to a server.</p></section>
+</main>
+<script>
+"use strict";
+const passages=[
+"Technology changes the way we learn work and communicate. Regular practice improves typing speed and accuracy. Focus on each word and try to keep a steady rhythm as you type.",
+"Learning computer skills can open new opportunities. A good typing habit begins with patience and consistent practice. Accuracy is more important than rushing through every sentence.",
+"Databases store information in an organized way. Developers write queries to retrieve and update data. Understanding basic computer concepts makes solving technical problems easier.",
+"The internet connects people and ideas around the world. When we explore new tools and learn new skills we become more confident in our daily digital tasks."
+];
+const $=id=>document.getElementById(id);
+let target="",started=null,interval=null,finished=false,seconds=60,passageIndex=-1;
+function escapeHTML(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function choosePassage(){passageIndex=(passageIndex+1)%passages.length;target=passages[passageIndex];}
+function renderSample(){const v=$("typing").value;let out="";for(let i=0;i<target.length;i++){const c=escapeHTML(target[i]);const cls=i<v.length?(v[i]===target[i]?"correct":"wrong"):(i===v.length?"current":"");out+=cls?'<span class="'+cls+'">'+c+'</span>':c;}$("sample").innerHTML=out;}
+function stats(){const v=$("typing").value;let correct=0;for(let i=0;i<v.length;i++)if(v[i]===target[i])correct++;const errors=v.length-correct;const elapsed=started===null?0:Math.min(seconds,(Date.now()-started)/1000);$("wpm").textContent=elapsed>0?Math.round(correct/5/(elapsed/60)):0;$("accuracy").textContent=(v.length?Math.round(correct/v.length*100):100)+"%";$("errors").textContent=errors;return {correct,errors};}
+function clock(){const elapsed=started===null?0:Math.floor((Date.now()-started)/1000);const left=Math.max(0,seconds-elapsed);$("timer").textContent=String(Math.floor(left/60)).padStart(2,"0")+":"+String(left%60).padStart(2,"0");stats();if(left===0&&started!==null)endTest();}
+function reset(change=false){clearInterval(interval);interval=null;started=null;finished=false;seconds=Number($("duration").value);if(change||!target)choosePassage();$("typing").value="";$("typing").disabled=false;$("result").textContent="";clock();renderSample();}
+function endTest(){if(finished)return;finished=true;clearInterval(interval);interval=null;stats();$("typing").disabled=true;$("result").textContent="Test completed! Your speed: "+$("wpm").textContent+" WPM · Accuracy: "+$("accuracy").textContent+" · Errors: "+$("errors").textContent+".";}
+$("typing").addEventListener("input",()=>{if(finished)return;if(started===null){started=Date.now();interval=setInterval(clock,200);}renderSample();stats();if($("typing").value.length>=target.length)endTest();});
+$("duration").addEventListener("change",()=>reset());
+$("restart").addEventListener("click",()=>reset());
+$("newTest").addEventListener("click",()=>reset(true));
+$("finish").addEventListener("click",()=>{if(started!==null)endTest();});
+reset(true);
+</script>
+</body></html>
