@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Free personal income and expense manager. Track daily income, expenses, savings and monthly reports privately in your browser.">
+<title>Income & Expense Manager | LOVE COMPUTER</title>
+<style>
+:root{--navy:#14213d;--blue:#2563eb;--green:#15803d;--red:#b91c1c;--gold:#f5b700;--bg:#f4f7fb;--card:#fff;--text:#182230;--muted:#657286;--border:#e1e7ef;--shadow:0 8px 24px rgba(20,33,61,.07)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.wrap{max-width:1180px;margin:auto;padding:20px}.hero{background:linear-gradient(120deg,#14213d,#1d4ed8);color:#fff;border-radius:20px;padding:26px;display:flex;justify-content:space-between;gap:18px;align-items:center;box-shadow:var(--shadow)}.brand{font-weight:800;letter-spacing:.08em;color:#bfdbfe;font-size:.8rem}.hero h1{margin:6px 0;font-size:clamp(1.6rem,4vw,2.35rem);line-height:1.15}.hero p{margin:8px 0 0;color:#e0eaff;max-width:650px}.hero-badge{white-space:nowrap;background:#ffffff1a;border:1px solid #ffffff40;border-radius:999px;padding:8px 12px;font-size:.85rem}.privacy{margin:14px 0;background:#ecfdf5;border:1px solid #bbf7d0;border-radius:12px;padding:11px 14px;color:#166534;font-size:.9rem}.section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:24px 0 12px}.section-head h2{margin:0;font-size:1.2rem}.month-control{display:flex;gap:8px;align-items:center}.month-control input{width:auto}.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.card,.panel{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;box-shadow:var(--shadow);min-width:0}.metric-label{color:var(--muted);font-size:.9rem}.metric-value{font-size:clamp(1.35rem,3vw,1.8rem);font-weight:800;margin-top:7px;overflow-wrap:anywhere}.metric-sub{font-size:.8rem;color:var(--muted);margin-top:4px}.green{color:var(--green)}.red{color:var(--red)}.blue{color:var(--blue)}.layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}.panel h2{margin:0 0 14px;font-size:1.15rem}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field{display:flex;flex-direction:column;gap:5px;min-width:0}.field.full{grid-column:1/-1}label{font-weight:650;font-size:.88rem}input,select,textarea{width:100%;min-width:0;border:1px solid #cbd5e1;border-radius:9px;padding:10px 11px;background:#fff;color:var(--text)}input:focus,select:focus,textarea:focus{outline:3px solid #bfdbfe;border-color:var(--blue)}.btn{border:0;border-radius:9px;padding:10px 14px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:7px}.btn-primary{background:var(--blue);color:#fff}.btn-dark{background:var(--navy);color:#fff}.btn-light{background:#eef2f7;color:#233047;border:1px solid var(--border)}.btn-danger{background:#fee2e2;color:#991b1b}.btn-small{padding:6px 9px;font-size:.82rem}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.hint{font-size:.82rem;color:var(--muted);margin:10px 0 0}.chart-wrap{height:230px;position:relative}.chart-wrap canvas{width:100%;height:100%;display:block}.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:.85rem;color:var(--muted);margin-top:10px}.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}.filters{display:grid;grid-template-columns:1.1fr 1fr 1fr 1.4fr auto;gap:9px;margin-bottom:12px}.table-scroll{overflow-x:auto;border:1px solid var(--border);border-radius:12px}table{border-collapse:collapse;width:100%;min-width:760px;background:#fff}th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--border);font-size:.9rem}th{background:#f8fafc;color:#475569;font-size:.82rem;white-space:nowrap}tr:last-child td{border-bottom:0}.amount{font-weight:750;white-space:nowrap}.pill{display:inline-block;border-radius:999px;padding:3px 8px;font-size:.78rem;font-weight:750}.pill-income{background:#dcfce7;color:#166534}.pill-expense{background:#fee2e2;color:#991b1b}.empty{text-align:center;color:var(--muted);padding:28px}.footer{color:var(--muted);font-size:.85rem;text-align:center;padding:26px 8px}.footer a{color:var(--blue);text-decoration:none}.hidden{display:none!important}.small-note{font-size:.83rem;color:var(--muted)}.notice{border-radius:10px;padding:10px 12px;margin-top:10px;font-size:.87rem;display:none}.notice.show{display:block}.notice.ok{background:#dcfce7;color:#166534}.notice.error{background:#fee2e2;color:#991b1b}
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.layout{grid-template-columns:1fr}.filters{grid-template-columns:repeat(2,minmax(0,1fr))}.filters .wide{grid-column:1/-1}}
+@media(max-width:560px){.wrap{padding:12px}.hero{padding:20px;display:block;border-radius:15px}.hero-badge{display:inline-block;margin-top:14px}.cards{gap:9px}.card{padding:13px}.panel{padding:14px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.section-head{align-items:flex-start;flex-direction:column}.month-control{width:100%}.month-control input{flex:1}.filters{grid-template-columns:1fr 1fr}.filters .wide{grid-column:1/-1}.metric-value{font-size:1.35rem}.actions .btn{flex:1}}
+@media print{body{background:#fff}.hero{background:#fff;color:#000;border:1px solid #ccc}.hero p,.brand{color:#333}.privacy,.form-panel,.filters,.actions,.footer,.section-head button{display:none!important}.wrap{max-width:none;padding:0}.card,.panel{box-shadow:none;break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <div><div class="brand">LOVE COMPUTER</div><h1>Income &amp; Expense Manager</h1><p>Track your money, understand your spending, and see your savings — all in one simple tool.</p></div>
+  <div class="hero-badge">✓ Free · No Login</div>
+</header>
+<div class="privacy"><strong>Privacy first:</strong> Your entries are saved in this browser on this device. They are not uploaded to LOVE COMPUTER. Export a backup regularly, especially before clearing browser data or changing devices.</div>
+
+<div class="section-head"><h2>📊 Financial Overview</h2><div class="month-control"><label for="summaryMonth">Month:</label><input type="month" id="summaryMonth"></div></div>
+<section class="cards" aria-label="Financial summary">
+  <div class="card"><div class="metric-label">Total Income</div><div class="metric-value green" id="totalIncome">₹0.00</div><div class="metric-sub">For selected month</div></div>
+  <div class="card"><div class="metric-label">Total Expenses</div><div class="metric-value red" id="totalExpense">₹0.00</div><div class="metric-sub">For selected month</div></div>
+  <div class="card"><div class="metric-label">Net Savings</div><div class="metric-value blue" id="netSavings">₹0.00</div><div class="metric-sub">Income minus expenses</div></div>
+  <div class="card"><div class="metric-label">Savings Rate</div><div class="metric-value" id="savingsRate">0%</div><div class="metric-sub">Savings as % of income</div></div>
+</section>
+
+<div class="section-head"><h2>✍️ Add a Transaction</h2><span class="small-note">All amounts in Indian Rupees (₹)</span></div>
+<section class="panel form-panel">
+  <form id="transactionForm">
+    <input type="hidden" id="editId">
+    <div class="form-grid">
+      <div class="field"><label for="type">Transaction Type *</label><select id="type" required><option value="Income">Income</option><option value="Expense">Expense</option></select></div>
+      <div class="field"><label for="date">Date *</label><input type="date" id="date" required></div>
+      <div class="field"><label for="category">Category *</label><select id="category" required></select></div>
+      <div class="field"><label for="amount">Amount (₹) *</label><input type="number" id="amount" min="0.01" step="0.01" placeholder="e.g. 1250" required></div>
+      <div class="field"><label for="description">Description *</label><input id="description" maxlength="120" placeholder="e.g. Salary, groceries, electricity bill" required></div>
+      <div class="field"><label for="payment">Payment Method</label><select id="payment"><option>UPI</option><option>Cash</option><option>Bank Transfer</option><option>Credit/Debit Card</option><option>Net Banking</option><option>Other</option></select></div>
+      <div class="field full"><label for="notes">Notes (optional)</label><textarea id="notes" rows="2" maxlength="500" placeholder="Any additional details"></textarea></div>
+    </div>
+    <div class="actions"><button class="btn btn-primary" type="submit" id="saveButton">＋ Add Transaction</button><button class="btn btn-light" type="button" id="cancelEdit" hidden>Cancel Edit</button><button class="btn btn-light" type="reset" id="clearForm">Clear Form</button></div>
+    <div id="formNotice" class="notice" role="status" aria-live="polite"></div>
+  </form>
+</section>
+
+<div class="section-head"><h2>📈 Monthly Report</h2><button class="btn btn-light" id="printReport" type="button">Print Report</button></div>
+<section class="layout">
+  <div class="panel"><h2>Income vs Expenses (Last 6 Months)</h2><div class="chart-wrap"><canvas id="barChart" aria-label="Income and expenses chart"></canvas></div><div class="legend"><span><i class="dot" style="background:#16a34a"></i>Income</span><span><i class="dot" style="background:#ef4444"></i>Expenses</span></div></div>
+  <div class="panel"><h2>Expenses by Category</h2><div class="chart-wrap"><canvas id="categoryChart" aria-label="Expenses by category chart"></canvas></div><div id="categoryLegend" class="legend"></div></div>
+</section>
+
+<div class="section-head"><h2>🧾 Transaction History</h2><div class="actions" style="margin:0"><button class="btn btn-light" id="exportCsv" type="button">⬇ Export CSV</button><button class="btn btn-light" id="exportJson" type="button">⬇ Backup JSON</button><button class="btn btn-light" id="importButton" type="button">⬆ Restore Backup</button><input class="hidden" type="file" id="importFile" accept=".json,application/json"></div></div>
+<section class="panel">
+  <div class="filters">
+    <div class="field"><label for="filterMonth">Month</label><input type="month" id="filterMonth"></div>
+    <div class="field"><label for="filterType">Type</label><select id="filterType"><option value="All">All Types</option><option>Income</option><option>Expense</option></select></div>
+    <div class="field"><label for="filterCategory">Category</label><select id="filterCategory"><option value="All">All Categories</option></select></div>
+    <div class="field wide"><label for="search">Search</label><input id="search" placeholder="Search description or notes"></div>
+    <div class="field"><label>&nbsp;</label><button class="btn btn-light" type="button" id="resetFilters">Reset</button></div>
+  </div>
+  <div class="table-scroll"><table><thead><tr><th>Date</th><th>Type</th><th>Category</th><th>Description</th><th>Payment</th><th>Amount</th><th>Actions</th></tr></thead><tbody id="transactionRows"></tbody></table><div class="empty" id="emptyState">No transactions yet. Add your first entry above.</div></div>
+  <div class="actions"><button class="btn btn-danger" id="deleteAll" type="button">Delete All My Data</button><span class="small-note" id="recordCount" style="align-self:center">0 records</span></div>
+</section>
+<div class="footer">A free tool by <a href="https://lovecomputer.co.in/" rel="noopener">LOVE COMPUTER</a> · No account required · Data stays in your browser<br><span>Tip: Download a JSON backup regularly to protect your records.</span></div>
+</div>
+<script>
+(function(){
+'use strict';
+const STORAGE_KEY='lovecomputer_income_expense_manager_v1';
+const incomeCategories=['Salary','Business','Freelance','Google AdSense','Affiliate Commission','eBook / Digital Sales','Interest','Gift','Other Income'];
+const expenseCategories=['Food & Groceries','Rent / Housing','Utilities & Bills','Travel / Fuel','Shopping','Health','Education','Entertainment','EMI / Loan','Insurance','Domain & Hosting','Software / Tools','Marketing','Other Expense'];
+const $=id=>document.getElementById(id);
+let transactions=[];
+const money=n=>new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:2}).format(Number(n)||0);
+const dateToday=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
+const monthNow=()=>dateToday().slice(0,7);
+const safeText=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function load(){try{const raw=localStorage.getItem(STORAGE_KEY);transactions=raw?JSON.parse(raw):[];if(!Array.isArray(transactions))transactions=[];}catch(e){transactions=[];}}
+function save(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(transactions));return true;}catch(e){alert('Could not save data. Your browser storage may be full or disabled. Please export a backup and try again.');return false;}}
+function setCategories(selected){const cats=$('type').value==='Income'?incomeCategories:expenseCategories;$('category').innerHTML=cats.map(c=>`<option value="${safeText(c)}">${safeText(c)}</option>`).join('');if(selected&&cats.includes(selected))$('category').value=selected;}
+function refreshFilterCategories(){const selected=$('filterCategory').value||'All';const cats=[...new Set([...incomeCategories,...expenseCategories,...transactions.map(t=>t.category)])].sort();$('filterCategory').innerHTML='<option value="All">All Categories</option>'+cats.map(c=>`<option value="${safeText(c)}">${safeText(c)}</option>`).join('');if(cats.includes(selected))$('filterCategory').value=selected;}
+function monthTransactions(month){return transactions.filter(t=>String(t.date||'').slice(0,7)===month);}
+function updateDashboard(){
+ const m=$('summaryMonth').value||monthNow(),list=monthTransactions(m);
+ const inc=list.filter(t=>t.type==='Income').reduce((a,t)=>a+Number(t.amount),0),exp=list.filter(t=>t.type==='Expense').reduce((a,t)=>a+Number(t.amount),0),net=inc-exp;
+ $('totalIncome').textContent=money(inc);$('totalExpense').textContent=money(exp);$('netSavings').textContent=money(net);$('netSavings').className='metric-value '+(net>=0?'blue':'red');$('savingsRate').textContent=(inc?((net/inc)*100).toFixed(1):'0')+'%';
+ drawBarChart();drawCategoryChart(list);
+}
+function filteredTransactions(){
+ const m=$('filterMonth').value,ty=$('filterType').value,cat=$('filterCategory').value,q=$('search').value.trim().toLowerCase();
+ return [...transactions].filter(t=>(!m||String(t.date).slice(0,7)===m)&&(ty==='All'||t.type===ty)&&(cat==='All'||t.category===cat)&&(!q||[t.description,t.notes,t.category,t.payment].some(v=>String(v||'').toLowerCase().includes(q)))).sort((a,b)=>b.date.localeCompare(a.date)||b.createdAt-a.createdAt);
+}
+function renderRows(){
+ const list=filteredTransactions();$('transactionRows').innerHTML=list.map(t=>`<tr><td>${safeText(t.date)}</td><td><span class="pill ${t.type==='Income'?'pill-income':'pill-expense'}">${safeText(t.type)}</span></td><td>${safeText(t.category)}</td><td>${safeText(t.description)}${t.notes?`<div class="small-note">${safeText(t.notes)}</div>`:''}</td><td>${safeText(t.payment||'—')}</td><td class="amount ${t.type==='Income'?'green':'red'}">${t.type==='Income'?'+':'−'}${money(t.amount)}</td><td><div class="actions" style="margin:0;flex-wrap:nowrap"><button class="btn btn-light btn-small" data-edit="${safeText(t.id)}" type="button" aria-label="Edit transaction">Edit</button><button class="btn btn-danger btn-small" data-delete="${safeText(t.id)}" type="button" aria-label="Delete transaction">Delete</button></div></td></tr>`).join('');
+ $('emptyState').style.display=list.length?'none':'block';$('recordCount').textContent=`Showing ${list.length} of ${transactions.length} records`;
+}
+function render(){refreshFilterCategories();renderRows();updateDashboard();}
+function showNotice(message,kind='ok'){const n=$('formNotice');n.textContent=message;n.className='notice show '+kind;setTimeout(()=>n.classList.remove('show'),4000);}
+function resetForm(){ $('transactionForm').reset();$('editId').value='';$('date').value=dateToday();$('type').value='Income';setCategories();$('saveButton').textContent='＋ Add Transaction';$('cancelEdit').hidden=true;}
+$('type').addEventListener('change',()=>setCategories());
+$('transactionForm').addEventListener('submit',e=>{
+ e.preventDefault();const editId=$('editId').value;const amount=Number($('amount').value);
+ if(!Number.isFinite(amount)||amount<=0){showNotice('Please enter an amount greater than zero.','error');return;}
+ const entry={id:editId||`${Date.now()}-${Math.random().toString(36).slice(2,9)}`,type:$('type').value,date:$('date').value,category:$('category').value,amount:Math.round(amount*100)/100,description:$('description').value.trim(),payment:$('payment').value,notes:$('notes').value.trim(),createdAt:Date.now()};
+ if(!entry.date||!entry.description){showNotice('Please complete all required fields.','error');return;}
+ if(editId){const i=transactions.findIndex(t=>t.id===editId);if(i>=0){entry.createdAt=transactions[i].createdAt;transactions[i]=entry;}}else transactions.push(entry);
+ if(save()){resetForm();$('summaryMonth').value=entry.date.slice(0,7);$('filterMonth').value=entry.date.slice(0,7);render();showNotice(editId?'Transaction updated successfully.':'Transaction added successfully.');}
+});
+$('clearForm').addEventListener('click',()=>setTimeout(resetForm,0));
+$('cancelEdit').addEventListener('click',resetForm);
+$('transactionRows').addEventListener('click',e=>{
+ const edit=e.target.closest('[data-edit]'),del=e.target.closest('[data-delete]');
+ if(edit){const t=transactions.find(x=>x.id===edit.dataset.edit);if(!t)return;$('editId').value=t.id;$('type').value=t.type;setCategories(t.category);$('date').value=t.date;$('amount').value=t.amount;$('description').value=t.description;$('payment').value=t.payment||'Other';$('notes').value=t.notes||'';$('saveButton').textContent='Save Changes';$('cancelEdit').hidden=false;$('transactionForm').scrollIntoView({behavior:'smooth',block:'start'});}
+ if(del){const t=transactions.find(x=>x.id===del.dataset.delete);if(t&&confirm(`Delete "${t.description}" (${money(t.amount)})?`)){transactions=transactions.filter(x=>x.id!==t.id);if(save())render();}}
+});
+['filterMonth','filterType','filterCategory','search'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',renderRows));
+$('summaryMonth').addEventListener('change',updateDashboard);
+$('resetFilters').addEventListener('click',()=>{$('filterMonth').value='';$('filterType').value='All';$('filterCategory').value='All';$('search').value='';renderRows();});
+$('deleteAll').addEventListener('click',()=>{if(!transactions.length){alert('There are no records to delete.');return;}if(confirm('Delete ALL transactions saved in this browser? This cannot be undone. Download a backup first if you may need these records.')){transactions=[];if(save()){resetForm();render();}}});
+function downloadFile(name,content,type){const blob=new Blob([content],{type});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);}
+function csvCell(v){const s=String(v??'');return '"'+s.replace(/"/g,'""')+'"';}
+$('exportCsv').addEventListener('click',()=>{const list=filteredTransactions();if(!list.length){alert('No matching records to export.');return;}const headers=['Date','Type','Category','Description','Payment Method','Amount (INR)','Notes'];const rows=list.map(t=>[t.date,t.type,t.category,t.description,t.payment,t.amount,t.notes]);const csv='\ufeff'+[headers,...rows].map(r=>r.map(csvCell).join(',')).join('\r\n');downloadFile(`income-expense-${dateToday()}.csv`,csv,'text/csv;charset=utf-8;');});
+$('exportJson').addEventListener('click',()=>{const payload={app:'LOVE COMPUTER Income & Expense Manager',version:1,exportedAt:new Date().toISOString(),transactions};downloadFile(`income-expense-backup-${dateToday()}.json`,JSON.stringify(payload,null,2),'application/json');});
+$('importButton').addEventListener('click',()=>$('importFile').click());
+$('importFile').addEventListener('change',async e=>{const file=e.target.files[0];if(!file)return;try{const parsed=JSON.parse(await file.text());const arr=Array.isArray(parsed)?parsed:parsed.transactions;if(!Array.isArray(arr))throw new Error('Invalid backup format');const clean=arr.filter(t=>t&&['Income','Expense'].includes(t.type)&&typeof t.date==='string'&&typeof t.category==='string'&&Number(t.amount)>0&&typeof t.description==='string').map(t=>({id:String(t.id||`${Date.now()}-${Math.random()}`),type:t.type,date:t.date,category:t.category,amount:Math.round(Number(t.amount)*100)/100,description:t.description,payment:String(t.payment||'Other'),notes:String(t.notes||''),createdAt:Number(t.createdAt)||Date.now()}));if(!confirm(`Restore ${clean.length} valid records? This will replace the current records in this browser.`))return;transactions=clean;if(save()){resetForm();render();alert(`Restored ${clean.length} records successfully.`);}}catch(err){alert('Could not read this backup. Please select a valid JSON backup exported by this tool.');}finally{e.target.value='';}});
+$('printReport').addEventListener('click',()=>window.print());
+const chartColors=['#2563eb','#f59e0b','#8b5cf6','#06b6d4','#f97316','#ec4899','#64748b','#84cc16','#14b8a6','#a855f7'];
+function prepCanvas(canvas){const rect=canvas.getBoundingClientRect(),ratio=window.devicePixelRatio||1;canvas.width=Math.max(1,Math.floor(rect.width*ratio));canvas.height=Math.max(1,Math.floor(rect.height*ratio));const ctx=canvas.getContext('2d');ctx.scale(ratio,ratio);return {ctx,w:rect.width,h:rect.height};}
+function drawBarChart(){
+ const {ctx,w,h}=prepCanvas($('barChart'));ctx.clearRect(0,0,w,h);const months=[];const now=new Date();for(let i=5;i>=0;i--){const d=new Date(now.getFullYear(),now.getMonth()-i,1);months.push({key:`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`,label:d.toLocaleDateString('en-IN',{month:'short'})});}
+ const vals=months.map(m=>{const a=monthTransactions(m.key);return {income:a.filter(t=>t.type==='Income').reduce((s,t)=>s+Number(t.amount),0),expense:a.filter(t=>t.type==='Expense').reduce((s,t)=>s+Number(t.amount),0)}});
+ const max=Math.max(1,...vals.flatMap(v=>[v.income,v.expense]));const pad={l:48,r:8,t:12,b:30},cw=w-pad.l-pad.r,ch=h-pad.t-pad.b;
+ ctx.font='11px system-ui';ctx.fillStyle='#64748b';ctx.strokeStyle='#e2e8f0';ctx.lineWidth=1;
+ for(let i=0;i<=4;i++){const y=pad.t+ch*i/4;ctx.beginPath();ctx.moveTo(pad.l,y);ctx.lineTo(w-pad.r,y);ctx.stroke();const v=max*(1-i/4);ctx.textAlign='right';ctx.fillText(v>=1000?(v/1000).toFixed(v>=10000?0:1)+'k':Math.round(v),pad.l-7,y+4);}
+ const group=cw/6,bw=Math.min(15,group*.28);
+ vals.forEach((v,i)=>{const x=pad.l+group*i+group/2;const hi=ch*v.income/max,he=ch*v.expense/max;ctx.fillStyle='#16a34a';ctx.fillRect(x-bw-2,pad.t+ch-hi,bw,hi);ctx.fillStyle='#ef4444';ctx.fillRect(x+2,pad.t+ch-he,bw,he);ctx.fillStyle='#64748b';ctx.textAlign='center';ctx.fillText(months[i].label,x,h-9);});
+}
+function drawCategoryChart(list){
+ const canvas=$('categoryChart'),{ctx,w,h}=prepCanvas(canvas);ctx.clearRect(0,0,w,h);
+ const sums={};list.filter(t=>t.type==='Expense').forEach(t=>sums[t.category]=(sums[t.category]||0)+Number(t.amount));const items=Object.entries(sums).sort((a,b)=>b[1]-a[1]);const total=items.reduce((s,x)=>s+x[1],0);$('categoryLegend').innerHTML='';
+ if(!items.length){ctx.fillStyle='#64748b';ctx.font='14px system-ui';ctx.textAlign='center';ctx.fillText('No expense data for this month',w/2,h/2);return;}
+ const cx=Math.min(w*.35,120),cy=h/2,r=Math.min(78,h*.36,w*.26);let angle=-Math.PI/2;
+ items.forEach(([name,val],i)=>{const end=angle+val/total*Math.PI*2;ctx.beginPath();ctx.moveTo(cx,cy);ctx.arc(cx,cy,r,angle,end);ctx.closePath();ctx.fillStyle=chartColors[i%chartColors.length];ctx.fill();angle=end;
+ const row=document.createElement('span');row.innerHTML=`<i class="dot" style="background:${chartColors[i%chartColors.length]}"></i>${safeText(name)} (${(val/total*100).toFixed(1)}%)`; $('categoryLegend').appendChild(row);
+ });
+ ctx.beginPath();ctx.arc(cx,cy,r*.58,0,Math.PI*2);ctx.fillStyle='#fff';ctx.fill();ctx.fillStyle='#182230';ctx.font='bold 13px system-ui';ctx.textAlign='center';ctx.fillText(total>=100000?`₹${(total/100000).toFixed(1)}L`:total>=1000?`₹${(total/1000).toFixed(1)}k`:money(total).replace('.00',''),cx,cy+4);
+}
+window.addEventListener('resize',()=>{drawBarChart();drawCategoryChart(monthTransactions($('summaryMonth').value||monthNow()));});
+load();$('date').value=dateToday();$('summaryMonth').value=monthNow();$('filterMonth').value=monthNow();setCategories();render();
+})();
+</script>
+</body>
+</html>
