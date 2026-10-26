@@ -539,94 +539,144 @@
 
 
 <script>
-(function(){
-  const now = new Date();
-  const dateOptions = { timeZone: 'Asia/Kolkata', day: 'numeric', month: 'long', year: 'numeric' };
-  const weekdayOptions = { timeZone: 'Asia/Kolkata', weekday: 'long' };
+(function () {
+  'use strict';
+
+  const TIME_ZONE = 'Asia/Kolkata';
+  const endpoint = 'https://dharmbodh-panchang.taruncool8647.workers.dev/';
   const dateEl = document.getElementById('panchangGregorianDate');
   const weekdayEl = document.getElementById('panchangWeekday');
   const labelEl = document.getElementById('dailyDateLabel');
-  if (dateEl) dateEl.textContent = new Intl.DateTimeFormat('hi-IN', dateOptions).format(now);
-  if (weekdayEl) weekdayEl.textContent = new Intl.DateTimeFormat('hi-IN', weekdayOptions).format(now);
-  if (labelEl) labelEl.textContent = new Intl.DateTimeFormat('hi-IN', {timeZone:'Asia/Kolkata', day:'numeric', month:'short'}).format(now);
+  const statusEl = document.getElementById('panchangStatus');
 
-  // Live Panchang from the Cloudflare Worker. The API key stays server-side.
-  const panchangStatus = document.getElementById('panchangStatus');
-  const panchangFields = {
-    weekday: document.getElementById('panchangWeekday'),
+  const fields = {
     tithi: document.getElementById('panchangTithi'),
     paksha: document.getElementById('panchangPaksha'),
     nakshatra: document.getElementById('panchangNakshatra'),
     yoga: document.getElementById('panchangYoga'),
     karana: document.getElementById('panchangKarana')
   };
-  const panchangHindi = {
-    weekday: {Sunday:'रविवार',Monday:'सोमवार',Tuesday:'मंगलवार',Wednesday:'बुधवार',Thursday:'गुरुवार',Friday:'शुक्रवार',Saturday:'शनिवार'},
-    paksha: {Shukla:'शुक्ल पक्ष',Krishna:'कृष्ण पक्ष'},
-    tithi: {Pratipada:'प्रतिपदा',Dvitiya:'द्वितीया',Tritiya:'तृतीया',Chaturthi:'चतुर्थी',Panchami:'पंचमी',Shashthi:'षष्ठी',Saptami:'सप्तमी',Ashtami:'अष्टमी',Navami:'नवमी',Dashami:'दशमी',Ekadashi:'एकादशी',Dwadashi:'द्वादशी',Trayodashi:'त्रयोदशी',Chaturdashi:'चतुर्दशी',Purnima:'पूर्णिमा',Amavasya:'अमावस्या'},
-    nakshatra: {'Ashwini':'अश्विनी','Bharani':'भरणी','Krittika':'कृत्तिका','Rohini':'रोहिणी','Mrigashira':'मृगशिरा','Ardra':'आर्द्रा','Punarvasu':'पुनर्वसु','Pushya':'पुष्य','Ashlesha':'आश्लेषा','Magha':'मघा','Purva Phalguni':'पूर्वा फाल्गुनी','Uttara Phalguni':'उत्तरा फाल्गुनी','Hasta':'हस्त','Chitra':'चित्रा','Swati':'स्वाति','Vishakha':'विशाखा','Anuradha':'अनुराधा','Jyeshtha':'ज्येष्ठा','Mula':'मूल','Purva Ashadha':'पूर्वाषाढ़ा','Uttara Ashadha':'उत्तराषाढ़ा','Shravana':'श्रवण','Dhanishta':'धनिष्ठा','Shatabhisha':'शतभिषा','Purva Bhadrapada':'पूर्वाभाद्रपद','Uttara Bhadrapada':'उत्तराभाद्रपद','Revati':'रेवती'},
-    yoga: {Vishkumbha:'विष्कुम्भ',Priti:'प्रीति',Ayushman:'आयुष्मान',Saubhagya:'सौभाग्य',Shobhana:'शोभन',Atiganda:'अतिगण्ड',Sukarma:'सुकर्मा',Dhriti:'धृति',Shula:'शूल',Ganda:'गण्ड',Vriddhi:'वृद्धि',Dhruva:'ध्रुव',Vyaghata:'व्याघात',Harshana:'हर्षण',Vajra:'वज्र',Siddhi:'सिद्धि',Vyatipata:'व्यतीपात',Variyan:'वरीयान',Parigha:'परिघ',Shiva:'शिव',Siddha:'सिद्ध',Sadhya:'साध्य',Shubha:'शुभ',Shukla:'शुक्ल',Brahma:'ब्रह्म',Indra:'इन्द्र',Vaidhriti:'वैधृति'},
-    karana: {Bava:'बव',Balava:'बालव',Kaulava:'कौलव',Taitila:'तैतिल',Garaja:'गरज',Vanija:'वणिज',Vishti:'विष्टि',Shakuni:'शकुनि',Chatushpada:'चतुष्पद',Naga:'नाग',Kimstughna:'किंस्तुघ्न'}
+
+  const names = {
+    weekday: {
+      Sunday:'रविवार', Monday:'सोमवार', Tuesday:'मंगलवार',
+      Wednesday:'बुधवार', Thursday:'गुरुवार', Friday:'शुक्रवार', Saturday:'शनिवार'
+    },
+    paksha: { Shukla:'शुक्ल पक्ष', Krishna:'कृष्ण पक्ष' },
+    tithi: {
+      Pratipada:'प्रतिपदा', Dvitiya:'द्वितीया', Dwitiya:'द्वितीया',
+      Tritiya:'तृतीया', Chaturthi:'चतुर्थी', Panchami:'पंचमी',
+      Shashthi:'षष्ठी', Saptami:'सप्तमी', Ashtami:'अष्टमी',
+      Navami:'नवमी', Dashami:'दशमी', Ekadashi:'एकादशी',
+      Dwadashi:'द्वादशी', Trayodashi:'त्रयोदशी', Chaturdashi:'चतुर्दशी',
+      Purnima:'पूर्णिमा', Amavasya:'अमावस्या'
+    },
+    nakshatra: {
+      Ashwini:'अश्विनी', Bharani:'भरणी', Krittika:'कृत्तिका',
+      Rohini:'रोहिणी', Mrigashira:'मृगशिरा', Ardra:'आर्द्रा',
+      Punarvasu:'पुनर्वसु', Pushya:'पुष्य', Ashlesha:'आश्लेषा',
+      Magha:'मघा', 'Purva Phalguni':'पूर्वा फाल्गुनी',
+      'Uttara Phalguni':'उत्तरा फाल्गुनी', Hasta:'हस्त', Chitra:'चित्रा',
+      Swati:'स्वाति', Vishakha:'विशाखा', Anuradha:'अनुराधा',
+      Jyeshtha:'ज्येष्ठा', Mula:'मूल', 'Purva Ashadha':'पूर्वाषाढ़ा',
+      'Uttara Ashadha':'उत्तराषाढ़ा', Shravana:'श्रवण',
+      Dhanishta:'धनिष्ठा', Shatabhisha:'शतभिषा',
+      'Purva Bhadrapada':'पूर्वाभाद्रपद',
+      'Uttara Bhadrapada':'उत्तराभाद्रपद', Revati:'रेवती'
+    },
+    yoga: {
+      Vishkumbha:'विष्कुम्भ', Priti:'प्रीति', Ayushman:'आयुष्मान',
+      Saubhagya:'सौभाग्य', Shobhana:'शोभन', Atiganda:'अतिगण्ड',
+      Sukarma:'सुकर्मा', Dhriti:'धृति', Shula:'शूल', Ganda:'गण्ड',
+      Vriddhi:'वृद्धि', Dhruva:'ध्रुव', Vyaghata:'व्याघात',
+      Harshana:'हर्षण', Vajra:'वज्र', Siddhi:'सिद्धि',
+      Vyatipata:'व्यतीपात', Variyan:'वरीयान', Parigha:'परिघ',
+      Shiva:'शिव', Siddha:'सिद्ध', Sadhya:'साध्य', Shubha:'शुभ',
+      Shukla:'शुक्ल', Brahma:'ब्रह्म', Indra:'इन्द्र', Vaidhriti:'वैधृति'
+    },
+    karana: {
+      Bava:'बव', Balava:'बालव', Kaulava:'कौलव', Taitila:'तैतिल',
+      Garaja:'गरज', Vanija:'वणिज', Vishti:'विष्टि', Shakuni:'शकुनि',
+      Chatushpada:'चतुष्पद', Naga:'नाग', Kimstughna:'किंस्तुघ्न'
+    }
   };
-  function panchangTranslate(kind, value) {
-    if (!value) return 'जानकारी उपलब्ध नहीं';
-    return (panchangHindi[kind] && panchangHindi[kind][value]) || value;
+
+  function istParts(date) {
+    const parts = new Intl.DateTimeFormat('en-GB', {
+      timeZone: TIME_ZONE, year:'numeric', month:'2-digit', day:'2-digit',
+      hour:'2-digit', minute:'2-digit', second:'2-digit', hourCycle:'h23'
+    }).formatToParts(date);
+    return Object.fromEntries(parts.map(p => [p.type, p.value]));
   }
-  async function loadLivePanchang() {
-    if (!panchangStatus) return;
+
+  function renderLocalDate() {
+    const now = new Date();
+    if (dateEl) dateEl.textContent = new Intl.DateTimeFormat('hi-IN', {
+      timeZone: TIME_ZONE, day:'numeric', month:'long', year:'numeric'
+    }).format(now);
+    if (weekdayEl) weekdayEl.textContent = new Intl.DateTimeFormat('hi-IN', {
+      timeZone: TIME_ZONE, weekday:'long'
+    }).format(now);
+    if (labelEl) labelEl.textContent = new Intl.DateTimeFormat('hi-IN', {
+      timeZone: TIME_ZONE, day:'numeric', month:'short'
+    }).format(now);
+    return istParts(now);
+  }
+
+  function translate(kind, value) {
+    if (!value) return 'जानकारी उपलब्ध नहीं';
+    return (names[kind] && names[kind][value]) || value;
+  }
+
+  async function loadPanchang() {
+    const local = renderLocalDate();
+    if (!statusEl) return;
+
     try {
-      const response = await fetch('https://dharmbodh-panchang.taruncool8647.workers.dev/', {
-        headers: {Accept:'application/json'},
+      // Date/time context is passed so a compatible Worker can calculate the active limb.
+      const url = new URL(endpoint);
+      url.searchParams.set('date', `${local.year}-${local.month}-${local.day}`);
+      url.searchParams.set('time', `${local.hour}:${local.minute}:${local.second}`);
+      url.searchParams.set('timezone', TIME_ZONE);
+      url.searchParams.set('basis', 'current');
+
+      const response = await fetch(url.toString(), {
+        headers: { Accept: 'application/json' },
         cache: 'no-store'
       });
       if (!response.ok) throw new Error('HTTP ' + response.status);
       const data = await response.json();
       if (data.error) throw new Error(data.error);
+
+      // Weekday is always based on the visitor-facing IST calendar date.
       const values = {
-        // Weekday is derived from the same India-local date shown on the card.
-        // Do not allow a stale/cached API response to overwrite it.
-        tithi: panchangTranslate('tithi', data.tithi && data.tithi.name),
-        paksha: panchangTranslate('paksha', data.tithi && data.tithi.paksha),
-        nakshatra: panchangTranslate('nakshatra', data.nakshatra && data.nakshatra.name),
-        yoga: panchangTranslate('yoga', data.yoga && data.yoga.name),
-        karana: panchangTranslate('karana', data.karana && data.karana.name)
+        tithi: translate('tithi', data.tithi && data.tithi.name),
+        paksha: translate('paksha', data.tithi && data.tithi.paksha),
+        nakshatra: translate('nakshatra', data.nakshatra && data.nakshatra.name),
+        yoga: translate('yoga', data.yoga && data.yoga.name),
+        karana: translate('karana', data.karana && data.karana.name)
       };
-      Object.entries(values).forEach(([key, value]) => {
-        const element = panchangFields[key];
-        if (element) element.textContent = value;
+
+      Object.entries(fields).forEach(([key, el]) => {
+        if (el) el.textContent = values[key];
       });
-      panchangStatus.textContent = 'पंचांग डेटा प्राप्त हुआ। स्थान: नई दिल्ली। तिथि और अन्य विवरण API के समय-आधार के अनुसार हैं।';
+
+      const basis = String(data.basis || data.time_basis || '').toLowerCase();
+      if (basis === 'current' || basis === 'now' || basis === 'instant') {
+        statusEl.textContent = 'नई दिल्ली के वर्तमान भारतीय समय (IST) के अनुसार पंचांग। अंतिम जाँच: ' +
+          new Intl.DateTimeFormat('hi-IN', { timeZone: TIME_ZONE, hour:'2-digit', minute:'2-digit' }).format(new Date()) + ' बजे।';
+      } else {
+        statusEl.textContent = 'वार और तारीख IST के अनुसार हैं। तिथि, नक्षत्र, योग और करण के लिए पंचांग API को वर्तमान समय (IST) का डेटा देना आवश्यक है; अभी API का समय-आधार सत्यापित नहीं है।';
+      }
     } catch (error) {
-      Object.entries(panchangFields).filter(([key]) => key !== 'weekday').forEach(([, element]) => {
-        if (element) element.textContent = 'अभी उपलब्ध नहीं';
-      });
-      panchangStatus.textContent = 'अभी पंचांग डेटा प्राप्त नहीं हो सका। कृपया कुछ देर बाद पुनः प्रयास करें।';
+      statusEl.textContent = 'पंचांग डेटा अभी प्राप्त नहीं हो सका। तारीख और वार भारतीय समय (IST) के अनुसार दिखाए गए हैं।';
       console.error('DharmBodh Panchang error:', error);
     }
   }
-  loadLivePanchang();
 
-
-  const bhaktiItems = [
-    {type:'आज का सुविचार', main:'सत्य, करुणा और सेवा को अपने जीवन में स्थान दें।', desc:'छोटे अच्छे कर्म भी जीवन में सकारात्मक परिवर्तन ला सकते हैं।'},
-    {type:'आज का संकल्प', main:'आज किसी की सहायता बिना किसी अपेक्षा के करें।', desc:'सेवा और सहानुभूति भारतीय आध्यात्मिक परंपरा के महत्वपूर्ण मूल्य हैं।'},
-    {type:'आज की भक्ति', main:'कुछ पल शांत होकर ईश्वर का स्मरण करें।', desc:'श्रद्धा के साथ किया गया छोटा-सा जप भी मन को एकाग्र करने का अवसर देता है।'},
-    {type:'आज की सीख', main:'क्रोध के समय ठहरना और सोचकर बोलना भी साधना है।', desc:'संयम, विनम्रता और मधुर वाणी संबंधों को मजबूत बनाते हैं।'},
-    {type:'आज का विचार', main:'अपने कर्तव्य को ईमानदारी से निभाना भी धर्म का एक रूप है।', desc:'दैनिक जीवन में सत्य और जिम्मेदारी को अपनाने का प्रयास करें।'},
-    {type:'आज का संदेश', main:'कृतज्ञता रखें और जो आपके पास है उसका सम्मान करें।', desc:'कृतज्ञता हमें दूसरों के योगदान और जीवन के छोटे सुखों को पहचानने में मदद करती है।'},
-    {type:'आज का संकल्प', main:'प्रकृति, जीवों और अपने आसपास के लोगों के प्रति दयालु रहें।', desc:'दया और अहिंसा का भाव रोज़मर्रा के व्यवहार से शुरू होता है।'}
-  ];
-  // Use the calendar date in India (Asia/Kolkata), not the visitor's timezone.
-  const indiaDate = new Intl.DateTimeFormat('en-CA', {timeZone:'Asia/Kolkata', year:'numeric', month:'2-digit', day:'2-digit'}).format(now);
-  const dayNumber = Number(indiaDate.replace(/-/g, ''));
-  const dayIndex = dayNumber % bhaktiItems.length;
-  const item = bhaktiItems[dayIndex];
-  const type = document.getElementById('bhaktiType');
-  const main = document.getElementById('bhaktiMain');
-  const desc = document.getElementById('bhaktiDescription');
-  if (type) type.textContent = item.type;
-  if (main) main.textContent = item.main;
-  if (desc) desc.textContent = item.desc;
+  loadPanchang();
+  // Re-check periodically; exact limb transitions still depend on a current-time-aware Worker.
+  window.setInterval(loadPanchang, 5 * 60 * 1000);
 })();
 </script>
 
